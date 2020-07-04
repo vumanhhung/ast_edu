@@ -1,0 +1,29 @@
+.drodown {
+  position: relative;
+  z-index: 100
+}
+  .drodown .k-treeview {
+    display:none;
+    position: absolute;
+    top: 34px;
+    left: 15px;
+    border: 1px solid;
+    border-top: none;
+    border-top-color: currentcolor;
+    border-right-color: currentcolor;
+    border-bottom-color: currentcolor;
+    border-bottom-width: 1px;
+    border-left-color: currentcolor;height:200px;width:90%;background:#fff
+  }
+.showDropdown {
+  display: block!important
+}
+.fileName {
+  padding: 3px 5px 3px 0;
+  text-decoration: underline;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80%;
+}
+.deleteFile{color:red;position:relative;top:-5px;cursor:pointer}

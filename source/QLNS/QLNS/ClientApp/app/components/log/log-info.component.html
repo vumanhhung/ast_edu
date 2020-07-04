@@ -1,0 +1,79 @@
+﻿<div class="modal fade" bsModal #editorModal="bs-modal" (onHidden)="onEditorModalHidden()" [config]="{backdrop: 'static'}" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left caption-subject bold uppercase font-green">
+          <i class="fa fa-plus" *ngIf="isNew"></i> <i class="fa fa-pencil" *ngIf="!isNew"></i> {{isNew ? 'Thêm mới' : 'Chỉnh sửa'}}
+        </h4>
+        <button type="button" class="close pull-right btn-close-modal" title="Close" (click)="editorModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="Editform">
+          <form *ngIf="formResetToggle" [attr.autocomplete]="isGeneralEditor ? NaN : null" class="form-horizontal" name="LogInfoForm" #f="ngForm" novalidate (ngSubmit)="f.form.valid ? save() :
+          (!tenModule.valid);
+(!hanhDong.valid);
+(!noiDung.valid);
+(!nguoiThucHien.valid);
+(!ngayThucHien.valid);
+">
+<div class="form-group has-feedback form-md-line-input">
+<label class="control-label col-md-2" for="tenModule-{{uniqueId}}">TenModule</label>
+<div class="col-md-10" [ngClass]="{'has-success': f.submitted && tenModule.valid, 'has-error' : f.submitted && !tenModule.valid}">
+<input autofocus type="text" class="form-control" name="tenModule" [(ngModel)]="LogEdit.tenModule" #tenModule="ngModel" required placeholder="Nhập TenModule"/>
+<span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': tenModule.valid, 'glyphicon-remove' : !tenModule.valid }"></span>
+<span *ngIf="showValidationErrors && f.submitted && !tenModule.valid" class="errorMessage">
+TenModule không được để trống
+</span></div></div><div class="clearfix"></div>
+<div class="form-group has-feedback form-md-line-input">
+<label class="control-label col-md-2" for="hanhDong-{{uniqueId}}">HanhDong</label>
+<div class="col-md-10" [ngClass]="{'has-success': f.submitted && hanhDong.valid, 'has-error' : f.submitted && !hanhDong.valid}">
+<input autofocus type="text" class="form-control" name="hanhDong" [(ngModel)]="LogEdit.hanhDong" #hanhDong="ngModel" required placeholder="Nhập HanhDong"/>
+<span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': hanhDong.valid, 'glyphicon-remove' : !hanhDong.valid }"></span>
+<span *ngIf="showValidationErrors && f.submitted && !hanhDong.valid" class="errorMessage">
+HanhDong không được để trống
+</span></div></div><div class="clearfix"></div>
+<div class="form-group has-feedback form-md-line-input">
+<label class="control-label col-md-2" for="noiDung-{{uniqueId}}">NoiDung</label>
+<div class="col-md-10" [ngClass]="{'has-success': f.submitted && noiDung.valid, 'has-error' : f.submitted && !noiDung.valid}">
+<input autofocus type="text" class="form-control" name="noiDung" [(ngModel)]="LogEdit.noiDung" #noiDung="ngModel" required placeholder="Nhập NoiDung"/>
+<span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': noiDung.valid, 'glyphicon-remove' : !noiDung.valid }"></span>
+<span *ngIf="showValidationErrors && f.submitted && !noiDung.valid" class="errorMessage">
+NoiDung không được để trống
+</span></div></div><div class="clearfix"></div>
+<div class="form-group has-feedback form-md-line-input">
+<label class="control-label col-md-2" for="nguoiThucHien-{{uniqueId}}">NguoiThucHien</label>
+<div class="col-md-10" [ngClass]="{'has-success': f.submitted && nguoiThucHien.valid, 'has-error' : f.submitted && !nguoiThucHien.valid}">
+<input autofocus type="text" class="form-control" name="nguoiThucHien" [(ngModel)]="LogEdit.nguoiThucHien" #nguoiThucHien="ngModel" required placeholder="Nhập NguoiThucHien"/>
+<span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': nguoiThucHien.valid, 'glyphicon-remove' : !nguoiThucHien.valid }"></span>
+<span *ngIf="showValidationErrors && f.submitted && !nguoiThucHien.valid" class="errorMessage">
+NguoiThucHien không được để trống
+</span></div></div><div class="clearfix"></div>
+<div class="form-group has-feedback form-md-line-input">
+<label class="control-label col-md-2" for="ngayThucHien-{{uniqueId}}">NgayThucHien</label>
+<div class="col-md-10" [ngClass]="{'has-success': f.submitted && ngayThucHien.valid, 'has-error' : f.submitted && !ngayThucHien.valid}">
+<input autofocus type="text" class="form-control" name="ngayThucHien" [(ngModel)]="LogEdit.ngayThucHien" #ngayThucHien="ngModel" required placeholder="Nhập NgayThucHien"/>
+<span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': ngayThucHien.valid, 'glyphicon-remove' : !ngayThucHien.valid }"></span>
+<span *ngIf="showValidationErrors && f.submitted && !ngayThucHien.valid" class="errorMessage">
+NgayThucHien không được để trống
+</span></div></div><div class="clearfix"></div>
+            <div class="actionBtn-form-group">
+              <div class="">
+                <div class="pull-right btnF">
+                  <button *ngIf="!isEditMode && isGeneralEditor" type="button" (click)="close()" class="btn btn-default"><i class='fa fa-close'></i> Đóng</button>
+                  <button *ngIf="!isEditMode && !isGeneralEditor" type="button" (click)="edit()" class="btn btn-default"><i class='fa fa-edit'></i> Lưu lại</button>
+                  <button *ngIf="isEditMode" type="button" (click)="cancel()" class="btn btn-default" [disabled]="isSaving"><i class='fa fa-arrow-circle-o-left'></i> Hủy bỏ</button>
+                  <button *ngIf="isEditMode" type="submit" class="btn btn-primary green" [disabled]="isSaving">
+                    <i *ngIf="!isSaving" class='fa fa-floppy-o'></i><i *ngIf="isSaving" class='fa fa-circle-o-notch fa-spin'></i> Lưu lại
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

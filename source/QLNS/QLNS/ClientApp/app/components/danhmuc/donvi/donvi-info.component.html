@@ -1,0 +1,144 @@
+<div class="modal fade" bsModal #editorModal="bs-modal" (onHidden)="onEditorModalHidden()" [config]="{backdrop: 'static'}" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title pull-left caption-subject bold uppercase font-green">
+                    <i class="fa fa-plus" *ngIf="isNew"></i> <i class="fa fa-pencil" *ngIf="!isNew"></i> {{isNew ? 'Thêm mới' : 'Chỉnh sửa'}}
+                </h4>
+                <button type="button" class="close pull-right btn-close-modal" title="Close" (click)="editorModal.hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="Editform">
+                    <form *ngIf="formResetToggle" [attr.autocomplete]="isGeneralEditor ? NaN : null" class="form-horizontal" name="DonViInfoForm" #f="ngForm" novalidate (ngSubmit)="f.form.valid ? save() :
+          (!tenDonVi.valid);
+          (!viTri.valid);
+">
+                        <div class="form-group has-feedback form-md-line-input">
+                            <label class="control-label col-md-2" for="tenDonVi-{{uniqueId}}">Tên đơn vị</label>
+                            <div class="col-md-10" [ngClass]="{'has-success': f.submitted && tenDonVi.valid, 'has-error' : f.submitted && (!tenDonVi.valid  || isExitsItems)}">
+                                <input autofocus type="text" class="form-control" name="tenDonVi" [(ngModel)]="DonViEdit.tenDonVi" #tenDonVi="ngModel" required placeholder="Nhập tên đơn vị" (ngModelChange)="onTenDonViChange($event)" />
+                                <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': tenDonVi.valid, 'glyphicon-remove' : (!tenDonVi.valid || isExitsItems)}"></span>
+                                <span *ngIf="showValidationErrors && f.submitted && !tenDonVi.valid" class="errorMessage">
+                                    Tên đơn vị không được để trống
+                                </span>
+                                <span *ngIf="showValidationErrors && f.submitted && isExitsItems" class="errorMessage">
+                                    Tên đơn vị đã tồn tại
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback form-md-line-input">
+                            <label class="control-label col-md-2" for="maDonViCha-{{uniqueId}}">Đơn vị cha</label>
+                            <div class="col-md-4 drodown">
+                                <kendo-treeview [class.showDropdown]="isShowDropdown" [nodes]="donvi"
+                                                textField="tenDonVi"
+                                                kendoTreeViewExpandable
+                                                kendoTreeViewHierarchyBinding
+                                                [(expandedKeys)]="expandedKeys"
+                                                kendoTreeViewSelectable
+                                                [selectBy]="'tenDonVi'"
+                                                [(selectedKeys)]="selectedKeys"
+                                                [kendoTreeViewDisable]="'tenDonVi'"
+                                                [(disabledKeys)]="disabledKeys"
+                                                childrenField="items">
+                                    <ng-template kendoTreeViewNodeTemplate let-dataItem>
+                                        <div (click)="handleSelection(dataItem)">
+                                            <span [ngClass]="iconClass(dataItem)"></span>
+                                            {{dataItem.tenDonVi}}
+                                        </div>
+                                    </ng-template>
+                                </kendo-treeview>
+                                <input autofocus type="text" class="form-control" readonly="readonly" value="{{textDropDVC}}" (click)="focusFunction($event)" style="cursor:pointer;color: transparent;text-shadow: 0 0 0 black;" />
+                                <i class="fa fa-caret-down" style="position: absolute;top: 13px;right: 20px;font-size: 17px;cursor:pointer" (click)="hiddenDrop()"></i>
+                                <i class="fa fa-times-circle-o" style="position: absolute;top: 13px;right: 37px;font-size: 14px;cursor:pointer" (click)="removeTextDrop()"></i>
+                            </div>
+                            <label class="control-label col-md-2" for="kyHieu-{{uniqueId}}">Ký hiệu</label>
+                            <div class="col-md-4" [ngClass]="{'has-success': f.submitted && kyHieu.valid, 'has-error' : f.submitted && !kyHieu.valid}">
+                                <input autofocus type="text" class="form-control" name="kyHieu" [(ngModel)]="DonViEdit.kyHieu" #kyHieu="ngModel" required placeholder="Nhập ký hiệu" />
+                                <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': tenDonVi.valid, 'glyphicon-remove' : !kyHieu.valid }"></span>
+                                <span *ngIf="showValidationErrors && f.submitted && !kyHieu.valid" class="errorMessage">
+                                    ký hiệu không được để trống
+                                </span>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group has-feedback form-md-line-input">
+                            <label class="control-label col-md-2" for="loaiDonVi-{{uniqueId}}">Loại đơn vị</label>
+                            <div class="col-md-5">
+                                <kendo-combobox [suggest]="true" class="form-control"
+                                                [data]="loaidonviFilter" [placeholder]="'Loại đơn vị'"
+                                                [textField]="'text'"
+                                                [valueField]="'value'"
+                                                [(ngModel)]="loaidonviSelected" name="loaidonvi">
+                                    <ng-template kendoDropDownListNoDataTemplate>
+                                        <p><span class="k-icon k-i-warning" style="font-size:30px"></span><br /><br /> Không tìm thấy kết quả nào</p>
+                                    </ng-template>
+                                    <ng-template kendoComboBoxItemTemplate let-dataItem>
+                                        &nbsp;{{ dataItem.text }}
+                                    </ng-template>
+                                </kendo-combobox>
+                            </div>
+                            <label class="control-label col-md-2" for="viTri-{{uniqueId}}">Vị trí</label>
+                            <div class="col-md-3">
+                                <kendo-numerictextbox [min]="0" [max]="9999999999" [autoCorrect]="autoCorrect" class="form-control" [format]="'0'" name="viTri" [(ngModel)]="DonViEdit.viTri" #viTri="ngModel">
+                                </kendo-numerictextbox>
+                            </div>
+                        </div>
+                        <!--<div class="form-group has-feedback form-md-line-input">
+                            <label class="control-label col-md-2" for="duongDanThuMuc-{{uniqueId}}">File Sever</label>
+                            <div class="col-md-10">                                
+                                <kendo-upload name="kendo-upload-flie" [autoUpload]="false"
+                                              (upload)="uploadEventHandler($event,'/pic/donvi')"
+                                              (select)="selectEventHandler($event)"
+                                              [multiple]="multiUpload"
+                                              (remove)="removeEventHandler($event)"
+                                              [saveUrl]='"api/FileUploads/UploadFile"'
+                                              [removeUrl]='"api/FileUploads/Remove"'
+                                              [restrictions]="uploadRestrictions"
+                                              (complete)="completeEventHandler($event)"
+                                              [batch]="true"
+                                              [disabled]="false">
+                                    <kendo-upload-messages select="Chọn file..."></kendo-upload-messages>
+                                </kendo-upload>
+                                <div class="clearfix"></div>
+                                <div *ngFor="let file of listFile" class="">
+                                    <a href="javascript://" id="imgData" class="fileName">{{file}}</a>
+                                    <span (click)="clearFile(file,DonViEdit.donViId)" tooltip="Xóa" class="glyphicon glyphicon-remove glyphicon-remove-image deleteFile"></span>
+                                </div>
+                            </div>
+                        </div>-->
+                        <div class="form-group has-feedback form-md-line-input">
+                            <label class="control-label col-md-2" for="dienGiai-{{uniqueId}}">Ghi chú</label>
+                            <div class="col-md-6">
+                                <textarea class="form-control" name="dienGiai" [(ngModel)]="DonViEdit.dienGiai" #dienGiai="ngModel" placeholder="Nhập mô tả"></textarea>
+                            </div>
+                            <label class="control-label col-md-2" for="trangThai-{{uniqueId}}">Trạng thái</label>
+                            <div class="col-md-2">
+                                <span class="statusEdit" [class.statusEdit_check]="isStatusEditChange" (click)="changeStatusEdit()"></span>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="actionBtn-form-group">
+                            <div class="">
+                                <div class="pull-right btnF">
+                                    <button *ngIf="!isEditMode && isGeneralEditor" type="button" (click)="close()" class="btn btn-default" style="padding: 3px 8px;"><i class='fa fa-close'></i> Đóng</button>
+                                    <button *ngIf="!isEditMode && !isGeneralEditor" type="button" (click)="edit()" class="btn btn-default" style="padding: 3px 8px;"><i class='fa fa-edit'></i> Lưu lại</button>
+                                    <button *ngIf="isEditMode" type="button" (click)="cancel()" class="btn btn-default" [disabled]="isSaving" style="padding: 3px 8px;"><i class='fa fa-arrow-circle-o-left'></i> Hủy bỏ</button>
+                                    <button *ngIf="isEditMode" type="submit" class="btn btn-primary green" [disabled]="isSaving">
+                                        <i *ngIf="!isSaving" class='fa fa-floppy-o'></i><i *ngIf="isSaving" class='fa fa-circle-o-notch fa-spin'></i> Lưu lại
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

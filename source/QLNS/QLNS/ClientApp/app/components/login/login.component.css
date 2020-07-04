@@ -1,0 +1,116 @@
+.boxshadow {
+    position: relative;
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    padding: 10px;
+    background: white;
+}
+
+
+    .boxshadow::after {
+        content: '';
+        position: absolute;
+        z-index: -1; /* hide shadow behind image */
+        -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+        width: 70%;
+        left: 15%; /* one half of the remaining 30% */
+        height: 100px;
+        bottom: 0;
+    }
+
+
+.cardshadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.separator-hr {
+    margin: 0;
+}
+
+.last-control-group {
+    margin-bottom: -25px;
+}
+
+.login-container {
+    padding-bottom: 52px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /*background: url(/images/icon/title-sw.png) no-repeat center center;*/
+}
+
+@media (min-width: 768px) {
+    .login-container {
+        width: 700px;
+    }
+}
+
+/*@media (min-width: 992px) {
+    .login-container {
+        width: 700px;
+    }
+}*/
+
+@media (min-width: 1200px) {
+    .login-container {
+        width: 730px;
+    }
+}
+
+
+.home-login {
+    min-height: 820px;
+    margin-left: -15px;
+    margin-right: -15px;
+    background: url(/images/icon/bg.png) no-repeat center center;
+    background-size: cover;
+    margin-top: -45px;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+}
+
+.box-login .clearfix {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.box-login .box-left {
+    width: 261px;
+    height: 260px;
+    background: url(/images/icon/logo.png) no-repeat left center;
+    float: right;
+    position: relative;
+}
+
+.box-login .box-right {
+    width: 100%;
+    background: url(/images/icon/khung.png) no-repeat center center;
+    float: right;
+    position: relative;
+    height: 260px;
+}
+
+    .box-login .box-right .panel-heading {
+        position: absolute;
+        top: 26px;
+        left: 99px;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .box-login .box-right .panel-body {
+        position: absolute;
+        width: 74%;
+        top: 65px;
+        left: 120px;
+    }
+
+.bg-orange {
+    background-color: #d85400;
+    border: none;
+}

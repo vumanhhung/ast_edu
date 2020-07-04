@@ -1,0 +1,43 @@
+<div class="container">
+    <section class="content">
+        <!-- /.row start -->
+        <div class="row home_dash_box">
+            <!-- col start -->
+            <div *ngIf="superuser" class="col-lg-2 col-xs-6 itemCate">
+                <a class="small-box bg-aqua" routerLink="/chucdanh">
+                    <div class="inner">
+                        <h3>
+                            Chức danh
+                        </h3>
+                    </div>
+                    <div class="icon"> <img [src]="icon3" alt="logo" width="80" height="80"> </div>
+                </a>
+            </div>
+            <!-- ./col end -->
+            <!-- col start -->
+            <div *ngIf="superuser" class="col-lg-2 col-xs-6 itemCate">
+                <a class="small-box bg-aqua" routerLink="/tinhthanh">
+                    <div class="inner">
+                        <h3>
+                            Tỉnh thành
+                        </h3>
+                    </div>
+                    <div class="icon"> <img [src]="icon34" alt="logo" width="80" height="80"> </div>
+                </a>
+            </div>
+            <!-- ./col end -->
+            <!-- col start -->
+            <div *ngIf="superuser" class="col-lg-2 col-xs-6 itemCate">
+                <a class="small-box bg-aqua" routerLink="/quanhuyen">
+                    <div class="inner">
+                        <h3>
+                            Quận huyện
+                        </h3>
+                    </div>
+                    <div class="icon"> <img [src]="icon15" alt="logo" width="80" height="80"> </div>
+                </a>
+            </div>
+            <!-- ./col end -->
+        </div>
+    </section>
+</div>

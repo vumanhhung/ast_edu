@@ -1,0 +1,77 @@
+<div class="container">
+    <section class="content">
+        <!-- /.row start -->
+        <div class="row home_dash_box">
+            <!-- col start -->
+            <div *ngIf="canViewThongTinChung" class="col-lg-2 col-xs-6 itemCate">
+                <a class="small-box bg-aqua" routerLink="/">
+                    <div class="inner">
+                        <h3>
+                            Thông tin chung
+                        </h3>
+                    </div>
+                    <div class="icon"> <img [src]="icon1" alt="logo" width="80" height="80"> </div>
+                </a>
+            </div>
+            <!-- ./col end -->
+            <!-- col start -->
+            <div *ngIf="canViewDonVi" class="col-lg-2 col-xs-6 itemCate">
+                <a class="small-box bg-aqua" routerLink="/donvi">
+                    <div class="inner">
+                        <h3>
+                            Đơn vị, phòng ban
+                        </h3>
+                    </div>
+                    <div class="icon"> <img [src]="icon2" alt="logo" width="80" height="80"> </div>
+                </a>
+            </div>
+            <!-- ./col end -->
+            <!-- col start -->
+            <div *ngIf="canViewNguoiDung" class="col-lg-2 col-xs-6 itemCate">
+                <a class="small-box bg-aqua" routerLink="/users">
+                    <div class="inner">
+                        <h3>
+                            Người dùng
+                        </h3>
+                    </div>
+                    <div class="icon"> <img [src]="icon5" alt="logo" width="80" height="80"> </div>
+                </a>
+            </div>
+            <!-- ./col end -->
+            <!-- col start -->
+            <div *ngIf="canViewNhomNguoiDung" class="col-lg-2 col-xs-6 itemCate">
+                <a class="small-box bg-aqua" routerLink="/roles">
+                    <div class="inner">
+                        <h3>
+                            Nhóm người dùng & phân quyền chức năng
+                        </h3>
+                    </div>
+                    <div class="icon"> <img [src]="icon6" alt="logo" width="80" height="80"> </div>
+                </a>
+            </div>
+            <!-- ./col end -->
+            <!-- col start -->
+            <div *ngIf="canViewQuyenDonVi" class="col-lg-2 col-xs-6 itemCate">
+                <a class="small-box bg-aqua" routerLink="/roledonvi">
+                    <div class="inner">
+                        <h3>
+                            Phân quyền đơn vị
+                        </h3>
+                    </div>
+                    <div class="icon"> <img [src]="icon4" alt="logo" width="80" height="80"> </div>
+                </a>
+            </div>
+            <!-- ./col end -->
+            <div class="col-lg-2 col-xs-6 itemCate">
+                <a class="small-box bg-aqua" routerLink="/log">
+                    <div class="inner">
+                        <h3>
+                            Nhật ký hệ thống
+                        </h3>
+                    </div>
+                    <div class="icon"> <img [src]="icon13" alt="logo" width="80" height="80"> </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,293 @@
+<div>
+    <form *ngIf="formResetToggle" [attr.autocomplete]="isGeneralEditor ? NaN : null" class="form-horizontal" name="userInfoForm" #f="ngForm" novalidate
+          (ngSubmit)="f.form.valid ? save() :
+
+          (!userName.valid && showErrorAlert('Tên tài khoản không được để trống', 'Vui lòng nhập tên tài khoản (2 - 200 ký tự)'));
+
+          (userPassword && !userPassword.valid && showErrorAlert('Mật khẩu không được để trống', 'Vui lòng nhập mật khẩu'));
+
+          (email.errors?.required && showErrorAlert('Email không được để trống', 'Vui lòng nhập email (tối đa 200 ký tự)'));
+          (email.errors?.pattern && showErrorAlert('Email không hợp lệ', 'Vui lòng nhập đúng định dạng Email'));
+
+          (isChangePassword && isEditingSelf && !currentPassword.valid && showErrorAlert('Mật khẩu hiện tại không được để trống', 'Vui lòng nhập mật khẩu hiện tại'));
+
+          ((isChangePassword || isNewUser) && !newPassword.valid && showErrorAlert('Mật khẩu mới không được để trống', 'Vui lòng nhập mật khẩu mới (tối thiểu 6 ký tự)'));
+
+          ((isChangePassword || isNewUser) && newPassword.valid && confirmPassword.errors?.required && showErrorAlert('Xác nhận mật khẩu mới không được để trống', 'Vui lòng nhập xác nhận mật khẩu mới'));
+          ((isChangePassword || isNewUser) && newPassword.valid && confirmPassword.errors?.validateEqual && showErrorAlert('Mật khẩu mới không trùng khớp', 'Vui lòng nhập mật khẩu mới và xác nhận mật khẩu mới trùng khớp'));
+
+          (canAssignRoles && !roles.valid && showErrorAlert('Nhóm người dùng không hợp lệ', 'Vui lòng chọn nhóm người dùng'));">
+
+        <!--<div *ngIf="viewDonVi" class="form-group drodown">
+            <label [class.col-md-3]="isViewOnly" [class.col-md-2]="!isViewOnly" class="control-label" for="donViId-{{uniqueId}}">Đơn vị</label>
+            <div *ngIf="isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly">
+                <kendo-treeview [class.showDropdown]="isShowDropdown" [nodes]="donvi"
+                                textField="tenDonVi"
+                                kendoTreeViewExpandable
+                                kendoTreeViewHierarchyBinding
+                                [(expandedKeys)]="expandedKeys"
+                                kendoTreeViewSelectable
+                                [selectBy]="'tenDonVi'"
+                                [(selectedKeys)]="selectedKeys"
+                                [kendoTreeViewDisable]="'tenDonVi'"
+                                [(disabledKeys)]="disabledKeys"
+                                childrenField="items">
+                    <ng-template kendoTreeViewNodeTemplate let-dataItem>
+                        <div (click)="handleSelection(dataItem)">
+                            <span [ngClass]="iconClass(dataItem)"></span>
+                            {{dataItem.tenDonVi}}
+                        </div>
+                    </ng-template>
+                </kendo-treeview>
+                <input autofocus type="text" class="form-control" readonly="readonly" value="{{textDropDVC}}" (click)="focusFunction($event)" style="cursor:pointer;color: transparent;text-shadow: 0 0 0 black;background-color:#fff;padding-right: 37px;" title="{{textDropDVC}}" />
+                <i *ngIf="!isShowDropdown" class="fa fa-caret-down" style="position: absolute;top: 13px;right: 20px;font-size: 17px;cursor:pointer" (click)="openDrop()"></i>
+                <i *ngIf="isShowDropdown" class="fa fa-caret-up" style="position: absolute;top: 13px;right: 20px;font-size: 17px;cursor:pointer" (click)="hiddenDrop()"></i>
+                <i class="fa fa-times-circle-o" style="position: absolute;top: 13px;right: 37px;font-size: 14px;cursor:pointer" (click)="removeTextDrop()"></i>
+            </div>
+        </div>
+
+        <div *ngIf="viewDonVi" class="row">
+            <div class="col-md-12">
+                <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label [class.col-md-3]="isViewOnly" [class.col-md-2]="!isViewOnly" class="control-label" for="jobTitle-{{uniqueId}}">Chức vụ</label>
+            <div *ngIf="!isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly">
+                <p class="form-control-static">{{user.jobTitle}}</p>
+            </div>
+            <div *ngIf="isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly">
+                <input autofocus type="text" attr.id="jobTitle-{{uniqueId}}" name="jobTitle" placeholder="Nhập chức vụ" class="form-control" [(ngModel)]="userEdit.jobTitle" />                
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+            </div>
+        </div>-->
+
+        <div class="form-group has-feedback">
+            <label [class.col-md-3]="isViewOnly" [class.col-md-2]="!isViewOnly" class="control-label" for="userName-{{uniqueId}}">Tên tài khoản</label>
+            <div *ngIf="!isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly">
+                <p class="form-control-static">{{user.userName}}</p>
+            </div>
+            <div *ngIf="isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly" [ngClass]="{'has-success': f.submitted && userName.valid, 'has-error' : f.submitted && !userName.valid}">
+                <input type="text" attr.id="userName-{{uniqueId}}" name="userName" [attr.autocomplete]="isGeneralEditor ? new-password : null" placeholder="Nhập tên tài khoản"
+                       class="form-control" [(ngModel)]="userEdit.userName" #userName="ngModel" required minlength="2" maxlength="200" />
+                <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': userName.valid, 'glyphicon-remove' : !userName.valid}"></span>
+                <span *ngIf="showValidationErrors && f.submitted && !userName.valid" class="errorMessage">
+                    Tên tài khoản không hợp lệ (2 - 200 ký tự)
+                </span>
+            </div>
+        </div>
+
+        <div *ngIf="isEditMode && isEditingSelf && !isChangePassword && user.userName != userEdit.userName" class="row">
+            <div class="col-md-12">
+                <hr class="password-separator-hr" />
+            </div>
+        </div>
+        <div *ngIf="isEditMode && isEditingSelf && !isChangePassword && user.userName != userEdit.userName" class="form-group has-feedback">
+            <label class="control-label col-md-2" for="userPassword-{{uniqueId}}">Mật khẩu</label>
+            <div class="col-md-10" [ngClass]="{'has-success': f.submitted && userPassword.valid, 'has-error' : f.submitted && !userPassword.valid}">
+                <input type="password" attr.id="userPassword-{{uniqueId}}" name="userPassword" [attr.autocomplete]="isGeneralEditor ? new-password : null" placeholder="Nhập mật khẩu"
+                       class="form-control" [(ngModel)]="userEdit.currentPassword" #userPassword="ngModel" required />
+                <small class="hint-sm">Mật khẩu cần phải thay đổi khi thay đổi tên người dùng</small>
+                <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': userPassword.valid, 'glyphicon-remove' : !userPassword.valid}"></span>
+                <span *ngIf="showValidationErrors && f.submitted && !userPassword.valid" class="errorMessage">
+                    Vui lòng nhập mật khẩu
+                </span>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+            </div>
+        </div>
+
+        <div class="form-group has-feedback">
+            <label [class.col-md-3]="isViewOnly" [class.col-md-2]="!isViewOnly" class="control-label" for="email-{{uniqueId}}">Email</label>
+            <div *ngIf="!isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly">
+                <p class="form-control-static">{{user.email}}</p>
+            </div>
+            <div *ngIf="isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly" [ngClass]="{'has-success': f.submitted && email.valid, 'has-error' : f.submitted && !email.valid}">
+                <input type="text" attr.id="email-{{uniqueId}}" name="email" placeholder="Nhập địa chỉ email" class="form-control" [(ngModel)]="userEdit.email" #email="ngModel"
+                       required maxlength="200" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" />
+                <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': email.valid, 'glyphicon-remove' : !email.valid}"></span>
+                <span *ngIf="showValidationErrors && f.submitted && email.errors?.required" class="errorMessage">
+                    Email không được để trống (tối đa 200 ký tự)
+                </span>
+                <span *ngIf="showValidationErrors && f.submitted && email.errors?.pattern" class="errorMessage">
+                    Định dạng email không hợp lệ
+                </span>
+            </div>
+        </div>
+
+        <div *ngIf="isEditMode" class="row">
+            <div class="col-md-12">
+                <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+            </div>
+        </div>
+
+        <div *ngIf="isEditMode" class="form-group">
+            <label for="newPassword-{{uniqueId}}" class="control-label col-md-2">Mật khẩu</label>
+            <div *ngIf="!isChangePassword && !isNewUser" class="col-md-10">
+                <button type="button" (click)="changePassword()" class="btn btn-link">Đổi mật khẩu</button>
+            </div>
+
+            <div *ngIf="isChangePassword || isNewUser" class="col-md-10">
+                <div class="password-well well well-sm">
+                    <div *ngIf="isEditingSelf" class="form-group has-feedback">
+                        <label class="control-label col-md-3" for="currentPassword-{{uniqueId}}">Mật khẩu hiện tại</label>
+                        <div class="col-md-9" [ngClass]="{'has-success': f.submitted && currentPassword.valid, 'has-error' : f.submitted && !currentPassword.valid}">
+                            <input type="password" attr.id="currentPassword-{{uniqueId}}" name="currentPassword" [attr.autocomplete]="isGeneralEditor ? new-password : null" placeholder="Nhập mật khẩu hiện tại" class="form-control" [(ngModel)]="userEdit.currentPassword" #currentPassword="ngModel"
+                                   required />
+                            <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': currentPassword.valid, 'glyphicon-remove' : !currentPassword.valid}"></span>
+                            <span *ngIf="showValidationErrors && f.submitted && !currentPassword.valid" class="errorMessage">
+                                Mật khẩu hiện tại không được để trống
+                            </span>
+                        </div>
+                    </div>
+
+                    <div *ngIf="!isNewUser" class="row">
+                        <div class="col-md-12">
+                            <hr class="password-separator-hr" />
+                        </div>
+                    </div>
+
+                    <div class="form-group has-feedback">
+                        <label class="control-label col-md-3" for="newPassword-{{uniqueId}}">Mật khẩu mới</label>
+                        <div class="col-md-9" [ngClass]="{'has-success': f.submitted && newPassword.valid, 'has-error' : f.submitted && !newPassword.valid}">
+                            <input type="password" attr.id="newPassword-{{uniqueId}}" name="newPassword" [attr.autocomplete]="isGeneralEditor ? new-password : null" placeholder="Nhập mật khẩu mới" class="form-control" [(ngModel)]="userEdit.newPassword" #newPassword="ngModel"
+                                   required minlength="6" validateEqual="confirmPassword" reverse="true" />
+                            <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': newPassword.valid, 'glyphicon-remove' : !newPassword.valid}"></span>
+                            <span *ngIf="showValidationErrors && f.submitted && !newPassword.valid" class="errorMessage">
+                                Mật khẩu mới không được để trống (tối thiểu 6 ký tự)
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <hr class="password-separator-hr" />
+                        </div>
+                    </div>
+
+                    <div class="form-group has-feedback">
+                        <label class="control-label col-md-3" for="confirmPassword-{{uniqueId}}">Xác nhận mật khẩu mới</label>
+                        <div class="col-md-9" [ngClass]="{'has-success': f.submitted && confirmPassword.valid, 'has-error' : f.submitted && !confirmPassword.valid}">
+                            <input type="password" attr.id="confirmPassword-{{uniqueId}}" name="confirmPassword" [attr.autocomplete]="isGeneralEditor ? new-password : null" placeholder="Nhập xác nhận mật khẩu mới" class="form-control" [(ngModel)]="userEdit.confirmPassword" #confirmPassword="ngModel"
+                                   required validateEqual="newPassword" />
+                            <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': confirmPassword.valid, 'glyphicon-remove' : !confirmPassword.valid}"></span>
+                            <span *ngIf="showValidationErrors && f.submitted && confirmPassword.errors?.required" class="errorMessage">
+                                Xác nhận mật khẩu mới không được để trống
+                            </span>
+                            <span *ngIf="showValidationErrors && f.submitted && confirmPassword.errors?.validateEqual && !confirmPassword.errors?.required" class="errorMessage">
+                                Mật khẩu mới và xác nhận mật khẩu mới không trùng khớp
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--******************************************************************************************************-->
+
+        <div *ngIf="!isEditMode || canAssignRoles" class="row">
+            <div class="col-md-12">
+                <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+            </div>
+        </div>
+
+        <div *ngIf="!isEditMode || canAssignRoles" class="form-group has-feedback">
+            <label [class.col-md-3]="isViewOnly" [class.col-md-2]="!isViewOnly" class="control-label" for="roles-user-info">Nhóm người dùng</label>
+            <div *ngIf="!isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly">
+                <p ngPreserveWhitespaces class="form-control-static">
+                    <span *ngFor="let role of user.roles">
+                        <span title='{{getRoleByName(role)?.description}}' class="badge">{{role}}</span>
+                    </span>
+                </p>
+            </div>
+            <div *ngIf="isEditMode && canAssignRoles" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly" [ngClass]="{'has-success': f.submitted && roles.valid, 'has-error' : f.submitted && !roles.valid}">
+                <select id="roles-user-info" name="roles" [(ngModel)]="userEdit.roles" #roles="ngModel" #rolesSelector="bootstrap-select" class="selectpicker form-control" bootstrapSelect required multiple
+                        data-live-search="true" data-actions-box="false" data-live-search-placeholder="Tìm kiếm..." title="Chọn nhóm người dùng">
+                    <option *ngFor="let role of allRoles" attr.data-content="<span title='{{role.description}}' class='badge'>{{role.name}}</span>" attr.value="{{role.name}}">
+                        {{role.name}}
+                    </option>
+                </select>
+                <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': roles.valid, 'glyphicon-remove' : !roles.valid}"></span>
+                <span *ngIf="showValidationErrors && f.submitted && !roles.valid" class="errorMessage">
+                    Vui lòng chọn nhóm người dùng
+                </span>
+            </div>
+        </div>
+
+        <!--******************************************************************************************************-->
+
+        <div class="row">
+            <div class="col-md-12">
+                <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label [class.col-md-3]="isViewOnly" [class.col-md-2]="!isViewOnly" class="control-label" for="fullName-{{uniqueId}}">Tên đầy đủ</label>
+            <div *ngIf="!isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly">
+                <p class="form-control-static">{{user.fullName}}</p>
+            </div>
+            <div *ngIf="isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly">
+                <input type="text" attr.id="fullName-{{uniqueId}}" name="fullName" placeholder="Nhập tên đầy đủ" class="form-control" [(ngModel)]="userEdit.fullName" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label [class.col-md-3]="isViewOnly" [class.col-md-2]="!isViewOnly" class="control-label" for="phoneNumber-{{uniqueId}}">Số điện thoại</label>
+            <div *ngIf="!isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly">
+                <p class="form-control-static">{{user.phoneNumber}}</p>
+            </div>
+            <div *ngIf="isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly">
+                <input type="text" attr.id="phoneNumber-{{uniqueId}}" name="phoneNumber" placeholder="Nhập số điện thoại" class="form-control" [(ngModel)]="userEdit.phoneNumber" />
+            </div>
+        </div>
+
+        <div *ngIf="!isViewOnly" class="row">
+            <div class="col-md-12">
+                <hr [class.last-separator-hr]="!isEditMode" [class.edit-last-separator-hr]="isEditMode" />
+            </div>
+        </div>
+
+        <div *ngIf="!isViewOnly" class="form-group">
+            <div class="col-sm-5">
+                <div *ngIf="isGeneralEditor && isEditMode" class="pull-left">
+                    <div class="checkbox user-enabled">
+                        <label>
+                            <input type="checkbox" name="isEnabled" [(ngModel)]="userEdit.isEnabled">
+                            Sử dụng
+                        </label>
+                    </div>
+                    <button *ngIf="userEdit.isLockedOut" type="button" (click)="unlockUser()" class="btn btn-warning unblock-user" [disabled]="isSaving"><i class='fa fa-unlock-alt'></i> {{'users.editor.Unblock' | translate}}</button>
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <div ngPreserveWhitespaces class="pull-right">
+                    <button *ngIf="!isEditMode && isGeneralEditor" type="button" (click)="close()" class="btn btn-default"><i class='fa fa-close'></i> Đóng lại</button>
+                    <button *ngIf="!isEditMode && !isGeneralEditor" type="button" (click)="edit()" class="btn btn-default"><i class='fa fa-edit'></i> Sửa</button>
+                    <button *ngIf="isEditMode" type="button" (click)="cancel()" class="btn btn-danger" [disabled]="isSaving"><i class='fa fa-times'></i> Hủy bỏ</button>
+                    <button *ngIf="isEditMode" type="submit" class="btn btn-primary" [disabled]="isSaving">
+                        <i *ngIf="!isSaving" class='fa fa-save'></i><i *ngIf="isSaving" class='fa fa-circle-o-notch fa-spin'></i> {{isSaving ? "Đang lưu" : "Ghi nhận"}}
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </form>
+</div>

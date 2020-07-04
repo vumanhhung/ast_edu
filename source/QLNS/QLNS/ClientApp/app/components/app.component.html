@@ -1,0 +1,192 @@
+﻿<div id="app_container" class="{{configurations.theme | lowercase}}-theme">
+    <ng2-toasty></ng2-toasty>
+    <div class='container'>
+        <nav id="header" class="app-component navbar navbar-inner">
+            <nav class="container">
+                <div *ngIf="!isUserLoggedIn" class="div-logo-login">
+                    <img [src]="appLogo1" alt="logo" class="logo-login">
+                    <div class="border-logo"></div>
+                    <div class="title-login">
+                        <p>
+                            HỆ THỐNG THÔNG TIN QUẢN LÝ CHẤM CÔNG - CÔNG TY CỔ PHẦN GIÁO DỤC & CÔNG NGHỆ AST
+                        </p>
+                    </div>
+                </div>
+                <div class="navbar-header">
+                    <button type="button" class="app-component navbar-toggle collapsed" data-toggle="collapse" data-target=".menuItemsContainer.app-component" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a *ngIf="isUserLoggedIn" class="app-component navbar-brand" routerLink="/">
+                        <img [src]="appLogo" alt="logo" routerLink="/" (click)="setRouterLinkActive(1)">
+                        <!--<span class="app-component appTitle">{{appTitle}}</span>-->
+                    </a>
+                </div>
+                <div *ngIf="isUserLoggedIn" class="app-component collapse navbar-collapse menuItemsContainer" style="position:relative;z-index:1">
+                    <h1 class="title-qlsn">
+                        <img src="/images/banner.png" style="margin-left: -20px;"/>
+                        <!--PHẦN MỀM QUẢN LÝ HIỆN VẬT-->
+                    </h1>
+                    <ul class="app-component nav navbar-nav nav-pills navBarPadding" style="margin-top:16px;margin-left:68px;">
+                        <li [class.active]="activeRouterLink == 0">
+                            <a href="javascript://" routerLink="/" (click)="setRouterLinkActive(0)">
+                                <i class="glyphicon glyphicon-home" style="margin-left:10px;"></i>
+                            </a>
+                        </li>
+                        <li *ngIf="baocaoP" [class.active]="activeRouterLink == 8">
+                            <a href="javascript://" (click)="setRouterLinkActive(8)" routerLink="/baocao"><i class="glyphicon glyphicon-stats"></i>Báo cáo</a>
+                        </li>
+                        <li *ngIf="danhmucP" [class.active]="activeRouterLink == 10">
+                            <a href="javascript://" (click)="setRouterLinkActive(10)" routerLink="/danhmuc"><i class="glyphicon glyphicon-list"></i>Danh mục</a>
+                        </li>
+                        <li *ngIf="hethongP" [class.active]="activeRouterLink == 11">
+                            <a href="javascript://" routerLink="/hethong" (click)="setRouterLinkActive(11)"><i class="glyphicon glyphicon-wrench"></i>Hệ thống</a>
+                        </li>
+                    </ul>
+                    <div class="topbar-actions">
+                        <!-- BEGIN USER PROFILE -->
+                        <style>
+                            .title-qlsn {
+                                color: #fff;
+                                padding: 0;
+                                margin: 0;
+                                font-size: 24px;
+                                font-weight: bold;
+                                margin-top: 2px;
+                            }
+
+                            .navbar.app-component .nav > li > a {
+                                padding: 6px 10px;
+                                border-radius: 0;
+                                margin-right: 3px;
+                                box-shadow: none;
+                                border: none
+                            }
+
+                            .navbar.app-component .nav > li {
+                                margin-left: 0;
+                            }
+
+                                .navbar.app-component .nav > li.active1 {
+                                    border-bottom: 28px solid #fff !important;
+                                }
+
+                            .warning {
+                                min-width: 210px;
+                                right: -77px;
+                            }
+
+                                .warning li a {
+                                    color: #383838;
+                                }
+
+                                    .warning li a i {
+                                        margin-right: 5px;
+                                    }
+
+                                .warning .top {
+                                    padding: 10px;
+                                }
+
+                                .warning::before {
+                                    right: 86px;
+                                }
+
+                            /*.nhomnguoidung {
+                                padding: 0;
+                                margin-top: 10px;
+                                font-weight: bold;
+                                text-align: center;
+                            }*/
+                        </style>
+                        <div class="btn-group-img btn-group">
+                            <button type="button" class="btn btn-sm md-skip dropdown-toggle hover-initialized user-info" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                <i class="fa fa-user-circle-o"></i>
+                                <span>{{userName}}</span>
+                            </button>
+                            <ul class="dropdown-menu-v2 user-info-detail" role="menu">
+                                <li>
+                                    <div class="top col-sm-12 clearfix">
+                                        <img src="/images/icon/user-image.png" />
+                                        <div style="float:left">
+                                            <b>{{userName}}</b>
+                                            <p>{{fullName}}</p>
+                                        </div>
+                                        <!--<div class="col-sm-12 nhomnguoidung" style="">{{groupName}}</div>-->
+                                    </div>
+                                </li>
+                                <li>
+                                    <a routerLink="/userinfo" (click)="setRouterLinkActive(8)">
+                                        <i class="glyphicon glyphicon-user"></i> Hồ sơ cá nhân
+                                    </a>
+                                </li>
+                                <!--<li>
+                                    <a routerLink="/config" (click)="setRouterLinkActive(8)">
+                                        <i class="fa fa-cogs"></i>  Cài đặt
+                                    </a>
+                                </li>-->
+                                <li class="divider"> </li>
+                                <li>
+                                    <a rel="nofollow" data-method="delete" (click)="logout()" href="javascript:;"><i class="fa fa-sign-out"></i> Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- END USER PROFILE -->
+                    </div>
+                </div>
+                <div *ngIf="!isUserLoggedIn && router.isActive('/about', false)" class="app-component collapse navbar-collapse menuItemsContainer">
+                    <ul class="app-component nav navbar-nav nav-pills navBarPadding navbar-right">
+                        <li routerLinkActive="active"><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span></a></li>
+                    </ul>
+                </div>
+                <div *ngIf="!isUserLoggedIn && router.isActive('/login', false) || false" class="app-component collapse navbar-collapse menuItemsContainer">
+                    <ul class="app-component nav navbar-nav nav-pills navBarPadding navbar-right">
+                        <li routerLinkActive="active"><a routerLink="/about"><span class="glyphicon glyphicon-info-sign"></span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </nav>
+
+        <div id="pre-bootstrap" *ngIf="!removePrebootScreen" [class.prebootShow.app-component]="!isAppLoaded" class="app-component prebootStep">
+            <div class="messaging">
+                <h1>
+                    Truy cập hệ thống!
+                </h1>
+                <p>
+                    HỆ THỐNG THÔNG TIN QUẢN LÝ CHẤM CÔNG - CÔNG TY CỔ PHẦN GIÁO DỤC & CÔNG NGHỆ AST
+                </p>
+
+            </div>
+        </div>
+
+        <div id="mainContent" class="app-component">
+            <router-outlet></router-outlet>
+        </div>
+
+        <div id="footer">
+            <div class="app-component navbar-fixed-bottom navbar-inner footer">
+                <div class="container">
+                    <footer>
+                        <div class="app-component vcenter_text center-block">
+                            <p class="text-center text-muted">
+                                <span class="appName">HỆ THỐNG THÔNG TIN QUẢN LÝ CHẤM CÔNG</span>
+                            </p>
+                            <p class="text-center companyName">
+                                CÔNG TY CỔ PHẦN GIÁO DỤC & CÔNG NGHỆ AST
+                            </p>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="shouldShowLoginModal" class="modal fade" bsModal #loginModal="bs-modal" (onShown)="onLoginModalShown()" (onHidden)="onLoginModalHidden()" (onHide)="onLoginModalHide()"
+         [config]="{backdrop: 'static'}" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <app-login #loginControl isModal="true"></app-login>
+        </div>
+    </div>
+</div>

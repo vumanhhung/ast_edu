@@ -1,0 +1,59 @@
+﻿<!--<div class="row">
+    <div class="col-md-6">
+        <div class="chart-container">
+            <canvas baseChart width="600" height="250"
+                    [datasets]="chartData"
+                    [labels]="chartLabels"
+                    [options]="chartOptions"
+                    [colors]="chartColors"
+                    [legend]="chartLegend"
+                    [chartType]="chartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <table class="table table-responsive table-condensed">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th *ngFor="let label of chartLabels">{{label}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let d of chartData">
+                    <th>{{d && d.label}}</th>
+                    <td *ngFor="let label of chartLabels; let j=index">{{d && d.data[j]}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="chart-type-container" dropdown>
+            <button id="chartType" type="button" dropdownToggle><i class="fa fa-bar-chart dropdown-toggle"></i></button>
+            <ul *dropdownMenu role="menu" aria-labelledby="chartType" class="dropdown-menu">
+                <li [class.active2]="chartType == 'bar'" role="menuitem"><a class="dropdown-item" (click)="changeChartType('bar')" href="javascript:;">Bar Chart</a></li>
+                <li [class.active2]="chartType == 'pie'" role="menuitem"><a class="dropdown-item" (click)="changeChartType('pie')" href="javascript:;">Pie Chart</a></li>
+                <li [class.active2]="chartType == 'doughnut'" role="menuitem"><a class="dropdown-item" (click)="changeChartType('doughnut')" href="javascript:;">Doughnut Chart</a></li>
+                <li [class.active2]="chartType == 'polarArea'" role="menuitem"><a class="dropdown-item" (click)="changeChartType('polarArea')" href="javascript:;">Polar Area Chart</a></li>
+                <li [class.active2]="chartType == 'radar'" role="menuitem"><a class="dropdown-item" (click)="changeChartType('radar')" href="javascript:;">Radar Chart</a></li>
+                <li class="divider dropdown-divider"></li>
+                <li [class.active2]="chartType == 'line'" role="menuitem"><a class="dropdown-item" (click)="changeChartType('line')" href="javascript:;">Line Chart</a></li>
+            </ul>
+            <label>
+                <select class="form-control input-sm" (change)="SelectedGroupValue(drGroup.value)" #drGroup="ngModel" [(ngModel)]="hedaotaoid" style="width:150px;">
+                    <option value="0">---Chọn hệ đào tạo---</option>
+                    <option *ngFor="let hdt of hedaotaos" [value]="hdt.hedaotaoid">
+                        {{hdt.hedaotao}}
+                    </option>
+                </select>
+            </label>
+            <label>
+                <select class="form-control input-sm" #drNamHoc="ngModel" (change)="SelectednamHoc(drNamHoc.value)" [(ngModel)]="namhoc">
+                    <option value="0">---Chọn năm học---</option>
+                    <option *ngFor="let o of namhocs" [value]="o.value">
+                        {{o.text}}
+                    </option>
+                </select>
+            </label>
+        </div>
+    </div>
+</div>-->

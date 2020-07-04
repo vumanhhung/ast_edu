@@ -1,0 +1,104 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="portlet light portlet-fit portlet-datatable bordered">
+      <div class="portlet-title tabbable-line">
+        <div class="caption">
+          <i class="fa fa-flag font-green"></i>
+          <span class="caption-subject font-green sbold uppercase">Quản lý đơn vị</span>
+        </div>
+        <div class="actions">
+          <!--<a class="btn green btn-outline btn-sm tooltips btndeletemore" data-placement="top" tooltip="Xoá" data-remote="true" href="javascript:;">
+            <span mwlConfirmationPopover
+                  [popoverTitle]="popoverTitle"
+                  [popoverMessage]="popoverMessage"
+                  placement="bottom"
+                  [confirmText]="confirmText"
+                  [cancelText]="cancelText"
+                  (confirm)="deleteMoreDonVi()"
+                  (cancel)="cancelClicked = true"><i class="fa fa-trash font-red"></i>&nbsp;Xoá</span>
+          </a>-->
+          <a class="btn green btn-outline btn-icon-only btn-refresh  loading-resources tooltips" data-placement="top" tooltip="Làm mới" data-remote="true" href="javascript:;" (click)="refreshData()"><i class="fa fa-refresh"></i></a>
+        </div>
+      </div>
+      <div class="portlet-body" style="padding-top:0">
+        <div class="rows">
+          <div class="col-md-12 x-toolbar-default">
+            <a *ngIf="canManageDonVi" class="btn green btn-outline btn-sm tooltips" data-placement="top" tooltip="Thêm mới" data-remote="true" href="javascript:;" (click)="newDonVi()"><i class="fa fa-plus"></i>&nbsp;Thêm mới</a>&nbsp;&nbsp;
+            <a class="btn green btn-outline btn-sm tooltips" data-placement="top" tooltip="Mở rộng" data-remote="true" href="javascript:;" (click)="openDonVi()"><i class="fa fa-plus"></i>&nbsp;Mở rộng</a>&nbsp;&nbsp;
+            <a class="btn green btn-outline btn-sm tooltips" data-placement="top" tooltip="Thu lại" data-remote="true" href="javascript:;" (click)="closeDonVi()"><i class="fa fa-minus"></i>&nbsp;Thu lại</a>
+          </div>          
+        </div>
+        <div class="clearfix"></div>
+        <div id="portlet-body-container">
+          <div id="myForm" style="min-height:300px">
+            <div class="table-container" id="treeView">
+              <kendo-treeview [nodes]="rows"
+                              textField="tenDonVi"
+                              kendoTreeViewExpandable
+                              kendoTreeViewHierarchyBinding
+                              [(expandedKeys)]="expandedKeys"
+                              childrenField="items">
+                <ng-template kendoTreeViewNodeTemplate let-dataItem>
+
+                  <ng-template #customTemplate let-options="options">
+                    <div [class]="'customnerpopover popover ' + options.placement" style="display: block">
+                      <div class="arrow"></div>
+                      <h3 class="popover-title">{{ options.popoverTitle }}</h3>
+                      <div class="popover-content">
+                        <p [innerHTML]="options.popoverMessage"></p>
+                        <div id="customTemplate"></div>
+                        <a *ngIf="canManageDonVi" class="cus-func editdv" href="javascript:;" (click)="editDonVi(dataItem)"><i class="fa fa-pencil-square-o"></i> &nbsp;Sửa đơn vị</a>
+                        <a *ngIf="canManageDonVi" class="cus-func deletedv" href="javascript:;" mwlConfirmationPopover
+                           [popoverTitle]="popoverTitle"
+                           [popoverMessage]="messagedelete"
+                           placement="right"
+                           [confirmText]="confirmText"
+                           [cancelText]="cancelText"
+                           (confirm)="deleteDonVi(dataItem)"
+                           (cancel)="cancelClicked = true"><i class="fa fa-trash"></i>&nbsp;Xóa đơn vị</a>
+                        <div *ngIf="!canManageDonVi"><i class="fa fa-exclamation-triangle"></i><span style="color: red; font-size:12px">&nbsp;&nbsp;Không có quyền thao tác chỉnh sửa</span></div>
+                      </div>
+                    </div>
+                  </ng-template>
+                  <a class="item-treeview" mwlConfirmationPopover
+                     [popoverTitle]=null
+                     [popoverMessage]=null
+                     placement="bottom"
+                     [customTemplate]="customTemplate"
+                     [appendToBody]="appendToBody"
+                     [confirmText]="confirmText"
+                     [cancelText]="cancelText"
+                     (cancel)="cancelClicked = true">
+                    <span [ngClass]="iconClass(dataItem)"></span>
+                    {{dataItem.tenDonVi}}
+                  </a>
+                  <i *ngIf="dataItem.trangThai" class="fa fa-check-square iconActive" style="color:green;padding-left:5px" mwlConfirmationPopover
+                     [popoverTitle]="ChangepopoverTitleStatus(dataItem)"
+                     [popoverMessage]="popoverMessage"
+                     placement="right"
+                     [confirmText]="confirmText"
+                     [cancelText]="cancelText"
+                     (confirm)="UpdateStatus(dataItem)"
+                     (cancel)="cancelClicked = true">
+                  </i>
+                  <i *ngIf="!dataItem.trangThai" class="fa fa-times-circle iconnonActive" style="color:red;padding-left:5px" mwlConfirmationPopover
+                     [popoverTitle]="ChangepopoverTitleStatus(dataItem)"
+                     [popoverMessage]="popoverMessage"
+                     placement="right"
+                     [confirmText]="confirmText"
+                     [cancelText]="cancelText"
+                     (confirm)="UpdateStatus(dataItem)"
+                     (cancel)="cancelClicked = true" [class.statusEdit_notPostion_check]="dataItem.trangThai">
+                  </i>
+                </ng-template>
+              </kendo-treeview>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<donvi-info #donviEditor [isGeneralEditor]="true"></donvi-info>

@@ -1,0 +1,81 @@
+﻿<div class="modal fade" bsModal #editorModal="bs-modal" (onHidden)="onEditorModalHidden()" [config]="{backdrop: 'static'}" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title pull-left caption-subject bold uppercase font-green">
+                    <i class="fa fa-plus" *ngIf="isNew"></i> <i class="fa fa-pencil" *ngIf="!isNew"></i> {{isNew ? 'Thêm mới' : 'Chỉnh sửa'}}
+                </h4>
+                <button type="button" class="close pull-right btn-close-modal" title="Close" (click)="editorModal.hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="Editform">
+                    <form *ngIf="formResetToggle" [attr.autocomplete]="isGeneralEditor ? NaN : null" class="form-horizontal" name="QuanHuyenInfoForm" #f="ngForm" novalidate (ngSubmit)="f.form.valid ? save() :
+(!tenQuanHuyen.valid);
+">
+                        <div class="form-group has-feedback form-md-line-input">
+                            <label class="control-label col-md-2" for="tenQuanHuyen-{{uniqueId}}">Tên quận huyện</label>
+                            <div class="col-md-10" [ngClass]="{'has-success': f.submitted && tenQuanHuyen.valid, 'has-error' : f.submitted && (!tenQuanHuyen.valid || isExitsItems)}">
+                                <input type="text" class="form-control" name="tenQuanHuyen" [(ngModel)]="QuanHuyenEdit.tenQuanHuyen" #tenQuanHuyen="ngModel" required placeholder="Nhập Tên quận huyện" />
+                                <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': tenQuanHuyen.valid, 'glyphicon-remove' : (!tenQuanHuyen.valid || isExitsItems) }"></span>
+                                <span *ngIf="showValidationErrors && f.submitted && !tenQuanHuyen.valid" class="errorMessage">
+                                    Tên quận huyện không được để trống
+                                </span>
+                                <span *ngIf="showValidationErrors && f.submitted && isExitsItems" class="errorMessage">
+                                    Tên quận huyện đã tồn tại.
+                                </span>
+                            </div>
+                        </div><div class="clearfix"></div>
+                        <div class="form-group has-feedback form-md-line-input">
+                            <label class="control-label col-md-2" for="tinhThanhId-{{uniqueId}}">Tỉnh thành</label>
+                            <div class="col-md-10" [ngClass]="{'has-success': f.submitted && tinhThanhChK, 'has-error' : f.submitted && !tinhThanhChK}">
+                                <kendo-combobox [suggest]="true" class="form-control"
+                                                [data]="tinhThanhFilter" [placeholder]="'Tỉnh thành'"
+                                                [textField]="'tenTinhThanh'"
+                                                [valueField]="'tinhThanhId'"
+                                                [(ngModel)]="tinhThanhSelected" name="tinhthanh"
+                                                (valueChange)="tinhThanhChange($event)">
+                                    <ng-template kendoDropDownListNoDataTemplate>
+                                        <p><span class="k-icon k-i-warning" style="font-size:30px"></span><br /><br /> Không tìm thấy kết quả nào</p>
+                                    </ng-template>
+                                    <ng-template kendoComboBoxItemTemplate let-dataItem>
+                                        &nbsp;{{ dataItem.tenTinhThanh }}
+                                    </ng-template>
+                                </kendo-combobox>
+                                <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': tinhThanhChK, 'glyphicon-remove' : !tinhThanhChK }"></span>
+                                <span *ngIf="showValidationErrors && f.submitted && !tinhThanhChK" class="errorMessage">
+                                    Tỉnh thành không được để trống
+                                </span>
+                            </div>
+                        </div><div class="clearfix"></div>
+                        <div class="form-group has-feedback form-md-line-input">
+                            <label class="control-label col-md-2" for="viTriHienThi-{{uniqueId}}">Thứ tự hiển thị</label>
+                            <div class="col-md-5">
+                                <kendo-numerictextbox [min]="0" [max]="999999999" [autoCorrect]="autoCorrect" class="form-control" [format]="'0'" name="viTriHienThi" [(ngModel)]="QuanHuyenEdit.viTriHienThi" #viTriHienThi="ngModel">
+                                </kendo-numerictextbox>
+                            </div>
+                            <label class="control-label col-md-2" for="trangThai-{{uniqueId}}">Trạng thái</label>
+                            <div class="col-md-3">
+                                <span class="statusEdit" [class.statusEdit_check]="isStatusEditChange" (click)="changeStatusEdit()"></span>
+                            </div>
+                        </div><div class="clearfix"></div>
+                        <div class="actionBtn-form-group">
+                            <div class="">
+                                <div class="pull-right btnF">
+                                    <button *ngIf="!isEditMode && isGeneralEditor" type="button" (click)="close()" class="btn btn-default"><i class='fa fa-close'></i> Đóng</button>
+                                    <button *ngIf="!isEditMode && !isGeneralEditor" type="button" (click)="edit()" class="btn btn-default"><i class='fa fa-edit'></i> Lưu lại</button>
+                                    <button *ngIf="isEditMode" type="button" (click)="cancel()" class="btn btn-default" [disabled]="isSaving"><i class='fa fa-arrow-circle-o-left'></i> Hủy bỏ</button>
+                                    <button *ngIf="isEditMode" type="submit" class="btn btn-primary green" [disabled]="isSaving">
+                                        <i *ngIf="!isSaving" class='fa fa-floppy-o'></i><i *ngIf="isSaving" class='fa fa-circle-o-notch fa-spin'></i> Lưu lại
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

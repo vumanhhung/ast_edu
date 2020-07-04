@@ -1,0 +1,111 @@
+body{
+}
+.btn:not(.md-skip).btn-sm {
+  font-size: 11px;
+  padding: 3px 10px;
+  text-transform: unset;
+}
+.item-treeview{color:#000000}
+.item-treeview:hover {
+  color: #0026ff;
+  cursor:pointer
+}
+.iconActive {
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s
+}
+
+.iconnonActive {
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s
+}
+.iconActive:hover {
+  font-size: 18px;
+  cursor: pointer
+}
+.iconnonActive:hover {
+  font-size: 18px;
+  cursor: pointer
+}
+.k-treeview{overflow:unset}
+.customnerpopover {
+  border-color: #99bce8;
+  color: black;
+  border-width: 1px;
+  border-style: solid;
+  width: 126px;
+  cursor: default;
+  background: #f0f0f0 !important;
+  padding: 2px;
+  padding-bottom: 5px;
+  margin-top:5px
+}
+  .customnerpopover .popover-title{display:none}
+  .customnerpopover .popover-content{padding:0}
+  .customnerpopover .cus-func {
+    display: block;
+    margin: 1px;
+    padding: 8px 6px 3px 6px;
+    text-decoration: none !important;
+    line-height: 16px;
+    cursor: pointer;
+    color:#000;font-size:12px
+  }
+    .customnerpopover .cus-func:hover {
+      background-image: none;
+      background-color: #d9e8fb;
+      background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#e7f0fc),color-stop(100%,#c7ddf9));
+      background-image: -webkit-linear-gradient(top,#e7f0fc,#c7ddf9);
+      background-image: -moz-linear-gradient(top,#e7f0fc,#c7ddf9);
+      background-image: -o-linear-gradient(top,#e7f0fc,#c7ddf9);
+      background-image: linear-gradient(top,#e7f0fc,#c7ddf9);
+      margin: 0;
+      border: 1px solid #a9cbf5;
+      cursor: pointer;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+    }
+  .customnerpopover .arrow {
+    border-bottom-color: #99bce8;
+    top: -10px;
+    border-width: 5px;
+  }
+    .customnerpopover .arrow::after {
+      border-bottom-color: #f0f0f0 !important;
+      top: -1px !important;
+      border-width: 3px;
+      margin-left: -3px;
+    }
+.popover{z-index:1040}
+.x-toolbar-default {
+  border-color: #99bce8;
+  background-image: none;
+  background-color: #d3e1f1;
+  background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#dfe9f5),color-stop(100%,#d3e1f1));
+  background-image: -webkit-linear-gradient(top,#dfe9f5,#d3e1f1);
+  background-image: -moz-linear-gradient(top,#dfe9f5,#d3e1f1);
+  background-image: -o-linear-gradient(top,#dfe9f5,#d3e1f1);
+  background-image: linear-gradient(top,#dfe9f5,#d3e1f1);
+  padding: 5px;
+  font-size: 11px;
+  border: 1px solid;
+  border-top-color: currentcolor;
+  border-right-color: currentcolor;
+  border-bottom-color: currentcolor;
+  border-bottom-width: 1px;
+  border-left-color: currentcolor;
+}
+#portlet-body-container {
+  border: 1px solid;border-top:none;
+  border-top-color: currentcolor;
+  border-right-color: currentcolor;
+  border-bottom-color: currentcolor;
+  border-bottom-width: 1px;
+  border-left-color: currentcolor;
+}
+#treeView{margin-top:0!important;padding-top:10px}

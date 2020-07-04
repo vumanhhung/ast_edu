@@ -1,0 +1,1371 @@
+2020-06-05T09:53:55.3344861+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:53:55.5285409+07:00  [FTL] Lỗi khởi tạo cơ sở dữ liệu (3b6074dc)
+System.AggregateException: One or more errors occurred. (Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.) ---> System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\HUNGVM\PMQLHienVat\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at QLNS.Program.Main(String[] args) in D:\HUNGVM\PMQLHienVat\source\QLNS\QLNS\Program.cs:line 35
+---> (Inner Exception #0) System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'UrencoDB, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\HUNGVM\PMQLHienVat\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+
+<---
+
+2020-06-05T09:53:55.8927872+07:00 0HM08VEO2ES9U:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/   (ca22a1cb)
+2020-06-05T09:53:56.2737458+07:00 0HM08VEO2ES9U:00000001 [INF] Executing action method "QLNS.Controllers.HomeController.Index (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:54:00.0253890+07:00 0HM08VEO2ES9U:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-06-05T09:54:01.6557637+07:00 0HM08VEO2ES9U:00000001 [INF] Executed action "QLNS.Controllers.HomeController.Index (QLNS)" in 5389.5675ms (afa2e885)
+2020-06-05T09:54:01.6610761+07:00 0HM08VEO2ES9U:00000001 [INF] Request finished in 5782.4415ms 200 text/html; charset=utf-8 (791a596a)
+2020-06-05T09:54:01.6991902+07:00 0HM08VEO2ES9U:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js?v=D6OJWpZmQVB4FDlkrtgrQynGdxlZA84K_cpMvAMayiU   (ca22a1cb)
+2020-06-05T09:54:35.6559850+07:00  [INF] webpack built 699d05de9e86774ce8c4 in 40952ms (a7b78e94)
+2020-06-05T09:54:36.4448166+07:00 0HM08VEO2ES9U:00000002 [INF] Request finished in 34745.7152ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T09:54:45.4096841+07:00 0HM08VEO2ES9U:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/DonVis/getDonViByRole/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-06-05T09:54:45.4237589+07:00 0HM08VEO2ES9U:00000003 [INF] "Bearer" was not authenticated. Failure message: "Authentication failed because the access token was expired." (48071232)
+2020-06-05T09:54:45.4427439+07:00 0HM08VEO2ES9V:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-06-05T09:54:45.4780829+07:00 0HM08VEO2ES9U:00000003 [INF] Executing action method "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:54:45.4826577+07:00 0HM08VEO2ES9U:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:54:45.9295035+07:00 0HM08VEO2ES9U:00000003 [INF] Executed DbCommand ("100"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:46.0230765+07:00 0HM08VEO2ES9U:00000003 [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:46.0245434+07:00 0HM08VEO2ES9U:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:46.0252016+07:00 0HM08VEO2ES9U:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:46.0257123+07:00 0HM08VEO2ES9U:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:46.0262083+07:00 0HM08VEO2ES9U:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:46.0267900+07:00 0HM08VEO2ES9U:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:46.0272816+07:00 0HM08VEO2ES9U:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:46.0277197+07:00 0HM08VEO2ES9U:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:46.0282035+07:00 0HM08VEO2ES9U:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:46.0287729+07:00 0HM08VEO2ES9U:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:46.0291826+07:00 0HM08VEO2ES9U:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:46.0297862+07:00 0HM08VEO2ES9U:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:46.0302801+07:00 0HM08VEO2ES9U:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:46.0307227+07:00 0HM08VEO2ES9U:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:46.0311360+07:00 0HM08VEO2ES9U:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:46.0315446+07:00 0HM08VEO2ES9U:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:46.0351661+07:00 0HM08VEO2ES9U:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:54:46.0413109+07:00 0HM08VEO2ES9U:00000003 [INF] Executed action "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" in 594.7428ms (afa2e885)
+2020-06-05T09:54:46.0423380+07:00 0HM08VEO2ES9U:00000003 [INF] Request finished in 632.7354ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:54:46.0515358+07:00 0HM08VEO2ES9U:00000004 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/DonVis/getItems/0/0/x application/json 324 (ca22a1cb)
+2020-06-05T09:54:46.0522301+07:00 0HM08VEO2ES9U:00000004 [INF] Policy execution successful. (0204925d)
+2020-06-05T09:54:46.0529929+07:00 0HM08VEO2ES9U:00000004 [INF] "Bearer" was not authenticated. Failure message: "Authentication failed because the access token was expired." (48071232)
+2020-06-05T09:54:46.0680069+07:00 0HM08VEO2ES9U:00000004 [INF] Executing action method "QLNS.Controllers.DonVisController.GetItems (QLNS)" with arguments (["0", "0", "x", "DonViId IN (select tbl_RoleDonVi.DonViId from AspNetUsers inner join AspNetUserRoles on AspNetUsers.Id = AspNetUserRoles.UserId inner join AspNetRoles on AspNetUserRoles.RoleId = AspNetRoles.Id inner join tbl_RoleDonVi on AspNetRoles.Id = tbl_RoleDonVi.RoleId where AspNetUsers.Id = '0280636e-99e3-4b3d-bec0-5e9aa67ad2b5')"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:54:46.0688332+07:00 0HM08VEO2ES9U:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:54:46.0902370+07:00 0HM08VEO2ES9U:00000004 [INF] Executed DbCommand ("15"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""tbl_DonVi_GetItemsByRange @p0,@p1,@p2,@p3" (0723d8ff)
+2020-06-05T09:54:46.0925009+07:00 0HM08VEO2ES9U:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:54:46.1023346+07:00 0HM08VEO2ES9U:00000004 [INF] Executed action "QLNS.Controllers.DonVisController.GetItems (QLNS)" in 45.3925ms (afa2e885)
+2020-06-05T09:54:46.1040755+07:00 0HM08VEO2ES9U:00000004 [INF] Request finished in 52.5888ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:54:58.5334570+07:00 0HM08VEO2ES9U:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/DonVis/getDonViByRole/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-06-05T09:54:58.5340282+07:00 0HM08VEO2ES9U:00000005 [INF] "Bearer" was not authenticated. Failure message: "Authentication failed because the access token was expired." (48071232)
+2020-06-05T09:54:58.5345076+07:00 0HM08VEO2ES9U:00000005 [INF] Executing action method "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:54:58.5348410+07:00 0HM08VEO2ES9U:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:54:58.5586595+07:00 0HM08VEO2ES9U:00000005 [INF] Executed DbCommand ("23"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:58.5609247+07:00 0HM08VEO2ES9U:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:58.5619772+07:00 0HM08VEO2ES9U:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:58.5634445+07:00 0HM08VEO2ES9U:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:58.5642758+07:00 0HM08VEO2ES9U:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:58.5648469+07:00 0HM08VEO2ES9U:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:58.5654542+07:00 0HM08VEO2ES9U:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:58.5660652+07:00 0HM08VEO2ES9U:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:58.5666075+07:00 0HM08VEO2ES9U:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:58.5671304+07:00 0HM08VEO2ES9U:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:58.5679298+07:00 0HM08VEO2ES9U:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:58.5685928+07:00 0HM08VEO2ES9U:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:58.5691510+07:00 0HM08VEO2ES9U:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:58.5697542+07:00 0HM08VEO2ES9U:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:58.5702774+07:00 0HM08VEO2ES9U:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:58.5708213+07:00 0HM08VEO2ES9U:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:58.5712955+07:00 0HM08VEO2ES9U:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:54:58.5714546+07:00 0HM08VEO2ES9U:00000005 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:54:58.5717033+07:00 0HM08VEO2ES9U:00000005 [INF] Executed action "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" in 37.3388ms (afa2e885)
+2020-06-05T09:54:58.5718162+07:00 0HM08VEO2ES9U:00000005 [INF] Request finished in 38.4522ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:54:58.8184279+07:00 0HM08VEO2ES9U:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/pic/avatar/qrcode_empty.png   (ca22a1cb)
+2020-06-05T09:54:58.8188594+07:00 0HM08VEO2ESA0:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/pic/avatar/barcode_empty.jpg   (ca22a1cb)
+2020-06-05T09:54:58.8207339+07:00 0HM08VEO2ES9U:00000006 [INF] The file "/pic/avatar/qrcode_empty.png" was not modified (f1f8d725)
+2020-06-05T09:54:58.8207339+07:00 0HM08VEO2ESA0:00000001 [INF] The file "/pic/avatar/barcode_empty.jpg" was not modified (f1f8d725)
+2020-06-05T09:54:58.8223174+07:00 0HM08VEO2ES9U:00000006 [INF] Request finished in 3.97ms 304 image/png (791a596a)
+2020-06-05T09:54:58.8223174+07:00 0HM08VEO2ESA0:00000001 [INF] Request finished in 3.4791ms 304 image/jpeg (791a596a)
+2020-06-05T09:54:58.8705478+07:00 0HM08VEO2ESA0:00000002 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/DonVis/getItems/0/0/x application/json 324 (ca22a1cb)
+2020-06-05T09:54:58.8707278+07:00 0HM08VEO2ESA0:00000002 [INF] Policy execution successful. (0204925d)
+2020-06-05T09:54:58.8712858+07:00 0HM08VEO2ESA0:00000002 [INF] "Bearer" was not authenticated. Failure message: "Authentication failed because the access token was expired." (48071232)
+2020-06-05T09:54:58.8832661+07:00 0HM08VEO2ESA0:00000002 [INF] Executing action method "QLNS.Controllers.DonVisController.GetItems (QLNS)" with arguments (["0", "0", "x", "DonViId IN (select tbl_RoleDonVi.DonViId from AspNetUsers inner join AspNetUserRoles on AspNetUsers.Id = AspNetUserRoles.UserId inner join AspNetRoles on AspNetUserRoles.RoleId = AspNetRoles.Id inner join tbl_RoleDonVi on AspNetRoles.Id = tbl_RoleDonVi.RoleId where AspNetUsers.Id = '0280636e-99e3-4b3d-bec0-5e9aa67ad2b5')"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:54:58.8837651+07:00 0HM08VEO2ESA0:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:54:58.9040270+07:00 0HM08VEO2ESA0:00000002 [INF] Executed DbCommand ("18"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""tbl_DonVi_GetItemsByRange @p0,@p1,@p2,@p3" (0723d8ff)
+2020-06-05T09:54:58.9044899+07:00 0HM08VEO2ESA0:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:54:58.9049057+07:00 0HM08VEO2ESA0:00000002 [INF] Executed action "QLNS.Controllers.DonVisController.GetItems (QLNS)" in 33.3777ms (afa2e885)
+2020-06-05T09:54:58.9051166+07:00 0HM08VEO2ESA0:00000002 [INF] Request finished in 34.6625ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:54:59.0032223+07:00 0HM08VEO2ES9U:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/account/users/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-06-05T09:54:59.0040538+07:00 0HM08VEO2ES9U:00000007 [INF] "Bearer" was not authenticated. Failure message: "Authentication failed because the access token was expired." (48071232)
+2020-06-05T09:54:59.0233526+07:00 0HM08VEO2ES9U:00000007 [INF] Authorization failed for user: null. (a4ab1676)
+2020-06-05T09:54:59.0257113+07:00 0HM08VEO2ES9U:00000007 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2020-06-05T09:54:59.0271589+07:00 0HM08VEO2ES9U:00000007 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2020-06-05T09:54:59.0381071+07:00 0HM08VEO2ES9U:00000007 [INF] AuthenticationScheme: "Bearer" was challenged. (d45f1f38)
+2020-06-05T09:54:59.0382258+07:00 0HM08VEO2ES9U:00000007 [INF] Executed action "QLNS.Controllers.AccountController.GetUserById (QLNS)" in 24.3826ms (afa2e885)
+2020-06-05T09:54:59.0384505+07:00 0HM08VEO2ES9U:00000007 [INF] Request finished in 35.2968ms 401  (791a596a)
+2020-06-05T09:54:59.0902923+07:00 0HM08VEO2ESA0:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:55842/connect/token application/x-www-form-urlencoded 7511 (ca22a1cb)
+2020-06-05T09:54:59.0904562+07:00 0HM08VEO2ESA0:00000003 [INF] Policy execution successful. (0204925d)
+2020-06-05T09:54:59.1503518+07:00 0HM08VEO2ESA0:00000003 [INF] The token request was successfully extracted from the HTTP request: "{
+  \"refresh_token\": \"[removed for security reasons]\",
+  \"grant_type\": \"refresh_token\",
+  \"scope\": \"openid email phone profile offline_access roles\"
+}". (ebc01284)
+2020-06-05T09:54:59.1653898+07:00 0HM08VEO2ESA0:00000003 [INF] The token request was successfully validated. (d7e51e65)
+2020-06-05T09:54:59.1884076+07:00 0HM08VEO2ESA0:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:54:59.3468480+07:00 0HM08VEO2ESA0:00000003 [INF] Executed DbCommand ("31"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [token].[Id], [token].[ApplicationId], [token].[AuthorizationId], [token].[ConcurrencyToken], [token].[CreationDate], [token].[ExpirationDate], [token].[Payload], [token].[ReferenceId], [token].[Status], [token].[Subject], [token].[Type], [token.Authorization].[Id], [token.Authorization].[ApplicationId], [token.Authorization].[ConcurrencyToken], [token.Authorization].[Scopes], [token.Authorization].[Status], [token.Authorization].[Subject], [token.Authorization].[Type], [token.Application].[Id], [token.Application].[ClientId], [token.Application].[ClientSecret], [token.Application].[ConcurrencyToken], [token.Application].[DisplayName], [token.Application].[PostLogoutRedirectUris], [token.Application].[RedirectUris], [token.Application].[Type]
+FROM [OpenIddictTokens] AS [token]
+LEFT JOIN [OpenIddictAuthorizations] AS [token.Authorization] ON [token].[AuthorizationId] = [token.Authorization].[Id]
+LEFT JOIN [OpenIddictApplications] AS [token.Application] ON [token].[ApplicationId] = [token.Application].[Id]
+WHERE [token].[Id] = @__key_0" (0723d8ff)
+2020-06-05T09:54:59.4490110+07:00 0HM08VEO2ESA0:00000003 [INF] Executing action method "QLNS.Controllers.AuthorizationController.Exchange (QLNS)" with arguments (["{
+  \"refresh_token\": \"[removed for security reasons]\",
+  \"grant_type\": \"refresh_token\",
+  \"scope\": \"openid email phone profile offline_access roles\"
+}"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:54:59.4595970+07:00 0HM08VEO2ESA0:00000003 [INF] AuthenticationScheme: "ASOS" was successfully authenticated. (1805f3b3)
+2020-06-05T09:54:59.4805909+07:00 0HM08VEO2ESA0:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Configuration], [e].[CreatedBy], [e].[CreatedDate], [e].[DonViId], [e].[Email], [e].[EmailConfirmed], [e].[FullName], [e].[IsEnabled], [e].[JobTitle], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedBy], [e].[UpdatedDate], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2020-06-05T09:54:59.5310006+07:00 0HM08VEO2ESA0:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2020-06-05T09:54:59.5666678+07:00 0HM08VEO2ESA0:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2020-06-05T09:54:59.5789121+07:00 0HM08VEO2ESA0:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[CreatedBy], [r].[CreatedDate], [r].[Description], [r].[Name], [r].[NormalizedName], [r].[UpdatedBy], [r].[UpdatedDate]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-06-05T09:54:59.6026297+07:00 0HM08VEO2ESA0:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-06-05T09:54:59.6123381+07:00 0HM08VEO2ESA0:00000003 [INF] Executing SignInResult with authentication scheme ("ASOS") and the following principal: "System.Security.Claims.ClaimsPrincipal". (f8bf0a82)
+2020-06-05T09:54:59.7236116+07:00 0HM08VEO2ESA0:00000003 [INF] Executed DbCommand ("10"ms) [Parameters=["@p10='?' (Size = 450), @p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 4000), @p11='?' (Size = 4000), @p3='?', @p4='?', @p5='?' (Size = 4000), @p6='?' (Size = 450), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [OpenIddictTokens] SET [ApplicationId] = @p0, [AuthorizationId] = @p1, [ConcurrencyToken] = @p2, [CreationDate] = @p3, [ExpirationDate] = @p4, [Payload] = @p5, [ReferenceId] = @p6, [Status] = @p7, [Subject] = @p8, [Type] = @p9
+WHERE [Id] = @p10 AND [ConcurrencyToken] = @p11;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2020-06-05T09:54:59.7325400+07:00 0HM08VEO2ESA0:00000003 [INF] The expiration date of the refresh token '"1321af09-e68f-41a1-8f50-0a81277c6563"' was automatically updated: 06/19/2020 02:54:59 +00:00. (3e1903c1)
+2020-06-05T09:54:59.8012504+07:00 0HM08VEO2ESA0:00000003 [INF] The token response was successfully returned: "{
+  \"resource\": \"http://localhost:55842\",
+  \"token_type\": \"Bearer\",
+  \"access_token\": \"[removed for security reasons]\",
+  \"expires_in\": 3600,
+  \"id_token\": \"[removed for security reasons]\"
+}". (12d98310)
+2020-06-05T09:54:59.8203310+07:00 0HM08VEO2ESA0:00000003 [INF] Executed action "QLNS.Controllers.AuthorizationController.Exchange (QLNS)" in 378.8167ms (afa2e885)
+2020-06-05T09:54:59.8205346+07:00 0HM08VEO2ESA0:00000003 [INF] Request finished in 730.3189ms 200 application/json;charset=UTF-8 (791a596a)
+2020-06-05T09:54:59.8375987+07:00 0HM08VEO2ES9U:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/account/users/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-06-05T09:54:59.8394297+07:00 0HM08VEO2ES9U:00000008 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:54:59.8404006+07:00 0HM08VEO2ES9U:00000008 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-06-05T09:54:59.8409659+07:00 0HM08VEO2ES9U:00000008 [INF] Executing action method "QLNS.Controllers.AccountController.GetUserById (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:54:59.8441645+07:00 0HM08VEO2ES9U:00000008 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-06-05T09:54:59.8493319+07:00 0HM08VEO2ES9U:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:54:59.8808845+07:00 0HM08VEO2ES9U:00000008 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Configuration], [u].[CreatedBy], [u].[CreatedDate], [u].[DonViId], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[IsEnabled], [u].[JobTitle], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedBy], [u].[UpdatedDate], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[Id] = @__userId_0
+ORDER BY [u].[Id]" (0723d8ff)
+2020-06-05T09:54:59.8890157+07:00 0HM08VEO2ES9U:00000008 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u.Roles].[UserId], [u.Roles].[RoleId]
+FROM [AspNetUserRoles] AS [u.Roles]
+INNER JOIN (
+    SELECT TOP(1) [u0].[Id]
+    FROM [AspNetUsers] AS [u0]
+    WHERE [u0].[Id] = @__userId_0
+    ORDER BY [u0].[Id]
+) AS [t] ON [u.Roles].[UserId] = [t].[Id]
+ORDER BY [t].[Id]" (0723d8ff)
+2020-06-05T09:54:59.9070431+07:00 0HM08VEO2ES9U:00000008 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Name]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[Id] IN (N'ad4de3cb-1654-460b-9c4c-e29fab9860d7')" (0723d8ff)
+2020-06-05T09:54:59.9280413+07:00 0HM08VEO2ES9U:00000008 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:54:59.9339657+07:00 0HM08VEO2ES9U:00000008 [INF] Executed action "QLNS.Controllers.AccountController.GetUserById (QLNS)" in 94.1769ms (afa2e885)
+2020-06-05T09:54:59.9341141+07:00 0HM08VEO2ES9U:00000008 [INF] Request finished in 96.5894ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:54:59.9489732+07:00 0HM08VEO2ESA0:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/account/users/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-06-05T09:54:59.9489732+07:00 0HM08VEO2ES9U:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/DiChuyens/getByStatus application/json  (ca22a1cb)
+2020-06-05T09:54:59.9495776+07:00 0HM08VEO2ESA0:00000004 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:54:59.9498294+07:00 0HM08VEO2ESA0:00000004 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-06-05T09:54:59.9502616+07:00 0HM08VEO2ESA0:00000004 [INF] Executing action method "QLNS.Controllers.AccountController.GetUserById (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:54:59.9504089+07:00 0HM08VEO2ESA0:00000004 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-06-05T09:54:59.9508765+07:00 0HM08VEO2ESA0:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:54:59.9523346+07:00 0HM08VEO2ES9U:00000009 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:54:59.9528887+07:00 0HM08VEO2ESA0:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Configuration], [u].[CreatedBy], [u].[CreatedDate], [u].[DonViId], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[IsEnabled], [u].[JobTitle], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedBy], [u].[UpdatedDate], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[Id] = @__userId_0
+ORDER BY [u].[Id]" (0723d8ff)
+2020-06-05T09:54:59.9536887+07:00 0HM08VEO2ESA0:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u.Roles].[UserId], [u.Roles].[RoleId]
+FROM [AspNetUserRoles] AS [u.Roles]
+INNER JOIN (
+    SELECT TOP(1) [u0].[Id]
+    FROM [AspNetUsers] AS [u0]
+    WHERE [u0].[Id] = @__userId_0
+    ORDER BY [u0].[Id]
+) AS [t] ON [u.Roles].[UserId] = [t].[Id]
+ORDER BY [t].[Id]" (0723d8ff)
+2020-06-05T09:54:59.9544692+07:00 0HM08VEO2ES9U:00000009 [INF] Executing action method "Pupai.Modules.Controllers.DiChuyensController.getByStatus (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:54:59.9553870+07:00 0HM08VEO2ESA0:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Name]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[Id] IN (N'ad4de3cb-1654-460b-9c4c-e29fab9860d7')" (0723d8ff)
+2020-06-05T09:54:59.9560561+07:00 0HM08VEO2ES9U:00000009 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:54:59.9566003+07:00 0HM08VEO2ESA0:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:54:59.9567870+07:00 0HM08VEO2ESA0:00000004 [INF] Executed action "QLNS.Controllers.AccountController.GetUserById (QLNS)" in 6.9869ms (afa2e885)
+2020-06-05T09:54:59.9569243+07:00 0HM08VEO2ESA0:00000004 [INF] Request finished in 8.0029ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:54:59.9699498+07:00 0HM08VEO2ES9U:00000009 [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[DiChuyenId], [r].[KyHieu], [r].[TenDiChuyen], [r].[TrangThai], [r].[VitriHienThi]
+FROM [tbl_DiChuyen] AS [r]
+WHERE [r].[TrangThai] = 1" (0723d8ff)
+2020-06-05T09:54:59.9713481+07:00 0HM08VEO2ESA0:00000005 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/HienVats/getItems/0/0/x application/json 34 (ca22a1cb)
+2020-06-05T09:54:59.9714652+07:00 0HM08VEO2ESA0:00000005 [INF] Policy execution successful. (0204925d)
+2020-06-05T09:54:59.9720211+07:00 0HM08VEO2ESA0:00000005 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:54:59.9748493+07:00 0HM08VEO2ESA0:00000005 [INF] Executing action method "Pupai.Modules.Controllers.HienVatsController.GetItems (QLNS)" with arguments (["0", "0", "x", "DonViId in (0) and TrangThai = 1"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:54:59.9795668+07:00 0HM08VEO2ESA0:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:54:59.9820075+07:00 0HM08VEO2ES9U:00000009 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:54:59.9856934+07:00 0HM08VEO2ES9U:00000009 [INF] Executed action "Pupai.Modules.Controllers.DiChuyensController.getByStatus (QLNS)" in 31.4172ms (afa2e885)
+2020-06-05T09:54:59.9858233+07:00 0HM08VEO2ES9U:00000009 [INF] Request finished in 36.9188ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:54:59.9986866+07:00 0HM08VEO2ESA0:00000005 [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""tbl_HienVat_GetItemsByRange @p0,@p1,@p2,@p3" (0723d8ff)
+2020-06-05T09:54:59.9990689+07:00 0HM08VEO2ESA0:00000005 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:55:00.0093049+07:00 0HM08VEO2ESA0:00000005 [INF] Executed action "Pupai.Modules.Controllers.HienVatsController.GetItems (QLNS)" in 34.8948ms (afa2e885)
+2020-06-05T09:55:00.0094460+07:00 0HM08VEO2ESA0:00000005 [INF] Request finished in 38.1569ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:55:03.3923622+07:00 0HM08VEO2ESA0:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/26b8958e0d7d65fd634031a1cc3ba0a1.png   (ca22a1cb)
+2020-06-05T09:55:03.3923614+07:00 0HM08VEO2ES9U:0000000A [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/2165f5c23474afc8d948394cae3fa63f.png   (ca22a1cb)
+2020-06-05T09:55:03.3953656+07:00 0HM08VEO2ES9U:0000000A [INF] Request finished in 2.9015ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:55:03.3955792+07:00 0HM08VEO2ESA1:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/2da1e833c2cb891d33ff4e58eced07d4.png   (ca22a1cb)
+2020-06-05T09:55:03.3971957+07:00 0HM08VEO2ESA0:00000006 [INF] Request finished in 4.7863ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:55:03.3974085+07:00 0HM08VEO2ESA3:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0bc9a9997fd299ed587ba1241f5f6657.png   (ca22a1cb)
+2020-06-05T09:55:03.3975663+07:00 0HM08VEO2ESA2:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/39db3efbca32138d9c0fb01623760338.png   (ca22a1cb)
+2020-06-05T09:55:03.3994629+07:00 0HM08VEO2ESA1:00000001 [INF] Request finished in 3.9331ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:55:03.3998608+07:00 0HM08VEO2ESA3:00000001 [INF] Request finished in 2.4809ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:55:03.4012267+07:00 0HM08VEO2ESA2:00000001 [INF] Request finished in 3.6603ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:55:03.4446789+07:00 0HM08VEO2ESA3:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/bd60eae1cf82800c33da4c7814c10c74.png   (ca22a1cb)
+2020-06-05T09:55:03.4466031+07:00 0HM08VEO2ES9U:0000000B [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/4a4cd48a2c824ef9ac1db0faad589f2d.png   (ca22a1cb)
+2020-06-05T09:55:03.4480087+07:00 0HM08VEO2ESA0:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/563c7e7c04bf5b74c7675ea6c3301c2b.png   (ca22a1cb)
+2020-06-05T09:55:03.4652109+07:00 0HM08VEO2ESA3:00000002 [INF] Request finished in 20.2237ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:55:03.4660033+07:00 0HM08VEO2ESA0:00000007 [INF] Request finished in 18.0786ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:55:03.4662844+07:00 0HM08VEO2ES9U:0000000B [INF] Request finished in 19.7474ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:55:03.4715992+07:00 0HM08VEO2ESA2:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/240711fa17b9a6d30b575198aeee244f.png   (ca22a1cb)
+2020-06-05T09:55:03.4781850+07:00 0HM08VEO2ESA1:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/641da7fcb446d404bb53311d2c4739ef.png   (ca22a1cb)
+2020-06-05T09:55:03.4785056+07:00 0HM08VEO2ESA2:00000002 [INF] Request finished in 6.9973ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:55:03.4817250+07:00 0HM08VEO2ESA1:00000002 [INF] Request finished in 3.572ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:55:05.4217923+07:00 0HM08VEO2ESA0:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/ThoiKys application/json  (ca22a1cb)
+2020-06-05T09:55:05.4224006+07:00 0HM08VEO2ESA0:00000008 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:55:05.4247198+07:00 0HM08VEO2ESA0:00000008 [INF] Executing action method "Pupai.Modules.Controllers.ThoiKysController.GetThoiKys (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:55:05.4250946+07:00 0HM08VEO2ESA0:00000008 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:55:05.4287652+07:00 0HM08VEO2ESA0:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:55:05.4370344+07:00 0HM08VEO2ESA0:00000008 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ThoiKyId], [t].[GhiChu], [t].[NgaySua], [t].[NgayTao], [t].[NguoiSua], [t].[NguoiTao], [t].[TenThoiKy], [t].[ThuTuHienThi], [t].[TrangThai]
+FROM [tbl_ThoiKy] AS [t]" (0723d8ff)
+2020-06-05T09:55:05.4455168+07:00 0HM08VEO2ESA0:00000008 [INF] Executed action "Pupai.Modules.Controllers.ThoiKysController.GetThoiKys (QLNS)" in 21.0244ms (afa2e885)
+2020-06-05T09:55:05.4456538+07:00 0HM08VEO2ESA0:00000008 [INF] Request finished in 23.935ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:56:44.0232318+07:00  [INF] webpack building... (478286db)
+2020-06-05T09:57:01.1389991+07:00  [INF] webpack built 45a00de4845060c2cc30 in 16844ms (3e2b1e28)
+2020-06-05T09:57:01.3106231+07:00 0HM08VEO2ESA4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/699d05de9e86774ce8c4.hot-update.json   (ca22a1cb)
+2020-06-05T09:57:01.3130974+07:00 0HM08VEO2ESA4:00000001 [INF] Request finished in 2.5113ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T09:57:01.3182781+07:00 0HM08VEO2ESA4:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.699d05de9e86774ce8c4.hot-update.js   (ca22a1cb)
+2020-06-05T09:57:01.3196791+07:00 0HM08VEO2ESA4:00000002 [INF] Request finished in 1.4222ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T09:57:01.4969744+07:00  [INF] webpack building... (478286db)
+2020-06-05T09:57:10.4967262+07:00 0HM08VEO2ESA4:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/ThoiKys application/json  (ca22a1cb)
+2020-06-05T09:57:10.4974244+07:00 0HM08VEO2ESA4:00000003 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:57:10.4976765+07:00 0HM08VEO2ESA4:00000003 [INF] Executing action method "Pupai.Modules.Controllers.ThoiKysController.GetThoiKys (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:57:10.4978442+07:00 0HM08VEO2ESA4:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:57:10.4983727+07:00 0HM08VEO2ESA4:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:57:10.5001237+07:00 0HM08VEO2ESA4:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ThoiKyId], [t].[GhiChu], [t].[NgaySua], [t].[NgayTao], [t].[NguoiSua], [t].[NguoiTao], [t].[TenThoiKy], [t].[ThuTuHienThi], [t].[TrangThai]
+FROM [tbl_ThoiKy] AS [t]" (0723d8ff)
+2020-06-05T09:57:10.5006584+07:00 0HM08VEO2ESA4:00000003 [INF] Executed action "Pupai.Modules.Controllers.ThoiKysController.GetThoiKys (QLNS)" in 2.9672ms (afa2e885)
+2020-06-05T09:57:10.5008080+07:00 0HM08VEO2ESA4:00000003 [INF] Request finished in 4.1613ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:57:17.2578732+07:00  [INF] webpack built eb98fdc14684cfe5d1fc in 15533ms (92b48605)
+2020-06-05T09:57:17.4130459+07:00 0HM08VEO2ESA4:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/45a00de4845060c2cc30.hot-update.json   (ca22a1cb)
+2020-06-05T09:57:17.4148156+07:00 0HM08VEO2ESA4:00000004 [INF] Request finished in 1.8326ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T09:57:17.4198113+07:00 0HM08VEO2ESA4:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.45a00de4845060c2cc30.hot-update.js   (ca22a1cb)
+2020-06-05T09:57:17.4210556+07:00 0HM08VEO2ESA4:00000005 [INF] Request finished in 1.3045ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T09:57:27.1307791+07:00 0HM08VEO2ESA4:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/ThoiKys application/json  (ca22a1cb)
+2020-06-05T09:57:27.1314250+07:00 0HM08VEO2ESA4:00000006 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:57:27.1316354+07:00 0HM08VEO2ESA4:00000006 [INF] Executing action method "Pupai.Modules.Controllers.ThoiKysController.GetThoiKys (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:57:27.1317416+07:00 0HM08VEO2ESA4:00000006 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:57:27.1321535+07:00 0HM08VEO2ESA4:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:57:27.1327506+07:00 0HM08VEO2ESA4:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[ThoiKyId], [t].[GhiChu], [t].[NgaySua], [t].[NgayTao], [t].[NguoiSua], [t].[NguoiTao], [t].[TenThoiKy], [t].[ThuTuHienThi], [t].[TrangThai]
+FROM [tbl_ThoiKy] AS [t]" (0723d8ff)
+2020-06-05T09:57:27.1332199+07:00 0HM08VEO2ESA4:00000006 [INF] Executed action "Pupai.Modules.Controllers.ThoiKysController.GetThoiKys (QLNS)" in 1.6077ms (afa2e885)
+2020-06-05T09:57:27.1333426+07:00 0HM08VEO2ESA4:00000006 [INF] Request finished in 2.6687ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:58:05.3565903+07:00 0HM08VEO2ESA4:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/DonVis/getDonViByRole/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-06-05T09:58:05.3572132+07:00 0HM08VEO2ESA4:00000007 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:58:05.3575579+07:00 0HM08VEO2ESA4:00000007 [INF] Executing action method "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:05.3579435+07:00 0HM08VEO2ESA4:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:58:05.3766712+07:00 0HM08VEO2ESA4:00000007 [INF] Executed DbCommand ("18"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:58:05.3779794+07:00 0HM08VEO2ESA4:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:58:05.3788041+07:00 0HM08VEO2ESA4:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:58:05.3793711+07:00 0HM08VEO2ESA4:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:58:05.3799800+07:00 0HM08VEO2ESA4:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:58:05.3805844+07:00 0HM08VEO2ESA4:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:58:05.3811397+07:00 0HM08VEO2ESA4:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:58:05.3817098+07:00 0HM08VEO2ESA4:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:58:05.3822530+07:00 0HM08VEO2ESA4:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:58:05.3828314+07:00 0HM08VEO2ESA4:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:58:05.3833556+07:00 0HM08VEO2ESA4:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:58:05.3839274+07:00 0HM08VEO2ESA4:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:58:05.3844473+07:00 0HM08VEO2ESA4:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:58:05.3849191+07:00 0HM08VEO2ESA4:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:58:05.3853677+07:00 0HM08VEO2ESA4:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:58:05.3859009+07:00 0HM08VEO2ESA4:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:58:05.3864045+07:00 0HM08VEO2ESA4:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T09:58:05.3865803+07:00 0HM08VEO2ESA4:00000007 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:58:05.3868624+07:00 0HM08VEO2ESA4:00000007 [INF] Executed action "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" in 29.4402ms (afa2e885)
+2020-06-05T09:58:05.3869914+07:00 0HM08VEO2ESA4:00000007 [INF] Request finished in 30.4995ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:58:05.5585842+07:00 0HM08VEO2ESA4:00000008 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/DonVis/getItems/0/0/x application/json 324 (ca22a1cb)
+2020-06-05T09:58:05.5586951+07:00 0HM08VEO2ESA4:00000008 [INF] Policy execution successful. (0204925d)
+2020-06-05T09:58:05.5591607+07:00 0HM08VEO2ESA4:00000008 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:58:05.5595615+07:00 0HM08VEO2ESA4:00000008 [INF] Executing action method "QLNS.Controllers.DonVisController.GetItems (QLNS)" with arguments (["0", "0", "x", "DonViId IN (select tbl_RoleDonVi.DonViId from AspNetUsers inner join AspNetUserRoles on AspNetUsers.Id = AspNetUserRoles.UserId inner join AspNetRoles on AspNetUserRoles.RoleId = AspNetRoles.Id inner join tbl_RoleDonVi on AspNetRoles.Id = tbl_RoleDonVi.RoleId where AspNetUsers.Id = '0280636e-99e3-4b3d-bec0-5e9aa67ad2b5')"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:05.5598924+07:00 0HM08VEO2ESA4:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:58:05.5754903+07:00 0HM08VEO2ESA4:00000008 [INF] Executed DbCommand ("14"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""tbl_DonVi_GetItemsByRange @p0,@p1,@p2,@p3" (0723d8ff)
+2020-06-05T09:58:05.5758779+07:00 0HM08VEO2ESA4:00000008 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:58:05.5761329+07:00 0HM08VEO2ESA4:00000008 [INF] Executed action "QLNS.Controllers.DonVisController.GetItems (QLNS)" in 16.7688ms (afa2e885)
+2020-06-05T09:58:05.5763154+07:00 0HM08VEO2ESA4:00000008 [INF] Request finished in 17.7609ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:58:05.6330554+07:00 0HM08VEO2ESA4:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/account/users/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-06-05T09:58:05.6336379+07:00 0HM08VEO2ESA4:00000009 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:58:05.6338639+07:00 0HM08VEO2ESA4:00000009 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-06-05T09:58:05.6341351+07:00 0HM08VEO2ESA4:00000009 [INF] Executing action method "QLNS.Controllers.AccountController.GetUserById (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:05.6342287+07:00 0HM08VEO2ESA4:00000009 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-06-05T09:58:05.6346176+07:00 0HM08VEO2ESA4:00000009 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:58:05.6367291+07:00 0HM08VEO2ESA4:00000009 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Configuration], [u].[CreatedBy], [u].[CreatedDate], [u].[DonViId], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[IsEnabled], [u].[JobTitle], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedBy], [u].[UpdatedDate], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[Id] = @__userId_0
+ORDER BY [u].[Id]" (0723d8ff)
+2020-06-05T09:58:05.6389107+07:00 0HM08VEO2ESA4:00000009 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u.Roles].[UserId], [u.Roles].[RoleId]
+FROM [AspNetUserRoles] AS [u.Roles]
+INNER JOIN (
+    SELECT TOP(1) [u0].[Id]
+    FROM [AspNetUsers] AS [u0]
+    WHERE [u0].[Id] = @__userId_0
+    ORDER BY [u0].[Id]
+) AS [t] ON [u.Roles].[UserId] = [t].[Id]
+ORDER BY [t].[Id]" (0723d8ff)
+2020-06-05T09:58:05.6408791+07:00 0HM08VEO2ESA4:00000009 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Name]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[Id] IN (N'ad4de3cb-1654-460b-9c4c-e29fab9860d7')" (0723d8ff)
+2020-06-05T09:58:05.6411593+07:00 0HM08VEO2ESA4:00000009 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:58:05.6413368+07:00 0HM08VEO2ESA4:00000009 [INF] Executed action "QLNS.Controllers.AccountController.GetUserById (QLNS)" in 7.5153ms (afa2e885)
+2020-06-05T09:58:05.6415116+07:00 0HM08VEO2ESA4:00000009 [INF] Request finished in 8.5209ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:58:05.6572781+07:00 0HM08VEO2ESA4:0000000A [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/account/users/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-06-05T09:58:05.6578818+07:00 0HM08VEO2ESA4:0000000A [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:58:05.6578167+07:00 0HM08VEO2ESA5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/DiChuyens/getByStatus application/json  (ca22a1cb)
+2020-06-05T09:58:05.6581057+07:00 0HM08VEO2ESA4:0000000A [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-06-05T09:58:05.6583434+07:00 0HM08VEO2ESA4:0000000A [INF] Executing action method "QLNS.Controllers.AccountController.GetUserById (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:05.6584741+07:00 0HM08VEO2ESA4:0000000A [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-06-05T09:58:05.6586776+07:00 0HM08VEO2ESA5:00000001 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:58:05.6588369+07:00 0HM08VEO2ESA4:0000000A [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:58:05.6589662+07:00 0HM08VEO2ESA5:00000001 [INF] Executing action method "Pupai.Modules.Controllers.DiChuyensController.getByStatus (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:05.6593432+07:00 0HM08VEO2ESA5:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:58:05.6597939+07:00 0HM08VEO2ESA4:0000000A [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Configuration], [u].[CreatedBy], [u].[CreatedDate], [u].[DonViId], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[IsEnabled], [u].[JobTitle], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedBy], [u].[UpdatedDate], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[Id] = @__userId_0
+ORDER BY [u].[Id]" (0723d8ff)
+2020-06-05T09:58:05.6613939+07:00 0HM08VEO2ESA4:0000000A [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u.Roles].[UserId], [u.Roles].[RoleId]
+FROM [AspNetUserRoles] AS [u.Roles]
+INNER JOIN (
+    SELECT TOP(1) [u0].[Id]
+    FROM [AspNetUsers] AS [u0]
+    WHERE [u0].[Id] = @__userId_0
+    ORDER BY [u0].[Id]
+) AS [t] ON [u.Roles].[UserId] = [t].[Id]
+ORDER BY [t].[Id]" (0723d8ff)
+2020-06-05T09:58:05.6626100+07:00 0HM08VEO2ESA4:0000000A [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Name]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[Id] IN (N'ad4de3cb-1654-460b-9c4c-e29fab9860d7')" (0723d8ff)
+2020-06-05T09:58:05.6628124+07:00 0HM08VEO2ESA4:0000000A [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:58:05.6631521+07:00 0HM08VEO2ESA4:0000000A [INF] Executed action "QLNS.Controllers.AccountController.GetUserById (QLNS)" in 5.0759ms (afa2e885)
+2020-06-05T09:58:05.6637191+07:00 0HM08VEO2ESA4:0000000A [INF] Request finished in 6.5051ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:58:05.6684065+07:00 0HM08VEO2ESA5:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[DiChuyenId], [r].[KyHieu], [r].[TenDiChuyen], [r].[TrangThai], [r].[VitriHienThi]
+FROM [tbl_DiChuyen] AS [r]
+WHERE [r].[TrangThai] = 1" (0723d8ff)
+2020-06-05T09:58:05.6686930+07:00 0HM08VEO2ESA5:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:58:05.6689498+07:00 0HM08VEO2ESA5:00000001 [INF] Executed action "Pupai.Modules.Controllers.DiChuyensController.getByStatus (QLNS)" in 10.0035ms (afa2e885)
+2020-06-05T09:58:05.6690758+07:00 0HM08VEO2ESA5:00000001 [INF] Request finished in 11.2918ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:58:05.6787557+07:00 0HM08VEO2ESA4:0000000B [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/HienVats/getItems/0/0/x application/json 34 (ca22a1cb)
+2020-06-05T09:58:05.6788727+07:00 0HM08VEO2ESA4:0000000B [INF] Policy execution successful. (0204925d)
+2020-06-05T09:58:05.6794470+07:00 0HM08VEO2ESA4:0000000B [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:58:05.6799162+07:00 0HM08VEO2ESA4:0000000B [INF] Executing action method "Pupai.Modules.Controllers.HienVatsController.GetItems (QLNS)" with arguments (["0", "0", "x", "DonViId in (0) and TrangThai = 1"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:05.6802722+07:00 0HM08VEO2ESA4:0000000B [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:58:05.6855532+07:00 0HM08VEO2ESA4:0000000B [INF] Executed DbCommand ("4"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""tbl_HienVat_GetItemsByRange @p0,@p1,@p2,@p3" (0723d8ff)
+2020-06-05T09:58:05.6857353+07:00 0HM08VEO2ESA4:0000000B [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:58:05.6859420+07:00 0HM08VEO2ESA4:0000000B [INF] Executed action "Pupai.Modules.Controllers.HienVatsController.GetItems (QLNS)" in 6.2948ms (afa2e885)
+2020-06-05T09:58:05.6860716+07:00 0HM08VEO2ESA4:0000000B [INF] Request finished in 7.431ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:58:07.9570280+07:00 0HM08VEO2ESA5:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/PhanLoais/getByStatus application/json  (ca22a1cb)
+2020-06-05T09:58:07.9576666+07:00 0HM08VEO2ESA5:00000002 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:58:07.9593298+07:00 0HM08VEO2ESA4:0000000C [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/ChatLieus/getByStatus application/json  (ca22a1cb)
+2020-06-05T09:58:07.9604974+07:00 0HM08VEO2ESA4:0000000C [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:58:07.9616818+07:00 0HM08VEO2ESA5:00000002 [INF] Executing action method "Pupai.Modules.Controllers.PhanLoaisController.getByStatus (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:07.9628314+07:00 0HM08VEO2ESA4:0000000C [INF] Executing action method "Pupai.Modules.Controllers.ChatLieusController.getByStatus (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:07.9632150+07:00 0HM08VEO2ESA5:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:58:07.9636881+07:00 0HM08VEO2ESA6:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/ThoiKys/getByStatus application/json  (ca22a1cb)
+2020-06-05T09:58:07.9641225+07:00 0HM08VEO2ESA4:0000000C [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:58:07.9647180+07:00 0HM08VEO2ESA6:00000001 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:58:07.9667021+07:00 0HM08VEO2ESA6:00000001 [INF] Executing action method "Pupai.Modules.Controllers.ThoiKysController.getByStatus (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:07.9680563+07:00 0HM08VEO2ESA6:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:58:07.9684539+07:00 0HM08VEO2ESA6:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:58:07.9715564+07:00 0HM08VEO2ESA7:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/DMBaoMatHVs/getByStatus application/json  (ca22a1cb)
+2020-06-05T09:58:07.9715946+07:00 0HM08VEO2ESA8:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/NguonGocs/getByStatus application/json  (ca22a1cb)
+2020-06-05T09:58:07.9720736+07:00 0HM08VEO2ESA7:00000001 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:58:07.9720788+07:00 0HM08VEO2ESA8:00000001 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:58:07.9741546+07:00 0HM08VEO2ESA7:00000001 [INF] Executing action method "Pupai.Modules.Controllers.DMBaoMatHVsController.getByStatus (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:07.9741597+07:00 0HM08VEO2ESA8:00000001 [INF] Executing action method "Pupai.Modules.Controllers.NguonGocsController.getByStatus (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:07.9757576+07:00 0HM08VEO2ESA8:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:58:07.9770277+07:00 0HM08VEO2ESA7:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:58:07.9903011+07:00 0HM08VEO2ESA7:00000001 [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[DMBaoMatHVId], [r].[GhiChu], [r].[NgaySua], [r].[NgayTao], [r].[NguoiSua], [r].[NguoiTao], [r].[TenBaoMat], [r].[ThuTuHienThi], [r].[TrangThai]
+FROM [tbl_DMBaoMatHV] AS [r]
+WHERE [r].[TrangThai] = 1" (0723d8ff)
+2020-06-05T09:58:07.9903067+07:00 0HM08VEO2ESA4:0000000C [INF] Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[ChatLieuId], [r].[GhiChu], [r].[NgaySua], [r].[NgayTao], [r].[NguoiSua], [r].[NguoiTao], [r].[TenChatLieu], [r].[ThuTuHienThi], [r].[TrangThai]
+FROM [tbl_ChatLieu] AS [r]
+WHERE [r].[TrangThai] = 1" (0723d8ff)
+2020-06-05T09:58:07.9957465+07:00 0HM08VEO2ESA8:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[NguonGocId], [r].[GhiChu], [r].[NgaySua], [r].[NgayTao], [r].[NguoiSua], [r].[NguoiTao], [r].[TenNguonGoc], [r].[ThuTuHienThi], [r].[TrangThai]
+FROM [tbl_NguonGoc] AS [r]
+WHERE [r].[TrangThai] = 1" (0723d8ff)
+2020-06-05T09:58:07.9972149+07:00 0HM08VEO2ESA7:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:58:07.9979897+07:00 0HM08VEO2ESA4:0000000C [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:58:08.0027556+07:00 0HM08VEO2ESA7:00000001 [INF] Executed action "Pupai.Modules.Controllers.DMBaoMatHVsController.getByStatus (QLNS)" in 28.8452ms (afa2e885)
+2020-06-05T09:58:08.0027622+07:00 0HM08VEO2ESA8:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:58:08.0028870+07:00 0HM08VEO2ESA7:00000001 [INF] Request finished in 31.3902ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:58:08.0053593+07:00 0HM08VEO2ESA5:00000002 [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[PhanLoaiId], [r].[GhiChu], [r].[NgaySua], [r].[NgayTao], [r].[NguoiSua], [r].[NguoiTao], [r].[TenPhanLoai], [r].[ThuTuHienThi], [r].[TrangThai]
+FROM [tbl_PhanLoai] AS [r]
+WHERE [r].[TrangThai] = 1" (0723d8ff)
+2020-06-05T09:58:08.0092554+07:00 0HM08VEO2ESA4:0000000C [INF] Executed action "Pupai.Modules.Controllers.ChatLieusController.getByStatus (QLNS)" in 46.6032ms (afa2e885)
+2020-06-05T09:58:08.0094418+07:00 0HM08VEO2ESA8:00000001 [INF] Executed action "Pupai.Modules.Controllers.NguonGocsController.getByStatus (QLNS)" in 35.5469ms (afa2e885)
+2020-06-05T09:58:08.0095330+07:00 0HM08VEO2ESA4:0000000C [INF] Request finished in 50.2693ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:58:08.0095543+07:00 0HM08VEO2ESA8:00000001 [INF] Request finished in 38.0335ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:58:08.0124076+07:00 0HM08VEO2ESA5:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:58:08.0178796+07:00 0HM08VEO2ESA5:00000002 [INF] Executed action "Pupai.Modules.Controllers.PhanLoaisController.getByStatus (QLNS)" in 56.4985ms (afa2e885)
+2020-06-05T09:58:08.0180188+07:00 0HM08VEO2ESA5:00000002 [INF] Request finished in 61.0664ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:58:08.0260219+07:00 0HM08VEO2ESA7:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/account/users/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-06-05T09:58:08.0270663+07:00 0HM08VEO2ESA7:00000002 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:58:08.0273504+07:00 0HM08VEO2ESA7:00000002 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-06-05T09:58:08.0276341+07:00 0HM08VEO2ESA7:00000002 [INF] Executing action method "QLNS.Controllers.AccountController.GetUserById (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:08.0277181+07:00 0HM08VEO2ESA7:00000002 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-06-05T09:58:08.0281366+07:00 0HM08VEO2ESA7:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:58:08.0320079+07:00 0HM08VEO2ESA6:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[ThoiKyId], [r].[GhiChu], [r].[NgaySua], [r].[NgayTao], [r].[NguoiSua], [r].[NguoiTao], [r].[TenThoiKy], [r].[ThuTuHienThi], [r].[TrangThai]
+FROM [tbl_ThoiKy] AS [r]
+WHERE [r].[TrangThai] = 1" (0723d8ff)
+2020-06-05T09:58:08.0323077+07:00 0HM08VEO2ESA7:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Configuration], [u].[CreatedBy], [u].[CreatedDate], [u].[DonViId], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[IsEnabled], [u].[JobTitle], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedBy], [u].[UpdatedDate], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[Id] = @__userId_0
+ORDER BY [u].[Id]" (0723d8ff)
+2020-06-05T09:58:08.0324714+07:00 0HM08VEO2ESA6:00000001 [INF] Executed action "Pupai.Modules.Controllers.ThoiKysController.getByStatus (QLNS)" in 65.8212ms (afa2e885)
+2020-06-05T09:58:08.0325956+07:00 0HM08VEO2ESA6:00000001 [INF] Request finished in 68.9443ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:58:08.0331431+07:00 0HM08VEO2ESA7:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u.Roles].[UserId], [u.Roles].[RoleId]
+FROM [AspNetUserRoles] AS [u.Roles]
+INNER JOIN (
+    SELECT TOP(1) [u0].[Id]
+    FROM [AspNetUsers] AS [u0]
+    WHERE [u0].[Id] = @__userId_0
+    ORDER BY [u0].[Id]
+) AS [t] ON [u.Roles].[UserId] = [t].[Id]
+ORDER BY [t].[Id]" (0723d8ff)
+2020-06-05T09:58:08.0355773+07:00 0HM08VEO2ESA7:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Name]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[Id] IN (N'ad4de3cb-1654-460b-9c4c-e29fab9860d7')" (0723d8ff)
+2020-06-05T09:58:08.0357894+07:00 0HM08VEO2ESA7:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:58:08.0359755+07:00 0HM08VEO2ESA7:00000002 [INF] Executed action "QLNS.Controllers.AccountController.GetUserById (QLNS)" in 8.6919ms (afa2e885)
+2020-06-05T09:58:08.0362097+07:00 0HM08VEO2ESA7:00000002 [INF] Request finished in 10.2573ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:58:15.9506886+07:00 0HM08VEO2ESA8:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/danhmuc   (ca22a1cb)
+2020-06-05T09:58:15.9535841+07:00 0HM08VEO2ESA8:00000002 [INF] Executing action method "QLNS.Controllers.HomeController.Index (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:15.9540615+07:00 0HM08VEO2ESA8:00000002 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-06-05T09:58:16.1661913+07:00 0HM08VEO2ESA8:00000002 [INF] Executed action "QLNS.Controllers.HomeController.Index (QLNS)" in 212.6474ms (afa2e885)
+2020-06-05T09:58:16.1663263+07:00 0HM08VEO2ESA8:00000002 [INF] Request finished in 215.7086ms 200 text/html; charset=utf-8 (791a596a)
+2020-06-05T09:58:16.1842113+07:00 0HM08VEO2ESA4:0000000D [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js?v=OgGOzeN_QOYYMl11wxNGAi97WPlz1k48WG2bucQa3mA   (ca22a1cb)
+2020-06-05T09:58:16.3188199+07:00 0HM08VEO2ESA4:0000000D [INF] Request finished in 134.6043ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T09:58:27.0731631+07:00 0HM08VEO2ESA5:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/26b8958e0d7d65fd634031a1cc3ba0a1.png   (ca22a1cb)
+2020-06-05T09:58:27.0755785+07:00 0HM08VEO2ESA5:00000003 [INF] Request finished in 2.454ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:58:27.1514419+07:00 0HM08VEO2ESA6:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-06-05T09:58:27.1594190+07:00 0HM08VEO2ESA7:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/2da1e833c2cb891d33ff4e58eced07d4.png   (ca22a1cb)
+2020-06-05T09:58:27.1594190+07:00 0HM08VEO2ESA8:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/39db3efbca32138d9c0fb01623760338.png   (ca22a1cb)
+2020-06-05T09:58:27.1635023+07:00 0HM08VEO2ESA4:0000000E [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/2165f5c23474afc8d948394cae3fa63f.png   (ca22a1cb)
+2020-06-05T09:58:27.1644859+07:00 0HM08VEO2ESA5:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0bc9a9997fd299ed587ba1241f5f6657.png   (ca22a1cb)
+2020-06-05T09:58:27.4278259+07:00 0HM08VEO2ESA8:00000003 [INF] Request finished in 268.2545ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:58:27.4289214+07:00 0HM08VEO2ESA5:00000004 [INF] Request finished in 264.43ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:58:27.4291343+07:00 0HM08VEO2ESA4:0000000E [INF] Request finished in 265.7306ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:58:27.4294909+07:00 0HM08VEO2ESA7:00000003 [INF] Request finished in 270.1368ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:58:27.4642222+07:00 0HM08VEO2ESA5:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/563c7e7c04bf5b74c7675ea6c3301c2b.png   (ca22a1cb)
+2020-06-05T09:58:27.4642220+07:00 0HM08VEO2ESA4:0000000F [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/bd60eae1cf82800c33da4c7814c10c74.png   (ca22a1cb)
+2020-06-05T09:58:27.4714600+07:00 0HM08VEO2ESA5:00000005 [INF] Request finished in 7.2998ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:58:27.4715765+07:00 0HM08VEO2ESA4:0000000F [INF] Request finished in 7.3699ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:58:27.4916526+07:00 0HM08VEO2ESA8:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/4a4cd48a2c824ef9ac1db0faad589f2d.png   (ca22a1cb)
+2020-06-05T09:58:27.5318911+07:00 0HM08VEO2ESA8:00000004 [INF] Request finished in 40.2157ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:58:27.5356242+07:00 0HM08VEO2ESA7:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/641da7fcb446d404bb53311d2c4739ef.png   (ca22a1cb)
+2020-06-05T09:58:27.5384607+07:00 0HM08VEO2ESA5:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/240711fa17b9a6d30b575198aeee244f.png   (ca22a1cb)
+2020-06-05T09:58:27.5482964+07:00 0HM08VEO2ESA7:00000004 [INF] Request finished in 12.8659ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:58:27.5486439+07:00 0HM08VEO2ESA5:00000006 [INF] Request finished in 10.5925ms 200 image/png; charset=UTF-8 (791a596a)
+2020-06-05T09:58:31.9324182+07:00 0HM08VEO2ESA4:00000010 [INF] Request starting HTTP/1.1 GET http://localhost:55842/nguongoc   (ca22a1cb)
+2020-06-05T09:58:31.9330511+07:00 0HM08VEO2ESA4:00000010 [INF] Executing action method "QLNS.Controllers.HomeController.Index (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:31.9332225+07:00 0HM08VEO2ESA4:00000010 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-06-05T09:58:31.9338295+07:00 0HM08VEO2ESA4:00000010 [INF] Executed action "QLNS.Controllers.HomeController.Index (QLNS)" in 0.7875ms (afa2e885)
+2020-06-05T09:58:31.9339441+07:00 0HM08VEO2ESA4:00000010 [INF] Request finished in 1.6033ms 200 text/html; charset=utf-8 (791a596a)
+2020-06-05T09:58:31.9661623+07:00 0HM08VEO2ESA5:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js?v=OgGOzeN_QOYYMl11wxNGAi97WPlz1k48WG2bucQa3mA   (ca22a1cb)
+2020-06-05T09:58:32.0871165+07:00 0HM08VEO2ESA5:00000007 [INF] Request finished in 120.9653ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T09:58:35.9232441+07:00 0HM08VEO2ESA7:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/chatlieu   (ca22a1cb)
+2020-06-05T09:58:35.9237638+07:00 0HM08VEO2ESA7:00000005 [INF] Executing action method "QLNS.Controllers.HomeController.Index (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:35.9238805+07:00 0HM08VEO2ESA7:00000005 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-06-05T09:58:35.9242860+07:00 0HM08VEO2ESA7:00000005 [INF] Executed action "QLNS.Controllers.HomeController.Index (QLNS)" in 0.5609ms (afa2e885)
+2020-06-05T09:58:35.9243763+07:00 0HM08VEO2ESA7:00000005 [INF] Request finished in 1.2078ms 200 text/html; charset=utf-8 (791a596a)
+2020-06-05T09:58:35.9788938+07:00 0HM08VEO2ESA8:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js?v=OgGOzeN_QOYYMl11wxNGAi97WPlz1k48WG2bucQa3mA   (ca22a1cb)
+2020-06-05T09:58:36.1023531+07:00 0HM08VEO2ESA8:00000005 [INF] Request finished in 123.4794ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T09:58:37.2685251+07:00 0HM08VEO2ESA4:00000011 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dmbaomathv   (ca22a1cb)
+2020-06-05T09:58:37.2690643+07:00 0HM08VEO2ESA4:00000011 [INF] Executing action method "QLNS.Controllers.HomeController.Index (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:37.2692753+07:00 0HM08VEO2ESA4:00000011 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-06-05T09:58:37.2698389+07:00 0HM08VEO2ESA4:00000011 [INF] Executed action "QLNS.Controllers.HomeController.Index (QLNS)" in 0.7508ms (afa2e885)
+2020-06-05T09:58:37.2699949+07:00 0HM08VEO2ESA4:00000011 [INF] Request finished in 1.5264ms 200 text/html; charset=utf-8 (791a596a)
+2020-06-05T09:58:37.2998985+07:00 0HM08VEO2ESA5:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js?v=OgGOzeN_QOYYMl11wxNGAi97WPlz1k48WG2bucQa3mA   (ca22a1cb)
+2020-06-05T09:58:37.4600319+07:00 0HM08VEO2ESA5:00000008 [INF] Request finished in 160.1129ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T09:58:39.5018242+07:00 0HM08VEO2ESA7:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/phanloai   (ca22a1cb)
+2020-06-05T09:58:39.5024197+07:00 0HM08VEO2ESA7:00000006 [INF] Executing action method "QLNS.Controllers.HomeController.Index (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:39.5025381+07:00 0HM08VEO2ESA7:00000006 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-06-05T09:58:39.5030859+07:00 0HM08VEO2ESA7:00000006 [INF] Executed action "QLNS.Controllers.HomeController.Index (QLNS)" in 0.6642ms (afa2e885)
+2020-06-05T09:58:39.5032304+07:00 0HM08VEO2ESA7:00000006 [INF] Request finished in 1.5341ms 200 text/html; charset=utf-8 (791a596a)
+2020-06-05T09:58:39.5731645+07:00 0HM08VEO2ESA8:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js?v=OgGOzeN_QOYYMl11wxNGAi97WPlz1k48WG2bucQa3mA   (ca22a1cb)
+2020-06-05T09:58:39.7318399+07:00 0HM08VEO2ESA8:00000006 [INF] Request finished in 158.6599ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T09:58:49.6892278+07:00 0HM08VEO2ESA4:00000012 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/NguonGocs application/json  (ca22a1cb)
+2020-06-05T09:58:49.6898393+07:00 0HM08VEO2ESA4:00000012 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:58:49.6957310+07:00 0HM08VEO2ESA4:00000012 [INF] Executing action method "Pupai.Modules.Controllers.NguonGocsController.GetNguonGocs (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:49.6960833+07:00 0HM08VEO2ESA4:00000012 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:58:49.6971507+07:00 0HM08VEO2ESA4:00000012 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:58:49.7024777+07:00 0HM08VEO2ESA4:00000012 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[NguonGocId], [t].[GhiChu], [t].[NgaySua], [t].[NgayTao], [t].[NguoiSua], [t].[NguoiTao], [t].[TenNguonGoc], [t].[ThuTuHienThi], [t].[TrangThai]
+FROM [tbl_NguonGoc] AS [t]" (0723d8ff)
+2020-06-05T09:58:49.7029198+07:00 0HM08VEO2ESA4:00000012 [INF] Executed action "Pupai.Modules.Controllers.NguonGocsController.GetNguonGocs (QLNS)" in 7.2764ms (afa2e885)
+2020-06-05T09:58:49.7030517+07:00 0HM08VEO2ESA4:00000012 [INF] Request finished in 13.9031ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:58:49.8612803+07:00 0HM08VEO2ESA5:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-06-05T09:58:50.1709210+07:00 0HM08VEO2ESA6:00000002 [INF] Request finished in 23019.4719ms 200 text/event-stream; charset=utf-8 (791a596a)
+2020-06-05T09:58:50.1711826+07:00 0HM08VEO2ES9V:00000001 [INF] Request finished in 244728.507ms 200 text/event-stream; charset=utf-8 (791a596a)
+2020-06-05T09:58:57.1673762+07:00 0HM08VEO2ESA7:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/ChatLieus application/json  (ca22a1cb)
+2020-06-05T09:58:57.1679581+07:00 0HM08VEO2ESA7:00000007 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:58:57.1697720+07:00 0HM08VEO2ESA7:00000007 [INF] Executing action method "Pupai.Modules.Controllers.ChatLieusController.GetChatLieus (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:57.1718412+07:00 0HM08VEO2ESA7:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:58:57.1722919+07:00 0HM08VEO2ESA7:00000007 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:58:57.1796611+07:00 0HM08VEO2ESA7:00000007 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[ChatLieuId], [r].[GhiChu], [r].[NgaySua], [r].[NgayTao], [r].[NguoiSua], [r].[NguoiTao], [r].[TenChatLieu], [r].[ThuTuHienThi], [r].[TrangThai]
+FROM [tbl_ChatLieu] AS [r]
+ORDER BY [r].[ChatLieuId] DESC" (0723d8ff)
+2020-06-05T09:58:57.1802498+07:00 0HM08VEO2ESA7:00000007 [INF] Executed action "Pupai.Modules.Controllers.ChatLieusController.GetChatLieus (QLNS)" in 10.5306ms (afa2e885)
+2020-06-05T09:58:57.1803790+07:00 0HM08VEO2ESA7:00000007 [INF] Request finished in 13.0841ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:58:57.3552436+07:00 0HM08VEO2ESA8:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-06-05T09:58:57.6443829+07:00 0HM08VEO2ESA8:00000007 [INF] Request finished in 289.1218ms 200 text/event-stream; charset=utf-8 (791a596a)
+2020-06-05T09:58:59.1915380+07:00 0HM08VEO2ESA4:00000013 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/DMBaoMatHVs application/json  (ca22a1cb)
+2020-06-05T09:58:59.1922249+07:00 0HM08VEO2ESA4:00000013 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:58:59.1945619+07:00 0HM08VEO2ESA4:00000013 [INF] Executing action method "Pupai.Modules.Controllers.DMBaoMatHVsController.GetDMBaoMatHVs (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:58:59.1948905+07:00 0HM08VEO2ESA4:00000013 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:58:59.1960935+07:00 0HM08VEO2ESA4:00000013 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:58:59.2013187+07:00 0HM08VEO2ESA4:00000013 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[DMBaoMatHVId], [t].[GhiChu], [t].[NgaySua], [t].[NgayTao], [t].[NguoiSua], [t].[NguoiTao], [t].[TenBaoMat], [t].[ThuTuHienThi], [t].[TrangThai]
+FROM [tbl_DMBaoMatHV] AS [t]" (0723d8ff)
+2020-06-05T09:58:59.2016773+07:00 0HM08VEO2ESA4:00000013 [INF] Executed action "Pupai.Modules.Controllers.DMBaoMatHVsController.GetDMBaoMatHVs (QLNS)" in 7.184ms (afa2e885)
+2020-06-05T09:58:59.2017984+07:00 0HM08VEO2ESA4:00000013 [INF] Request finished in 10.3497ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:58:59.3295649+07:00 0HM08VEO2ESA7:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-06-05T09:58:59.5619857+07:00 0HM08VEO2ESA7:00000008 [INF] Request finished in 232.1401ms 200 text/event-stream; charset=utf-8 (791a596a)
+2020-06-05T09:59:00.4385933+07:00 0HM08VEO2ESA4:00000014 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/PhanLoais application/json  (ca22a1cb)
+2020-06-05T09:59:00.4391626+07:00 0HM08VEO2ESA4:00000014 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T09:59:00.4409160+07:00 0HM08VEO2ESA4:00000014 [INF] Executing action method "Pupai.Modules.Controllers.PhanLoaisController.GetPhanLoais (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T09:59:00.4412010+07:00 0HM08VEO2ESA4:00000014 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T09:59:00.4428815+07:00 0HM08VEO2ESA4:00000014 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T09:59:00.4482382+07:00 0HM08VEO2ESA4:00000014 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[PhanLoaiId], [t].[GhiChu], [t].[NgaySua], [t].[NgayTao], [t].[NguoiSua], [t].[NguoiTao], [t].[TenPhanLoai], [t].[ThuTuHienThi], [t].[TrangThai]
+FROM [tbl_PhanLoai] AS [t]" (0723d8ff)
+2020-06-05T09:59:00.4485853+07:00 0HM08VEO2ESA4:00000014 [INF] Executed action "Pupai.Modules.Controllers.PhanLoaisController.GetPhanLoais (QLNS)" in 7.7264ms (afa2e885)
+2020-06-05T09:59:00.4487128+07:00 0HM08VEO2ESA4:00000014 [INF] Request finished in 10.1947ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T09:59:00.5460632+07:00 0HM08VEO2ESA4:00000015 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-06-05T09:59:18.1957190+07:00 0HM08VEO2ESA9:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-06-05T09:59:20.1962757+07:00 0HM08VEO2ESAA:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-06-05T10:00:06.4362450+07:00  [INF] webpack building... (478286db)
+2020-06-05T10:00:26.9889794+07:00  [INF] webpack built 4f5f108e9080fb692f56 in 20294ms (a4cea05a)
+2020-06-05T10:00:27.1777565+07:00 0HM08VEO2ESAB:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/eb98fdc14684cfe5d1fc.hot-update.json   (ca22a1cb)
+2020-06-05T10:00:27.1798251+07:00 0HM08VEO2ESAB:00000001 [INF] Request finished in 2.1483ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:00:27.1824804+07:00 0HM08VEO2ESAB:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/eb98fdc14684cfe5d1fc.hot-update.json   (ca22a1cb)
+2020-06-05T10:00:27.1839329+07:00 0HM08VEO2ESAB:00000002 [INF] Request finished in 1.5014ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:00:27.1869027+07:00 0HM08VEO2ESAB:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.eb98fdc14684cfe5d1fc.hot-update.js   (ca22a1cb)
+2020-06-05T10:00:27.1876914+07:00 0HM08VEO2ESAC:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/eb98fdc14684cfe5d1fc.hot-update.json   (ca22a1cb)
+2020-06-05T10:00:27.1883033+07:00 0HM08VEO2ESAB:00000003 [INF] Request finished in 1.5124ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T10:00:27.1892913+07:00 0HM08VEO2ESAC:00000001 [INF] Request finished in 1.6302ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:00:27.1950535+07:00 0HM08VEO2ESAB:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/eb98fdc14684cfe5d1fc.hot-update.json   (ca22a1cb)
+2020-06-05T10:00:27.1963246+07:00 0HM08VEO2ESAB:00000004 [INF] Request finished in 1.3327ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:00:27.2015925+07:00 0HM08VEO2ESAC:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.eb98fdc14684cfe5d1fc.hot-update.js   (ca22a1cb)
+2020-06-05T10:00:27.2030818+07:00 0HM08VEO2ESAC:00000002 [INF] Request finished in 1.5259ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T10:00:27.2060655+07:00 0HM08VEO2ESAB:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.eb98fdc14684cfe5d1fc.hot-update.js   (ca22a1cb)
+2020-06-05T10:00:27.2073317+07:00 0HM08VEO2ESAB:00000005 [INF] Request finished in 1.3185ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T10:00:27.2151587+07:00 0HM08VEO2ESAC:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.eb98fdc14684cfe5d1fc.hot-update.js   (ca22a1cb)
+2020-06-05T10:00:27.2165197+07:00 0HM08VEO2ESAC:00000003 [INF] Request finished in 1.4027ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T10:00:50.4536536+07:00 0HM08VEO2ESAB:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/PhanLoais application/json  (ca22a1cb)
+2020-06-05T10:00:50.4542580+07:00 0HM08VEO2ESAB:00000006 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:00:50.4544725+07:00 0HM08VEO2ESAB:00000006 [INF] Executing action method "Pupai.Modules.Controllers.PhanLoaisController.GetPhanLoais (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:00:50.4545806+07:00 0HM08VEO2ESAB:00000006 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:00:50.4549938+07:00 0HM08VEO2ESAB:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:00:50.4568570+07:00 0HM08VEO2ESAB:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[PhanLoaiId], [t].[GhiChu], [t].[NgaySua], [t].[NgayTao], [t].[NguoiSua], [t].[NguoiTao], [t].[TenPhanLoai], [t].[ThuTuHienThi], [t].[TrangThai]
+FROM [tbl_PhanLoai] AS [t]" (0723d8ff)
+2020-06-05T10:00:50.4572002+07:00 0HM08VEO2ESAB:00000006 [INF] Executed action "Pupai.Modules.Controllers.PhanLoaisController.GetPhanLoais (QLNS)" in 2.752ms (afa2e885)
+2020-06-05T10:00:50.4573280+07:00 0HM08VEO2ESAB:00000006 [INF] Request finished in 3.7467ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:00:50.5991224+07:00 0HM08VEO2ESAC:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/NguonGocs application/json  (ca22a1cb)
+2020-06-05T10:00:50.5996890+07:00 0HM08VEO2ESAC:00000004 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:00:50.5998989+07:00 0HM08VEO2ESAC:00000004 [INF] Executing action method "Pupai.Modules.Controllers.NguonGocsController.GetNguonGocs (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:00:50.6000590+07:00 0HM08VEO2ESAC:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:00:50.6005280+07:00 0HM08VEO2ESAC:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:00:50.6019165+07:00 0HM08VEO2ESAC:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[NguonGocId], [t].[GhiChu], [t].[NgaySua], [t].[NgayTao], [t].[NguoiSua], [t].[NguoiTao], [t].[TenNguonGoc], [t].[ThuTuHienThi], [t].[TrangThai]
+FROM [tbl_NguonGoc] AS [t]" (0723d8ff)
+2020-06-05T10:00:50.6023250+07:00 0HM08VEO2ESAC:00000004 [INF] Executed action "Pupai.Modules.Controllers.NguonGocsController.GetNguonGocs (QLNS)" in 2.4482ms (afa2e885)
+2020-06-05T10:00:50.6024468+07:00 0HM08VEO2ESAC:00000004 [INF] Request finished in 3.4277ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:00:50.6401367+07:00 0HM08VEO2ESAB:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/ChatLieus application/json  (ca22a1cb)
+2020-06-05T10:00:50.6407137+07:00 0HM08VEO2ESAB:00000007 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:00:50.6409196+07:00 0HM08VEO2ESAB:00000007 [INF] Executing action method "Pupai.Modules.Controllers.ChatLieusController.GetChatLieus (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:00:50.6416222+07:00 0HM08VEO2ESAB:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:00:50.6418793+07:00 0HM08VEO2ESAB:00000007 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:00:50.6435796+07:00 0HM08VEO2ESAB:00000007 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[ChatLieuId], [r].[GhiChu], [r].[NgaySua], [r].[NgayTao], [r].[NguoiSua], [r].[NguoiTao], [r].[TenChatLieu], [r].[ThuTuHienThi], [r].[TrangThai]
+FROM [tbl_ChatLieu] AS [r]
+ORDER BY [r].[ChatLieuId] DESC" (0723d8ff)
+2020-06-05T10:00:50.6443492+07:00 0HM08VEO2ESAB:00000007 [INF] Executed action "Pupai.Modules.Controllers.ChatLieusController.GetChatLieus (QLNS)" in 3.4211ms (afa2e885)
+2020-06-05T10:00:50.6444837+07:00 0HM08VEO2ESAB:00000007 [INF] Request finished in 4.4286ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:00:50.8868145+07:00 0HM08VEO2ESAC:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/DMBaoMatHVs application/json  (ca22a1cb)
+2020-06-05T10:00:50.8874715+07:00 0HM08VEO2ESAC:00000005 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:00:50.8876798+07:00 0HM08VEO2ESAC:00000005 [INF] Executing action method "Pupai.Modules.Controllers.DMBaoMatHVsController.GetDMBaoMatHVs (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:00:50.8877872+07:00 0HM08VEO2ESAC:00000005 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:00:50.8881600+07:00 0HM08VEO2ESAC:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:00:50.8897743+07:00 0HM08VEO2ESAC:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[DMBaoMatHVId], [t].[GhiChu], [t].[NgaySua], [t].[NgayTao], [t].[NguoiSua], [t].[NguoiTao], [t].[TenBaoMat], [t].[ThuTuHienThi], [t].[TrangThai]
+FROM [tbl_DMBaoMatHV] AS [t]" (0723d8ff)
+2020-06-05T10:00:50.8901312+07:00 0HM08VEO2ESAC:00000005 [INF] Executed action "Pupai.Modules.Controllers.DMBaoMatHVsController.GetDMBaoMatHVs (QLNS)" in 2.4675ms (afa2e885)
+2020-06-05T10:00:50.8902602+07:00 0HM08VEO2ESAC:00000005 [INF] Request finished in 3.5706ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:01:22.7652422+07:00  [INF] webpack building... (478286db)
+2020-06-05T10:01:42.9773367+07:00  [INF] webpack built 98829a3e16486132e785 in 20004ms (b9bac875)
+2020-06-05T10:01:43.1766309+07:00 0HM08VEO2ESAB:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/4f5f108e9080fb692f56.hot-update.json   (ca22a1cb)
+2020-06-05T10:01:43.1788802+07:00 0HM08VEO2ESAB:00000008 [INF] Request finished in 2.2704ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:01:43.1817047+07:00 0HM08VEO2ESAC:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/4f5f108e9080fb692f56.hot-update.json   (ca22a1cb)
+2020-06-05T10:01:43.1830554+07:00 0HM08VEO2ESAC:00000006 [INF] Request finished in 1.3946ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:01:43.1895605+07:00 0HM08VEO2ESAB:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/4f5f108e9080fb692f56.hot-update.json   (ca22a1cb)
+2020-06-05T10:01:43.1918894+07:00 0HM08VEO2ESAB:00000009 [INF] Request finished in 2.3551ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:01:43.1978095+07:00 0HM08VEO2ESAC:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.4f5f108e9080fb692f56.hot-update.js   (ca22a1cb)
+2020-06-05T10:01:43.1990633+07:00 0HM08VEO2ESAC:00000007 [INF] Request finished in 1.3241ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T10:01:43.2199052+07:00 0HM08VEO2ESAB:0000000A [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.4f5f108e9080fb692f56.hot-update.js   (ca22a1cb)
+2020-06-05T10:01:43.2212763+07:00 0HM08VEO2ESAB:0000000A [INF] Request finished in 1.413ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T10:01:43.2319910+07:00 0HM08VEO2ESAC:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/4f5f108e9080fb692f56.hot-update.json   (ca22a1cb)
+2020-06-05T10:01:43.2333428+07:00 0HM08VEO2ESAC:00000008 [INF] Request finished in 1.4023ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:01:43.2389137+07:00 0HM08VEO2ESAB:0000000B [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.4f5f108e9080fb692f56.hot-update.js   (ca22a1cb)
+2020-06-05T10:01:43.2406827+07:00 0HM08VEO2ESAB:0000000B [INF] Request finished in 1.7796ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T10:01:43.2435685+07:00 0HM08VEO2ESAC:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.4f5f108e9080fb692f56.hot-update.js   (ca22a1cb)
+2020-06-05T10:01:43.2448682+07:00 0HM08VEO2ESAC:00000009 [INF] Request finished in 1.3558ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T10:02:04.0931327+07:00 0HM08VEO2ESAB:0000000C [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/PhanLoais application/json  (ca22a1cb)
+2020-06-05T10:02:04.0937841+07:00 0HM08VEO2ESAB:0000000C [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:02:04.0940923+07:00 0HM08VEO2ESAB:0000000C [INF] Executing action method "Pupai.Modules.Controllers.PhanLoaisController.GetPhanLoais (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:02:04.0942423+07:00 0HM08VEO2ESAB:0000000C [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:02:04.0947673+07:00 0HM08VEO2ESAB:0000000C [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:02:04.0963372+07:00 0HM08VEO2ESAB:0000000C [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[PhanLoaiId], [t].[GhiChu], [t].[NgaySua], [t].[NgayTao], [t].[NguoiSua], [t].[NguoiTao], [t].[TenPhanLoai], [t].[ThuTuHienThi], [t].[TrangThai]
+FROM [tbl_PhanLoai] AS [t]" (0723d8ff)
+2020-06-05T10:02:04.0967063+07:00 0HM08VEO2ESAB:0000000C [INF] Executed action "Pupai.Modules.Controllers.PhanLoaisController.GetPhanLoais (QLNS)" in 2.6276ms (afa2e885)
+2020-06-05T10:02:04.0968461+07:00 0HM08VEO2ESAB:0000000C [INF] Request finished in 3.7874ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:02:04.3179286+07:00 0HM08VEO2ESAC:0000000A [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/DMBaoMatHVs application/json  (ca22a1cb)
+2020-06-05T10:02:04.3184892+07:00 0HM08VEO2ESAC:0000000A [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:02:04.3187128+07:00 0HM08VEO2ESAC:0000000A [INF] Executing action method "Pupai.Modules.Controllers.DMBaoMatHVsController.GetDMBaoMatHVs (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:02:04.3188161+07:00 0HM08VEO2ESAC:0000000A [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:02:04.3191544+07:00 0HM08VEO2ESAC:0000000A [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:02:04.3205118+07:00 0HM08VEO2ESAC:0000000A [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[DMBaoMatHVId], [t].[GhiChu], [t].[NgaySua], [t].[NgayTao], [t].[NguoiSua], [t].[NguoiTao], [t].[TenBaoMat], [t].[ThuTuHienThi], [t].[TrangThai]
+FROM [tbl_DMBaoMatHV] AS [t]" (0723d8ff)
+2020-06-05T10:02:04.3208318+07:00 0HM08VEO2ESAC:0000000A [INF] Executed action "Pupai.Modules.Controllers.DMBaoMatHVsController.GetDMBaoMatHVs (QLNS)" in 2.1667ms (afa2e885)
+2020-06-05T10:02:04.3209594+07:00 0HM08VEO2ESAC:0000000A [INF] Request finished in 3.107ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:02:04.4704771+07:00 0HM08VEO2ESAB:0000000D [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/ChatLieus application/json  (ca22a1cb)
+2020-06-05T10:02:04.4710606+07:00 0HM08VEO2ESAB:0000000D [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:02:04.4712675+07:00 0HM08VEO2ESAB:0000000D [INF] Executing action method "Pupai.Modules.Controllers.ChatLieusController.GetChatLieus (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:02:04.4716725+07:00 0HM08VEO2ESAB:0000000D [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:02:04.4718642+07:00 0HM08VEO2ESAB:0000000D [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:02:04.4733851+07:00 0HM08VEO2ESAB:0000000D [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[ChatLieuId], [r].[GhiChu], [r].[NgaySua], [r].[NgayTao], [r].[NguoiSua], [r].[NguoiTao], [r].[TenChatLieu], [r].[ThuTuHienThi], [r].[TrangThai]
+FROM [tbl_ChatLieu] AS [r]
+ORDER BY [r].[ChatLieuId] DESC" (0723d8ff)
+2020-06-05T10:02:04.4739921+07:00 0HM08VEO2ESAB:0000000D [INF] Executed action "Pupai.Modules.Controllers.ChatLieusController.GetChatLieus (QLNS)" in 2.717ms (afa2e885)
+2020-06-05T10:02:04.4741266+07:00 0HM08VEO2ESAB:0000000D [INF] Request finished in 3.7189ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:02:04.8074434+07:00 0HM08VEO2ESAC:0000000B [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/NguonGocs application/json  (ca22a1cb)
+2020-06-05T10:02:04.8080492+07:00 0HM08VEO2ESAC:0000000B [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:02:04.8082939+07:00 0HM08VEO2ESAC:0000000B [INF] Executing action method "Pupai.Modules.Controllers.NguonGocsController.GetNguonGocs (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:02:04.8084605+07:00 0HM08VEO2ESAC:0000000B [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:02:04.8088795+07:00 0HM08VEO2ESAC:0000000B [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:02:04.8102671+07:00 0HM08VEO2ESAC:0000000B [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[NguonGocId], [t].[GhiChu], [t].[NgaySua], [t].[NgayTao], [t].[NguoiSua], [t].[NguoiTao], [t].[TenNguonGoc], [t].[ThuTuHienThi], [t].[TrangThai]
+FROM [tbl_NguonGoc] AS [t]" (0723d8ff)
+2020-06-05T10:02:04.8106562+07:00 0HM08VEO2ESAC:0000000B [INF] Executed action "Pupai.Modules.Controllers.NguonGocsController.GetNguonGocs (QLNS)" in 2.3972ms (afa2e885)
+2020-06-05T10:02:04.8107833+07:00 0HM08VEO2ESAC:0000000B [INF] Request finished in 3.4505ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:03:48.3805710+07:00  [INF] webpack building... (478286db)
+2020-06-05T10:04:09.5594746+07:00  [INF] webpack built 4b7b2ecbe508a5b0b29e in 20964ms (549d454c)
+2020-06-05T10:04:09.6625892+07:00  [ERR] Hash: 4b7b2ecbe508a5b0b29e
+Version: webpack 3.10.0
+Time: 20964ms
+                                   Asset      Size  Chunks                    Chunk Names
+    bb9704a2166d7cd64b10d62f1d566356.png    147 kB                            
+    39db3efbca32138d9c0fb01623760338.png    157 kB                            
+    563c7e7c04bf5b74c7675ea6c3301c2b.png   46.1 kB                            
+    bd60eae1cf82800c33da4c7814c10c74.png   83.8 kB                            
+    4a4cd48a2c824ef9ac1db0faad589f2d.png    170 kB                            
+    b4cd69fc962ee0bc15433dfbb83e89f9.png    192 kB                            
+    b1e47b094eb0a9950467d554734fbd8c.jpg   31.7 kB                            
+    8403b398a5747a0ebc86e9eaf866275a.jpg   92.2 kB                            
+    806f92ae37d89cff0d91f92687a0ea89.png   70.9 kB                            
+    6ef5c5c3e36db9415432b93497371b2d.png   39.1 kB                            
+    8f78faa351425f60dd184c30de5c1026.png   49.7 kB                            
+    7cd1aebd88ce95e05fa8a7781a821a8e.png   31.9 kB                            
+    26b8958e0d7d65fd634031a1cc3ba0a1.png    273 kB                     [big]  
+    2165f5c23474afc8d948394cae3fa63f.png   71.1 kB                            
+    0bc9a9997fd299ed587ba1241f5f6657.png   53.6 kB                            
+    2da1e833c2cb891d33ff4e58eced07d4.png    248 kB                            
+    20b0a84eee3084b0695cf18941496e2e.png    145 kB                            
+    240711fa17b9a6d30b575198aeee244f.png   55.3 kB                            
+    3b36b06825a0c4c359324ce0feefb0ed.png   97.7 kB                            
+    1e86fa4fc818daae89ca09dfbd4ea5a5.png   54.9 kB                            
+    c846835ffac6d3d432f7acaf94bd852e.png     56 kB                            
+    a0c7083f9c339195fc5b4c41dd7af0af.png   68.9 kB                            
+    86831ba717d6a0d6cdae3262fa86d100.png     39 kB                            
+    84144d3930d5fd3ea7e38729fb012bec.png    459 kB                     [big]  
+    d657f1028b3cd66a85d85607008ff754.png   33.7 kB                            
+    031dfa25174895c1ba809ae27b82e372.png   52.7 kB                            
+    eafdb11865e1519a6016c888d9e1f3bc.png   48.9 kB                            
+    a75972d990ef78c6983268af1ea19e91.png   45.9 kB                            
+    491ec5d24a8f0b6e4babe9421c545c50.png   49.7 kB                            
+    f8f7a35c7080582ab61f4281e6aeacd0.png   70.9 kB                            
+    641da7fcb446d404bb53311d2c4739ef.png   67.6 kB                            
+    75b1db326b53120cf3bac0e633227b85.png   39.2 kB                            
+    53ae50344bb96291ef3bf701c2c61212.png   37.8 kB                            
+    e2c5896114d04a6d8d808f20bcdf79ae.png    350 kB                     [big]  
+    e10af218b941826ea360d7554688d721.png   32.6 kB                            
+                          main-client.js   14.1 MB       0  [emitted]  [big]  main-client
+    0.98829a3e16486132e785.hot-update.js   17.1 kB       0  [emitted]         main-client
+    98829a3e16486132e785.hot-update.json  43 bytes          [emitted]         
+                      main-client.js.map     16 MB       0  [emitted]         main-client
+0.98829a3e16486132e785.hot-update.js.map   23.2 kB       0  [emitted]         main-client
+   [0] delegated ./node_modules/@angular/core/esm5/core.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+  [14] external "vendor_7f98dda2557d6d111d50" 42 bytes {0} [not cacheable]
+ [514] delegated ./node_modules/bootstrap/dist/js/npm.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1104] multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts 52 bytes {0}
+[1105] delegated ./node_modules/event-source-polyfill/src/eventsource.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1106] (webpack)-hot-middleware/client.js?path=__webpack_hmr&dynamicPublicPath=true 7.35 kB {0}
+[1107] delegated ./node_modules/webpack/buildin/module.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1108] ./node_modules/querystring-es3/index.js 127 bytes {0}
+[1111] ./node_modules/strip-ansi/index.js 161 bytes {0}
+[1113] (webpack)-hot-middleware/client-overlay.js 2.21 kB {0}
+[1118] (webpack)-hot-middleware/process-update.js 4.33 kB {0}
+[1119] ./ClientApp/boot.browser.ts 1.29 kB {0} [built]
+[1120] delegated ./node_modules/core-js/client/shim.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1121] delegated ./node_modules/web-animations-js/web-animations.min.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1122] ./node_modules/zone.js/dist/zone.js 126 kB {0}
+    + 1882 hidden modules
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/chatlieu/chatlieu.component.ts:58:196 
+    TS2304: Cannot find name 'HienVatService'.
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/chatlieu/chatlieu.component.ts:218:66 
+    TS2339: Property 'nguonGocId' does not exist on type 'ChatLieu'. (55133f44)
+2020-06-05T10:04:09.9092410+07:00  [INF] webpack building... (478286db)
+2020-06-05T10:04:31.3968935+07:00 0HM08VEO2ESA4:00000015 [INF] Request finished in 330850.8432ms 200 text/event-stream; charset=utf-8 (791a596a)
+2020-06-05T10:04:33.0977820+07:00  [INF] webpack built d4af4a3c487cb08f201b in 22963ms (78348d2f)
+2020-06-05T10:04:33.2130559+07:00  [ERR] Hash: d4af4a3c487cb08f201b
+Version: webpack 3.10.0
+Time: 22963ms
+                                   Asset      Size  Chunks                    Chunk Names
+    bb9704a2166d7cd64b10d62f1d566356.png    147 kB                            
+    39db3efbca32138d9c0fb01623760338.png    157 kB                            
+    563c7e7c04bf5b74c7675ea6c3301c2b.png   46.1 kB                            
+    bd60eae1cf82800c33da4c7814c10c74.png   83.8 kB                            
+    4a4cd48a2c824ef9ac1db0faad589f2d.png    170 kB                            
+    b4cd69fc962ee0bc15433dfbb83e89f9.png    192 kB                            
+    b1e47b094eb0a9950467d554734fbd8c.jpg   31.7 kB                            
+    8403b398a5747a0ebc86e9eaf866275a.jpg   92.2 kB                            
+    806f92ae37d89cff0d91f92687a0ea89.png   70.9 kB                            
+    6ef5c5c3e36db9415432b93497371b2d.png   39.1 kB                            
+    8f78faa351425f60dd184c30de5c1026.png   49.7 kB                            
+    7cd1aebd88ce95e05fa8a7781a821a8e.png   31.9 kB                            
+    26b8958e0d7d65fd634031a1cc3ba0a1.png    273 kB                     [big]  
+    2165f5c23474afc8d948394cae3fa63f.png   71.1 kB                            
+    0bc9a9997fd299ed587ba1241f5f6657.png   53.6 kB                            
+    2da1e833c2cb891d33ff4e58eced07d4.png    248 kB                            
+    20b0a84eee3084b0695cf18941496e2e.png    145 kB                            
+    240711fa17b9a6d30b575198aeee244f.png   55.3 kB                            
+    3b36b06825a0c4c359324ce0feefb0ed.png   97.7 kB                            
+    1e86fa4fc818daae89ca09dfbd4ea5a5.png   54.9 kB                            
+    c846835ffac6d3d432f7acaf94bd852e.png     56 kB                            
+    a0c7083f9c339195fc5b4c41dd7af0af.png   68.9 kB                            
+    86831ba717d6a0d6cdae3262fa86d100.png     39 kB                            
+    84144d3930d5fd3ea7e38729fb012bec.png    459 kB                     [big]  
+    d657f1028b3cd66a85d85607008ff754.png   33.7 kB                            
+    031dfa25174895c1ba809ae27b82e372.png   52.7 kB                            
+    eafdb11865e1519a6016c888d9e1f3bc.png   48.9 kB                            
+    a75972d990ef78c6983268af1ea19e91.png   45.9 kB                            
+    491ec5d24a8f0b6e4babe9421c545c50.png   49.7 kB                            
+    f8f7a35c7080582ab61f4281e6aeacd0.png   70.9 kB                            
+    641da7fcb446d404bb53311d2c4739ef.png   67.6 kB                            
+    75b1db326b53120cf3bac0e633227b85.png   39.2 kB                            
+    53ae50344bb96291ef3bf701c2c61212.png   37.8 kB                            
+    e2c5896114d04a6d8d808f20bcdf79ae.png    350 kB                     [big]  
+    e10af218b941826ea360d7554688d721.png   32.6 kB                            
+                          main-client.js   14.1 MB       0  [emitted]  [big]  main-client
+    0.4b7b2ecbe508a5b0b29e.hot-update.js   34.1 kB       0  [emitted]         main-client
+    4b7b2ecbe508a5b0b29e.hot-update.json  43 bytes          [emitted]         
+                      main-client.js.map     16 MB       0  [emitted]         main-client
+0.4b7b2ecbe508a5b0b29e.hot-update.js.map   46.4 kB       0  [emitted]         main-client
+   [0] delegated ./node_modules/@angular/core/esm5/core.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+  [14] external "vendor_7f98dda2557d6d111d50" 42 bytes {0} [not cacheable]
+ [514] delegated ./node_modules/bootstrap/dist/js/npm.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1104] multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts 52 bytes {0}
+[1105] delegated ./node_modules/event-source-polyfill/src/eventsource.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1106] (webpack)-hot-middleware/client.js?path=__webpack_hmr&dynamicPublicPath=true 7.35 kB {0}
+[1107] delegated ./node_modules/webpack/buildin/module.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1108] ./node_modules/querystring-es3/index.js 127 bytes {0}
+[1111] ./node_modules/strip-ansi/index.js 161 bytes {0}
+[1113] (webpack)-hot-middleware/client-overlay.js 2.21 kB {0}
+[1118] (webpack)-hot-middleware/process-update.js 4.33 kB {0}
+[1119] ./ClientApp/boot.browser.ts 1.29 kB {0} [built]
+[1120] delegated ./node_modules/core-js/client/shim.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1121] delegated ./node_modules/web-animations-js/web-animations.min.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1122] ./node_modules/zone.js/dist/zone.js 126 kB {0}
+    + 1882 hidden modules
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/chatlieu/chatlieu.component.ts:58:196 
+    TS2304: Cannot find name 'HienVatService'.
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/chatlieu/chatlieu.component.ts:218:66 
+    TS2339: Property 'nguonGocId' does not exist on type 'ChatLieu'.
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/dmbaomathv/dmbaomathv.component.ts:58:200 
+    TS2304: Cannot find name 'HienVatService'.
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/dmbaomathv/dmbaomathv.component.ts:218:66 
+    TS2339: Property 'nguonGocId' does not exist on type 'DMBaoMatHV'.
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/phanloai/phanloai.component.ts:57:196 
+    TS2304: Cannot find name 'HienVatService'.
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/phanloai/phanloai.component.ts:218:66 
+    TS2339: Property 'nguonGocId' does not exist on type 'PhanLoai'. (6a6dffb6)
+2020-06-05T10:04:33.4622006+07:00  [INF] webpack building... (478286db)
+2020-06-05T10:04:52.5344730+07:00 0HM08VEO2ESAD:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-06-05T10:04:54.9848500+07:00  [INF] webpack built 2d088f74017eb694fe9d in 21292ms (4019a741)
+2020-06-05T10:04:55.0898810+07:00  [ERR] Hash: 2d088f74017eb694fe9d
+Version: webpack 3.10.0
+Time: 21292ms
+                                   Asset      Size  Chunks                    Chunk Names
+    bb9704a2166d7cd64b10d62f1d566356.png    147 kB                            
+    39db3efbca32138d9c0fb01623760338.png    157 kB                            
+    563c7e7c04bf5b74c7675ea6c3301c2b.png   46.1 kB                            
+    bd60eae1cf82800c33da4c7814c10c74.png   83.8 kB                            
+    4a4cd48a2c824ef9ac1db0faad589f2d.png    170 kB                            
+    b4cd69fc962ee0bc15433dfbb83e89f9.png    192 kB                            
+    b1e47b094eb0a9950467d554734fbd8c.jpg   31.7 kB                            
+    8403b398a5747a0ebc86e9eaf866275a.jpg   92.2 kB                            
+    806f92ae37d89cff0d91f92687a0ea89.png   70.9 kB                            
+    6ef5c5c3e36db9415432b93497371b2d.png   39.1 kB                            
+    8f78faa351425f60dd184c30de5c1026.png   49.7 kB                            
+    7cd1aebd88ce95e05fa8a7781a821a8e.png   31.9 kB                            
+    26b8958e0d7d65fd634031a1cc3ba0a1.png    273 kB                     [big]  
+    2165f5c23474afc8d948394cae3fa63f.png   71.1 kB                            
+    0bc9a9997fd299ed587ba1241f5f6657.png   53.6 kB                            
+    2da1e833c2cb891d33ff4e58eced07d4.png    248 kB                            
+    20b0a84eee3084b0695cf18941496e2e.png    145 kB                            
+    240711fa17b9a6d30b575198aeee244f.png   55.3 kB                            
+    3b36b06825a0c4c359324ce0feefb0ed.png   97.7 kB                            
+    1e86fa4fc818daae89ca09dfbd4ea5a5.png   54.9 kB                            
+    c846835ffac6d3d432f7acaf94bd852e.png     56 kB                            
+    a0c7083f9c339195fc5b4c41dd7af0af.png   68.9 kB                            
+    86831ba717d6a0d6cdae3262fa86d100.png     39 kB                            
+    84144d3930d5fd3ea7e38729fb012bec.png    459 kB                     [big]  
+    d657f1028b3cd66a85d85607008ff754.png   33.7 kB                            
+    031dfa25174895c1ba809ae27b82e372.png   52.7 kB                            
+    eafdb11865e1519a6016c888d9e1f3bc.png   48.9 kB                            
+    a75972d990ef78c6983268af1ea19e91.png   45.9 kB                            
+    491ec5d24a8f0b6e4babe9421c545c50.png   49.7 kB                            
+    f8f7a35c7080582ab61f4281e6aeacd0.png   70.9 kB                            
+    641da7fcb446d404bb53311d2c4739ef.png   67.6 kB                            
+    75b1db326b53120cf3bac0e633227b85.png   39.2 kB                            
+    53ae50344bb96291ef3bf701c2c61212.png   37.8 kB                            
+    e2c5896114d04a6d8d808f20bcdf79ae.png    350 kB                     [big]  
+    e10af218b941826ea360d7554688d721.png   32.6 kB                            
+                          main-client.js   14.1 MB       0  [emitted]  [big]  main-client
+    0.d4af4a3c487cb08f201b.hot-update.js   51.6 kB       0  [emitted]         main-client
+    d4af4a3c487cb08f201b.hot-update.json  43 bytes          [emitted]         
+                      main-client.js.map     16 MB       0  [emitted]         main-client
+0.d4af4a3c487cb08f201b.hot-update.js.map   69.7 kB       0  [emitted]         main-client
+   [0] delegated ./node_modules/@angular/core/esm5/core.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+  [14] external "vendor_7f98dda2557d6d111d50" 42 bytes {0} [not cacheable]
+ [514] delegated ./node_modules/bootstrap/dist/js/npm.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1104] multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts 52 bytes {0}
+[1105] delegated ./node_modules/event-source-polyfill/src/eventsource.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1106] (webpack)-hot-middleware/client.js?path=__webpack_hmr&dynamicPublicPath=true 7.35 kB {0}
+[1107] delegated ./node_modules/webpack/buildin/module.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1108] ./node_modules/querystring-es3/index.js 127 bytes {0}
+[1111] ./node_modules/strip-ansi/index.js 161 bytes {0}
+[1113] (webpack)-hot-middleware/client-overlay.js 2.21 kB {0}
+[1118] (webpack)-hot-middleware/process-update.js 4.33 kB {0}
+[1119] ./ClientApp/boot.browser.ts 1.29 kB {0} [built]
+[1120] delegated ./node_modules/core-js/client/shim.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1121] delegated ./node_modules/web-animations-js/web-animations.min.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1122] ./node_modules/zone.js/dist/zone.js 126 kB {0}
+    + 1882 hidden modules
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/chatlieu/chatlieu.component.ts:219:66 
+    TS2339: Property 'nguonGocId' does not exist on type 'ChatLieu'.
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/dmbaomathv/dmbaomathv.component.ts:219:66 
+    TS2339: Property 'nguonGocId' does not exist on type 'DMBaoMatHV'. (9a1a9722)
+2020-06-05T10:04:55.5863184+07:00  [INF] webpack building... (478286db)
+2020-06-05T10:05:15.7403099+07:00  [INF] webpack built 50e8aa28afaca876a101 in 19930ms (76890013)
+2020-06-05T10:05:15.9110186+07:00 0HM08VEO2ESAE:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/98829a3e16486132e785.hot-update.json   (ca22a1cb)
+2020-06-05T10:05:15.9131975+07:00 0HM08VEO2ESAE:00000001 [INF] Request finished in 2.185ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:05:15.9167263+07:00 0HM08VEO2ESAE:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/98829a3e16486132e785.hot-update.json   (ca22a1cb)
+2020-06-05T10:05:15.9180338+07:00 0HM08VEO2ESAE:00000002 [INF] Request finished in 1.3605ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:05:15.9232715+07:00 0HM08VEO2ESAE:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/98829a3e16486132e785.hot-update.json   (ca22a1cb)
+2020-06-05T10:05:15.9251710+07:00 0HM08VEO2ESAE:00000003 [INF] Request finished in 2.0588ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:05:15.9253367+07:00 0HM08VEO2ESAF:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.98829a3e16486132e785.hot-update.js   (ca22a1cb)
+2020-06-05T10:05:15.9287039+07:00 0HM08VEO2ESAF:00000001 [INF] Request finished in 3.4195ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T10:05:15.9299659+07:00 0HM08VEO2ESAE:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/98829a3e16486132e785.hot-update.json   (ca22a1cb)
+2020-06-05T10:05:15.9324250+07:00 0HM08VEO2ESAE:00000004 [INF] Request finished in 2.6195ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:05:15.9395988+07:00 0HM08VEO2ESAF:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.98829a3e16486132e785.hot-update.js   (ca22a1cb)
+2020-06-05T10:05:15.9412410+07:00 0HM08VEO2ESAF:00000002 [INF] Request finished in 1.6884ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T10:05:15.9440307+07:00 0HM08VEO2ESAE:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.98829a3e16486132e785.hot-update.js   (ca22a1cb)
+2020-06-05T10:05:15.9455357+07:00 0HM08VEO2ESAE:00000005 [INF] Request finished in 1.6062ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T10:05:15.9479902+07:00 0HM08VEO2ESAF:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.98829a3e16486132e785.hot-update.js   (ca22a1cb)
+2020-06-05T10:05:15.9492526+07:00 0HM08VEO2ESAF:00000003 [INF] Request finished in 1.3472ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T10:05:16.0076693+07:00 0HM08VEO2ESAE:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/4b7b2ecbe508a5b0b29e.hot-update.json   (ca22a1cb)
+2020-06-05T10:05:16.0090193+07:00 0HM08VEO2ESAE:00000006 [INF] Request finished in 1.4046ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:05:16.0141508+07:00 0HM08VEO2ESAF:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.4b7b2ecbe508a5b0b29e.hot-update.js   (ca22a1cb)
+2020-06-05T10:05:16.0155814+07:00 0HM08VEO2ESAF:00000004 [INF] Request finished in 1.4799ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T10:05:16.0354606+07:00 0HM08VEO2ESAE:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/4b7b2ecbe508a5b0b29e.hot-update.json   (ca22a1cb)
+2020-06-05T10:05:16.0368381+07:00 0HM08VEO2ESAE:00000007 [INF] Request finished in 1.4223ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:05:16.0406102+07:00 0HM08VEO2ESAF:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/4b7b2ecbe508a5b0b29e.hot-update.json   (ca22a1cb)
+2020-06-05T10:05:16.0419700+07:00 0HM08VEO2ESAF:00000005 [INF] Request finished in 1.4306ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:05:16.0456839+07:00 0HM08VEO2ESAE:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.4b7b2ecbe508a5b0b29e.hot-update.js   (ca22a1cb)
+2020-06-05T10:05:16.0471298+07:00 0HM08VEO2ESAE:00000008 [INF] Request finished in 1.4833ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T10:05:16.0544324+07:00 0HM08VEO2ESAF:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.4b7b2ecbe508a5b0b29e.hot-update.js   (ca22a1cb)
+2020-06-05T10:05:16.0566157+07:00 0HM08VEO2ESAF:00000006 [INF] Request finished in 2.1725ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T10:05:16.0702785+07:00 0HM08VEO2ESAE:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/4b7b2ecbe508a5b0b29e.hot-update.json   (ca22a1cb)
+2020-06-05T10:05:16.0717522+07:00 0HM08VEO2ESAE:00000009 [INF] Request finished in 1.4628ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:05:16.0765387+07:00 0HM08VEO2ESAF:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.4b7b2ecbe508a5b0b29e.hot-update.js   (ca22a1cb)
+2020-06-05T10:05:16.0777737+07:00 0HM08VEO2ESAF:00000007 [INF] Request finished in 1.3129ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T10:05:37.9637576+07:00  [INF] webpack building... (478286db)
+2020-06-05T10:05:55.5267215+07:00  [INF] webpack built 6269a6def4368d59d31c in 17346ms (6b6a636b)
+2020-06-05T10:05:55.8813861+07:00  [INF] webpack building... (478286db)
+2020-06-05T10:06:12.9454691+07:00  [INF] webpack built d26659b2531c3734b3ff in 16837ms (6b785f94)
+2020-06-05T10:06:21.8324064+07:00  [INF] webpack building... (478286db)
+2020-06-05T10:06:40.2146505+07:00  [INF] webpack built 63802fa206140f4b9d2d in 18154ms (02ae53d8)
+2020-06-05T10:06:40.5588851+07:00  [INF] webpack building... (478286db)
+2020-06-05T10:06:57.5079368+07:00  [INF] webpack built 7eb5cbad39f84d4945b8 in 16732ms (b24056e0)
+2020-06-05T10:07:04.6010084+07:00  [INF] webpack building... (478286db)
+2020-06-05T10:07:22.2207544+07:00  [INF] webpack built eb6681f0f2f3355eaec2 in 17377ms (aa6068df)
+2020-06-05T10:07:22.5618106+07:00  [INF] webpack building... (478286db)
+2020-06-05T10:07:39.9117812+07:00  [INF] webpack built 6f70214d896c97138efe in 17107ms (19936792)
+2020-06-05T10:07:40.2524474+07:00  [INF] webpack building... (478286db)
+2020-06-05T10:07:57.5513706+07:00  [INF] webpack built 02232f1b340d0a2ad8d5 in 17071ms (7138ef49)
+2020-06-05T10:07:57.8913967+07:00  [INF] webpack building... (478286db)
+2020-06-05T10:08:14.4045753+07:00 0HM08VEO2ESA9:00000001 [INF] Request finished in 536208.8711ms 200 text/event-stream; charset=utf-8 (791a596a)
+2020-06-05T10:08:14.4045753+07:00 0HM08VEO2ESAA:00000001 [INF] Request finished in 534208.3173ms 200 text/event-stream; charset=utf-8 (791a596a)
+2020-06-05T10:08:14.4048130+07:00 0HM08VEO2ESA5:00000009 [INF] Request finished in 564543.5949ms 200 text/event-stream; charset=utf-8 (791a596a)
+2020-06-05T10:08:14.9306193+07:00  [INF] webpack built 321203d90514b8e3db08 in 16799ms (addf14f3)
+2020-06-05T10:08:15.8264107+07:00 0HM08VEO2ESAG:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/phanloai   (ca22a1cb)
+2020-06-05T10:08:15.8270729+07:00 0HM08VEO2ESAG:00000001 [INF] Executing action method "QLNS.Controllers.HomeController.Index (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:08:15.8272213+07:00 0HM08VEO2ESAG:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-06-05T10:08:16.0455913+07:00 0HM08VEO2ESAG:00000001 [INF] Executed action "QLNS.Controllers.HomeController.Index (QLNS)" in 218.5016ms (afa2e885)
+2020-06-05T10:08:16.0457106+07:00 0HM08VEO2ESAG:00000001 [INF] Request finished in 219.3663ms 200 text/html; charset=utf-8 (791a596a)
+2020-06-05T10:08:16.0843219+07:00 0HM08VEO2ESAG:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js?v=PR4XTWAPhjY72nb4rwkTSsktD2E22TgVhudeTDVIPkU   (ca22a1cb)
+2020-06-05T10:08:16.2813571+07:00 0HM08VEO2ESAG:00000002 [INF] Request finished in 197.0831ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T10:08:24.4040178+07:00 0HM08VEO2ESAD:00000001 [INF] Request finished in 211869.5469ms 200 text/event-stream; charset=utf-8 (791a596a)
+2020-06-05T10:08:27.7677662+07:00 0HM08VEO2ESAG:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/PhanLoais application/json  (ca22a1cb)
+2020-06-05T10:08:27.7689586+07:00 0HM08VEO2ESAG:00000003 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:08:27.7692873+07:00 0HM08VEO2ESAG:00000003 [INF] Executing action method "Pupai.Modules.Controllers.PhanLoaisController.GetPhanLoais (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:08:27.7694820+07:00 0HM08VEO2ESAG:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:08:27.7700354+07:00 0HM08VEO2ESAG:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:08:27.7743458+07:00 0HM08VEO2ESAG:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[PhanLoaiId], [t].[GhiChu], [t].[NgaySua], [t].[NgayTao], [t].[NguoiSua], [t].[NguoiTao], [t].[TenPhanLoai], [t].[ThuTuHienThi], [t].[TrangThai]
+FROM [tbl_PhanLoai] AS [t]" (0723d8ff)
+2020-06-05T10:08:27.7747103+07:00 0HM08VEO2ESAG:00000003 [INF] Executed action "Pupai.Modules.Controllers.PhanLoaisController.GetPhanLoais (QLNS)" in 5.4846ms (afa2e885)
+2020-06-05T10:08:27.7748374+07:00 0HM08VEO2ESAG:00000003 [INF] Request finished in 7.1403ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:08:27.8707376+07:00 0HM08VEO2ESAG:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-06-05T10:08:28.0116418+07:00 0HM08VEO2ESAH:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/favicon.ico   (ca22a1cb)
+2020-06-05T10:08:28.0119033+07:00 0HM08VEO2ESAH:00000001 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"D:\HUNGVM\PMQLHienVat\source\QLNS\QLNS\wwwroot\favicon.ico"' (27b0a520)
+2020-06-05T10:08:28.0408097+07:00 0HM08VEO2ESAH:00000001 [INF] Request finished in 29.1237ms 200 image/x-icon (791a596a)
+2020-06-05T10:11:22.4858678+07:00 0HM08VEO2ESAI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/DonVis/getDonViByRole/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-06-05T10:11:22.4865769+07:00 0HM08VEO2ESAI:00000001 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:11:22.4869503+07:00 0HM08VEO2ESAI:00000001 [INF] Executing action method "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:11:22.4873865+07:00 0HM08VEO2ESAI:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:11:22.5061558+07:00 0HM08VEO2ESAI:00000001 [INF] Executed DbCommand ("18"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:11:22.5072959+07:00 0HM08VEO2ESAI:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:11:22.5080181+07:00 0HM08VEO2ESAI:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:11:22.5086383+07:00 0HM08VEO2ESAI:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:11:22.5092723+07:00 0HM08VEO2ESAI:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:11:22.5098117+07:00 0HM08VEO2ESAI:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:11:22.5103742+07:00 0HM08VEO2ESAI:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:11:22.5109312+07:00 0HM08VEO2ESAI:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:11:22.5114210+07:00 0HM08VEO2ESAI:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:11:22.5119460+07:00 0HM08VEO2ESAI:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:11:22.5124787+07:00 0HM08VEO2ESAI:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:11:22.5129401+07:00 0HM08VEO2ESAI:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:11:22.5134064+07:00 0HM08VEO2ESAI:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:11:22.5138525+07:00 0HM08VEO2ESAI:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:11:22.5142933+07:00 0HM08VEO2ESAI:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:11:22.5147289+07:00 0HM08VEO2ESAI:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:11:22.5152566+07:00 0HM08VEO2ESAI:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:11:22.5154156+07:00 0HM08VEO2ESAI:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:11:22.5159092+07:00 0HM08VEO2ESAI:00000001 [INF] Executed action "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" in 29.0767ms (afa2e885)
+2020-06-05T10:11:22.5160355+07:00 0HM08VEO2ESAI:00000001 [INF] Request finished in 30.2796ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:11:22.7430067+07:00 0HM08VEO2ESAI:00000002 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/DonVis/getItems/0/0/x application/json 324 (ca22a1cb)
+2020-06-05T10:11:22.7431237+07:00 0HM08VEO2ESAI:00000002 [INF] Policy execution successful. (0204925d)
+2020-06-05T10:11:22.7436561+07:00 0HM08VEO2ESAI:00000002 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:11:22.7442217+07:00 0HM08VEO2ESAI:00000002 [INF] Executing action method "QLNS.Controllers.DonVisController.GetItems (QLNS)" with arguments (["0", "0", "x", "DonViId IN (select tbl_RoleDonVi.DonViId from AspNetUsers inner join AspNetUserRoles on AspNetUsers.Id = AspNetUserRoles.UserId inner join AspNetRoles on AspNetUserRoles.RoleId = AspNetRoles.Id inner join tbl_RoleDonVi on AspNetRoles.Id = tbl_RoleDonVi.RoleId where AspNetUsers.Id = '0280636e-99e3-4b3d-bec0-5e9aa67ad2b5')"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:11:22.7448082+07:00 0HM08VEO2ESAI:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:11:22.7796453+07:00 0HM08VEO2ESAI:00000002 [INF] Executed DbCommand ("34"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""tbl_DonVi_GetItemsByRange @p0,@p1,@p2,@p3" (0723d8ff)
+2020-06-05T10:11:22.7800771+07:00 0HM08VEO2ESAI:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:11:22.7803355+07:00 0HM08VEO2ESAI:00000002 [INF] Executed action "QLNS.Controllers.DonVisController.GetItems (QLNS)" in 36.4913ms (afa2e885)
+2020-06-05T10:11:22.7804652+07:00 0HM08VEO2ESAI:00000002 [INF] Request finished in 37.547ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:11:22.8447934+07:00 0HM08VEO2ESAI:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/account/users/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-06-05T10:11:22.8454158+07:00 0HM08VEO2ESAI:00000003 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:11:22.8456479+07:00 0HM08VEO2ESAI:00000003 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-06-05T10:11:22.8459051+07:00 0HM08VEO2ESAI:00000003 [INF] Executing action method "QLNS.Controllers.AccountController.GetUserById (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:11:22.8459847+07:00 0HM08VEO2ESAI:00000003 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-06-05T10:11:22.8463604+07:00 0HM08VEO2ESAI:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:11:22.8488951+07:00 0HM08VEO2ESAI:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Configuration], [u].[CreatedBy], [u].[CreatedDate], [u].[DonViId], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[IsEnabled], [u].[JobTitle], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedBy], [u].[UpdatedDate], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[Id] = @__userId_0
+ORDER BY [u].[Id]" (0723d8ff)
+2020-06-05T10:11:22.8513455+07:00 0HM08VEO2ESAI:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u.Roles].[UserId], [u.Roles].[RoleId]
+FROM [AspNetUserRoles] AS [u.Roles]
+INNER JOIN (
+    SELECT TOP(1) [u0].[Id]
+    FROM [AspNetUsers] AS [u0]
+    WHERE [u0].[Id] = @__userId_0
+    ORDER BY [u0].[Id]
+) AS [t] ON [u.Roles].[UserId] = [t].[Id]
+ORDER BY [t].[Id]" (0723d8ff)
+2020-06-05T10:11:22.8533327+07:00 0HM08VEO2ESAI:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Name]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[Id] IN (N'ad4de3cb-1654-460b-9c4c-e29fab9860d7')" (0723d8ff)
+2020-06-05T10:11:22.8535783+07:00 0HM08VEO2ESAI:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:11:22.8538217+07:00 0HM08VEO2ESAI:00000003 [INF] Executed action "QLNS.Controllers.AccountController.GetUserById (QLNS)" in 8.2083ms (afa2e885)
+2020-06-05T10:11:22.8540013+07:00 0HM08VEO2ESAI:00000003 [INF] Request finished in 9.2573ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:11:22.8722414+07:00 0HM08VEO2ESAI:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/account/users/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-06-05T10:11:22.8728230+07:00 0HM08VEO2ESAI:00000004 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:11:22.8730833+07:00 0HM08VEO2ESAI:00000004 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-06-05T10:11:22.8733576+07:00 0HM08VEO2ESAI:00000004 [INF] Executing action method "QLNS.Controllers.AccountController.GetUserById (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:11:22.8734469+07:00 0HM08VEO2ESAI:00000004 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-06-05T10:11:22.8738229+07:00 0HM08VEO2ESAI:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:11:22.8740994+07:00 0HM08VEO2ESAJ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/DiChuyens/getByStatus application/json  (ca22a1cb)
+2020-06-05T10:11:22.8746165+07:00 0HM08VEO2ESAJ:00000001 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:11:22.8748545+07:00 0HM08VEO2ESAJ:00000001 [INF] Executing action method "Pupai.Modules.Controllers.DiChuyensController.getByStatus (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:11:22.8749675+07:00 0HM08VEO2ESAI:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Configuration], [u].[CreatedBy], [u].[CreatedDate], [u].[DonViId], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[IsEnabled], [u].[JobTitle], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedBy], [u].[UpdatedDate], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[Id] = @__userId_0
+ORDER BY [u].[Id]" (0723d8ff)
+2020-06-05T10:11:22.8751766+07:00 0HM08VEO2ESAJ:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:11:22.8759223+07:00 0HM08VEO2ESAI:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u.Roles].[UserId], [u.Roles].[RoleId]
+FROM [AspNetUserRoles] AS [u.Roles]
+INNER JOIN (
+    SELECT TOP(1) [u0].[Id]
+    FROM [AspNetUsers] AS [u0]
+    WHERE [u0].[Id] = @__userId_0
+    ORDER BY [u0].[Id]
+) AS [t] ON [u.Roles].[UserId] = [t].[Id]
+ORDER BY [t].[Id]" (0723d8ff)
+2020-06-05T10:11:22.8770351+07:00 0HM08VEO2ESAI:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Name]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[Id] IN (N'ad4de3cb-1654-460b-9c4c-e29fab9860d7')" (0723d8ff)
+2020-06-05T10:11:22.8772361+07:00 0HM08VEO2ESAI:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:11:22.8774215+07:00 0HM08VEO2ESAI:00000004 [INF] Executed action "QLNS.Controllers.AccountController.GetUserById (QLNS)" in 4.3961ms (afa2e885)
+2020-06-05T10:11:22.8776026+07:00 0HM08VEO2ESAI:00000004 [INF] Request finished in 5.4204ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:11:22.8839214+07:00 0HM08VEO2ESAJ:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[DiChuyenId], [r].[KyHieu], [r].[TenDiChuyen], [r].[TrangThai], [r].[VitriHienThi]
+FROM [tbl_DiChuyen] AS [r]
+WHERE [r].[TrangThai] = 1" (0723d8ff)
+2020-06-05T10:11:22.8842152+07:00 0HM08VEO2ESAJ:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:11:22.8846460+07:00 0HM08VEO2ESAJ:00000001 [INF] Executed action "Pupai.Modules.Controllers.DiChuyensController.getByStatus (QLNS)" in 9.8292ms (afa2e885)
+2020-06-05T10:11:22.8847769+07:00 0HM08VEO2ESAJ:00000001 [INF] Request finished in 10.7127ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:11:22.9142616+07:00 0HM08VEO2ESAI:00000005 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/HienVats/getItems/0/0/x application/json 34 (ca22a1cb)
+2020-06-05T10:11:22.9143739+07:00 0HM08VEO2ESAI:00000005 [INF] Policy execution successful. (0204925d)
+2020-06-05T10:11:22.9149409+07:00 0HM08VEO2ESAI:00000005 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:11:22.9153279+07:00 0HM08VEO2ESAI:00000005 [INF] Executing action method "Pupai.Modules.Controllers.HienVatsController.GetItems (QLNS)" with arguments (["0", "0", "x", "DonViId in (0) and TrangThai = 1"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:11:22.9158261+07:00 0HM08VEO2ESAI:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:11:22.9211409+07:00 0HM08VEO2ESAI:00000005 [INF] Executed DbCommand ("4"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""tbl_HienVat_GetItemsByRange @p0,@p1,@p2,@p3" (0723d8ff)
+2020-06-05T10:11:22.9213190+07:00 0HM08VEO2ESAI:00000005 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:11:22.9214631+07:00 0HM08VEO2ESAI:00000005 [INF] Executed action "Pupai.Modules.Controllers.HienVatsController.GetItems (QLNS)" in 6.3382ms (afa2e885)
+2020-06-05T10:11:22.9215906+07:00 0HM08VEO2ESAI:00000005 [INF] Request finished in 7.4131ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:13:59.1381160+07:00 0HM08VEO2ESAK:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js.map   (ca22a1cb)
+2020-06-05T10:13:59.3544420+07:00 0HM08VEO2ESAK:00000001 [INF] Request finished in 216.3433ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:14:48.2684147+07:00  [INF] webpack building... (478286db)
+2020-06-05T10:15:05.9917655+07:00  [INF] webpack built 3328011ff85ac5e38b22 in 17525ms (ab760c55)
+2020-06-05T10:15:06.1237952+07:00 0HM08VEO2ESAL:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/321203d90514b8e3db08.hot-update.json   (ca22a1cb)
+2020-06-05T10:15:06.1259669+07:00 0HM08VEO2ESAL:00000001 [INF] Request finished in 2.2141ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:15:06.1383151+07:00 0HM08VEO2ESAL:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.321203d90514b8e3db08.hot-update.js   (ca22a1cb)
+2020-06-05T10:15:06.1400784+07:00 0HM08VEO2ESAL:00000002 [INF] Request finished in 1.8282ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-06-05T10:15:15.5720876+07:00 0HM08VEO2ESAL:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.321203d90514b8e3db08.hot-update.js.map   (ca22a1cb)
+2020-06-05T10:15:15.5739412+07:00 0HM08VEO2ESAL:00000003 [INF] Request finished in 1.9112ms 200 application/json; charset=UTF-8 (791a596a)
+2020-06-05T10:15:15.8070169+07:00 0HM08VEO2ESAL:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/DonVis/getDonViByRole/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-06-05T10:15:15.8077037+07:00 0HM08VEO2ESAL:00000004 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:15:15.8080764+07:00 0HM08VEO2ESAL:00000004 [INF] Executing action method "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:15:15.8084623+07:00 0HM08VEO2ESAL:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:15:15.8274933+07:00 0HM08VEO2ESAL:00000004 [INF] Executed DbCommand ("18"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:15:15.8286456+07:00 0HM08VEO2ESAL:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:15:15.8298058+07:00 0HM08VEO2ESAL:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:15:15.8306735+07:00 0HM08VEO2ESAL:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:15:15.8313461+07:00 0HM08VEO2ESAL:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:15:15.8320289+07:00 0HM08VEO2ESAL:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:15:15.8326037+07:00 0HM08VEO2ESAL:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:15:15.8331433+07:00 0HM08VEO2ESAL:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:15:15.8336797+07:00 0HM08VEO2ESAL:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:15:15.8342049+07:00 0HM08VEO2ESAL:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:15:15.8347063+07:00 0HM08VEO2ESAL:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:15:15.8352103+07:00 0HM08VEO2ESAL:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:15:15.8357573+07:00 0HM08VEO2ESAL:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:15:15.8363999+07:00 0HM08VEO2ESAL:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:15:15.8370062+07:00 0HM08VEO2ESAL:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:15:15.8375788+07:00 0HM08VEO2ESAL:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:15:15.8381398+07:00 0HM08VEO2ESAL:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-06-05T10:15:15.8383058+07:00 0HM08VEO2ESAL:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:15:15.8385811+07:00 0HM08VEO2ESAL:00000004 [INF] Executed action "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" in 30.6351ms (afa2e885)
+2020-06-05T10:15:15.8387025+07:00 0HM08VEO2ESAL:00000004 [INF] Request finished in 31.773ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:15:16.2079019+07:00 0HM08VEO2ESAL:00000005 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/DonVis/getItems/0/0/x application/json 324 (ca22a1cb)
+2020-06-05T10:15:16.2080160+07:00 0HM08VEO2ESAL:00000005 [INF] Policy execution successful. (0204925d)
+2020-06-05T10:15:16.2085265+07:00 0HM08VEO2ESAL:00000005 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:15:16.2089968+07:00 0HM08VEO2ESAL:00000005 [INF] Executing action method "QLNS.Controllers.DonVisController.GetItems (QLNS)" with arguments (["0", "0", "x", "DonViId IN (select tbl_RoleDonVi.DonViId from AspNetUsers inner join AspNetUserRoles on AspNetUsers.Id = AspNetUserRoles.UserId inner join AspNetRoles on AspNetUserRoles.RoleId = AspNetRoles.Id inner join tbl_RoleDonVi on AspNetRoles.Id = tbl_RoleDonVi.RoleId where AspNetUsers.Id = '0280636e-99e3-4b3d-bec0-5e9aa67ad2b5')"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:15:16.2093300+07:00 0HM08VEO2ESAL:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:15:16.2254795+07:00 0HM08VEO2ESAL:00000005 [INF] Executed DbCommand ("15"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""tbl_DonVi_GetItemsByRange @p0,@p1,@p2,@p3" (0723d8ff)
+2020-06-05T10:15:16.2259296+07:00 0HM08VEO2ESAL:00000005 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:15:16.2261878+07:00 0HM08VEO2ESAL:00000005 [INF] Executed action "QLNS.Controllers.DonVisController.GetItems (QLNS)" in 17.4131ms (afa2e885)
+2020-06-05T10:15:16.2263223+07:00 0HM08VEO2ESAL:00000005 [INF] Request finished in 18.4944ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:15:16.3102970+07:00 0HM08VEO2ESAL:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/account/users/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-06-05T10:15:16.3108670+07:00 0HM08VEO2ESAL:00000006 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:15:16.3110949+07:00 0HM08VEO2ESAL:00000006 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-06-05T10:15:16.3113389+07:00 0HM08VEO2ESAL:00000006 [INF] Executing action method "QLNS.Controllers.AccountController.GetUserById (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:15:16.3114549+07:00 0HM08VEO2ESAL:00000006 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-06-05T10:15:16.3119013+07:00 0HM08VEO2ESAL:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:15:16.3145116+07:00 0HM08VEO2ESAL:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Configuration], [u].[CreatedBy], [u].[CreatedDate], [u].[DonViId], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[IsEnabled], [u].[JobTitle], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedBy], [u].[UpdatedDate], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[Id] = @__userId_0
+ORDER BY [u].[Id]" (0723d8ff)
+2020-06-05T10:15:16.3166533+07:00 0HM08VEO2ESAL:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u.Roles].[UserId], [u.Roles].[RoleId]
+FROM [AspNetUserRoles] AS [u.Roles]
+INNER JOIN (
+    SELECT TOP(1) [u0].[Id]
+    FROM [AspNetUsers] AS [u0]
+    WHERE [u0].[Id] = @__userId_0
+    ORDER BY [u0].[Id]
+) AS [t] ON [u.Roles].[UserId] = [t].[Id]
+ORDER BY [t].[Id]" (0723d8ff)
+2020-06-05T10:15:16.3183404+07:00 0HM08VEO2ESAL:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Name]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[Id] IN (N'ad4de3cb-1654-460b-9c4c-e29fab9860d7')" (0723d8ff)
+2020-06-05T10:15:16.3185831+07:00 0HM08VEO2ESAL:00000006 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:15:16.3188209+07:00 0HM08VEO2ESAL:00000006 [INF] Executed action "QLNS.Controllers.AccountController.GetUserById (QLNS)" in 7.7596ms (afa2e885)
+2020-06-05T10:15:16.3189662+07:00 0HM08VEO2ESAL:00000006 [INF] Request finished in 8.7301ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:15:16.3371207+07:00 0HM08VEO2ESAL:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/account/users/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-06-05T10:15:16.3377029+07:00 0HM08VEO2ESAL:00000007 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:15:16.3379343+07:00 0HM08VEO2ESAL:00000007 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-06-05T10:15:16.3381757+07:00 0HM08VEO2ESAL:00000007 [INF] Executing action method "QLNS.Controllers.AccountController.GetUserById (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:15:16.3383202+07:00 0HM08VEO2ESAL:00000007 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-06-05T10:15:16.3387207+07:00 0HM08VEO2ESAL:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:15:16.3396541+07:00 0HM08VEO2ESAL:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Configuration], [u].[CreatedBy], [u].[CreatedDate], [u].[DonViId], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[IsEnabled], [u].[JobTitle], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedBy], [u].[UpdatedDate], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[Id] = @__userId_0
+ORDER BY [u].[Id]" (0723d8ff)
+2020-06-05T10:15:16.3402243+07:00 0HM08VEO2ESAL:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u.Roles].[UserId], [u.Roles].[RoleId]
+FROM [AspNetUserRoles] AS [u.Roles]
+INNER JOIN (
+    SELECT TOP(1) [u0].[Id]
+    FROM [AspNetUsers] AS [u0]
+    WHERE [u0].[Id] = @__userId_0
+    ORDER BY [u0].[Id]
+) AS [t] ON [u.Roles].[UserId] = [t].[Id]
+ORDER BY [t].[Id]" (0723d8ff)
+2020-06-05T10:15:16.3404438+07:00 0HM08VEO2ESAM:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/DiChuyens/getByStatus application/json  (ca22a1cb)
+2020-06-05T10:15:16.3410104+07:00 0HM08VEO2ESAM:00000001 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:15:16.3411979+07:00 0HM08VEO2ESAL:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Name]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[Id] IN (N'ad4de3cb-1654-460b-9c4c-e29fab9860d7')" (0723d8ff)
+2020-06-05T10:15:16.3412633+07:00 0HM08VEO2ESAM:00000001 [INF] Executing action method "Pupai.Modules.Controllers.DiChuyensController.getByStatus (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:15:16.3414258+07:00 0HM08VEO2ESAL:00000007 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:15:16.3416610+07:00 0HM08VEO2ESAM:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:15:16.3417042+07:00 0HM08VEO2ESAL:00000007 [INF] Executed action "QLNS.Controllers.AccountController.GetUserById (QLNS)" in 3.8069ms (afa2e885)
+2020-06-05T10:15:16.3418273+07:00 0HM08VEO2ESAL:00000007 [INF] Request finished in 4.7684ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:15:16.3437082+07:00 0HM08VEO2ESAM:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[DiChuyenId], [r].[KyHieu], [r].[TenDiChuyen], [r].[TrangThai], [r].[VitriHienThi]
+FROM [tbl_DiChuyen] AS [r]
+WHERE [r].[TrangThai] = 1" (0723d8ff)
+2020-06-05T10:15:16.3439875+07:00 0HM08VEO2ESAM:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:15:16.3441650+07:00 0HM08VEO2ESAM:00000001 [INF] Executed action "Pupai.Modules.Controllers.DiChuyensController.getByStatus (QLNS)" in 2.9318ms (afa2e885)
+2020-06-05T10:15:16.3443131+07:00 0HM08VEO2ESAM:00000001 [INF] Request finished in 3.9106ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:15:16.3773451+07:00 0HM08VEO2ESAL:00000008 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/HienVats/getItems/0/0/x application/json 34 (ca22a1cb)
+2020-06-05T10:15:16.3774570+07:00 0HM08VEO2ESAL:00000008 [INF] Policy execution successful. (0204925d)
+2020-06-05T10:15:16.3779726+07:00 0HM08VEO2ESAL:00000008 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-06-05T10:15:16.3783899+07:00 0HM08VEO2ESAL:00000008 [INF] Executing action method "Pupai.Modules.Controllers.HienVatsController.GetItems (QLNS)" with arguments (["0", "0", "x", "DonViId in (0) and TrangThai = 1"]) - ModelState is Valid (ba7f4ac2)
+2020-06-05T10:15:16.3787398+07:00 0HM08VEO2ESAL:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-06-05T10:15:16.3838085+07:00 0HM08VEO2ESAL:00000008 [INF] Executed DbCommand ("4"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""tbl_HienVat_GetItemsByRange @p0,@p1,@p2,@p3" (0723d8ff)
+2020-06-05T10:15:16.3839810+07:00 0HM08VEO2ESAL:00000008 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-06-05T10:15:16.3841234+07:00 0HM08VEO2ESAL:00000008 [INF] Executed action "Pupai.Modules.Controllers.HienVatsController.GetItems (QLNS)" in 5.9668ms (afa2e885)
+2020-06-05T10:15:16.3842807+07:00 0HM08VEO2ESAL:00000008 [INF] Request finished in 6.9869ms 200 application/json; charset=utf-8 (791a596a)
+2020-06-05T10:20:15.5381690+07:00 0HM08VEO2ESAG:00000004 [INF] Request finished in 707667.3996ms 200 text/event-stream; charset=utf-8 (791a596a)

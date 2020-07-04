@@ -1,0 +1,100 @@
+.row:not(:last-child) {
+    /*border-bottom: 1px solid #ccc;*/
+}
+
+.separator-hr {
+    margin: 0 5px;
+    border-top-style: dashed;
+}
+
+.edit-separator-hr {
+    margin: 10px 5px;
+    border-top-style: dashed;
+}
+
+.last-separator-hr {
+    margin-top: 5px;
+}
+
+.edit-last-separator-hr {
+    margin-top: 15px;
+}
+
+.password-separator-hr {
+    margin: 5px;
+    border-style: none;
+}
+
+
+.form-group {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+input.form-control {
+    border-left-width: 5px;
+}
+
+
+.password-well {
+    margin-bottom: 0;
+}
+
+.hint-sm {
+    display: block;
+}
+
+.checkbox.user-enabled {
+    display: inline-block;
+}
+
+.unblock-user {
+    margin-left: 34px;
+}
+
+@media (min-width: 992px) {
+    .user-enabled {
+        margin-left: 40px;
+    }
+}
+
+
+.dropdown-menu {    
+    border: 1px solid rgba(0,0,0,.15)!important;
+    border-radius: 4px!important;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175)!important;
+}
+
+
+.k-grid-content-locked tr:last-child td, .k-grid-content tr:last-child td {
+    overflow: hidden !important
+}
+
+.drodown {
+    position: relative;
+    z-index: 1
+}
+
+    .drodown .k-treeview {
+        display: none;
+        position: absolute;
+        top: 31px;
+        left: 15px;
+        border-top: none;
+        border-top-color: currentcolor;
+        border-right-color: currentcolor;
+        border-bottom-color: currentcolor;
+        border-bottom-width: 1px;
+        border-left-color: currentcolor;
+        height: 200px;
+        width: 96%;
+        background: #fff;
+        border: 1px solid rgba(0,0,0,.15);
+        border-radius: 4px;
+        box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    }
+
+.showDropdown {
+    display: block !important
+}
+

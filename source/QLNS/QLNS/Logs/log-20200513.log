@@ -1,0 +1,2066 @@
+2020-05-13T00:05:19.9116856+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-05-13T00:05:20.4156668+07:00  [FTL] Lỗi khởi tạo cơ sở dữ liệu (3b6074dc)
+System.AggregateException: One or more errors occurred. (Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.) ---> System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\Project\CucDiSan\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at QLNS.Program.Main(String[] args) in D:\Project\CucDiSan\source\QLNS\QLNS\Program.cs:line 35
+---> (Inner Exception #0) System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'UrencoDB, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\Project\CucDiSan\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+
+<---
+
+2020-05-13T00:05:20.8773752+07:00 0HLVMIQJJTLB6:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:55842/  0 (ca22a1cb)
+2020-05-13T00:05:20.8773752+07:00 0HLVMIQJJTLB7:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/   (ca22a1cb)
+2020-05-13T00:05:20.9380415+07:00 0HLVMIQJJTLB6:00000001 [INF] Request finished in 92.7135ms 200  (791a596a)
+2020-05-13T00:05:21.8505403+07:00 0HLVMIQJJTLB7:00000001 [INF] Executing action method "QLNS.Controllers.HomeController.Index (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-05-13T00:05:24.9636305+07:00 0HLVMIQJJTLB7:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-05-13T00:05:26.4852456+07:00 0HLVMIQJJTLB7:00000001 [INF] Executed action "QLNS.Controllers.HomeController.Index (QLNS)" in 4709.825ms (afa2e885)
+2020-05-13T00:05:26.5163705+07:00 0HLVMIQJJTLB7:00000001 [INF] Request finished in 5649.2758ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-13T00:05:26.8105969+07:00 0HLVMIQJJTLB6:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/vendor.css?v=QOq4-etCsJX8m9f_uO-JvgMS6xz8jLZCOH8wJGYZOR0   (ca22a1cb)
+2020-05-13T00:05:26.9545086+07:00 0HLVMIQJJTLB7:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/vendor.js?v=FwYw6gAJD-OCZqk1GTiv1cCp_cSE_F6L35nFyXTyXgM   (ca22a1cb)
+2020-05-13T00:05:26.9777729+07:00 0HLVMIQJJTLB8:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js?v=HxL21eWNaTijOsjLOQ0RxyZQo9hkQLtm_pdkY21wOEs   (ca22a1cb)
+2020-05-13T00:05:47.2667244+07:00  [INF] webpack built 4d0017ff957416a85c21 in 28492ms (32453f00)
+2020-05-13T00:05:47.6635803+07:00 0HLVMIQJJTLB7:00000002 [INF] Sending file. Request path: '"/dist/vendor.js"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\dist\vendor.js"' (27b0a520)
+2020-05-13T00:05:47.8118402+07:00  [ERR] Hash: 4d0017ff957416a85c21
+Version: webpack 3.10.0
+Time: 28492ms
+                               Asset     Size  Chunks                    Chunk Names
+3b36b06825a0c4c359324ce0feefb0ed.png  97.7 kB          [emitted]         
+bb9704a2166d7cd64b10d62f1d566356.png   147 kB          [emitted]         
+563c7e7c04bf5b74c7675ea6c3301c2b.png  46.1 kB          [emitted]         
+bd60eae1cf82800c33da4c7814c10c74.png  83.8 kB          [emitted]         
+4a4cd48a2c824ef9ac1db0faad589f2d.png   170 kB          [emitted]         
+b4cd69fc962ee0bc15433dfbb83e89f9.png   192 kB          [emitted]         
+b1e47b094eb0a9950467d554734fbd8c.jpg  31.7 kB          [emitted]         
+8403b398a5747a0ebc86e9eaf866275a.jpg  92.2 kB          [emitted]         
+806f92ae37d89cff0d91f92687a0ea89.png  70.9 kB          [emitted]         
+6ef5c5c3e36db9415432b93497371b2d.png  39.1 kB          [emitted]         
+8f78faa351425f60dd184c30de5c1026.png  49.7 kB          [emitted]         
+7cd1aebd88ce95e05fa8a7781a821a8e.png  31.9 kB          [emitted]         
+26b8958e0d7d65fd634031a1cc3ba0a1.png   273 kB          [emitted]  [big]  
+2165f5c23474afc8d948394cae3fa63f.png  71.1 kB          [emitted]         
+0bc9a9997fd299ed587ba1241f5f6657.png  53.6 kB          [emitted]         
+2da1e833c2cb891d33ff4e58eced07d4.png   248 kB          [emitted]         
+20b0a84eee3084b0695cf18941496e2e.png   145 kB          [emitted]         
+240711fa17b9a6d30b575198aeee244f.png  55.3 kB          [emitted]         
+39db3efbca32138d9c0fb01623760338.png   157 kB          [emitted]         
+1e86fa4fc818daae89ca09dfbd4ea5a5.png  54.9 kB          [emitted]         
+c846835ffac6d3d432f7acaf94bd852e.png    56 kB          [emitted]         
+a0c7083f9c339195fc5b4c41dd7af0af.png  68.9 kB          [emitted]         
+86831ba717d6a0d6cdae3262fa86d100.png    39 kB          [emitted]         
+84144d3930d5fd3ea7e38729fb012bec.png   459 kB          [emitted]  [big]  
+d657f1028b3cd66a85d85607008ff754.png  33.7 kB          [emitted]         
+031dfa25174895c1ba809ae27b82e372.png  52.7 kB          [emitted]         
+eafdb11865e1519a6016c888d9e1f3bc.png  48.9 kB          [emitted]         
+a75972d990ef78c6983268af1ea19e91.png  45.9 kB          [emitted]         
+491ec5d24a8f0b6e4babe9421c545c50.png  49.7 kB          [emitted]         
+f8f7a35c7080582ab61f4281e6aeacd0.png  70.9 kB          [emitted]         
+641da7fcb446d404bb53311d2c4739ef.png  67.6 kB          [emitted]         
+75b1db326b53120cf3bac0e633227b85.png  39.2 kB          [emitted]         
+53ae50344bb96291ef3bf701c2c61212.png  37.8 kB          [emitted]         
+e2c5896114d04a6d8d808f20bcdf79ae.png   350 kB          [emitted]  [big]  
+e10af218b941826ea360d7554688d721.png  32.6 kB          [emitted]         
+                      main-client.js  12.6 MB       0  [emitted]  [big]  main-client
+                  main-client.js.map    14 MB       0  [emitted]         main-client
+   [0] delegated ./node_modules/@angular/core/esm5/core.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+   [9] external "vendor_7f98dda2557d6d111d50" 42 bytes {0} [not cacheable]
+ [999] multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts 52 bytes {0} [built]
+[1000] delegated ./node_modules/event-source-polyfill/src/eventsource.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1001] (webpack)-hot-middleware/client.js?path=__webpack_hmr&dynamicPublicPath=true 7.35 kB {0} [built]
+[1002] delegated ./node_modules/webpack/buildin/module.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1003] ./node_modules/querystring-es3/index.js 127 bytes {0} [built]
+[1006] ./node_modules/strip-ansi/index.js 161 bytes {0} [built]
+[1008] (webpack)-hot-middleware/client-overlay.js 2.21 kB {0} [built]
+[1013] (webpack)-hot-middleware/process-update.js 4.33 kB {0} [built]
+[1014] ./ClientApp/boot.browser.ts 1.29 kB {0} [built]
+[1015] delegated ./node_modules/core-js/client/shim.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1016] delegated ./node_modules/web-animations-js/web-animations.min.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1018] ./node_modules/@angular/platform-browser-dynamic/esm5/platform-browser-dynamic.js 24.9 kB {0} [built]
+[1020] ./ClientApp/app/app.module.ts 11.2 kB {0} [built]
+    + 1625 hidden modules
+
+ERROR in ./ClientApp/app/components/danhmuc/tinhthanh/tinhthanh-info.component.ts
+Module not found: Error: Can't resolve '../../../models/tinhthanh.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\danhmuc\tinhthanh'
+ @ ./ClientApp/app/components/danhmuc/tinhthanh/tinhthanh-info.component.ts 19:0-60
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/danhmuc/tinhthanh/tinhthanh.component.ts
+Module not found: Error: Can't resolve '../../../models/tinhthanh.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\danhmuc\tinhthanh'
+ @ ./ClientApp/app/components/danhmuc/tinhthanh/tinhthanh.component.ts 14:0-60
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/tinhthanh/tinhthanh-info.component.ts:8:27 
+    TS2307: Cannot find module '../../../models/tinhthanh.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/tinhthanh/tinhthanh.component.ts:7:27 
+    TS2307: Cannot find module '../../../models/tinhthanh.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/antoanlaodong.service.ts:7:31 
+    TS2307: Cannot find module '../models/antoanlaodong.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/bactho.service.ts:7:24 
+    TS2307: Cannot find module '../models/bactho.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/baocao.service.ts:7:76 
+    TS2307: Cannot find module '../models/baocao.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/bhxh.service.ts:7:22 
+    TS2307: Cannot find module '../models/bhxh.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/bonhiemmiennhiem.service.ts:7:34 
+    TS2307: Cannot find module '../models/bonhiemmiennhiem.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/capbacquandoi.service.ts:7:31 
+    TS2307: Cannot find module '../models/capbacquandoi.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/capktkl.service.ts:7:25 
+    TS2307: Cannot find module '../models/capktkl.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/chibodang.service.ts:6:27 
+    TS2307: Cannot find module '../models/chibodang.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/chitieuthunhap.service.ts:7:32 
+    TS2307: Cannot find module '../models/chitieuthunhap.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/chitieuthunhap.service.ts:8:25 
+    TS2307: Cannot find module '../models/thunhap.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/chucdanh.service.ts:7:26 
+    TS2307: Cannot find module '../models/chucdanh.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/chucvudangdoancd.service.ts:7:34 
+    TS2307: Cannot find module '../models/chucvudangdoancd.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/chungchivanbang.service.ts:7:33 
+    TS2307: Cannot find module '../models/chungchivanbang.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/chuyenmon.service.ts:7:27 
+    TS2307: Cannot find module '../models/chuyenmon.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/chuyennganh.service.ts:7:29 
+    TS2307: Cannot find module '../models/chuyennganh.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/congtac.service.ts:7:25 
+    TS2307: Cannot find module '../models/congtac.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/danghopdong.service.ts:7:29 
+    TS2307: Cannot find module '../models/danghopdong.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/dangkynghi.service.ts:7:28 
+    TS2307: Cannot find module '../models/dangkynghi.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/danhhieu.service.ts:7:26 
+    TS2307: Cannot find module '../models/danhhieu.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/danhmucatvsld.service.ts:7:31 
+    TS2307: Cannot find module '../models/danhmucatvsld.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/dantoc.service.ts:7:24 
+    TS2307: Cannot find module '../models/dantoc.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/daotaoboiduong.service.ts:7:32 
+    TS2307: Cannot find module '../models/daotaoboiduong.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/gioitinh.service.ts:7:26 
+    TS2307: Cannot find module '../models/gioitinh.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/hinhthucdaotao.service.ts:7:32 
+    TS2307: Cannot find module '../models/hinhthucdaotao.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/hinhthucktkl.service.ts:7:30 
+    TS2307: Cannot find module '../models/hinhthucktkl.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/hocham.service.ts:7:24 
+    TS2307: Cannot find module '../models/hocham.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/hocvi.service.ts:7:23 
+    TS2307: Cannot find module '../models/hocvi.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/hopdong.service.ts:10:25 
+    TS2307: Cannot find module '../models/hopdong.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/hosodang.service.ts:7:26 
+    TS2307: Cannot find module '../models/hosodang.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/hosonhansu.service.ts:7:28 
+    TS2307: Cannot find module '../models/hosonhansu.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/ketquaxeploai.service.ts:7:31 
+    TS2307: Cannot find module '../models/ketquaxeploai.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/khenthuongkyluat.service.ts:7:34 
+    TS2307: Cannot find module '../models/khenthuongkyluat.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/kynang.service.ts:7:24 
+    TS2307: Cannot find module '../models/kynang.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/loaichungchivanbang.service.ts:7:37 
+    TS2307: Cannot find module '../models/loaichungchivanbang.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/loaihopdong.service.ts:7:29 
+    TS2307: Cannot find module '../models/loaihopdong.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/loaiquatrinhcongtac.service.ts:10:37 
+    TS2307: Cannot find module '../models/loaiquatrinhcongtac.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/loaitainan.service.ts:7:28 
+    TS2307: Cannot find module '../models/loaitainnan.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/lydonghi.service.ts:7:26 
+    TS2307: Cannot find module '../models/lydonghi.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/lyluanchinhtri.service.ts:7:32 
+    TS2307: Cannot find module '../models/lyluanchinhtri.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/moiquanhe.service.ts:7:27 
+    TS2307: Cannot find module '../models/moiquanhe.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/mucdotainan.service.ts:7:29 
+    TS2307: Cannot find module '../models/mucdotainan.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/ngachcongchuc.service.ts:7:31 
+    TS2307: Cannot find module '../models/ngachcongchuc.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/nganhang.service.ts:7:26 
+    TS2307: Cannot find module '../models/nganhang.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/noidungtruythu.service.ts:7:32 
+    TS2307: Cannot find module '../models/noidungtruythu.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/quanhegiadinh.service.ts:7:31 
+    TS2307: Cannot find module '../models/quanhegiadinh.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/quatrinhcongtac.service.ts:7:33 
+    TS2307: Cannot find module '../models/quatrinhcongtac.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/quatrinhluong.service.ts:7:31 
+    TS2307: Cannot find module '../models/quatrinhluong.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/quoctich.service.ts:7:26 
+    TS2307: Cannot find module '../models/quoctich.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/sendemail-endpoint.service.ts:7:27 
+    TS2307: Cannot find module '../models/sendemail.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/sendemail.service.ts:7:27 
+    TS2307: Cannot find module '../models/sendemail.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/tailieu.service.ts:7:25 
+    TS2307: Cannot find module '../models/tailieu.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/tainanlaodong.service.ts:7:31 
+    TS2307: Cannot find module '../models/tainanlaodong.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/tanggiambaohiem.service.ts:7:33 
+    TS2307: Cannot find module '../models/tangiambaohiem.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/thoiviec.service.ts:7:26 
+    TS2307: Cannot find module '../models/thoiviec.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/thongke.service.ts:7:25 
+    TS2307: Cannot find module '../models/thongke.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/tinhthanh.service.ts:7:27 
+    TS2307: Cannot find module '../models/tinhthanh.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/tinhtranghonnhan.service.ts:7:34 
+    TS2307: Cannot find module '../models/tinhtranghonnhan.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/tongiao.service.ts:7:25 
+    TS2307: Cannot find module '../models/tongiao.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/truythubhxh.service.ts:7:29 
+    TS2307: Cannot find module '../models/truythubhxh.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/vanhoa.service.ts:7:24 
+    TS2307: Cannot find module '../models/vanhoa.model'. (4b283a88)
+2020-05-13T00:05:47.8825239+07:00 0HLVMIQJJTLB6:00000002 [INF] Sending file. Request path: '"/dist/vendor.css"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\dist\vendor.css"' (27b0a520)
+2020-05-13T00:05:48.2268159+07:00 0HLVMIQJJTLB7:00000002 [INF] Request finished in 21162.7141ms 200 application/javascript (791a596a)
+2020-05-13T00:05:48.5019798+07:00 0HLVMIQJJTLB6:00000002 [INF] Request finished in 21661.5673ms 200 text/css (791a596a)
+2020-05-13T00:05:48.8859180+07:00 0HLVMIQJJTLB8:00000001 [INF] Request finished in 21899.8079ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-05-13T00:05:49.8440124+07:00 0HLVMIQJJTLB7:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-05-13T00:05:49.8692602+07:00 0HLVMIQJJTLB6:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/favicon.ico   (ca22a1cb)
+2020-05-13T00:05:49.8793370+07:00 0HLVMIQJJTLB6:00000003 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\favicon.ico"' (27b0a520)
+2020-05-13T00:05:49.9803991+07:00 0HLVMIQJJTLB6:00000003 [INF] Request finished in 109.717ms 200 image/x-icon (791a596a)
+2020-05-13T00:06:44.8799731+07:00 0HLVMIQJJTLB8:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js.map   (ca22a1cb)
+2020-05-13T00:06:45.8020943+07:00 0HLVMIQJJTLB8:00000002 [INF] Request finished in 923.6127ms 200 application/json; charset=UTF-8 (791a596a)
+2020-05-13T00:19:35.3122510+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-05-13T00:19:35.5504829+07:00  [FTL] Lỗi khởi tạo cơ sở dữ liệu (3b6074dc)
+System.AggregateException: One or more errors occurred. (Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.) ---> System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\Project\CucDiSan\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at QLNS.Program.Main(String[] args) in D:\Project\CucDiSan\source\QLNS\QLNS\Program.cs:line 35
+---> (Inner Exception #0) System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'UrencoDB, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\Project\CucDiSan\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+
+<---
+
+2020-05-13T00:19:35.9606589+07:00 0HLVMJ2IESIE2:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:55842/  0 (ca22a1cb)
+2020-05-13T00:19:35.9606589+07:00 0HLVMJ2IESIE1:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/   (ca22a1cb)
+2020-05-13T00:19:35.9944895+07:00 0HLVMJ2IESIE2:00000001 [INF] Request finished in 48.2787ms 200  (791a596a)
+2020-05-13T00:19:36.3705781+07:00 0HLVMJ2IESIE1:00000001 [INF] Executing action method "QLNS.Controllers.HomeController.Index (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-05-13T00:19:39.1697604+07:00 0HLVMJ2IESIE1:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-05-13T00:19:40.1883850+07:00 0HLVMJ2IESIE1:00000001 [INF] Executed action "QLNS.Controllers.HomeController.Index (QLNS)" in 3872.8434ms (afa2e885)
+2020-05-13T00:19:40.1915108+07:00 0HLVMJ2IESIE2:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/vendor.js?v=FwYw6gAJD-OCZqk1GTiv1cCp_cSE_F6L35nFyXTyXgM   (ca22a1cb)
+2020-05-13T00:19:40.2001298+07:00 0HLVMJ2IESIE1:00000001 [INF] Request finished in 4255.7405ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-13T00:19:40.2268546+07:00 0HLVMJ2IESIE3:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js?v=c_mamgCQ9Pv0RutbyyZp3AkiXUKcnVJL1YJhLuLbBv4   (ca22a1cb)
+2020-05-13T00:19:40.2682033+07:00 0HLVMJ2IESIE4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/vendor.css?v=QOq4-etCsJX8m9f_uO-JvgMS6xz8jLZCOH8wJGYZOR0   (ca22a1cb)
+2020-05-13T00:20:02.4074060+07:00  [INF] webpack built 384e6b73cc073470c3ef in 27663ms (d9141b4a)
+2020-05-13T00:20:03.6690547+07:00  [ERR] Hash: 384e6b73cc073470c3ef
+Version: webpack 3.10.0
+Time: 27663ms
+                               Asset     Size  Chunks                    Chunk Names
+3b36b06825a0c4c359324ce0feefb0ed.png  97.7 kB          [emitted]         
+bb9704a2166d7cd64b10d62f1d566356.png   147 kB          [emitted]         
+563c7e7c04bf5b74c7675ea6c3301c2b.png  46.1 kB          [emitted]         
+bd60eae1cf82800c33da4c7814c10c74.png  83.8 kB          [emitted]         
+4a4cd48a2c824ef9ac1db0faad589f2d.png   170 kB          [emitted]         
+b4cd69fc962ee0bc15433dfbb83e89f9.png   192 kB          [emitted]         
+b1e47b094eb0a9950467d554734fbd8c.jpg  31.7 kB          [emitted]         
+8403b398a5747a0ebc86e9eaf866275a.jpg  92.2 kB          [emitted]         
+806f92ae37d89cff0d91f92687a0ea89.png  70.9 kB          [emitted]         
+6ef5c5c3e36db9415432b93497371b2d.png  39.1 kB          [emitted]         
+8f78faa351425f60dd184c30de5c1026.png  49.7 kB          [emitted]         
+7cd1aebd88ce95e05fa8a7781a821a8e.png  31.9 kB          [emitted]         
+26b8958e0d7d65fd634031a1cc3ba0a1.png   273 kB          [emitted]  [big]  
+2165f5c23474afc8d948394cae3fa63f.png  71.1 kB          [emitted]         
+0bc9a9997fd299ed587ba1241f5f6657.png  53.6 kB          [emitted]         
+2da1e833c2cb891d33ff4e58eced07d4.png   248 kB          [emitted]         
+20b0a84eee3084b0695cf18941496e2e.png   145 kB          [emitted]         
+240711fa17b9a6d30b575198aeee244f.png  55.3 kB          [emitted]         
+39db3efbca32138d9c0fb01623760338.png   157 kB          [emitted]         
+1e86fa4fc818daae89ca09dfbd4ea5a5.png  54.9 kB          [emitted]         
+c846835ffac6d3d432f7acaf94bd852e.png    56 kB          [emitted]         
+a0c7083f9c339195fc5b4c41dd7af0af.png  68.9 kB          [emitted]         
+86831ba717d6a0d6cdae3262fa86d100.png    39 kB          [emitted]         
+84144d3930d5fd3ea7e38729fb012bec.png   459 kB          [emitted]  [big]  
+d657f1028b3cd66a85d85607008ff754.png  33.7 kB          [emitted]         
+031dfa25174895c1ba809ae27b82e372.png  52.7 kB          [emitted]         
+eafdb11865e1519a6016c888d9e1f3bc.png  48.9 kB          [emitted]         
+a75972d990ef78c6983268af1ea19e91.png  45.9 kB          [emitted]         
+491ec5d24a8f0b6e4babe9421c545c50.png  49.7 kB          [emitted]         
+f8f7a35c7080582ab61f4281e6aeacd0.png  70.9 kB          [emitted]         
+641da7fcb446d404bb53311d2c4739ef.png  67.6 kB          [emitted]         
+75b1db326b53120cf3bac0e633227b85.png  39.2 kB          [emitted]         
+53ae50344bb96291ef3bf701c2c61212.png  37.8 kB          [emitted]         
+e2c5896114d04a6d8d808f20bcdf79ae.png   350 kB          [emitted]  [big]  
+e10af218b941826ea360d7554688d721.png  32.6 kB          [emitted]         
+                      main-client.js  12.6 MB       0  [emitted]  [big]  main-client
+                  main-client.js.map    14 MB       0  [emitted]         main-client
+   [0] delegated ./node_modules/@angular/core/esm5/core.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+   [9] external "vendor_7f98dda2557d6d111d50" 42 bytes {0} [not cacheable]
+ [993] multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts 52 bytes {0} [built]
+ [994] delegated ./node_modules/event-source-polyfill/src/eventsource.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+ [995] (webpack)-hot-middleware/client.js?path=__webpack_hmr&dynamicPublicPath=true 7.35 kB {0} [built]
+ [996] delegated ./node_modules/webpack/buildin/module.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+ [997] ./node_modules/querystring-es3/index.js 127 bytes {0} [built]
+[1000] ./node_modules/strip-ansi/index.js 161 bytes {0} [built]
+[1002] (webpack)-hot-middleware/client-overlay.js 2.21 kB {0} [built]
+[1007] (webpack)-hot-middleware/process-update.js 4.33 kB {0} [built]
+[1008] ./ClientApp/boot.browser.ts 1.29 kB {0} [built]
+[1009] delegated ./node_modules/core-js/client/shim.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1010] delegated ./node_modules/web-animations-js/web-animations.min.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1012] ./node_modules/@angular/platform-browser-dynamic/esm5/platform-browser-dynamic.js 24.9 kB {0} [built]
+[1014] ./ClientApp/app/app.module.ts 11.2 kB {0} [built]
+    + 1616 hidden modules
+
+ERROR in ./ClientApp/app/components/danhmuc/donvi/donvi.component.ts
+Module not found: Error: Can't resolve '../../../models/donvi.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\danhmuc\donvi'
+ @ ./ClientApp/app/components/danhmuc/donvi/donvi.component.ts 15:0-52
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/danhmuc/donvi/donvi-info.component.ts
+Module not found: Error: Can't resolve '../../../models/donvi.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\danhmuc\donvi'
+ @ ./ClientApp/app/components/danhmuc/donvi/donvi-info.component.ts 13:0-52
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/danhmuc/donvi/donvi.component.ts
+Module not found: Error: Can't resolve '../../../models/permission.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\danhmuc\donvi'
+ @ ./ClientApp/app/components/danhmuc/donvi/donvi.component.ts 19:0-62
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/danhmuc/tinhthanh/tinhthanh-info.component.ts
+Module not found: Error: Can't resolve '../../../models/tinhthanh.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\danhmuc\tinhthanh'
+ @ ./ClientApp/app/components/danhmuc/tinhthanh/tinhthanh-info.component.ts 19:0-60
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/danhmuc/tinhthanh/tinhthanh.component.ts
+Module not found: Error: Can't resolve '../../../models/tinhthanh.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\danhmuc\tinhthanh'
+ @ ./ClientApp/app/components/danhmuc/tinhthanh/tinhthanh.component.ts 14:0-60
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/log/log.component.ts
+Module not found: Error: Can't resolve '../../models/log.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\log'
+ @ ./ClientApp/app/components/log/log.component.ts 15:0-45
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/login/login.component.ts
+Module not found: Error: Can't resolve '../../models/log.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\login'
+ @ ./ClientApp/app/components/login/login.component.ts 24:0-45
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/controls/users-management.component.ts
+Module not found: Error: Can't resolve '../../models/permission.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\controls'
+ @ ./ClientApp/app/components/controls/users-management.component.ts 17:0-59
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/controls/user-preferences.component.ts
+Module not found: Error: Can't resolve '../../models/permission.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\controls'
+ @ ./ClientApp/app/components/controls/user-preferences.component.ts 21:0-59
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/controls/role-editor.component.ts
+Module not found: Error: Can't resolve '../../models/permission.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\controls'
+ @ ./ClientApp/app/components/controls/role-editor.component.ts 18:0-59
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/controls/roles-management.component.ts
+Module not found: Error: Can't resolve '../../models/permission.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\controls'
+ @ ./ClientApp/app/components/controls/roles-management.component.ts 16:0-59
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/controls/notifications-viewer.component.ts
+Module not found: Error: Can't resolve '../../models/permission.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\controls'
+ @ ./ClientApp/app/components/controls/notifications-viewer.component.ts 22:0-59
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/controls/user-info.component.ts
+Module not found: Error: Can't resolve '../../models/permission.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\controls'
+ @ ./ClientApp/app/components/controls/user-info.component.ts 21:0-59
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/hethong/hosocanhan.component.ts
+Module not found: Error: Can't resolve '../../models/permission.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\hethong'
+ @ ./ClientApp/app/components/hethong/hosocanhan.component.ts 17:0-59
+ @ ./ClientApp/app/app-routing.module.ts
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/hethong/hethong-menu.component.ts
+Module not found: Error: Can't resolve '../../models/permission.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\hethong'
+ @ ./ClientApp/app/components/hethong/hethong-menu.component.ts 18:0-59
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/settings/settings.component.ts
+Module not found: Error: Can't resolve '../../models/permission.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\settings'
+ @ ./ClientApp/app/components/settings/settings.component.ts 24:0-59
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/controls/role-editor.component.ts
+Module not found: Error: Can't resolve '../../models/role.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\controls'
+ @ ./ClientApp/app/components/controls/role-editor.component.ts 17:0-47
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/controls/user-info.component.ts
+Module not found: Error: Can't resolve '../../models/role.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\controls'
+ @ ./ClientApp/app/components/controls/user-info.component.ts 20:0-47
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/controls/users-management.component.ts
+Module not found: Error: Can't resolve '../../models/role.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\controls'
+ @ ./ClientApp/app/components/controls/users-management.component.ts 16:0-47
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/hethong/hosocanhan.component.ts
+Module not found: Error: Can't resolve '../../models/role.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\hethong'
+ @ ./ClientApp/app/components/hethong/hosocanhan.component.ts 16:0-47
+ @ ./ClientApp/app/app-routing.module.ts
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/hethong/roledonvi.component.ts
+Module not found: Error: Can't resolve '../../models/roledonvi.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\hethong'
+ @ ./ClientApp/app/components/hethong/roledonvi.component.ts 15:0-57
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/controls/user-info.component.ts
+Module not found: Error: Can't resolve '../../models/user-edit.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\controls'
+ @ ./ClientApp/app/components/controls/user-info.component.ts 19:0-56
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/hethong/hosocanhan.component.ts
+Module not found: Error: Can't resolve '../../models/user-edit.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\hethong'
+ @ ./ClientApp/app/components/hethong/hosocanhan.component.ts 15:0-56
+ @ ./ClientApp/app/app-routing.module.ts
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/login/login.component.ts
+Module not found: Error: Can't resolve '../../models/user-login.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\login'
+ @ ./ClientApp/app/components/login/login.component.ts 22:0-58
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/controls/user-info.component.ts
+Module not found: Error: Can't resolve '../../models/user.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\controls'
+ @ ./ClientApp/app/components/controls/user-info.component.ts 18:0-47
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/hethong/hosocanhan.component.ts
+Module not found: Error: Can't resolve '../../models/user.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\hethong'
+ @ ./ClientApp/app/components/hethong/hosocanhan.component.ts 14:0-47
+ @ ./ClientApp/app/app-routing.module.ts
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/app.component.ts
+Module not found: Error: Can't resolve '../models/log.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components'
+ @ ./ClientApp/app/components/app.component.ts 32:0-42
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/services/notification.service.ts
+Module not found: Error: Can't resolve '../models/notification.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\services'
+ @ ./ClientApp/app/services/notification.service.ts 24:0-60
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/app.component.ts
+Module not found: Error: Can't resolve '../models/permission.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components'
+ @ ./ClientApp/app/components/app.component.ts 28:0-56
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/services/auth.service.ts
+Module not found: Error: Can't resolve '../models/user.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\services'
+ @ ./ClientApp/app/services/auth.service.ts 27:0-44
+ @ ./ClientApp/app/app-routing.module.ts
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in [at-loader] ./ClientApp/app/components/app.component.ts:22:28 
+    TS2307: Cannot find module '../models/permission.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/app.component.ts:25:23 
+    TS2307: Cannot find module '../models/donvi.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/app.component.ts:27:21 
+    TS2307: Cannot find module '../models/log.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/controls/notifications-viewer.component.ts:15:28 
+    TS2307: Cannot find module '../../models/permission.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/controls/notifications-viewer.component.ts:17:30 
+    TS2307: Cannot find module '../../models/notification.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/controls/role-editor.component.ts:10:22 
+    TS2307: Cannot find module '../../models/role.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/controls/role-editor.component.ts:11:28 
+    TS2307: Cannot find module '../../models/permission.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/controls/roles-management.component.ts:8:22 
+    TS2307: Cannot find module '../../models/role.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/controls/roles-management.component.ts:9:28 
+    TS2307: Cannot find module '../../models/permission.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/controls/user-info.component.ts:11:22 
+    TS2307: Cannot find module '../../models/user.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/controls/user-info.component.ts:12:26 
+    TS2307: Cannot find module '../../models/user-edit.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/controls/user-info.component.ts:13:22 
+    TS2307: Cannot find module '../../models/role.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/controls/user-info.component.ts:14:28 
+    TS2307: Cannot find module '../../models/permission.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/controls/user-preferences.component.ts:14:28 
+    TS2307: Cannot find module '../../models/permission.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/controls/users-management.component.ts:8:22 
+    TS2307: Cannot find module '../../models/user.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/controls/users-management.component.ts:9:22 
+    TS2307: Cannot find module '../../models/role.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/controls/users-management.component.ts:10:28 
+    TS2307: Cannot find module '../../models/permission.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/controls/users-management.component.ts:11:26 
+    TS2307: Cannot find module '../../models/user-edit.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/donvi/donvi-info.component.ts:10:23 
+    TS2307: Cannot find module '../../../models/donvi.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/donvi/donvi.component.ts:8:23 
+    TS2307: Cannot find module '../../../models/donvi.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/donvi/donvi.component.ts:12:28 
+    TS2307: Cannot find module '../../../models/permission.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/tinhthanh/tinhthanh-info.component.ts:8:27 
+    TS2307: Cannot find module '../../../models/tinhthanh.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/tinhthanh/tinhthanh.component.ts:7:27 
+    TS2307: Cannot find module '../../../models/tinhthanh.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/hethong/hethong-menu.component.ts:10:28 
+    TS2307: Cannot find module '../../models/permission.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/hethong/hosocanhan.component.ts:6:22 
+    TS2307: Cannot find module '../../models/user.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/hethong/hosocanhan.component.ts:7:26 
+    TS2307: Cannot find module '../../models/user-edit.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/hethong/hosocanhan.component.ts:8:22 
+    TS2307: Cannot find module '../../models/role.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/hethong/hosocanhan.component.ts:9:28 
+    TS2307: Cannot find module '../../models/permission.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/hethong/roledonvi.component.ts:8:27 
+    TS2307: Cannot find module '../../models/roledonvi.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/hethong/roledonvi.component.ts:9:23 
+    TS2307: Cannot find module '../../models/donvi.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/hethong/roledonvi.component.ts:12:22 
+    TS2307: Cannot find module '../../models/role.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/home/home.component.ts:14:22 
+    TS2307: Cannot find module '../../models/user.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/home/home.component.ts:17:23 
+    TS2307: Cannot find module '../../models/donvi.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/log/log-info.component.ts:5:21 
+    TS2307: Cannot find module '../../models/log.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/log/log.component.ts:8:21 
+    TS2307: Cannot find module '../../models/log.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/login/login.component.ts:15:27 
+    TS2307: Cannot find module '../../models/user-login.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/login/login.component.ts:17:21 
+    TS2307: Cannot find module '../../models/log.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/settings/settings.component.ts:17:28 
+    TS2307: Cannot find module '../../models/permission.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/account.service.ts:20:22 
+    TS2307: Cannot find module '../models/user.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/account.service.ts:21:22 
+    TS2307: Cannot find module '../models/role.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/account.service.ts:22:63 
+    TS2307: Cannot find module '../models/permission.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/account.service.ts:23:26 
+    TS2307: Cannot find module '../models/user-edit.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/auth.service.ts:21:40 
+    TS2307: Cannot find module '../models/login-response.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/auth.service.ts:22:22 
+    TS2307: Cannot find module '../models/user.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/auth.service.ts:23:63 
+    TS2307: Cannot find module '../models/permission.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/donvi.service.ts:10:23 
+    TS2307: Cannot find module '../models/donvi.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/log.service.ts:7:21 
+    TS2307: Cannot find module '../models/log.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/notification.service.ts:17:30 
+    TS2307: Cannot find module '../models/notification.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/roledonvi.service.ts:7:27 
+    TS2307: Cannot find module '../models/roledonvi.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/tinhthanh.service.ts:7:27 
+    TS2307: Cannot find module '../models/tinhthanh.model'. (74ccb9d1)
+2020-05-13T00:20:03.7135757+07:00 0HLVMJ2IESIE2:00000002 [INF] Sending file. Request path: '"/dist/vendor.js"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\dist\vendor.js"' (27b0a520)
+2020-05-13T00:20:03.8040164+07:00 0HLVMJ2IESIE4:00000001 [INF] Sending file. Request path: '"/dist/vendor.css"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\dist\vendor.css"' (27b0a520)
+2020-05-13T00:20:04.0424239+07:00 0HLVMJ2IESIE2:00000002 [INF] Request finished in 23787.5301ms 200 application/javascript (791a596a)
+2020-05-13T00:20:04.1762108+07:00 0HLVMJ2IESIE4:00000001 [INF] Request finished in 23843.2776ms 200 text/css (791a596a)
+2020-05-13T00:20:05.2013733+07:00 0HLVMJ2IESIE3:00000001 [INF] Request finished in 24973.9123ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-05-13T00:20:08.3106786+07:00 0HLVMJ2IESIE1:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js.map   (ca22a1cb)
+2020-05-13T00:20:08.8725778+07:00 0HLVMJ2IESIE1:00000002 [INF] Request finished in 546.576ms 200 application/json; charset=UTF-8 (791a596a)
+2020-05-13T00:20:09.4039726+07:00 0HLVMJ2IESIE2:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-05-13T00:21:44.2485276+07:00 0HLVMJ2IESIE5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/   (ca22a1cb)
+2020-05-13T00:21:44.2932939+07:00 0HLVMJ2IESIE5:00000001 [INF] Executing action method "QLNS.Controllers.HomeController.Index (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-05-13T00:21:44.2967648+07:00 0HLVMJ2IESIE5:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-05-13T00:21:44.6487273+07:00 0HLVMJ2IESIE5:00000001 [INF] Executed action "QLNS.Controllers.HomeController.Index (QLNS)" in 377.0471ms (afa2e885)
+2020-05-13T00:21:44.6535894+07:00 0HLVMJ2IESIE5:00000001 [INF] Request finished in 404.3396ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-13T00:21:44.7012375+07:00 0HLVMJ2IESIE5:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/vendor.css?v=QOq4-etCsJX8m9f_uO-JvgMS6xz8jLZCOH8wJGYZOR0   (ca22a1cb)
+2020-05-13T00:21:44.7175335+07:00 0HLVMJ2IESIE6:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js?v=P7Wi4_4R1u86Zs-hBjkMmZFtLUDm6cYA6qpTfRvb844   (ca22a1cb)
+2020-05-13T00:21:44.7317509+07:00 0HLVMJ2IESIE7:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/vendor.js?v=FwYw6gAJD-OCZqk1GTiv1cCp_cSE_F6L35nFyXTyXgM   (ca22a1cb)
+2020-05-13T00:21:44.7982027+07:00 0HLVMJ2IESIE5:00000002 [INF] Sending file. Request path: '"/dist/vendor.css"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\dist\vendor.css"' (27b0a520)
+2020-05-13T00:21:44.8256910+07:00 0HLVMJ2IESIE7:00000001 [INF] Sending file. Request path: '"/dist/vendor.js"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\dist\vendor.js"' (27b0a520)
+2020-05-13T00:21:44.9917399+07:00 0HLVMJ2IESIE5:00000002 [INF] Request finished in 197.1038ms 200 text/css (791a596a)
+2020-05-13T00:21:45.2119207+07:00 0HLVMJ2IESIE7:00000001 [INF] Request finished in 427.6378ms 200 application/javascript (791a596a)
+2020-05-13T00:21:45.5422575+07:00 0HLVMJ2IESIE6:00000001 [INF] Request finished in 832.6181ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-05-13T00:21:46.4955637+07:00 0HLVMJ2IESIE5:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js.map   (ca22a1cb)
+2020-05-13T00:21:46.5467131+07:00 0HLVMJ2IESIE7:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-05-13T00:21:46.5970760+07:00 0HLVMJ2IESIE6:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/favicon.ico   (ca22a1cb)
+2020-05-13T00:21:46.6163948+07:00 0HLVMJ2IESIE6:00000002 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\favicon.ico"' (27b0a520)
+2020-05-13T00:21:46.6504903+07:00 0HLVMJ2IESIE6:00000002 [INF] Request finished in 91.2759ms 200 image/x-icon (791a596a)
+2020-05-13T00:21:46.9332361+07:00 0HLVMJ2IESIE2:00000003 [INF] Request finished in 97527.5676ms 200 text/event-stream; charset=utf-8 (791a596a)
+2020-05-13T00:21:47.6022266+07:00 0HLVMJ2IESIE5:00000003 [INF] Request finished in 1117.5331ms 200 application/json; charset=UTF-8 (791a596a)
+2020-05-13T00:22:04.5507082+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-05-13T00:22:04.8590254+07:00  [FTL] Lỗi khởi tạo cơ sở dữ liệu (3b6074dc)
+System.AggregateException: One or more errors occurred. (Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.) ---> System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\Project\CucDiSan\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at QLNS.Program.Main(String[] args) in D:\Project\CucDiSan\source\QLNS\QLNS\Program.cs:line 35
+---> (Inner Exception #0) System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'UrencoDB, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\Project\CucDiSan\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+
+<---
+
+2020-05-13T00:22:05.0933940+07:00 0HLVMJ3USVG67:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:55842/  0 (ca22a1cb)
+2020-05-13T00:22:05.0918926+07:00 0HLVMJ3USVG68:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/   (ca22a1cb)
+2020-05-13T00:22:05.1463060+07:00 0HLVMJ3USVG67:00000001 [INF] Request finished in 65.1861ms 200  (791a596a)
+2020-05-13T00:22:05.6588486+07:00 0HLVMJ3USVG68:00000001 [INF] Executing action method "QLNS.Controllers.HomeController.Index (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-05-13T00:22:08.8387123+07:00 0HLVMJ3USVG68:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-05-13T00:22:09.4218620+07:00 0HLVMJ3USVG68:00000001 [INF] Executed action "QLNS.Controllers.HomeController.Index (QLNS)" in 3852.0347ms (afa2e885)
+2020-05-13T00:22:09.4474359+07:00 0HLVMJ3USVG68:00000001 [INF] Request finished in 4373.3416ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-13T00:22:09.4534524+07:00 0HLVMJ3USVG67:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js?v=P7Wi4_4R1u86Zs-hBjkMmZFtLUDm6cYA6qpTfRvb844   (ca22a1cb)
+2020-05-13T00:22:09.4551953+07:00 0HLVMJ3USVG68:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/vendor.css?v=QOq4-etCsJX8m9f_uO-JvgMS6xz8jLZCOH8wJGYZOR0   (ca22a1cb)
+2020-05-13T00:22:09.5081123+07:00 0HLVMJ3USVG69:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/vendor.js?v=FwYw6gAJD-OCZqk1GTiv1cCp_cSE_F6L35nFyXTyXgM   (ca22a1cb)
+2020-05-13T00:22:30.9869316+07:00  [INF] webpack built 4d0017ff957416a85c21 in 27236ms (d01d57e0)
+2020-05-13T00:22:31.2356620+07:00  [ERR] Hash: 4d0017ff957416a85c21
+Version: webpack 3.10.0
+Time: 27236ms
+                               Asset     Size  Chunks                    Chunk Names
+3b36b06825a0c4c359324ce0feefb0ed.png  97.7 kB          [emitted]         
+bb9704a2166d7cd64b10d62f1d566356.png   147 kB          [emitted]         
+563c7e7c04bf5b74c7675ea6c3301c2b.png  46.1 kB          [emitted]         
+bd60eae1cf82800c33da4c7814c10c74.png  83.8 kB          [emitted]         
+4a4cd48a2c824ef9ac1db0faad589f2d.png   170 kB          [emitted]         
+b4cd69fc962ee0bc15433dfbb83e89f9.png   192 kB          [emitted]         
+b1e47b094eb0a9950467d554734fbd8c.jpg  31.7 kB          [emitted]         
+8403b398a5747a0ebc86e9eaf866275a.jpg  92.2 kB          [emitted]         
+806f92ae37d89cff0d91f92687a0ea89.png  70.9 kB          [emitted]         
+6ef5c5c3e36db9415432b93497371b2d.png  39.1 kB          [emitted]         
+8f78faa351425f60dd184c30de5c1026.png  49.7 kB          [emitted]         
+7cd1aebd88ce95e05fa8a7781a821a8e.png  31.9 kB          [emitted]         
+26b8958e0d7d65fd634031a1cc3ba0a1.png   273 kB          [emitted]  [big]  
+2165f5c23474afc8d948394cae3fa63f.png  71.1 kB          [emitted]         
+0bc9a9997fd299ed587ba1241f5f6657.png  53.6 kB          [emitted]         
+2da1e833c2cb891d33ff4e58eced07d4.png   248 kB          [emitted]         
+20b0a84eee3084b0695cf18941496e2e.png   145 kB          [emitted]         
+240711fa17b9a6d30b575198aeee244f.png  55.3 kB          [emitted]         
+39db3efbca32138d9c0fb01623760338.png   157 kB          [emitted]         
+1e86fa4fc818daae89ca09dfbd4ea5a5.png  54.9 kB          [emitted]         
+c846835ffac6d3d432f7acaf94bd852e.png    56 kB          [emitted]         
+a0c7083f9c339195fc5b4c41dd7af0af.png  68.9 kB          [emitted]         
+86831ba717d6a0d6cdae3262fa86d100.png    39 kB          [emitted]         
+84144d3930d5fd3ea7e38729fb012bec.png   459 kB          [emitted]  [big]  
+d657f1028b3cd66a85d85607008ff754.png  33.7 kB          [emitted]         
+031dfa25174895c1ba809ae27b82e372.png  52.7 kB          [emitted]         
+eafdb11865e1519a6016c888d9e1f3bc.png  48.9 kB          [emitted]         
+a75972d990ef78c6983268af1ea19e91.png  45.9 kB          [emitted]         
+491ec5d24a8f0b6e4babe9421c545c50.png  49.7 kB          [emitted]         
+f8f7a35c7080582ab61f4281e6aeacd0.png  70.9 kB          [emitted]         
+641da7fcb446d404bb53311d2c4739ef.png  67.6 kB          [emitted]         
+75b1db326b53120cf3bac0e633227b85.png  39.2 kB          [emitted]         
+53ae50344bb96291ef3bf701c2c61212.png  37.8 kB          [emitted]         
+e2c5896114d04a6d8d808f20bcdf79ae.png   350 kB          [emitted]  [big]  
+e10af218b941826ea360d7554688d721.png  32.6 kB          [emitted]         
+                      main-client.js  12.6 MB       0  [emitted]  [big]  main-client
+                  main-client.js.map    14 MB       0  [emitted]         main-client
+   [0] delegated ./node_modules/@angular/core/esm5/core.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+   [9] external "vendor_7f98dda2557d6d111d50" 42 bytes {0} [not cacheable]
+ [999] multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts 52 bytes {0} [built]
+[1000] delegated ./node_modules/event-source-polyfill/src/eventsource.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1001] (webpack)-hot-middleware/client.js?path=__webpack_hmr&dynamicPublicPath=true 7.35 kB {0} [built]
+[1002] delegated ./node_modules/webpack/buildin/module.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1003] ./node_modules/querystring-es3/index.js 127 bytes {0} [built]
+[1006] ./node_modules/strip-ansi/index.js 161 bytes {0} [built]
+[1008] (webpack)-hot-middleware/client-overlay.js 2.21 kB {0} [built]
+[1013] (webpack)-hot-middleware/process-update.js 4.33 kB {0} [built]
+[1014] ./ClientApp/boot.browser.ts 1.29 kB {0} [built]
+[1015] delegated ./node_modules/core-js/client/shim.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1016] delegated ./node_modules/web-animations-js/web-animations.min.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1018] ./node_modules/@angular/platform-browser-dynamic/esm5/platform-browser-dynamic.js 24.9 kB {0} [built]
+[1020] ./ClientApp/app/app.module.ts 11.2 kB {0} [built]
+    + 1625 hidden modules
+
+ERROR in ./ClientApp/app/components/danhmuc/tinhthanh/tinhthanh.component.ts
+Module not found: Error: Can't resolve '../../../models/tinhthanh.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\danhmuc\tinhthanh'
+ @ ./ClientApp/app/components/danhmuc/tinhthanh/tinhthanh.component.ts 14:0-60
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in ./ClientApp/app/components/danhmuc/tinhthanh/tinhthanh-info.component.ts
+Module not found: Error: Can't resolve '../../../models/tinhthanh.model' in 'D:\Project\CucDiSan\source\QLNS\QLNS\ClientApp\app\components\danhmuc\tinhthanh'
+ @ ./ClientApp/app/components/danhmuc/tinhthanh/tinhthanh-info.component.ts 19:0-60
+ @ ./ClientApp/app/app.module.ts
+ @ ./ClientApp/boot.browser.ts
+ @ multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/tinhthanh/tinhthanh-info.component.ts:8:27 
+    TS2307: Cannot find module '../../../models/tinhthanh.model'.
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/tinhthanh/tinhthanh.component.ts:7:27 
+    TS2307: Cannot find module '../../../models/tinhthanh.model'.
+
+ERROR in [at-loader] ./ClientApp/app/services/tinhthanh.service.ts:7:27 
+    TS2307: Cannot find module '../models/tinhthanh.model'. (97e771ca)
+2020-05-13T00:22:31.2622646+07:00 0HLVMJ3USVG69:00000001 [INF] Sending file. Request path: '"/dist/vendor.js"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\dist\vendor.js"' (27b0a520)
+2020-05-13T00:22:31.2826262+07:00 0HLVMJ3USVG68:00000002 [INF] Sending file. Request path: '"/dist/vendor.css"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\dist\vendor.css"' (27b0a520)
+2020-05-13T00:22:31.6127367+07:00 0HLVMJ3USVG68:00000002 [INF] Request finished in 22111.0981ms 200 text/css (791a596a)
+2020-05-13T00:22:31.7101964+07:00 0HLVMJ3USVG69:00000001 [INF] Request finished in 22164.8319ms 200 application/javascript (791a596a)
+2020-05-13T00:22:32.3713933+07:00 0HLVMJ3USVG67:00000002 [INF] Request finished in 22913.6813ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-05-13T00:22:33.5959951+07:00 0HLVMJ3USVG68:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js.map   (ca22a1cb)
+2020-05-13T00:22:33.6193891+07:00 0HLVMJ3USVG69:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-05-13T00:22:35.0356268+07:00 0HLVMJ3USVG68:00000003 [INF] Request finished in 1458.223ms 200 application/json; charset=UTF-8 (791a596a)
+2020-05-13T00:23:03.8200194+07:00  [INF] webpack building... (478286db)
+2020-05-13T00:23:18.2352334+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-05-13T00:23:18.4541647+07:00  [FTL] Lỗi khởi tạo cơ sở dữ liệu (3b6074dc)
+System.AggregateException: One or more errors occurred. (Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.) ---> System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\Project\CucDiSan\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at QLNS.Program.Main(String[] args) in D:\Project\CucDiSan\source\QLNS\QLNS\Program.cs:line 35
+---> (Inner Exception #0) System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'UrencoDB, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\Project\CucDiSan\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+
+<---
+
+2020-05-13T00:23:18.8392678+07:00 0HLVMJ4KS6CBF:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:55842/  0 (ca22a1cb)
+2020-05-13T00:23:18.8385098+07:00 0HLVMJ4KS6CBE:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/   (ca22a1cb)
+2020-05-13T00:23:18.8884026+07:00 0HLVMJ4KS6CBF:00000001 [INF] Request finished in 64.2505ms 200  (791a596a)
+2020-05-13T00:23:19.3139140+07:00 0HLVMJ4KS6CBE:00000001 [INF] Executing action method "QLNS.Controllers.HomeController.Index (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-05-13T00:23:22.4796448+07:00 0HLVMJ4KS6CBE:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-05-13T00:23:23.8992153+07:00 0HLVMJ4KS6CBE:00000001 [INF] Executed action "QLNS.Controllers.HomeController.Index (QLNS)" in 4642.9238ms (afa2e885)
+2020-05-13T00:23:23.9034983+07:00 0HLVMJ4KS6CBF:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/vendor.js?v=FwYw6gAJD-OCZqk1GTiv1cCp_cSE_F6L35nFyXTyXgM   (ca22a1cb)
+2020-05-13T00:23:23.9121917+07:00 0HLVMJ4KS6CBE:00000001 [INF] Request finished in 5095.7207ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-13T00:23:23.9493162+07:00 0HLVMJ4KS6CBH:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/vendor.css?v=QOq4-etCsJX8m9f_uO-JvgMS6xz8jLZCOH8wJGYZOR0   (ca22a1cb)
+2020-05-13T00:23:23.9770153+07:00 0HLVMJ4KS6CBG:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js?v=c_mamgCQ9Pv0RutbyyZp3AkiXUKcnVJL1YJhLuLbBv4   (ca22a1cb)
+2020-05-13T00:23:45.7078295+07:00  [INF] webpack built 00231141849cc1f441cf in 27821ms (1a1b8fb0)
+2020-05-13T00:23:46.0003867+07:00 0HLVMJ4KS6CBF:00000002 [INF] Sending file. Request path: '"/dist/vendor.js"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\dist\vendor.js"' (27b0a520)
+2020-05-13T00:23:46.0044120+07:00 0HLVMJ4KS6CBH:00000001 [INF] Sending file. Request path: '"/dist/vendor.css"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\dist\vendor.css"' (27b0a520)
+2020-05-13T00:23:46.1201752+07:00 0HLVMJ4KS6CBH:00000001 [INF] Request finished in 22175.9121ms 200 text/css (791a596a)
+2020-05-13T00:23:46.2850773+07:00 0HLVMJ4KS6CBF:00000002 [INF] Request finished in 22366.135ms 200 application/javascript (791a596a)
+2020-05-13T00:23:47.1651506+07:00 0HLVMJ4KS6CBG:00000001 [INF] Request finished in 23187.1073ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-05-13T00:23:48.8684458+07:00 0HLVMJ4KS6CBE:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js.map   (ca22a1cb)
+2020-05-13T00:23:48.8719490+07:00 0HLVMJ4KS6CBH:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-05-13T00:23:50.2276807+07:00 0HLVMJ4KS6CBE:00000002 [INF] Request finished in 1379.1457ms 200 application/json; charset=UTF-8 (791a596a)
+2020-05-13T00:27:20.0468719+07:00  [INF] webpack building... (478286db)
+2020-05-13T00:27:22.8711702+07:00  [INF] webpack built 00231141849cc1f441cf in 2657ms (60a810ee)
+2020-05-13T00:27:33.7404800+07:00  [INF] webpack building... (478286db)
+2020-05-13T00:27:46.8534837+07:00  [INF] webpack built 6ef490259ff5ef4f0fe6 in 12972ms (d9c950e0)
+2020-05-13T00:27:47.0773412+07:00 0HLVMJ4KS6CBI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/00231141849cc1f441cf.hot-update.json   (ca22a1cb)
+2020-05-13T00:27:47.1379419+07:00 0HLVMJ4KS6CBI:00000001 [INF] Request finished in 49.714ms 200 application/json; charset=UTF-8 (791a596a)
+2020-05-13T00:27:47.1440827+07:00 0HLVMJ4KS6CBI:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.00231141849cc1f441cf.hot-update.js   (ca22a1cb)
+2020-05-13T00:27:47.2317782+07:00  [INF] webpack building... (478286db)
+2020-05-13T00:27:47.3081358+07:00 0HLVMJ4KS6CBI:00000002 [INF] Request finished in 98.2422ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-05-13T00:27:47.3294770+07:00 0HLVMJ4KS6CBI:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.00231141849cc1f441cf.hot-update.js.map   (ca22a1cb)
+2020-05-13T00:27:47.4103146+07:00 0HLVMJ4KS6CBJ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0.00231141849cc1f441cf.hot-update.js.map   (ca22a1cb)
+2020-05-13T00:27:47.6175089+07:00 0HLVMJ4KS6CBI:00000003 [INF] Request finished in 208.5717ms 200 application/json; charset=UTF-8 (791a596a)
+2020-05-13T00:27:47.6597436+07:00 0HLVMJ4KS6CBJ:00000001 [INF] Request finished in 267.5535ms 200 application/json; charset=UTF-8 (791a596a)
+2020-05-13T00:27:49.3767147+07:00  [INF] webpack built 6ef490259ff5ef4f0fe6 in 2062ms (05bc4884)
+2020-05-13T00:28:03.3386743+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-05-13T00:28:03.6603070+07:00  [FTL] Lỗi khởi tạo cơ sở dữ liệu (3b6074dc)
+System.AggregateException: One or more errors occurred. (Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.) ---> System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\Project\CucDiSan\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at QLNS.Program.Main(String[] args) in D:\Project\CucDiSan\source\QLNS\QLNS\Program.cs:line 35
+---> (Inner Exception #0) System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'UrencoDB, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\Project\CucDiSan\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+
+<---
+
+2020-05-13T00:28:03.9734646+07:00 0HLVMJ79R92BU:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/   (ca22a1cb)
+2020-05-13T00:28:03.9744567+07:00 0HLVMJ79R92BT:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:55842/  0 (ca22a1cb)
+2020-05-13T00:28:04.0235461+07:00 0HLVMJ79R92BT:00000001 [INF] Request finished in 66.1682ms 200  (791a596a)
+2020-05-13T00:28:04.8250300+07:00 0HLVMJ79R92BU:00000001 [INF] Executing action method "QLNS.Controllers.HomeController.Index (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-05-13T00:28:09.1478340+07:00 0HLVMJ79R92BU:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-05-13T00:28:10.3902833+07:00 0HLVMJ79R92BU:00000001 [INF] Executed action "QLNS.Controllers.HomeController.Index (QLNS)" in 5624.6957ms (afa2e885)
+2020-05-13T00:28:10.4214986+07:00 0HLVMJ79R92BU:00000001 [INF] Request finished in 6446.3193ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-13T00:28:10.4284420+07:00 0HLVMJ79R92BT:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js?v=mLvVc2DqhFOKBrO8Vg7bTdm4B0Y2lC_rIlNR3vODXzY   (ca22a1cb)
+2020-05-13T00:28:10.4371389+07:00 0HLVMJ79R92BU:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/vendor.js?v=FwYw6gAJD-OCZqk1GTiv1cCp_cSE_F6L35nFyXTyXgM   (ca22a1cb)
+2020-05-13T00:28:10.5409852+07:00 0HLVMJ79R92BV:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/vendor.css?v=QOq4-etCsJX8m9f_uO-JvgMS6xz8jLZCOH8wJGYZOR0   (ca22a1cb)
+2020-05-13T00:28:39.5478063+07:00  [INF] webpack built b0e8f8fd9b43ad484e79 in 36734ms (76dc8c63)
+2020-05-13T00:28:39.9324741+07:00 0HLVMJ79R92BU:00000002 [INF] Sending file. Request path: '"/dist/vendor.js"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\dist\vendor.js"' (27b0a520)
+2020-05-13T00:28:39.9581938+07:00 0HLVMJ79R92BV:00000001 [INF] Sending file. Request path: '"/dist/vendor.css"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\dist\vendor.css"' (27b0a520)
+2020-05-13T00:28:40.6350937+07:00 0HLVMJ79R92BU:00000002 [INF] Request finished in 30097.0229ms 200 application/javascript (791a596a)
+2020-05-13T00:28:40.7891585+07:00 0HLVMJ79R92BV:00000001 [INF] Request finished in 29977.5185ms 200 text/css (791a596a)
+2020-05-13T00:28:41.6211203+07:00 0HLVMJ79R92BT:00000002 [INF] Request finished in 31199.2644ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-05-13T00:28:47.3039849+07:00 0HLVMJ79R92BV:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js.map   (ca22a1cb)
+2020-05-13T00:28:47.4102373+07:00 0HLVMJ79R92BT:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/icon/khung.png   (ca22a1cb)
+2020-05-13T00:28:47.4277717+07:00 0HLVMJ79R92BT:00000003 [INF] Sending file. Request path: '"/images/icon/khung.png"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\images\icon\khung.png"' (27b0a520)
+2020-05-13T00:28:47.5370207+07:00 0HLVMJ79R92BU:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/icon/title-sw.png   (ca22a1cb)
+2020-05-13T00:28:47.7516797+07:00 0HLVMJ79R92BU:00000003 [INF] Sending file. Request path: '"/images/icon/title-sw.png"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\images\icon\title-sw.png"' (27b0a520)
+2020-05-13T00:28:48.5715565+07:00 0HLVMJ79R92C1:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/font/utm-avo.woff   (ca22a1cb)
+2020-05-13T00:28:48.6250731+07:00 0HLVMJ79R92BT:00000003 [INF] Request finished in 483.9685ms 200 image/png (791a596a)
+2020-05-13T00:28:48.6285139+07:00 0HLVMJ79R92C2:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/font/utm-avobold.woff   (ca22a1cb)
+2020-05-13T00:28:48.6590864+07:00 0HLVMJ79R92C1:00000001 [INF] Policy execution successful. (0204925d)
+2020-05-13T00:28:48.6636355+07:00 0HLVMJ79R92BT:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-05-13T00:28:48.6960883+07:00 0HLVMJ79R92BU:00000003 [INF] Request finished in 1209.715ms 200 image/png (791a596a)
+2020-05-13T00:28:48.7226083+07:00 0HLVMJ79R92C0:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/icon/bg.png   (ca22a1cb)
+2020-05-13T00:28:48.7316880+07:00 0HLVMJ79R92C1:00000001 [INF] Sending file. Request path: '"/images/font/utm-avo.woff"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\images\font\utm-avo.woff"' (27b0a520)
+2020-05-13T00:28:48.7710866+07:00 0HLVMJ79R92C2:00000001 [INF] Policy execution successful. (0204925d)
+2020-05-13T00:28:48.7912037+07:00 0HLVMJ79R92C0:00000001 [INF] Sending file. Request path: '"/images/icon/bg.png"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\images\icon\bg.png"' (27b0a520)
+2020-05-13T00:28:48.8077837+07:00 0HLVMJ79R92C2:00000001 [INF] Sending file. Request path: '"/images/font/utm-avobold.woff"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\images\font\utm-avobold.woff"' (27b0a520)
+2020-05-13T00:28:48.8258745+07:00 0HLVMJ79R92BU:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/icon/logo.png   (ca22a1cb)
+2020-05-13T00:28:48.8965723+07:00 0HLVMJ79R92C2:00000001 [INF] Request finished in 325.4781ms 200 application/font-woff (791a596a)
+2020-05-13T00:28:49.1390989+07:00 0HLVMJ79R92BU:00000004 [INF] Sending file. Request path: '"/images/icon/logo.png"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\images\icon\logo.png"' (27b0a520)
+2020-05-13T00:28:49.2001675+07:00 0HLVMJ79R92C2:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/icon/mitec-hrm.png   (ca22a1cb)
+2020-05-13T00:28:49.2537376+07:00 0HLVMJ79R92C0:00000001 [INF] Request finished in 1623.4123ms 200 image/png (791a596a)
+2020-05-13T00:28:49.2813523+07:00 0HLVMJ79R92BU:00000004 [INF] Request finished in 364.1757ms 200 image/png (791a596a)
+2020-05-13T00:28:49.3082316+07:00 0HLVMJ79R92C2:00000002 [INF] Sending file. Request path: '"/images/icon/mitec-hrm.png"'. Physical path: '"D:\Project\CucDiSan\source\QLNS\QLNS\wwwroot\images\icon\mitec-hrm.png"' (27b0a520)
+2020-05-13T00:28:50.0952593+07:00 0HLVMJ79R92C2:00000002 [INF] Request finished in 385.984ms 200 image/png (791a596a)
+2020-05-13T00:28:50.1641791+07:00 0HLVMJ79R92C1:00000001 [INF] Request finished in 2620.9363ms 200 application/font-woff (791a596a)
+2020-05-13T00:28:50.5339553+07:00 0HLVMJ79R92BV:00000002 [INF] Request finished in 3496.6593ms 200 application/json; charset=UTF-8 (791a596a)
+2020-05-13T00:28:57.5352048+07:00 0HLVMJ79R92BU:00000005 [INF] Request starting HTTP/1.1 POST http://localhost:55842/connect/token application/x-www-form-urlencoded 155 (ca22a1cb)
+2020-05-13T00:28:57.5373005+07:00 0HLVMJ79R92BU:00000005 [INF] Policy execution successful. (0204925d)
+2020-05-13T00:28:57.6551759+07:00 0HLVMJ79R92BU:00000005 [INF] The token request was successfully extracted from the HTTP request: "{
+  \"username\": \"trungvu18\",
+  \"password\": \"[removed for security reasons]\",
+  \"grant_type\": \"password\",
+  \"scope\": \"openid email phone profile offline_access roles\",
+  \"resource\": \"http://localhost:55842\"
+}". (ebc01284)
+2020-05-13T00:28:57.6736870+07:00 0HLVMJ79R92BU:00000005 [INF] The token request was successfully validated. (d7e51e65)
+2020-05-13T00:28:57.7611057+07:00 0HLVMJ79R92BU:00000005 [INF] Executing action method "QLNS.Controllers.AuthorizationController.Exchange (QLNS)" with arguments (["{
+  \"username\": \"trungvu18\",
+  \"password\": \"[removed for security reasons]\",
+  \"grant_type\": \"password\",
+  \"scope\": \"openid email phone profile offline_access roles\",
+  \"resource\": \"http://localhost:55842\"
+}"]) - ModelState is Valid (ba7f4ac2)
+2020-05-13T00:28:57.7729841+07:00 0HLVMJ79R92BU:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-05-13T00:28:58.3300740+07:00 0HLVMJ79R92BU:00000005 [ERR] An error occurred using the connection to database '"UrencoDb"' on server '"123.25.21.54"'. (5fc3407c)
+System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'urenco'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+ClientConnectionId:f3532dbc-10e9-42fd-af82-2d1976116fb0
+Error Number:18456,State:1,Class:14
+2020-05-13T00:28:58.5180940+07:00 0HLVMJ79R92BU:00000005 [ERR] An exception occurred in the database while iterating the results of a query for context type '"DAL.ApplicationDbContext"'."
+""System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'urenco'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.<FirstOrDefault_>d__165`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.<MoveNext>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+ClientConnectionId:f3532dbc-10e9-42fd-af82-2d1976116fb0
+Error Number:18456,State:1,Class:14" (64e2593c)
+System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'urenco'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.<FirstOrDefault_>d__165`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.<MoveNext>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<ExecuteSingletonAsyncQuery>d__23`1.MoveNext()
+ClientConnectionId:f3532dbc-10e9-42fd-af82-2d1976116fb0
+Error Number:18456,State:1,Class:14
+2020-05-13T00:28:58.7462209+07:00 0HLVMJ79R92BU:00000005 [ERR] An exception occurred in the database while iterating the results of a query for context type '"DAL.ApplicationDbContext"'."
+""System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'urenco'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.<FirstOrDefault_>d__165`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.<MoveNext>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<ExecuteSingletonAsyncQuery>d__23`1.MoveNext()
+ClientConnectionId:f3532dbc-10e9-42fd-af82-2d1976116fb0
+Error Number:18456,State:1,Class:14" (64e2593c)
+System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'urenco'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.<FirstOrDefault_>d__165`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.<MoveNext>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<ExecuteSingletonAsyncQuery>d__23`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at QLNS.Controllers.AuthorizationController.<Exchange>d__4.MoveNext() in D:\Project\CucDiSan\source\QLNS\QLNS\Controllers\AuthorizationController.cs:line 54
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIIndexMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>d__6.MoveNext()
+ClientConnectionId:f3532dbc-10e9-42fd-af82-2d1976116fb0
+Error Number:18456,State:1,Class:14
+2020-05-13T00:28:58.8292327+07:00 0HLVMJ79R92BU:00000005 [INF] Executed action "QLNS.Controllers.AuthorizationController.Exchange (QLNS)" in 1113.1633ms (afa2e885)
+2020-05-13T00:28:59.0124277+07:00 0HLVMJ79R92BU:00000005 [ERR] An unhandled exception has occurred: Login failed for user 'urenco'. (9b264e06)
+System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'urenco'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.<FirstOrDefault_>d__165`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.<MoveNext>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<ExecuteSingletonAsyncQuery>d__23`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at QLNS.Controllers.AuthorizationController.<Exchange>d__4.MoveNext() in D:\Project\CucDiSan\source\QLNS\QLNS\Controllers\AuthorizationController.cs:line 54
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIIndexMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>d__6.MoveNext()
+ClientConnectionId:f3532dbc-10e9-42fd-af82-2d1976116fb0
+Error Number:18456,State:1,Class:14
+2020-05-13T00:28:59.0608646+07:00 0HLVMJ79R92BU:00000005 [INF] Request finished in 1530.9516ms 500 application/json (791a596a)
+2020-05-13T00:29:03.3234994+07:00 0HLVMJ79R92C0:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:55842/connect/token application/x-www-form-urlencoded 151 (ca22a1cb)
+2020-05-13T00:29:03.3259508+07:00 0HLVMJ79R92C0:00000002 [INF] Policy execution successful. (0204925d)
+2020-05-13T00:29:03.3317478+07:00 0HLVMJ79R92C0:00000002 [INF] The token request was successfully extracted from the HTTP request: "{
+  \"username\": \"admin\",
+  \"password\": \"[removed for security reasons]\",
+  \"grant_type\": \"password\",
+  \"scope\": \"openid email phone profile offline_access roles\",
+  \"resource\": \"http://localhost:55842\"
+}". (ebc01284)
+2020-05-13T00:29:03.3403165+07:00 0HLVMJ79R92C0:00000002 [INF] The token request was successfully validated. (d7e51e65)
+2020-05-13T00:29:03.3803197+07:00 0HLVMJ79R92C0:00000002 [INF] Executing action method "QLNS.Controllers.AuthorizationController.Exchange (QLNS)" with arguments (["{
+  \"username\": \"admin\",
+  \"password\": \"[removed for security reasons]\",
+  \"grant_type\": \"password\",
+  \"scope\": \"openid email phone profile offline_access roles\",
+  \"resource\": \"http://localhost:55842\"
+}"]) - ModelState is Valid (ba7f4ac2)
+2020-05-13T00:29:03.3829692+07:00 0HLVMJ79R92C0:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-05-13T00:29:03.4988637+07:00 0HLVMJ79R92C0:00000002 [ERR] An error occurred using the connection to database '"UrencoDb"' on server '"123.25.21.54"'. (5fc3407c)
+System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'urenco'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.<FirstOrDefault_>d__165`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.<MoveNext>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+ClientConnectionId:c99ce03c-0573-4cac-a22d-7d7ac99b4e1d
+Error Number:18456,State:1,Class:14
+2020-05-13T00:29:03.7018969+07:00 0HLVMJ79R92C0:00000002 [ERR] An exception occurred in the database while iterating the results of a query for context type '"DAL.ApplicationDbContext"'."
+""System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'urenco'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.<FirstOrDefault_>d__165`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.<MoveNext>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+ClientConnectionId:c99ce03c-0573-4cac-a22d-7d7ac99b4e1d
+Error Number:18456,State:1,Class:14" (64e2593c)
+System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'urenco'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.<FirstOrDefault_>d__165`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.<MoveNext>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<ExecuteSingletonAsyncQuery>d__23`1.MoveNext()
+ClientConnectionId:c99ce03c-0573-4cac-a22d-7d7ac99b4e1d
+Error Number:18456,State:1,Class:14
+2020-05-13T00:29:03.9106232+07:00 0HLVMJ79R92C0:00000002 [ERR] An exception occurred in the database while iterating the results of a query for context type '"DAL.ApplicationDbContext"'."
+""System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'urenco'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.<FirstOrDefault_>d__165`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.<MoveNext>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<ExecuteSingletonAsyncQuery>d__23`1.MoveNext()
+ClientConnectionId:c99ce03c-0573-4cac-a22d-7d7ac99b4e1d
+Error Number:18456,State:1,Class:14" (64e2593c)
+System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'urenco'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.<FirstOrDefault_>d__165`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.<MoveNext>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<ExecuteSingletonAsyncQuery>d__23`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at QLNS.Controllers.AuthorizationController.<Exchange>d__4.MoveNext() in D:\Project\CucDiSan\source\QLNS\QLNS\Controllers\AuthorizationController.cs:line 54
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIIndexMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>d__6.MoveNext()
+ClientConnectionId:c99ce03c-0573-4cac-a22d-7d7ac99b4e1d
+Error Number:18456,State:1,Class:14
+2020-05-13T00:29:03.9804247+07:00 0HLVMJ79R92C0:00000002 [INF] Executed action "QLNS.Controllers.AuthorizationController.Exchange (QLNS)" in 623.4291ms (afa2e885)
+2020-05-13T00:29:04.1433534+07:00 0HLVMJ79R92C0:00000002 [ERR] An unhandled exception has occurred: Login failed for user 'urenco'. (9b264e06)
+System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'urenco'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.<OpenAsync>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<BufferlessMoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.<ExecuteAsync>d__7`2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.<MoveNext>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.<FirstOrDefault_>d__165`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.<MoveNext>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.<MoveNextCore>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.<MoveNext>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.<MoveNext>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<ExecuteSingletonAsyncQuery>d__23`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at QLNS.Controllers.AuthorizationController.<Exchange>d__4.MoveNext() in D:\Project\CucDiSan\source\QLNS\QLNS\Controllers\AuthorizationController.cs:line 54
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIIndexMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>d__6.MoveNext()
+ClientConnectionId:c99ce03c-0573-4cac-a22d-7d7ac99b4e1d
+Error Number:18456,State:1,Class:14
+2020-05-13T00:29:04.1717516+07:00 0HLVMJ79R92C0:00000002 [INF] Request finished in 851.9287ms 500 application/json (791a596a)

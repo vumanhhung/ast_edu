@@ -1,0 +1,122 @@
+﻿<div class="row">
+  <div class="col-md-12">
+    <div class="portlet light portlet-fit portlet-datatable bordered">
+      <div class="portlet-title tabbable-line">
+        <div class="caption">
+          <i class="fa fa-flag font-green"></i>
+          <span class="caption-subject font-green sbold uppercase">Quản lý QuocGia</span>
+        </div>
+        <div class="actions">
+          <a class="btn green btn-outline btn-circle btn-sm tooltips" data-placement="top" tooltip="Thêm mới" data-remote="true" href="javascript:;" (click)="newQuocGia()"><i class="fa fa-plus"></i>&nbsp;Thêm mới</a>          
+          <a class="btn green btn-outline btn-circle btn-sm tooltips btndeletemore" data-placement="top" tooltip="Xóa nhiều" data-remote="true" href="javascript:;">
+            <span mwlConfirmationPopover
+                  [popoverTitle]="popoverTitle"
+                  [popoverMessage]="popoverMessage"
+                  placement="bottom"
+                  [confirmText]="confirmText"
+                  [cancelText]="cancelText"
+                  (confirm)="deleteMoreQuocGia()"
+                  (cancel)="cancelClicked = true"><i class="fa fa-trash font-red"></i>&nbsp;Xóa nhiều</span>
+          </a>
+          <a class="btn green btn-outline btn-circle btn-icon-only btn-refresh  loading-resources tooltips" data-placement="top" tooltip="Làm mới" data-remote="true" href="javascript:;" (click)="refreshData()"><i class="fa fa-refresh"></i></a>
+        </div>
+      </div>
+      <div class="portlet-body">
+        <div class="row">
+          <div class="col-md-8">
+            <search-box (searchChange)="onSearchChanged($event)" placeholder="Tìm kiếm"></search-box>
+          </div>
+
+
+
+          <div class="col-md-4">
+            <div class="displayItem">
+              Hiển thị
+              <select class="form-control input-sm" #drSelected (change)="SelectedValue(drSelected.value)">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select> bản ghi
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div id="portlet-body-container">
+          <div id="myForm" style="overflow-x:auto">
+            <div class="table-container" style="min-width:768px">
+              <kendo-grid [data]="gridView"
+                          [pageSize]="pageSize"
+                          [skip]="skip"
+                          [pageable]="true"
+                          [sortable]="{allowUnsort: allowUnsort,mode: 'single'}"
+                          [sort]="sort"
+                          (sortChange)="sortChange($event)"
+                          (pageChange)="pageChange($event)"
+                          [selectable]="{enabled: true, checkboxOnly: true }"
+                          [kendoGridSelectBy]="'quocGiaId'"
+                          [selectedKeys]="mySelection"
+                          (selectedKeysChange)="onSelectedKeysChange($event)">
+                <kendo-grid-checkbox-column width="50" class="alightcenter">
+                  <ng-template kendoGridHeaderTemplate>
+                    <input class="k-checkbox" id="selectAllCheckboxId" kendoGridSelectAllCheckbox
+                           [state]="selectAllState"
+                           (selectAllChange)="onSelectAllChange($event)">
+                    <label class="k-checkbox-label" for="selectAllCheckboxId"></label>
+                  </ng-template>
+                </kendo-grid-checkbox-column>               
+                <kendo-grid-column class="alightcenter" field="viTri" title="Vị trí" width="60" filter="numeric">
+                </kendo-grid-column>
+                <kendo-grid-column title="Trạng thái" width="100" class="alightcenter positionRelative" filter="boolean">
+                  <ng-template kendoGridCellTemplate let-dataItem>
+                    <span mwlConfirmationPopover
+                          [popoverTitle]="ChangepopoverTitleStatus(dataItem)"
+                          [popoverMessage]="popoverMessage"
+                          placement="left"
+                          [confirmText]="confirmText"
+                          [cancelText]="cancelText"
+                          (confirm)="UpdateStatus(dataItem)"
+                          (cancel)="cancelClicked = true" class="statusEdit_notPostion" [class.statusEdit_notPostion_check]="dataItem.trangThai"></span>
+                  </ng-template>
+                </kendo-grid-column>
+                <kendo-grid-column class="alightcenter" width="120" filter="boolean" title="Chức năng">
+                  <ng-template kendoGridCellTemplate let-dataItem>
+                    <a class="btn btn-circle btn-icon-only btn-default tooltips" data-remote="true" href="javascript:;" (click)="editQuocGia(dataItem)" data-placement="left" tooltip="Chỉnh sửa"><i class="fa fa-pencil"></i></a>
+                    <button class="btn red btn-circle btn-icon-only btn-default cus-tooltips cus-confirmations" data-placement="left" tooltip="Xóa"
+                            mwlConfirmationPopover
+                            [popoverTitle]="popoverTitle"
+                            [popoverMessage]="popoverMessage"
+                            placement="left"
+                            [confirmText]="confirmText"
+                            [cancelText]="cancelText"
+                            (confirm)="deleteQuocGia(dataItem)"
+                            (cancel)="cancelClicked = true">
+                      <i class="fa fa-trash-o"></i>
+                    </button>
+                  </ng-template>
+                </kendo-grid-column>
+                <ng-template kendoPagerTemplate let-totalPages="totalPages" let-currentPage="currentPage">
+                  <kendo-pager-prev-buttons></kendo-pager-prev-buttons>
+                  <kendo-pager-numeric-buttons [buttonCount]="10"></kendo-pager-numeric-buttons>
+                  <kendo-pager-next-buttons></kendo-pager-next-buttons>
+                  <kendo-pager-info></kendo-pager-info>
+                </ng-template>
+                <kendo-grid-messages pagerPage="Trang"
+                                     pagerOf="trong số"
+                                     pagerItems="bản ghi">
+                </kendo-grid-messages>
+                <ng-template kendoGridNoRecordsTemplate>
+                  Không có bản ghi nào.
+                </ng-template>
+              </kendo-grid>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<quocgia-info #quocgiaEditor [isGeneralEditor]="true"></quocgia-info>

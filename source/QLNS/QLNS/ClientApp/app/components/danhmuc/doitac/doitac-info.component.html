@@ -1,0 +1,97 @@
+﻿<div class="modal fade" bsModal #editorModal="bs-modal" (onHidden)="onEditorModalHidden()" [config]="{backdrop: 'static'}" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left caption-subject bold uppercase font-green">
+          <i class="fa fa-plus" *ngIf="isNew"></i> <i class="fa fa-pencil" *ngIf="!isNew"></i> {{isNew ? 'Thêm mới' : 'Chỉnh sửa'}}
+        </h4>
+        <button type="button" class="close pull-right btn-close-modal" title="Close" (click)="editorModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="Editform">
+          <form *ngIf="formResetToggle" [attr.autocomplete]="isGeneralEditor ? NaN : null" class="form-horizontal" name="DoiTacInfoForm" #f="ngForm" novalidate (ngSubmit)="f.form.valid ? save() :
+          (!tenDoiTac.valid);
+(!maDoiTac.valid);
+(!anhDaiDien.valid);
+(!nguoiTao.valid);
+(!ngayTao.valid);
+(!nguoiSua.valid);
+(!ngaySua.valid);
+">
+<div class="form-group has-feedback form-md-line-input">
+<label class="control-label col-md-2" for="tenDoiTac-{{uniqueId}}">TenDoiTac</label>
+<div class="col-md-10" [ngClass]="{'has-success': f.submitted && tenDoiTac.valid, 'has-error' : f.submitted && !tenDoiTac.valid}">
+<input autofocus type="text" class="form-control" name="tenDoiTac" [(ngModel)]="DoiTacEdit.tenDoiTac" #tenDoiTac="ngModel" required placeholder="Nhập TenDoiTac"/>
+<span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': tenDoiTac.valid, 'glyphicon-remove' : !tenDoiTac.valid }"></span>
+<span *ngIf="showValidationErrors && f.submitted && !tenDoiTac.valid" class="errorMessage">
+TenDoiTac không được để trống
+</span></div></div><div class="clearfix"></div>
+<div class="form-group has-feedback form-md-line-input">
+<label class="control-label col-md-2" for="maDoiTac-{{uniqueId}}">MaDoiTac</label>
+<div class="col-md-10" [ngClass]="{'has-success': f.submitted && maDoiTac.valid, 'has-error' : f.submitted && !maDoiTac.valid}">
+<input autofocus type="text" class="form-control" name="maDoiTac" [(ngModel)]="DoiTacEdit.maDoiTac" #maDoiTac="ngModel" required placeholder="Nhập MaDoiTac"/>
+<span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': maDoiTac.valid, 'glyphicon-remove' : !maDoiTac.valid }"></span>
+<span *ngIf="showValidationErrors && f.submitted && !maDoiTac.valid" class="errorMessage">
+MaDoiTac không được để trống
+</span></div></div><div class="clearfix"></div>
+<div class="form-group has-feedback form-md-line-input">
+<label class="control-label col-md-2" for="anhDaiDien-{{uniqueId}}">AnhDaiDien</label>
+<div class="col-md-10" [ngClass]="{'has-success': f.submitted && anhDaiDien.valid, 'has-error' : f.submitted && !anhDaiDien.valid}">
+<input autofocus type="text" class="form-control" name="anhDaiDien" [(ngModel)]="DoiTacEdit.anhDaiDien" #anhDaiDien="ngModel" required placeholder="Nhập AnhDaiDien"/>
+<span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': anhDaiDien.valid, 'glyphicon-remove' : !anhDaiDien.valid }"></span>
+<span *ngIf="showValidationErrors && f.submitted && !anhDaiDien.valid" class="errorMessage">
+AnhDaiDien không được để trống
+</span></div></div><div class="clearfix"></div>
+<div class="form-group has-feedback form-md-line-input">
+<label class="control-label col-md-2" for="nguoiTao-{{uniqueId}}">NguoiTao</label>
+<div class="col-md-10" [ngClass]="{'has-success': f.submitted && nguoiTao.valid, 'has-error' : f.submitted && !nguoiTao.valid}">
+<input autofocus type="text" class="form-control" name="nguoiTao" [(ngModel)]="DoiTacEdit.nguoiTao" #nguoiTao="ngModel" required placeholder="Nhập NguoiTao"/>
+<span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': nguoiTao.valid, 'glyphicon-remove' : !nguoiTao.valid }"></span>
+<span *ngIf="showValidationErrors && f.submitted && !nguoiTao.valid" class="errorMessage">
+NguoiTao không được để trống
+</span></div></div><div class="clearfix"></div>
+<div class="form-group has-feedback form-md-line-input">
+<label class="control-label col-md-2" for="ngayTao-{{uniqueId}}">NgayTao</label>
+<div class="col-md-10" [ngClass]="{'has-success': f.submitted && ngayTao.valid, 'has-error' : f.submitted && !ngayTao.valid}">
+<input autofocus type="text" class="form-control" name="ngayTao" [(ngModel)]="DoiTacEdit.ngayTao" #ngayTao="ngModel" required placeholder="Nhập NgayTao"/>
+<span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': ngayTao.valid, 'glyphicon-remove' : !ngayTao.valid }"></span>
+<span *ngIf="showValidationErrors && f.submitted && !ngayTao.valid" class="errorMessage">
+NgayTao không được để trống
+</span></div></div><div class="clearfix"></div>
+<div class="form-group has-feedback form-md-line-input">
+<label class="control-label col-md-2" for="nguoiSua-{{uniqueId}}">NguoiSua</label>
+<div class="col-md-10" [ngClass]="{'has-success': f.submitted && nguoiSua.valid, 'has-error' : f.submitted && !nguoiSua.valid}">
+<input autofocus type="text" class="form-control" name="nguoiSua" [(ngModel)]="DoiTacEdit.nguoiSua" #nguoiSua="ngModel" required placeholder="Nhập NguoiSua"/>
+<span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': nguoiSua.valid, 'glyphicon-remove' : !nguoiSua.valid }"></span>
+<span *ngIf="showValidationErrors && f.submitted && !nguoiSua.valid" class="errorMessage">
+NguoiSua không được để trống
+</span></div></div><div class="clearfix"></div>
+<div class="form-group has-feedback form-md-line-input">
+<label class="control-label col-md-2" for="ngaySua-{{uniqueId}}">NgaySua</label>
+<div class="col-md-10" [ngClass]="{'has-success': f.submitted && ngaySua.valid, 'has-error' : f.submitted && !ngaySua.valid}">
+<input autofocus type="text" class="form-control" name="ngaySua" [(ngModel)]="DoiTacEdit.ngaySua" #ngaySua="ngModel" required placeholder="Nhập NgaySua"/>
+<span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': ngaySua.valid, 'glyphicon-remove' : !ngaySua.valid }"></span>
+<span *ngIf="showValidationErrors && f.submitted && !ngaySua.valid" class="errorMessage">
+NgaySua không được để trống
+</span></div></div><div class="clearfix"></div>
+            <div class="actionBtn-form-group">
+              <div class="">
+                <div class="pull-right btnF">
+                  <button *ngIf="!isEditMode && isGeneralEditor" type="button" (click)="close()" class="btn btn-default"><i class='fa fa-close'></i> Đóng</button>
+                  <button *ngIf="!isEditMode && !isGeneralEditor" type="button" (click)="edit()" class="btn btn-default"><i class='fa fa-edit'></i> Lưu lại</button>
+                  <button *ngIf="isEditMode" type="button" (click)="cancel()" class="btn btn-default" [disabled]="isSaving"><i class='fa fa-arrow-circle-o-left'></i> Hủy bỏ</button>
+                  <button *ngIf="isEditMode" type="submit" class="btn btn-primary green" [disabled]="isSaving">
+                    <i *ngIf="!isSaving" class='fa fa-floppy-o'></i><i *ngIf="isSaving" class='fa fa-circle-o-notch fa-spin'></i> Lưu lại
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,158 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="portlet light portlet-fit portlet-datatable bordered">
+      <div class="portlet-title tabbable-line">
+        <div class="caption">
+          <i class="fa fa-flag font-green"></i>
+          <span class="caption-subject font-green sbold uppercase">Quản lý người dùng</span>
+        </div>
+        <div class="actions">
+          <a  class="btn green btn-outline btn-sm tooltips" data-placement="top" tooltip="Thêm mới" data-remote="true" href="javascript:;" (click)="newUser(row)"><i class="fa fa-plus"></i>&nbsp;Thêm mới</a>
+          <a class="btn green btn-outline btn-icon-only btn-refresh  loading-resources tooltips" data-placement="top" tooltip="Làm mới" data-remote="true" href="javascript:;" (click)="refreshData()"><i class="fa fa-refresh"></i></a>
+        </div>
+      </div>
+      <div class="portlet-body">
+        <div class="row">
+          <div class="col-md-8">
+            <search-box (searchChange)="onSearchChanged($event)" placeholder="Tìm kiếm"></search-box>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div id="portlet-body-container">
+          <div id="myForm" style="overflow-x:auto">
+            <div class="table-container" style="min-width:768px">
+                <kendo-grid [data]="gridView"
+                            [pageSize]="pageSize"
+                            [skip]="skip"
+                            [pageable]="true"
+                            [sortable]="{allowUnsort: allowUnsort,mode: 'single'}"
+                            [sort]="sort"
+                            (sortChange)="sortChange($event)"
+                            (pageChange)="pageChange($event)">
+                    <kendo-grid-column field="userName" title="Tên đăng nhập" filter="numeric">
+                    </kendo-grid-column>
+                    <kendo-grid-column field="fullName" title="Tên đầy đủ" filter="numeric">
+                    </kendo-grid-column>
+                    <kendo-grid-column field="email" title="Email" filter="numeric">
+                    </kendo-grid-column>
+                    <kendo-grid-column field="phoneNumber" title="Số điện thoại" filter="numeric">
+                    </kendo-grid-column>
+                    <kendo-grid-column field="roles" title="Nhóm người dùng">
+                        <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+                            <span class="user-role badge" *ngFor="let role of dataItem.roles">{{role}}</span>
+                        </ng-template>
+                    </kendo-grid-column>
+                    <kendo-grid-column class="alightcenter" width="120" filter="boolean" title="Chức năng">
+                        <ng-template kendoGridCellTemplate let-dataItem>
+                            <a *ngIf="canManageUsers" class="btn-func btn btn-circle btn-icon-only btn-default tooltips" data-remote="true" href="javascript:;" (click)="editUser(dataItem)" data-placement="left" tooltip="Chỉnh sửa"><i class="fa fa-pencil"></i></a>
+                            <button *ngIf="canManageUsers" class="btn-func btn red btn-circle btn-icon-only btn-default cus-tooltips cus-confirmations" data-placement="left" tooltip="Xóa"
+                                    mwlConfirmationPopover
+                                    [popoverTitle]="popoverTitle"
+                                    [popoverMessage]="popoverMessage"
+                                    placement="left"
+                                    [confirmText]="confirmText"
+                                    [cancelText]="cancelText"
+                                    (confirm)="deleteUser(dataItem)"
+                                    (cancel)="cancelClicked = true">
+                                <i class="fa fa-trash-o"></i>
+                            </button>
+                        </ng-template>
+                    </kendo-grid-column>
+                    <ng-template kendoPagerTemplate let-totalPages="totalPages" let-currentPage="currentPage">
+                        Số bản ghi:<kendo-pager-page-sizes [pageSizes]="[5, 10, 20, 50]"></kendo-pager-page-sizes>
+                        <kendo-pager-prev-buttons class="paging-left"></kendo-pager-prev-buttons>
+                        <kendo-pager-numeric-buttons class="page-number" [buttonCount]="5"></kendo-pager-numeric-buttons>
+                        <kendo-pager-next-buttons class="paging-right"></kendo-pager-next-buttons>
+                        <kendo-pager-info></kendo-pager-info>
+                    </ng-template>
+                    <kendo-grid-messages pagerPage="Trang"
+                                         pagerOf="trong số"
+                                         pagerItemsPerPage=""
+                                         pagerItems="bản ghi">
+                    </kendo-grid-messages>
+                    <ng-template kendoGridNoRecordsTemplate>
+                        Không có bản ghi nào.
+                    </ng-template>
+                </kendo-grid>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" bsModal #editorModal="bs-modal" (onHidden)="onEditorModalHidden()" [config]="{backdrop: 'static'}" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left"><i class="fa fa-user-circle-o"></i> {{editingUserName ? "Sửa người dùng: " + editingUserName.name : "Thêm mới người dùng"}}</h4>
+        <button type="button" class="close pull-right" title="Close" (click)="editorModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <user-info #userEditor [isGeneralEditor]="true"></user-info>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<div>
+  <div class="row control-box">
+    <div class="col-sm-8">
+      <div class="form-group search-box">
+        <search-box (searchChange)="onSearchChanged($event)" placeholder="{{'users.management.Search' | translate}}">></search-box>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="navbar action-box">
+        <ul class="nav navbar-nav navbar-right">
+          <li *ngIf="canManageUsers && canAssignRoles" class="toolbaritem">
+            <a href="javascript:;" (click)="newUser(row)">
+              <i class="fa fa-plus-circle"></i> {{'users.management.NewUser' | translate}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <ngx-datatable class="material colored-header sm table table-striped table-hover"
+                 [loadingIndicator]="loadingIndicator"
+                 [rows]="rows"
+                 [rowHeight]="35"
+                 [headerHeight]="35"
+                 [footerHeight]="35"
+                 [columns]="columns"
+                 [scrollbarV]="true"
+                 [columnMode]="'force'">
+  </ngx-datatable>
+
+  <ng-template #indexTemplate let-value="value">
+    <strong>{{value}}</strong>
+  </ng-template>
+
+  <ng-template #userNameTemplate let-row="row" let-value="value">
+    <span [class.locked-out]="row.isLockedOut" [class.user-disabled]="!row.isEnabled">
+      <i *ngIf="row.isLockedOut" class="fa fa-exclamation-triangle"> </i>
+      <i *ngIf="!row.isEnabled" class="fa fa-exclamation"> </i>
+      {{value}}
+    </span>
+  </ng-template>
+
+  <ng-template #rolesTemplate let-row="row" let-value="value" let-i="index">
+    <span class="user-role badge" *ngFor="let role of value">{{role}}</span>
+  </ng-template>
+
+  <ng-template #actionsTemplate let-row="row" let-value="value" let-i="index">
+    <div *ngIf="canManageUsers">
+      <a class="btn btn-link btn-xs" href="javascript:;" (click)="editUser(row)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> {{'users.management.Edit' | translate}}</a>
+      |
+      <a class="btn btn-link btn-xs" href="javascript:;" (click)="deleteUser(row)"><i class="fa fa-trash-o" aria-hidden="true"></i> {{'users.management.Delete' | translate}}</a>
+    </div>
+  </ng-template>
+
+
+
+</div>-->

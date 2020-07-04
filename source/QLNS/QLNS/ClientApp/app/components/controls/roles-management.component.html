@@ -1,0 +1,138 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="portlet light portlet-fit portlet-datatable bordered">
+      <div class="portlet-title tabbable-line">
+        <div class="caption">
+          <i class="fa fa-flag font-green"></i>
+          <span class="caption-subject font-green sbold uppercase">Quản lý nhóm người dùng</span>
+        </div>
+        <div class="actions">
+          <a *ngIf="canManageRoles" class="btn green btn-outline btn-sm tooltips" data-placement="top" tooltip="Thêm mới" data-remote="true" href="javascript:;" (click)="newRole(row)"><i class="fa fa-plus"></i>&nbsp;Thêm mới</a>
+          <a class="btn green btn-outline btn-icon-only btn-refresh  loading-resources tooltips" data-placement="top" tooltip="Làm mới" data-remote="true" href="javascript:;" (click)="refreshData()"><i class="fa fa-refresh"></i></a>
+        </div>
+      </div>
+      <div class="portlet-body">
+        <div class="row">
+          <div class="col-md-8">
+            <search-box (searchChange)="onSearchChanged($event)" placeholder="Tìm kiếm"></search-box>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div id="portlet-body-container">
+          <div id="myForm" style="overflow-x:auto">
+            <div class="table-container" style="min-width:768px">
+                <kendo-grid [data]="gridView"
+                            [pageSize]="pageSize"
+                            [skip]="skip"
+                            [pageable]="true"
+                            [sortable]="{allowUnsort: allowUnsort,mode: 'single'}"
+                            [sort]="sort"
+                            (sortChange)="sortChange($event)"
+                            (pageChange)="pageChange($event)">
+                    <kendo-grid-column field="name" title="Tên nhóm người dùng" filter="numeric">
+                    </kendo-grid-column>
+                    <kendo-grid-column field="description" title="Mô tả" filter="numeric">
+                    </kendo-grid-column>
+                    <kendo-grid-column field="usersCount" title="Số người dùng trong nhóm" filter="numeric">
+                    </kendo-grid-column>
+                    <kendo-grid-column class="alightcenter" width="120" filter="boolean" title="Chức năng">
+                        <ng-template kendoGridCellTemplate let-dataItem>
+                            <a *ngIf="!canManageRoles" class="btn-func btn btn-circle btn-icon-only btn-default tooltips" data-remote="true" href="javascript:;" (click)="editRole(dataItem)" data-placement="left" tooltip="Xem chi tiết"><i class="fa fa-eye"></i></a>
+                            <a *ngIf="canManageRoles" class="btn-func btn btn-circle btn-icon-only btn-default tooltips" data-remote="true" href="javascript:;" (click)="editRole(dataItem)" data-placement="left" tooltip="Chỉnh sửa"><i class="fa fa-pencil"></i></a>
+                            <button *ngIf="canManageRoles" class="btn-func btn red btn-circle btn-icon-only btn-default cus-tooltips cus-confirmations" data-placement="left" tooltip="Xóa"
+                                    mwlConfirmationPopover
+                                    [popoverTitle]="popoverTitle"
+                                    [popoverMessage]="popoverMessage"
+                                    placement="left"
+                                    [confirmText]="confirmText"
+                                    [cancelText]="cancelText"
+                                    (confirm)="deleteRole(dataItem)"
+                                    (cancel)="cancelClicked = true">
+                                <i class="fa fa-trash-o"></i>
+                            </button>
+                        </ng-template>
+                    </kendo-grid-column>
+                    <ng-template kendoPagerTemplate let-totalPages="totalPages" let-currentPage="currentPage">
+                        Số bản ghi:<kendo-pager-page-sizes [pageSizes]="[5, 10, 20, 50]"></kendo-pager-page-sizes>
+                        <kendo-pager-prev-buttons class="paging-left"></kendo-pager-prev-buttons>
+                        <kendo-pager-numeric-buttons class="page-number" [buttonCount]="5"></kendo-pager-numeric-buttons>
+                        <kendo-pager-next-buttons class="paging-right"></kendo-pager-next-buttons>
+                        <kendo-pager-info></kendo-pager-info>
+                    </ng-template>
+                    <kendo-grid-messages pagerPage="Trang"
+                                         pagerOf="trong số"
+                                         pagerItemsPerPage=""
+                                         pagerItems="bản ghi">
+                    </kendo-grid-messages>
+                    <ng-template kendoGridNoRecordsTemplate>
+                        Không có bản ghi nào.
+                    </ng-template>
+                </kendo-grid>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<div>
+    <div class="row control-box">
+        <div class="col-sm-8">
+            <div class="form-group search-box">
+                <search-box (searchChange)="onSearchChanged($event)" placeholder="{{'roles.management.Search' | translate}}">></search-box>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="navbar action-box">
+                <ul class="nav navbar-nav navbar-right">
+                    <li *ngIf="canManageRoles" class="toolbaritem">
+                        <a href="javascript:;" (click)="newRole(row)">
+                            <i class="fa fa-plus-circle"></i> {{'roles.management.NewRole' | translate}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <ngx-datatable class="material colored-header sm table table-striped table-hover"
+                   [loadingIndicator]="loadingIndicator"
+                   [rows]="rows"
+                   [rowHeight]="35"
+                   [headerHeight]="35"
+                   [footerHeight]="35"
+                   [columns]="columns"
+                   [scrollbarV]="true"
+                   [columnMode]="'force'">
+    </ngx-datatable>
+
+    <ng-template #indexTemplate let-value="value">
+        <strong>{{value}}</strong>
+    </ng-template>
+
+
+    <ng-template #actionsTemplate let-row="row" let-value="value" let-i="index">
+        <a *ngIf="canManageRoles" class="btn btn-link btn-xs" href="javascript:;" (click)="editRole(row)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> {{'roles.management.Edit' | translate}}</a>
+        <a *ngIf="!canManageRoles" class="btn btn-link btn-xs" href="javascript:;" (click)="editRole(row)"><i class="fa fa-eye" aria-hidden="true"></i> {{'roles.management.Details' | translate}}</a>
+        {{canManageRoles ? '|' : ''}}
+        <a *ngIf="canManageRoles" class="btn btn-link btn-xs" href="javascript:;" (click)="deleteRole(row)"><i class="fa fa-trash-o" aria-hidden="true"></i> {{'roles.management.Delete' | translate}}</a>
+    </ng-template>    
+</div>-->
+
+<div class="modal fade" bsModal #editorModal="bs-modal" (onHidden)="onEditorModalHidden()" [config]="{backdrop: 'static'}" tabindex="-1">
+  <div class="modal-dialog modal-lg" style="width:90%">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 *ngIf="!canManageRoles" class="modal-title pull-left"><i class="fa fa-shield"></i> {{editingRoleName ? "Chi tiết nhóm người dùng: " + editingRoleName.name : "Thêm mới nhóm người dùng"}}</h4>
+        <h4 *ngIf="canManageRoles" class="modal-title pull-left"><i class="fa fa-shield"></i> {{editingRoleName ? "Sửa nhóm người dùng: " + editingRoleName.name : "Thêm mới nhóm người dùng"}}</h4>
+        <button type="button" class="close pull-right" title="Close" (click)="editorModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <role-editor #roleEditor></role-editor>
+      </div>
+    </div>
+  </div>
+</div>

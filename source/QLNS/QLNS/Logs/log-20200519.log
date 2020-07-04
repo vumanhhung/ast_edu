@@ -1,0 +1,550 @@
+2020-05-19T23:45:14.6956753+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-05-19T23:45:14.9121981+07:00  [FTL] Lỗi khởi tạo cơ sở dữ liệu (3b6074dc)
+System.AggregateException: One or more errors occurred. (Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.) ---> System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.SeedAsync() in D:\PMQLHienVat\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at QLNS.Program.Main(String[] args) in D:\PMQLHienVat\source\QLNS\QLNS\Program.cs:line 35
+---> (Inner Exception #0) System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'UrencoDB, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.SeedAsync() in D:\PMQLHienVat\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+
+<---
+
+2020-05-19T23:45:16.1289567+07:00 0HLVS2G0UMOSI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/   (ca22a1cb)
+2020-05-19T23:45:16.1266689+07:00 0HLVS2G0UMOSH:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/favicon.ico   (ca22a1cb)
+2020-05-19T23:45:16.2974628+07:00 0HLVS2G0UMOSH:00000001 [INF] The file "/favicon.ico" was not modified (f1f8d725)
+2020-05-19T23:45:16.5427838+07:00 0HLVS2G0UMOSH:00000001 [INF] Request finished in 439.0128ms 304 image/x-icon (791a596a)
+2020-05-19T23:45:17.4699754+07:00 0HLVS2G0UMOSI:00000001 [INF] Executing action method "QLNS.Controllers.HomeController.Index (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-05-19T23:45:28.6428542+07:00 0HLVS2G0UMOSI:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-05-19T23:45:33.4845454+07:00 0HLVS2G0UMOSI:00000001 [INF] Executed action "QLNS.Controllers.HomeController.Index (QLNS)" in 16093.9479ms (afa2e885)
+2020-05-19T23:45:33.5388305+07:00 0HLVS2G0UMOSI:00000001 [INF] Request finished in 17492.6722ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-19T23:45:33.5746173+07:00 0HLVS2G0UMOSH:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/vendor.css?v=QOq4-etCsJX8m9f_uO-JvgMS6xz8jLZCOH8wJGYZOR0   (ca22a1cb)
+2020-05-19T23:45:33.5945727+07:00 0HLVS2G0UMOSI:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js?v=GJvw4Xd44QumXaKgyzdeiOOge5bJP624l1Mje6XDNd0   (ca22a1cb)
+2020-05-19T23:45:33.6479701+07:00 0HLVS2G0UMOSJ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/vendor.js?v=FwYw6gAJD-OCZqk1GTiv1cCp_cSE_F6L35nFyXTyXgM   (ca22a1cb)
+2020-05-19T23:46:04.0660526+07:00  [INF] webpack built da397704639434c97fdf in 51227ms (cadea416)
+2020-05-19T23:46:04.4464749+07:00  [ERR] Hash: da397704639434c97fdf
+Version: webpack 3.10.0
+Time: 51227ms
+                               Asset     Size  Chunks                    Chunk Names
+bb9704a2166d7cd64b10d62f1d566356.png   147 kB          [emitted]         
+39db3efbca32138d9c0fb01623760338.png   157 kB          [emitted]         
+563c7e7c04bf5b74c7675ea6c3301c2b.png  46.1 kB          [emitted]         
+bd60eae1cf82800c33da4c7814c10c74.png  83.8 kB          [emitted]         
+4a4cd48a2c824ef9ac1db0faad589f2d.png   170 kB          [emitted]         
+b4cd69fc962ee0bc15433dfbb83e89f9.png   192 kB          [emitted]         
+b1e47b094eb0a9950467d554734fbd8c.jpg  31.7 kB          [emitted]         
+8403b398a5747a0ebc86e9eaf866275a.jpg  92.2 kB          [emitted]         
+806f92ae37d89cff0d91f92687a0ea89.png  70.9 kB          [emitted]         
+6ef5c5c3e36db9415432b93497371b2d.png  39.1 kB          [emitted]         
+8f78faa351425f60dd184c30de5c1026.png  49.7 kB          [emitted]         
+7cd1aebd88ce95e05fa8a7781a821a8e.png  31.9 kB          [emitted]         
+26b8958e0d7d65fd634031a1cc3ba0a1.png   273 kB          [emitted]  [big]  
+2165f5c23474afc8d948394cae3fa63f.png  71.1 kB          [emitted]         
+0bc9a9997fd299ed587ba1241f5f6657.png  53.6 kB          [emitted]         
+2da1e833c2cb891d33ff4e58eced07d4.png   248 kB          [emitted]         
+20b0a84eee3084b0695cf18941496e2e.png   145 kB          [emitted]         
+240711fa17b9a6d30b575198aeee244f.png  55.3 kB          [emitted]         
+3b36b06825a0c4c359324ce0feefb0ed.png  97.7 kB          [emitted]         
+1e86fa4fc818daae89ca09dfbd4ea5a5.png  54.9 kB          [emitted]         
+c846835ffac6d3d432f7acaf94bd852e.png    56 kB          [emitted]         
+a0c7083f9c339195fc5b4c41dd7af0af.png  68.9 kB          [emitted]         
+86831ba717d6a0d6cdae3262fa86d100.png    39 kB          [emitted]         
+84144d3930d5fd3ea7e38729fb012bec.png   459 kB          [emitted]  [big]  
+d657f1028b3cd66a85d85607008ff754.png  33.7 kB          [emitted]         
+031dfa25174895c1ba809ae27b82e372.png  52.7 kB          [emitted]         
+eafdb11865e1519a6016c888d9e1f3bc.png  48.9 kB          [emitted]         
+a75972d990ef78c6983268af1ea19e91.png  45.9 kB          [emitted]         
+491ec5d24a8f0b6e4babe9421c545c50.png  49.7 kB          [emitted]         
+f8f7a35c7080582ab61f4281e6aeacd0.png  70.9 kB          [emitted]         
+641da7fcb446d404bb53311d2c4739ef.png  67.6 kB          [emitted]         
+75b1db326b53120cf3bac0e633227b85.png  39.2 kB          [emitted]         
+53ae50344bb96291ef3bf701c2c61212.png  37.8 kB          [emitted]         
+e2c5896114d04a6d8d808f20bcdf79ae.png   350 kB          [emitted]  [big]  
+e10af218b941826ea360d7554688d721.png  32.6 kB          [emitted]         
+                      main-client.js  12.7 MB       0  [emitted]  [big]  main-client
+                  main-client.js.map  14.2 MB       0  [emitted]         main-client
+   [0] delegated ./node_modules/@angular/core/esm5/core.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+   [9] external "vendor_7f98dda2557d6d111d50" 42 bytes {0} [not cacheable]
+ [472] delegated ./node_modules/bootstrap/dist/js/npm.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1012] multi event-source-polyfill webpack-hot-middleware/client?path=__webpack_hmr&dynamicPublicPath=true ./ClientApp/boot.browser.ts 52 bytes {0} [built]
+[1013] delegated ./node_modules/event-source-polyfill/src/eventsource.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1014] (webpack)-hot-middleware/client.js?path=__webpack_hmr&dynamicPublicPath=true 7.35 kB {0} [built]
+[1015] delegated ./node_modules/webpack/buildin/module.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1016] ./node_modules/querystring-es3/index.js 127 bytes {0} [built]
+[1019] ./node_modules/strip-ansi/index.js 161 bytes {0} [built]
+[1021] (webpack)-hot-middleware/client-overlay.js 2.21 kB {0} [built]
+[1026] (webpack)-hot-middleware/process-update.js 4.33 kB {0} [built]
+[1027] ./ClientApp/boot.browser.ts 1.29 kB {0} [built]
+[1028] delegated ./node_modules/core-js/client/shim.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1029] delegated ./node_modules/web-animations-js/web-animations.min.js from dll-reference vendor_7f98dda2557d6d111d50 42 bytes {0} [built]
+[1030] ./node_modules/zone.js/dist/zone.js 126 kB {0} [built]
+    + 1649 hidden modules
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/donvi/donvi-info.component.ts:340:36 
+    TS2551: Property 'loaiDonVi' does not exist on type 'DonVi'. Did you mean 'loaiDonViId'?
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/donvi/donvi-info.component.ts:342:36 
+    TS2551: Property 'loaiDonVi' does not exist on type 'DonVi'. Did you mean 'loaiDonViId'?
+
+ERROR in [at-loader] ./ClientApp/app/components/danhmuc/donvi/donvi-info.component.ts:517:84 
+    TS2551: Property 'loaiDonVi' does not exist on type 'DonVi'. Did you mean 'loaiDonViId'? (e55299c0)
+2020-05-19T23:46:04.4982624+07:00 0HLVS2G0UMOSH:00000002 [INF] The file "/dist/vendor.css" was not modified (f1f8d725)
+2020-05-19T23:46:04.5029758+07:00 0HLVS2G0UMOSH:00000002 [INF] Request finished in 30928.364ms 304 text/css (791a596a)
+2020-05-19T23:46:04.5040311+07:00 0HLVS2G0UMOSJ:00000001 [INF] The file "/dist/vendor.js" was not modified (f1f8d725)
+2020-05-19T23:46:04.5041804+07:00 0HLVS2G0UMOSJ:00000001 [INF] Request finished in 30856.3484ms 304 application/javascript (791a596a)
+2020-05-19T23:46:05.3821498+07:00 0HLVS2G0UMOSI:00000002 [INF] Request finished in 31787.5457ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-05-19T23:46:14.9070678+07:00 0HLVS2G0UMOSH:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/icon/khung.png   (ca22a1cb)
+2020-05-19T23:46:14.9071392+07:00 0HLVS2G0UMOSJ:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/icon/bg.png   (ca22a1cb)
+2020-05-19T23:46:14.9072982+07:00 0HLVS2G0UMOSH:00000003 [INF] The file "/images/icon/khung.png" was not modified (f1f8d725)
+2020-05-19T23:46:14.9073173+07:00 0HLVS2G0UMOSJ:00000002 [INF] The file "/images/icon/bg.png" was not modified (f1f8d725)
+2020-05-19T23:46:14.9073825+07:00 0HLVS2G0UMOSH:00000003 [INF] Request finished in 0.3907ms 304 image/png (791a596a)
+2020-05-19T23:46:14.9074520+07:00 0HLVS2G0UMOSI:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/icon/title-sw.png   (ca22a1cb)
+2020-05-19T23:46:14.9075113+07:00 0HLVS2G0UMOSJ:00000002 [INF] Request finished in 0.4231ms 304 image/png (791a596a)
+2020-05-19T23:46:14.9103298+07:00 0HLVS2G0UMOSI:00000003 [INF] The file "/images/icon/title-sw.png" was not modified (f1f8d725)
+2020-05-19T23:46:14.9106640+07:00 0HLVS2G0UMOSI:00000003 [INF] Request finished in 3.1326ms 304 image/png (791a596a)
+2020-05-19T23:46:14.9236175+07:00 0HLVS2G0UMOSH:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/icon/mitec-hrm.png   (ca22a1cb)
+2020-05-19T23:46:14.9240149+07:00 0HLVS2G0UMOSH:00000004 [INF] The file "/images/icon/mitec-hrm.png" was not modified (f1f8d725)
+2020-05-19T23:46:14.9276526+07:00 0HLVS2G0UMOSH:00000004 [INF] Request finished in 1.1435ms 304 image/png (791a596a)
+2020-05-19T23:46:14.9326736+07:00 0HLVS2G0UMOSI:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/icon/logo.png   (ca22a1cb)
+2020-05-19T23:46:14.9329445+07:00 0HLVS2G0UMOSI:00000004 [INF] The file "/images/icon/logo.png" was not modified (f1f8d725)
+2020-05-19T23:46:14.9330524+07:00 0HLVS2G0UMOSI:00000004 [INF] Request finished in 0.4769ms 304 image/png (791a596a)
+2020-05-19T23:46:14.9330753+07:00 0HLVS2G0UMOSJ:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-05-19T23:46:15.1460023+07:00 0HLVS2G0UMOSH:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/font/utm-avo.woff   (ca22a1cb)
+2020-05-19T23:46:15.1530923+07:00 0HLVS2G0UMOSH:00000005 [INF] Policy execution successful. (0204925d)
+2020-05-19T23:46:15.1563307+07:00 0HLVS2G0UMOSI:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/font/utm-avobold.woff   (ca22a1cb)
+2020-05-19T23:46:15.1564901+07:00 0HLVS2G0UMOSI:00000005 [INF] Policy execution successful. (0204925d)
+2020-05-19T23:46:15.1599676+07:00 0HLVS2G0UMOSH:00000005 [INF] The file "/images/font/utm-avo.woff" was not modified (f1f8d725)
+2020-05-19T23:46:15.1599675+07:00 0HLVS2G0UMOSI:00000005 [INF] The file "/images/font/utm-avobold.woff" was not modified (f1f8d725)
+2020-05-19T23:46:15.1600817+07:00 0HLVS2G0UMOSH:00000005 [INF] Request finished in 14.2116ms 304 application/font-woff (791a596a)
+2020-05-19T23:46:15.1600770+07:00 0HLVS2G0UMOSI:00000005 [INF] Request finished in 3.8092ms 304 application/font-woff (791a596a)
+2020-05-19T23:46:15.2040372+07:00 0HLVS2G0UMOSH:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/favicon.ico   (ca22a1cb)
+2020-05-19T23:46:15.2106213+07:00 0HLVS2G0UMOSH:00000006 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"D:\PMQLHienVat\source\QLNS\QLNS\wwwroot\favicon.ico"' (27b0a520)
+2020-05-19T23:46:15.2453235+07:00 0HLVS2G0UMOSH:00000006 [INF] Request finished in 41.2348ms 200 image/x-icon (791a596a)
+2020-05-19T23:50:01.2489271+07:00  [INF] webpack building... (478286db)
+2020-05-19T23:50:36.7984697+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-05-19T23:50:36.9417176+07:00  [FTL] Lỗi khởi tạo cơ sở dữ liệu (3b6074dc)
+System.AggregateException: One or more errors occurred. (Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.) ---> System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.SeedAsync() in D:\PMQLHienVat\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at QLNS.Program.Main(String[] args) in D:\PMQLHienVat\source\QLNS\QLNS\Program.cs:line 35
+---> (Inner Exception #0) System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'UrencoDB, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.SeedAsync() in D:\PMQLHienVat\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+
+<---
+
+2020-05-19T23:50:37.7725495+07:00 0HLVS2J0PG1M1:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-05-19T23:53:16.5692511+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-05-19T23:53:16.7341792+07:00  [FTL] Lỗi khởi tạo cơ sở dữ liệu (3b6074dc)
+System.AggregateException: One or more errors occurred. (Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.) ---> System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.SeedAsync() in D:\PMQLHienVat\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at QLNS.Program.Main(String[] args) in D:\PMQLHienVat\source\QLNS\QLNS\Program.cs:line 35
+---> (Inner Exception #0) System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'UrencoDB, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.SeedAsync() in D:\PMQLHienVat\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+
+<---
+
+2020-05-19T23:53:17.5802219+07:00 0HLVS2KGDAJ7T:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/   (ca22a1cb)
+2020-05-19T23:53:18.7947108+07:00 0HLVS2KGDAJ7T:00000001 [INF] Executing action method "QLNS.Controllers.HomeController.Index (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-05-19T23:53:27.3009417+07:00 0HLVS2KGDAJ7T:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2020-05-19T23:53:29.3655134+07:00 0HLVS2KGDAJ7T:00000001 [INF] Executed action "QLNS.Controllers.HomeController.Index (QLNS)" in 10641.6411ms (afa2e885)
+2020-05-19T23:53:29.4101069+07:00 0HLVS2KGDAJ7T:00000001 [INF] Request finished in 11924.8059ms 200 text/html; charset=utf-8 (791a596a)
+2020-05-19T23:53:29.4877941+07:00 0HLVS2KGDAJ7T:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js?v=0WUh7tgYQLE3vlEOCsT8vh6gyKsmTIeFENbG3_0Nhj8   (ca22a1cb)
+2020-05-19T23:53:55.9108369+07:00  [INF] webpack built bc7f9b0147c9f291d27d in 42130ms (57763a83)
+2020-05-19T23:53:56.5508014+07:00 0HLVS2KGDAJ7T:00000002 [INF] Request finished in 27063.0579ms 200 application/javascript; charset=UTF-8 (791a596a)
+2020-05-19T23:54:03.5269373+07:00 0HLVS2KGDAJ7T:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2020-05-19T23:54:14.8647490+07:00 0HLVS2KGDAJ7U:00000001 [INF] Request starting HTTP/1.1 POST http://localhost:55842/connect/token application/x-www-form-urlencoded 155 (ca22a1cb)
+2020-05-19T23:54:14.8748418+07:00 0HLVS2KGDAJ7U:00000001 [INF] Policy execution successful. (0204925d)
+2020-05-19T23:54:15.0094876+07:00 0HLVS2KGDAJ7U:00000001 [INF] The token request was successfully extracted from the HTTP request: "{
+  \"username\": \"trungvu18\",
+  \"password\": \"[removed for security reasons]\",
+  \"grant_type\": \"password\",
+  \"scope\": \"openid email phone profile offline_access roles\",
+  \"resource\": \"http://localhost:55842\"
+}". (ebc01284)
+2020-05-19T23:54:15.0237203+07:00 0HLVS2KGDAJ7U:00000001 [INF] The token request was successfully validated. (d7e51e65)
+2020-05-19T23:54:15.1309185+07:00 0HLVS2KGDAJ7U:00000001 [INF] Executing action method "QLNS.Controllers.AuthorizationController.Exchange (QLNS)" with arguments (["{
+  \"username\": \"trungvu18\",
+  \"password\": \"[removed for security reasons]\",
+  \"grant_type\": \"password\",
+  \"scope\": \"openid email phone profile offline_access roles\",
+  \"resource\": \"http://localhost:55842\"
+}"]) - ModelState is Valid (ba7f4ac2)
+2020-05-19T23:54:15.1419404+07:00 0HLVS2KGDAJ7U:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-05-19T23:54:16.0121837+07:00 0HLVS2KGDAJ7U:00000001 [INF] Executed DbCommand ("150"ms) [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Configuration], [u].[CreatedBy], [u].[CreatedDate], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[IsEnabled], [u].[JobTitle], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedBy], [u].[UpdatedDate], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0" (0723d8ff)
+2020-05-19T23:54:16.0938890+07:00 0HLVS2KGDAJ7U:00000001 [INF] Executed DbCommand ("6"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Configuration], [u].[CreatedBy], [u].[CreatedDate], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[IsEnabled], [u].[JobTitle], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedBy], [u].[UpdatedDate], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-05-19T23:54:16.3738296+07:00 0HLVS2KGDAJ7U:00000001 [INF] Executed DbCommand ("5"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2020-05-19T23:54:16.4530512+07:00 0HLVS2KGDAJ7U:00000001 [INF] Executed DbCommand ("6"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2020-05-19T23:54:16.4731927+07:00 0HLVS2KGDAJ7U:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[CreatedBy], [r].[CreatedDate], [r].[Description], [r].[Name], [r].[NormalizedName], [r].[UpdatedBy], [r].[UpdatedDate]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-05-19T23:54:16.5013389+07:00 0HLVS2KGDAJ7U:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-05-19T23:54:16.5323875+07:00 0HLVS2KGDAJ7U:00000001 [INF] Executing SignInResult with authentication scheme ("ASOS") and the following principal: "System.Security.Claims.ClaimsPrincipal". (f8bf0a82)
+2020-05-19T23:54:16.8098792+07:00 0HLVS2KGDAJ7U:00000001 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [OpenIddictAuthorizations] ([Id], [ApplicationId], [ConcurrencyToken], [Scopes], [Status], [Subject], [Type])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);" (0723d8ff)
+2020-05-19T23:54:16.8446960+07:00 0HLVS2KGDAJ7U:00000001 [INF] An ad hoc authorization was automatically created and associated with an unknown application: "d0fd2bb8-b04f-4076-bcb5-9af20406515d". (b5fe4ad7)
+2020-05-19T23:54:17.0057171+07:00 0HLVS2KGDAJ7U:00000001 [INF] Executed DbCommand ("11"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 4000), @p4='?', @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 450), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [OpenIddictTokens] ([Id], [ApplicationId], [AuthorizationId], [ConcurrencyToken], [CreationDate], [ExpirationDate], [Payload], [ReferenceId], [Status], [Subject], [Type])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);" (0723d8ff)
+2020-05-19T23:54:17.0529021+07:00 0HLVS2KGDAJ7U:00000001 [INF] The token response was successfully returned: "{
+  \"token_type\": \"Bearer\",
+  \"access_token\": \"[removed for security reasons]\",
+  \"expires_in\": 3600,
+  \"refresh_token\": \"[removed for security reasons]\",
+  \"id_token\": \"[removed for security reasons]\"
+}". (12d98310)
+2020-05-19T23:54:17.0844744+07:00 0HLVS2KGDAJ7U:00000001 [INF] Executed action "QLNS.Controllers.AuthorizationController.Exchange (QLNS)" in 2003.0908ms (afa2e885)
+2020-05-19T23:54:17.1026936+07:00 0HLVS2KGDAJ7U:00000001 [INF] Request finished in 2237.9293ms 200 application/json;charset=UTF-8 (791a596a)
+2020-05-19T23:54:17.1588124+07:00 0HLVS2KGDAJ7U:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/DonVis/getDonViByRole/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-05-19T23:54:17.1672640+07:00 0HLVS2KGDAJ7V:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/icon/user-image.png   (ca22a1cb)
+2020-05-19T23:54:17.1695810+07:00 0HLVS2KGDAJ80:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/banner.png   (ca22a1cb)
+2020-05-19T23:54:17.1987950+07:00 0HLVS2KGDAJ7V:00000001 [INF] The file "/images/icon/user-image.png" was not modified (f1f8d725)
+2020-05-19T23:54:17.1987950+07:00 0HLVS2KGDAJ80:00000001 [INF] The file "/images/banner.png" was not modified (f1f8d725)
+2020-05-19T23:54:17.2030756+07:00 0HLVS2KGDAJ7U:00000002 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-05-19T23:54:17.2090386+07:00 0HLVS2KGDAJ7V:00000001 [INF] Request finished in 41.8067ms 304 image/png (791a596a)
+2020-05-19T23:54:17.2090436+07:00 0HLVS2KGDAJ80:00000001 [INF] Request finished in 39.4801ms 304 image/png (791a596a)
+2020-05-19T23:54:17.2616714+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executing action method "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2020-05-19T23:54:17.2634725+07:00 0HLVS2KGDAJ7U:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-05-19T23:54:17.3303547+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("27"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3687505+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3696247+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3709902+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3719896+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3728837+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3735285+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3741103+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3746503+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3752509+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3758141+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3764398+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3769905+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3775597+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3781722+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3787374+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3792899+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3800452+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3807190+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3812844+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3819749+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3825808+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3831142+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3836522+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3842495+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3850003+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3855854+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3862987+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.3868898+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-05-19T23:54:17.4086421+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-05-19T23:54:17.4247205+07:00 0HLVS2KGDAJ7U:00000002 [INF] Executed action "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" in 206.4774ms (afa2e885)
+2020-05-19T23:54:17.4248568+07:00 0HLVS2KGDAJ7U:00000002 [INF] Request finished in 266.1012ms 200 application/json; charset=utf-8 (791a596a)
+2020-05-19T23:54:17.4337732+07:00 0HLVS2KGDAJ80:00000002 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/DonVis/getItems/0/0/x application/json 324 (ca22a1cb)
+2020-05-19T23:54:17.4340080+07:00 0HLVS2KGDAJ80:00000002 [INF] Policy execution successful. (0204925d)
+2020-05-19T23:54:17.4348621+07:00 0HLVS2KGDAJ80:00000002 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-05-19T23:54:17.4754829+07:00 0HLVS2KGDAJ80:00000002 [INF] Executing action method "QLNS.Controllers.DonVisController.GetItems (QLNS)" with arguments (["0", "0", "x", "DonViId IN (select tbl_RoleDonVi.DonViId from AspNetUsers inner join AspNetUserRoles on AspNetUsers.Id = AspNetUserRoles.UserId inner join AspNetRoles on AspNetUserRoles.RoleId = AspNetRoles.Id inner join tbl_RoleDonVi on AspNetRoles.Id = tbl_RoleDonVi.RoleId where AspNetUsers.Id = '0280636e-99e3-4b3d-bec0-5e9aa67ad2b5')"]) - ModelState is Valid (ba7f4ac2)
+2020-05-19T23:54:17.4761341+07:00 0HLVS2KGDAJ80:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-05-19T23:54:17.4951645+07:00 0HLVS2KGDAJ80:00000002 [ERR] Failed executing DbCommand ("7"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""tbl_DonVi_GetItemsByRange @p0,@p1,@p2,@p3" (627a98df)
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'LoaiDonVi'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(Boolean buffer)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+ClientConnectionId:96f7871d-9f7f-4eb3-ac74-e151beac8318
+Error Number:207,State:1,Class:16
+2020-05-19T23:54:17.5085917+07:00 0HLVS2KGDAJ80:00000002 [ERR] An exception occurred in the database while iterating the results of a query for context type '"DAL.ApplicationDbContext"'."
+""System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'LoaiDonVi'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(Boolean buffer)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:96f7871d-9f7f-4eb3-ac74-e151beac8318
+Error Number:207,State:1,Class:16" (64e2593c)
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'LoaiDonVi'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(Boolean buffer)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:96f7871d-9f7f-4eb3-ac74-e151beac8318
+Error Number:207,State:1,Class:16
+2020-05-19T23:54:17.5108377+07:00 0HLVS2KGDAJ80:00000002 [INF] Executed action "QLNS.Controllers.DonVisController.GetItems (QLNS)" in 69.3349ms (afa2e885)
+2020-05-19T23:54:17.5285300+07:00 0HLVS2KGDAJ80:00000002 [ERR] An unhandled exception has occurred: Invalid column name 'LoaiDonVi'. (aae742a8)
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'LoaiDonVi'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(Boolean buffer)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Collections.Generic.List`1.AddEnumerable(IEnumerable`1 enumerable)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at QLNS.Controllers.DonVisController.GetItems(Int32 start, Int32 count, String orderBy, String whereClause) in D:\PMQLHienVat\source\QLNS\QLNS\Controllers\DonViController.cs:line 95
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIIndexMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+ClientConnectionId:96f7871d-9f7f-4eb3-ac74-e151beac8318
+Error Number:207,State:1,Class:16
+2020-05-19T23:54:17.5414894+07:00 0HLVS2KGDAJ80:00000002 [INF] Request finished in 107.7895ms 500 application/json (791a596a)
+2020-05-19T23:54:17.5866292+07:00 0HLVS2KGDAJ7V:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:55842/api/Logs application/json 126 (ca22a1cb)
+2020-05-19T23:54:17.5867376+07:00 0HLVS2KGDAJ7V:00000002 [INF] Policy execution successful. (0204925d)
+2020-05-19T23:54:17.5878744+07:00 0HLVS2KGDAJ7V:00000002 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-05-19T23:54:17.6122751+07:00 0HLVS2KGDAJ7V:00000002 [INF] Executing action method "QLNS.Controllers.LogsController.PostLog (QLNS)" with arguments (["DAL.Models.Log"]) - ModelState is Valid (ba7f4ac2)
+2020-05-19T23:54:17.6151492+07:00 0HLVS2KGDAJ7V:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-05-19T23:54:17.6586931+07:00 0HLVS2KGDAJ7V:00000002 [INF] Executed DbCommand ("5"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [tbl_Log] ([HanhDong], [NgayThucHien], [NguoiThucHien], [NoiDung], [TenModule])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [LogID]
+FROM [tbl_Log]
+WHERE @@ROWCOUNT = 1 AND [LogID] = scope_identity();" (0723d8ff)
+2020-05-19T23:54:17.6742185+07:00 0HLVS2KGDAJ7V:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-05-19T23:54:17.7080782+07:00 0HLVS2KGDAJ7V:00000002 [INF] Executed action "QLNS.Controllers.LogsController.PostLog (QLNS)" in 115.4134ms (afa2e885)
+2020-05-19T23:54:17.7082983+07:00 0HLVS2KGDAJ7V:00000002 [INF] Request finished in 121.7126ms 201 application/json; charset=utf-8 (791a596a)
+2020-05-19T23:54:19.0846247+07:00 0HLVS2KGDAJ7U:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/26b8958e0d7d65fd634031a1cc3ba0a1.png   (ca22a1cb)
+2020-05-19T23:54:19.0848776+07:00 0HLVS2KGDAJ80:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/2165f5c23474afc8d948394cae3fa63f.png   (ca22a1cb)
+2020-05-19T23:54:19.0860976+07:00 0HLVS2KGDAJ7V:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/0bc9a9997fd299ed587ba1241f5f6657.png   (ca22a1cb)
+2020-05-19T23:54:19.0911641+07:00 0HLVS2KGDAJ81:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/2da1e833c2cb891d33ff4e58eced07d4.png   (ca22a1cb)
+2020-05-19T23:54:19.0917558+07:00 0HLVS2KGDAJ82:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/20b0a84eee3084b0695cf18941496e2e.png   (ca22a1cb)
+2020-05-19T23:54:19.0963917+07:00 0HLVS2KGDAJ80:00000003 [INF] Request finished in 11.5362ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.1010383+07:00 0HLVS2KGDAJ7V:00000003 [INF] Request finished in 15.0177ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.1025571+07:00 0HLVS2KGDAJ7U:00000003 [INF] Request finished in 18.0097ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.1037171+07:00 0HLVS2KGDAJ82:00000001 [INF] Request finished in 11.5281ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.1041252+07:00 0HLVS2KGDAJ81:00000001 [INF] Request finished in 13.1371ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.1415196+07:00 0HLVS2KGDAJ80:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/39db3efbca32138d9c0fb01623760338.png   (ca22a1cb)
+2020-05-19T23:54:19.1441156+07:00 0HLVS2KGDAJ80:00000004 [INF] Request finished in 2.5813ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.1443726+07:00 0HLVS2KGDAJ81:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/563c7e7c04bf5b74c7675ea6c3301c2b.png   (ca22a1cb)
+2020-05-19T23:54:19.1457852+07:00 0HLVS2KGDAJ81:00000002 [INF] Request finished in 1.4091ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.1483400+07:00 0HLVS2KGDAJ7V:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/4a4cd48a2c824ef9ac1db0faad589f2d.png   (ca22a1cb)
+2020-05-19T23:54:19.1504129+07:00 0HLVS2KGDAJ7V:00000004 [INF] Request finished in 2.099ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.1506007+07:00 0HLVS2KGDAJ7U:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/bd60eae1cf82800c33da4c7814c10c74.png   (ca22a1cb)
+2020-05-19T23:54:19.1521873+07:00 0HLVS2KGDAJ7U:00000004 [INF] Request finished in 1.54ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.1737879+07:00 0HLVS2KGDAJ82:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/641da7fcb446d404bb53311d2c4739ef.png   (ca22a1cb)
+2020-05-19T23:54:19.2113520+07:00 0HLVS2KGDAJ82:00000002 [INF] Request finished in 37.5793ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.2224220+07:00 0HLVS2KGDAJ7U:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/240711fa17b9a6d30b575198aeee244f.png   (ca22a1cb)
+2020-05-19T23:54:19.2242880+07:00 0HLVS2KGDAJ7U:00000005 [INF] Request finished in 1.9092ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.2318834+07:00 0HLVS2KGDAJ81:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/c846835ffac6d3d432f7acaf94bd852e.png   (ca22a1cb)
+2020-05-19T23:54:19.2336428+07:00 0HLVS2KGDAJ81:00000003 [INF] Request finished in 1.7791ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.2758046+07:00 0HLVS2KGDAJ7U:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/1e86fa4fc818daae89ca09dfbd4ea5a5.png   (ca22a1cb)
+2020-05-19T23:54:19.2779774+07:00 0HLVS2KGDAJ7U:00000006 [INF] Request finished in 2.188ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.3019065+07:00 0HLVS2KGDAJ82:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/3b36b06825a0c4c359324ce0feefb0ed.png   (ca22a1cb)
+2020-05-19T23:54:19.3024480+07:00 0HLVS2KGDAJ7V:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/8f78faa351425f60dd184c30de5c1026.png   (ca22a1cb)
+2020-05-19T23:54:19.3050927+07:00 0HLVS2KGDAJ7V:00000005 [INF] Request finished in 2.675ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.3054490+07:00 0HLVS2KGDAJ81:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/86831ba717d6a0d6cdae3262fa86d100.png   (ca22a1cb)
+2020-05-19T23:54:19.3068849+07:00 0HLVS2KGDAJ81:00000004 [INF] Request finished in 4.0391ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.3071321+07:00 0HLVS2KGDAJ80:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/a0c7083f9c339195fc5b4c41dd7af0af.png   (ca22a1cb)
+2020-05-19T23:54:19.3077811+07:00 0HLVS2KGDAJ82:00000003 [INF] Request finished in 5.984ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.3083114+07:00 0HLVS2KGDAJ80:00000005 [INF] Request finished in 1.1874ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.3442017+07:00 0HLVS2KGDAJ7U:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/84144d3930d5fd3ea7e38729fb012bec.png   (ca22a1cb)
+2020-05-19T23:54:19.3566300+07:00 0HLVS2KGDAJ7U:00000007 [INF] Request finished in 12.4263ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.3602311+07:00 0HLVS2KGDAJ7V:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/d657f1028b3cd66a85d85607008ff754.png   (ca22a1cb)
+2020-05-19T23:54:19.3607392+07:00 0HLVS2KGDAJ80:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/031dfa25174895c1ba809ae27b82e372.png   (ca22a1cb)
+2020-05-19T23:54:19.3614810+07:00 0HLVS2KGDAJ7V:00000006 [INF] Request finished in 1.3213ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.3616220+07:00 0HLVS2KGDAJ81:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/eafdb11865e1519a6016c888d9e1f3bc.png   (ca22a1cb)
+2020-05-19T23:54:19.3622777+07:00 0HLVS2KGDAJ80:00000006 [INF] Request finished in 1.5646ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.3635475+07:00 0HLVS2KGDAJ81:00000005 [INF] Request finished in 2.3126ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.4077296+07:00 0HLVS2KGDAJ82:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/a75972d990ef78c6983268af1ea19e91.png   (ca22a1cb)
+2020-05-19T23:54:19.4091041+07:00 0HLVS2KGDAJ82:00000004 [INF] Request finished in 1.3778ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.4239464+07:00 0HLVS2KGDAJ80:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/491ec5d24a8f0b6e4babe9421c545c50.png   (ca22a1cb)
+2020-05-19T23:54:19.4257642+07:00 0HLVS2KGDAJ80:00000007 [INF] Request finished in 1.8617ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.4409826+07:00 0HLVS2KGDAJ81:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/f8f7a35c7080582ab61f4281e6aeacd0.png   (ca22a1cb)
+2020-05-19T23:54:19.4466906+07:00 0HLVS2KGDAJ81:00000006 [INF] Request finished in 5.674ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.4470649+07:00 0HLVS2KGDAJ7V:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/53ae50344bb96291ef3bf701c2c61212.png   (ca22a1cb)
+2020-05-19T23:54:19.4488178+07:00 0HLVS2KGDAJ82:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/75b1db326b53120cf3bac0e633227b85.png   (ca22a1cb)
+2020-05-19T23:54:19.4492676+07:00 0HLVS2KGDAJ7V:00000007 [INF] Request finished in 2.3205ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.4505405+07:00 0HLVS2KGDAJ82:00000005 [INF] Request finished in 1.7991ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:19.4863545+07:00 0HLVS2KGDAJ80:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/e2c5896114d04a6d8d808f20bcdf79ae.png   (ca22a1cb)
+2020-05-19T23:54:19.4972420+07:00 0HLVS2KGDAJ80:00000008 [INF] Request finished in 10.9134ms 200 image/png; charset=UTF-8 (791a596a)
+2020-05-19T23:54:21.0084682+07:00 0HLVS2KGDAJ7V:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/ChatLieus application/json  (ca22a1cb)
+2020-05-19T23:54:21.0091381+07:00 0HLVS2KGDAJ7V:00000008 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-05-19T23:54:21.0127371+07:00 0HLVS2KGDAJ7V:00000008 [INF] Executing action method "Pupai.Modules.Controllers.ChatLieusController.GetChatLieus (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2020-05-19T23:54:21.0155222+07:00 0HLVS2KGDAJ7V:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-05-19T23:54:21.0166263+07:00 0HLVS2KGDAJ7V:00000008 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-05-19T23:54:21.0632725+07:00 0HLVS2KGDAJ7V:00000008 [INF] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[ChatLieuId], [r].[GhiChu], [r].[NgaySua], [r].[NgayTao], [r].[NguoiSua], [r].[NguoiTao], [r].[TenChatLieu], [r].[ThuTuHienThi], [r].[TrangThai]
+FROM [tbl_ChatLieu] AS [r]
+ORDER BY [r].[ChatLieuId] DESC" (0723d8ff)
+2020-05-19T23:54:21.0758168+07:00 0HLVS2KGDAJ7V:00000008 [INF] Executed action "Pupai.Modules.Controllers.ChatLieusController.GetChatLieus (QLNS)" in 63.361ms (afa2e885)
+2020-05-19T23:54:21.0759985+07:00 0HLVS2KGDAJ7V:00000008 [INF] Request finished in 67.5767ms 200 application/json; charset=utf-8 (791a596a)
+2020-05-19T23:55:30.2835785+07:00 0HLVS2KGDAJ83:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js.map   (ca22a1cb)
+2020-05-19T23:55:30.6745558+07:00 0HLVS2KGDAJ83:00000001 [INF] Request finished in 390.8633ms 200 application/json; charset=UTF-8 (791a596a)
+2020-05-19T23:59:27.3195006+07:00 0HLVS2KGDAJ84:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js.map   (ca22a1cb)
+2020-05-19T23:59:27.8197846+07:00 0HLVS2KGDAJ84:00000001 [INF] Request finished in 499.7144ms 200 application/json; charset=UTF-8 (791a596a)

@@ -1,0 +1,1168 @@
+2019-07-22T19:17:14.1510539+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:17:14.6570770+07:00  [FTL] Lỗi khởi tạo cơ sở dữ liệu (3b6074dc)
+System.AggregateException: One or more errors occurred. (Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.) ---> System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\Project\Urenco\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at QLNS.Program.Main(String[] args) in D:\Project\Urenco\source\QLNS\QLNS\Program.cs:line 35
+---> (Inner Exception #0) System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'UrencoDB, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\Project\Urenco\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+
+<---
+
+2019-07-22T19:17:15.6850710+07:00 0HLOEJQ46CFVI:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:55842/  0 (ca22a1cb)
+2019-07-22T19:17:15.5900524+07:00 0HLOEJQ46CFVJ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/   (ca22a1cb)
+2019-07-22T19:17:16.3624122+07:00 0HLOEJQ46CFVI:00000001 [INF] Request finished in 789.135ms 200  (791a596a)
+2019-07-22T19:17:17.6891142+07:00 0HLOEJQ46CFVJ:00000001 [INF] Executing action method "QLNS.Controllers.HomeController.Index (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:17:21.1651621+07:00 0HLOEJQ46CFVJ:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2019-07-22T19:17:23.6454043+07:00 0HLOEJQ46CFVJ:00000001 [INF] Executed action "QLNS.Controllers.HomeController.Index (QLNS)" in 6057.6971ms (afa2e885)
+2019-07-22T19:17:23.6541261+07:00 0HLOEJQ46CFVI:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js?v=hGpKU93toeuN2bVXPkivrtljGrqHIJC4X-6QsUeb6-k   (ca22a1cb)
+2019-07-22T19:17:23.6950902+07:00 0HLOEJQ46CFVJ:00000001 [INF] Request finished in 8192.6762ms 200 text/html; charset=utf-8 (791a596a)
+2019-07-22T19:17:23.9441852+07:00 0HLOEJQ46CFVK:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/vendor.js?v=FwYw6gAJD-OCZqk1GTiv1cCp_cSE_F6L35nFyXTyXgM   (ca22a1cb)
+2019-07-22T19:17:23.9892919+07:00 0HLOEJQ46CFVL:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/vendor.css?v=QOq4-etCsJX8m9f_uO-JvgMS6xz8jLZCOH8wJGYZOR0   (ca22a1cb)
+2019-07-22T19:17:43.1076240+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:17:43.2198895+07:00  [FTL] Lỗi khởi tạo cơ sở dữ liệu (3b6074dc)
+System.AggregateException: One or more errors occurred. (Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.) ---> System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\Project\Urenco\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at QLNS.Program.Main(String[] args) in D:\Project\Urenco\source\QLNS\QLNS\Program.cs:line 35
+---> (Inner Exception #0) System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'UrencoDB, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\Project\Urenco\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+
+<---
+
+2019-07-22T19:17:43.7428763+07:00 0HLOEJQCLN4FP:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/   (ca22a1cb)
+2019-07-22T19:17:44.1019253+07:00 0HLOEJQCLN4FP:00000001 [INF] Executing action method "QLNS.Controllers.HomeController.Index (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:17:46.7136767+07:00 0HLOEJQCLN4FP:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2019-07-22T19:17:47.2984334+07:00 0HLOEJQCLN4FP:00000001 [INF] Executed action "QLNS.Controllers.HomeController.Index (QLNS)" in 3199.2654ms (afa2e885)
+2019-07-22T19:17:47.3148992+07:00 0HLOEJQCLN4FP:00000001 [INF] Request finished in 3577.6748ms 200 text/html; charset=utf-8 (791a596a)
+2019-07-22T19:17:47.3244331+07:00 0HLOEJQCLN4FP:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/main-client.js?v=hGpKU93toeuN2bVXPkivrtljGrqHIJC4X-6QsUeb6-k   (ca22a1cb)
+2019-07-22T19:17:47.3378135+07:00 0HLOEJQCLN4FQ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/vendor.css?v=QOq4-etCsJX8m9f_uO-JvgMS6xz8jLZCOH8wJGYZOR0   (ca22a1cb)
+2019-07-22T19:17:47.3381505+07:00 0HLOEJQCLN4FR:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/vendor.js?v=FwYw6gAJD-OCZqk1GTiv1cCp_cSE_F6L35nFyXTyXgM   (ca22a1cb)
+2019-07-22T19:18:59.0430451+07:00  [INF] webpack built ddb26648e9de7ca4d741 in 76193ms (43cd8255)
+2019-07-22T19:18:59.3799343+07:00 0HLOEJQCLN4FR:00000001 [INF] Sending file. Request path: '"/dist/vendor.js"'. Physical path: '"D:\Project\Urenco\source\QLNS\QLNS\wwwroot\dist\vendor.js"' (27b0a520)
+2019-07-22T19:18:59.3799344+07:00 0HLOEJQCLN4FQ:00000001 [INF] Sending file. Request path: '"/dist/vendor.css"'. Physical path: '"D:\Project\Urenco\source\QLNS\QLNS\wwwroot\dist\vendor.css"' (27b0a520)
+2019-07-22T19:18:59.4022424+07:00 0HLOEJQCLN4FR:00000001 [INF] Request finished in 72064.0157ms 200 application/javascript (791a596a)
+2019-07-22T19:18:59.4026863+07:00 0HLOEJQCLN4FQ:00000001 [INF] Request finished in 72064.9218ms 200 text/css (791a596a)
+2019-07-22T19:18:59.7819125+07:00 0HLOEJQCLN4FP:00000002 [INF] Request finished in 72457.5495ms 200 application/javascript; charset=UTF-8 (791a596a)
+2019-07-22T19:19:46.5734041+07:00 0HLOEJQCLN4FR:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/icon/title-sw.png   (ca22a1cb)
+2019-07-22T19:19:46.5734058+07:00 0HLOEJQCLN4FQ:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/icon/khung.png   (ca22a1cb)
+2019-07-22T19:19:46.5736678+07:00 0HLOEJQCLN4FR:00000002 [INF] Sending file. Request path: '"/images/icon/title-sw.png"'. Physical path: '"D:\Project\Urenco\source\QLNS\QLNS\wwwroot\images\icon\title-sw.png"' (27b0a520)
+2019-07-22T19:19:46.5736695+07:00 0HLOEJQCLN4FQ:00000002 [INF] Sending file. Request path: '"/images/icon/khung.png"'. Physical path: '"D:\Project\Urenco\source\QLNS\QLNS\wwwroot\images\icon\khung.png"' (27b0a520)
+2019-07-22T19:19:46.5769025+07:00 0HLOEJQCLN4FQ:00000002 [INF] Request finished in 3.4846ms 200 image/png (791a596a)
+2019-07-22T19:19:46.5774525+07:00 0HLOEJQCLN4FP:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/icon/bg.png   (ca22a1cb)
+2019-07-22T19:19:46.5776648+07:00 0HLOEJQCLN4FP:00000003 [INF] Sending file. Request path: '"/images/icon/bg.png"'. Physical path: '"D:\Project\Urenco\source\QLNS\QLNS\wwwroot\images\icon\bg.png"' (27b0a520)
+2019-07-22T19:19:46.5838199+07:00 0HLOEJQCLN4FR:00000002 [INF] Request finished in 10.436ms 200 image/png (791a596a)
+2019-07-22T19:19:46.5965625+07:00 0HLOEJQCLN4FP:00000003 [INF] Request finished in 19.0931ms 200 image/png (791a596a)
+2019-07-22T19:19:46.6773612+07:00 0HLOEJQCLN4FQ:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2019-07-22T19:19:46.6822226+07:00 0HLOEJQCLN4FR:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/icon/mitec-hrm.png   (ca22a1cb)
+2019-07-22T19:19:46.6836244+07:00 0HLOEJQCLN4FR:00000003 [INF] Sending file. Request path: '"/images/icon/mitec-hrm.png"'. Physical path: '"D:\Project\Urenco\source\QLNS\QLNS\wwwroot\images\icon\mitec-hrm.png"' (27b0a520)
+2019-07-22T19:19:46.6934961+07:00 0HLOEJQCLN4FR:00000003 [INF] Request finished in 11.1021ms 200 image/png (791a596a)
+2019-07-22T19:19:46.6945692+07:00 0HLOEJQCLN4FS:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/icon/logo.png   (ca22a1cb)
+2019-07-22T19:19:46.6962124+07:00 0HLOEJQCLN4FS:00000001 [INF] Sending file. Request path: '"/images/icon/logo.png"'. Physical path: '"D:\Project\Urenco\source\QLNS\QLNS\wwwroot\images\icon\logo.png"' (27b0a520)
+2019-07-22T19:19:46.7162258+07:00 0HLOEJQCLN4FS:00000001 [INF] Request finished in 21.9008ms 200 image/png (791a596a)
+2019-07-22T19:19:46.7734922+07:00 0HLOEJQCLN4FR:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/font/utm-avobold.woff   (ca22a1cb)
+2019-07-22T19:19:46.7762469+07:00 0HLOEJQCLN4FR:00000004 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:19:46.7766673+07:00 0HLOEJQCLN4FR:00000004 [INF] Sending file. Request path: '"/images/font/utm-avobold.woff"'. Physical path: '"D:\Project\Urenco\source\QLNS\QLNS\wwwroot\images\font\utm-avobold.woff"' (27b0a520)
+2019-07-22T19:19:46.7873994+07:00 0HLOEJQCLN4FT:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/font/utm-avo.woff   (ca22a1cb)
+2019-07-22T19:19:46.7875795+07:00 0HLOEJQCLN4FT:00000001 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:19:46.7877703+07:00 0HLOEJQCLN4FT:00000001 [INF] Sending file. Request path: '"/images/font/utm-avo.woff"'. Physical path: '"D:\Project\Urenco\source\QLNS\QLNS\wwwroot\images\font\utm-avo.woff"' (27b0a520)
+2019-07-22T19:19:46.7926061+07:00 0HLOEJQCLN4FR:00000004 [INF] Request finished in 19.2602ms 200 application/font-woff (791a596a)
+2019-07-22T19:19:46.7963347+07:00 0HLOEJQCLN4FT:00000001 [INF] Request finished in 8.9809ms 200 application/font-woff (791a596a)
+2019-07-22T19:19:46.9233252+07:00 0HLOEJQCLN4FS:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55842/favicon.ico   (ca22a1cb)
+2019-07-22T19:19:46.9235463+07:00 0HLOEJQCLN4FS:00000002 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"D:\Project\Urenco\source\QLNS\QLNS\wwwroot\favicon.ico"' (27b0a520)
+2019-07-22T19:19:46.9411632+07:00 0HLOEJQCLN4FS:00000002 [INF] Request finished in 17.8475ms 200 image/x-icon (791a596a)
+2019-07-22T19:19:47.2090160+07:00 0HLOEJQCLN4FQ:00000003 [INF] Request finished in 531.6333ms 200 text/event-stream; charset=utf-8 (791a596a)
+2019-07-22T19:19:49.1590215+07:00 0HLOEJQCLN4FT:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:55842/connect/token application/x-www-form-urlencoded 155 (ca22a1cb)
+2019-07-22T19:19:49.1591541+07:00 0HLOEJQCLN4FT:00000002 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:19:49.2366078+07:00 0HLOEJQCLN4FT:00000002 [INF] The token request was successfully extracted from the HTTP request: "{
+  \"username\": \"trungvu18\",
+  \"password\": \"[removed for security reasons]\",
+  \"grant_type\": \"password\",
+  \"scope\": \"openid email phone profile offline_access roles\",
+  \"resource\": \"http://localhost:55842\"
+}". (ebc01284)
+2019-07-22T19:19:49.2595815+07:00 0HLOEJQCLN4FT:00000002 [INF] The token request was successfully validated. (d7e51e65)
+2019-07-22T19:19:49.3160040+07:00 0HLOEJQCLN4FT:00000002 [INF] Executing action method "QLNS.Controllers.AuthorizationController.Exchange (QLNS)" with arguments (["{
+  \"username\": \"trungvu18\",
+  \"password\": \"[removed for security reasons]\",
+  \"grant_type\": \"password\",
+  \"scope\": \"openid email phone profile offline_access roles\",
+  \"resource\": \"http://localhost:55842\"
+}"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:49.3218239+07:00 0HLOEJQCLN4FT:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:19:49.9629362+07:00 0HLOEJQCLN4FT:00000002 [INF] Executed DbCommand ("133"ms) [Parameters=["@__normalizedEmail_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Configuration], [u].[CreatedBy], [u].[CreatedDate], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[IsEnabled], [u].[JobTitle], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedBy], [u].[UpdatedDate], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0" (0723d8ff)
+2019-07-22T19:19:50.0427733+07:00 0HLOEJQCLN4FT:00000002 [INF] Executed DbCommand ("21"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Configuration], [u].[CreatedBy], [u].[CreatedDate], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[IsEnabled], [u].[JobTitle], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedBy], [u].[UpdatedDate], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2019-07-22T19:19:50.1870290+07:00 0HLOEJQCLN4FT:00000002 [INF] Executed DbCommand ("8"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2019-07-22T19:19:50.2443220+07:00 0HLOEJQCLN4FT:00000002 [INF] Executed DbCommand ("6"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2019-07-22T19:19:50.2670338+07:00 0HLOEJQCLN4FT:00000002 [INF] Executed DbCommand ("8"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[CreatedBy], [r].[CreatedDate], [r].[Description], [r].[Name], [r].[NormalizedName], [r].[UpdatedBy], [r].[UpdatedDate]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2019-07-22T19:19:50.3028647+07:00 0HLOEJQCLN4FT:00000002 [INF] Executed DbCommand ("11"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2019-07-22T19:19:50.3215408+07:00 0HLOEJQCLN4FT:00000002 [INF] Executing SignInResult with authentication scheme ("ASOS") and the following principal: "System.Security.Claims.ClaimsPrincipal". (f8bf0a82)
+2019-07-22T19:19:50.5484830+07:00 0HLOEJQCLN4FT:00000002 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [OpenIddictAuthorizations] ([Id], [ApplicationId], [ConcurrencyToken], [Scopes], [Status], [Subject], [Type])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);" (0723d8ff)
+2019-07-22T19:19:50.5635539+07:00 0HLOEJQCLN4FT:00000002 [INF] An ad hoc authorization was automatically created and associated with an unknown application: "78e244c6-7c55-45f3-9663-9811dfbf8f9c". (b5fe4ad7)
+2019-07-22T19:19:50.7134612+07:00 0HLOEJQCLN4FT:00000002 [INF] Executed DbCommand ("11"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 4000), @p4='?', @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 450), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [OpenIddictTokens] ([Id], [ApplicationId], [AuthorizationId], [ConcurrencyToken], [CreationDate], [ExpirationDate], [Payload], [ReferenceId], [Status], [Subject], [Type])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);" (0723d8ff)
+2019-07-22T19:19:50.7665587+07:00 0HLOEJQCLN4FT:00000002 [INF] The token response was successfully returned: "{
+  \"token_type\": \"Bearer\",
+  \"access_token\": \"[removed for security reasons]\",
+  \"expires_in\": 3600,
+  \"refresh_token\": \"[removed for security reasons]\",
+  \"id_token\": \"[removed for security reasons]\"
+}". (12d98310)
+2019-07-22T19:19:50.7884533+07:00 0HLOEJQCLN4FT:00000002 [INF] Executed action "QLNS.Controllers.AuthorizationController.Exchange (QLNS)" in 1491.5738ms (afa2e885)
+2019-07-22T19:19:50.7967536+07:00 0HLOEJQCLN4FT:00000002 [INF] Request finished in 1637.7474ms 200 application/json;charset=UTF-8 (791a596a)
+2019-07-22T19:19:50.8202298+07:00 0HLOEJQCLN4FR:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/DonVis/getDonViByRole/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2019-07-22T19:19:50.8371865+07:00 0HLOEJQCLN4FR:00000005 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:19:50.8597398+07:00 0HLOEJQCLN4FP:00000004 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/ThongKes/thongketuoi application/json 52 (ca22a1cb)
+2019-07-22T19:19:50.8598416+07:00 0HLOEJQCLN4FP:00000004 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:19:50.8634562+07:00 0HLOEJQCLN4FP:00000004 [INF] Executing action method "QLNS.Controllers.ThongKesController.thongketuoi (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:50.8834504+07:00 0HLOEJQCLN4FR:00000005 [INF] Executing action method "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:50.8859310+07:00 0HLOEJQCLN4FR:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:19:50.9167002+07:00 0HLOEJQCLN4FP:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:50.9274948+07:00 0HLOEJQCLN4FP:00000004 [INF] Executed action "QLNS.Controllers.ThongKesController.thongketuoi (QLNS)" in 64.3436ms (afa2e885)
+2019-07-22T19:19:50.9277724+07:00 0HLOEJQCLN4FP:00000004 [INF] Request finished in 68.1084ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:50.9291494+07:00 0HLOEJQCLN4FS:00000003 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/ThongKes/thongkegioitinh application/json 52 (ca22a1cb)
+2019-07-22T19:19:50.9292474+07:00 0HLOEJQCLN4FS:00000003 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:19:50.9308046+07:00 0HLOEJQCLN4FS:00000003 [INF] Executing action method "QLNS.Controllers.ThongKesController.thongkegioitinh (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:50.9549631+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:50.9962720+07:00 0HLOEJQCLN4FS:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:50.9965329+07:00 0HLOEJQCLN4FS:00000003 [INF] Executed action "QLNS.Controllers.ThongKesController.thongkegioitinh (QLNS)" in 65.7818ms (afa2e885)
+2019-07-22T19:19:50.9966213+07:00 0HLOEJQCLN4FS:00000003 [INF] Request finished in 67.5399ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:50.9968229+07:00 0HLOEJQCLN4FT:00000003 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/ThongKes/thongketinhthanh application/json 52 (ca22a1cb)
+2019-07-22T19:19:50.9969014+07:00 0HLOEJQCLN4FT:00000003 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:19:51.0049191+07:00 0HLOEJQCLN4FT:00000003 [INF] Executing action method "QLNS.Controllers.ThongKesController.thongketinhthanh (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:51.0404839+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("8"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.0505906+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("8"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.0582704+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.0707162+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("11"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.0722906+07:00 0HLOEJQCLN4FT:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:51.0724674+07:00 0HLOEJQCLN4FT:00000003 [INF] Executed action "QLNS.Controllers.ThongKesController.thongketinhthanh (QLNS)" in 67.6014ms (afa2e885)
+2019-07-22T19:19:51.0725812+07:00 0HLOEJQCLN4FT:00000003 [INF] Request finished in 75.7736ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:51.0727849+07:00 0HLOEJQCLN4FP:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/banner.png   (ca22a1cb)
+2019-07-22T19:19:51.0729814+07:00 0HLOEJQCLN4FP:00000005 [INF] Sending file. Request path: '"/images/banner.png"'. Physical path: '"D:\Project\Urenco\source\QLNS\QLNS\wwwroot\images\banner.png"' (27b0a520)
+2019-07-22T19:19:51.0750394+07:00 0HLOEJQCLN4FU:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/images/icon/user-image.png   (ca22a1cb)
+2019-07-22T19:19:51.0752546+07:00 0HLOEJQCLN4FU:00000001 [INF] Sending file. Request path: '"/images/icon/user-image.png"'. Physical path: '"D:\Project\Urenco\source\QLNS\QLNS\wwwroot\images\icon\user-image.png"' (27b0a520)
+2019-07-22T19:19:51.0764982+07:00 0HLOEJQCLN4FP:00000005 [INF] Request finished in 3.7002ms 200 image/png (791a596a)
+2019-07-22T19:19:51.0766744+07:00 0HLOEJQCLN4FU:00000001 [INF] Request finished in 1.6895ms 200 image/png (791a596a)
+2019-07-22T19:19:51.0797451+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.0903824+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.0990265+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("8"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.1063618+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.1143370+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.1223569+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.1303693+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.1381942+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.1464053+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.1543122+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.1631901+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.1703448+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.1813992+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("10"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.1904047+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.1983513+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.2062731+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.2145708+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.2238781+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("8"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.2343710+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("9"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.2431405+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("8"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.2522808+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.2603739+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.2684156+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.2765083+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.2768276+07:00 0HLOEJQCLN4FR:00000005 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:51.2794207+07:00 0HLOEJQCLN4FR:00000005 [INF] Executed action "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" in 433.4984ms (afa2e885)
+2019-07-22T19:19:51.2796189+07:00 0HLOEJQCLN4FR:00000005 [INF] Request finished in 459.4171ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:51.2827215+07:00 0HLOEJQCLN4FS:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/DonVis/getDonViByRole/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2019-07-22T19:19:51.2841306+07:00 0HLOEJQCLN4FS:00000004 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:19:51.2912313+07:00 0HLOEJQCLN4FS:00000004 [INF] Executing action method "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:51.2918268+07:00 0HLOEJQCLN4FS:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:19:51.3071723+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("9"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.3095114+07:00 0HLOEJQCLN4FT:00000004 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/DonVis/getItems/0/0/x application/json 324 (ca22a1cb)
+2019-07-22T19:19:51.3096099+07:00 0HLOEJQCLN4FT:00000004 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:19:51.3101552+07:00 0HLOEJQCLN4FT:00000004 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:19:51.3153758+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.3208792+07:00 0HLOEJQCLN4FT:00000004 [INF] Executing action method "QLNS.Controllers.DonVisController.GetItems (QLNS)" with arguments (["0", "0", "x", "DonViId IN (select tbl_RoleDonVi.DonViId from AspNetUsers inner join AspNetUserRoles on AspNetUsers.Id = AspNetUserRoles.UserId inner join AspNetRoles on AspNetUserRoles.RoleId = AspNetRoles.Id inner join tbl_RoleDonVi on AspNetRoles.Id = tbl_RoleDonVi.RoleId where AspNetUsers.Id = '0280636e-99e3-4b3d-bec0-5e9aa67ad2b5')"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:51.3215654+07:00 0HLOEJQCLN4FT:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:19:51.3223311+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.3306457+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.3389569+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.3488001+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("8"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.3563295+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.3643485+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.3708187+07:00 0HLOEJQCLN4FT:00000004 [INF] Executed DbCommand ("11"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""tbl_DonVi_GetItemsByRange @p0,@p1,@p2,@p3" (0723d8ff)
+2019-07-22T19:19:51.3724670+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.3726414+07:00 0HLOEJQCLN4FT:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:51.3800386+07:00 0HLOEJQCLN4FT:00000004 [INF] Executed action "QLNS.Controllers.DonVisController.GetItems (QLNS)" in 66.2055ms (afa2e885)
+2019-07-22T19:19:51.3802577+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.3808060+07:00 0HLOEJQCLN4FT:00000004 [INF] Request finished in 71.3351ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:51.3810204+07:00 0HLOEJQCLN4FP:00000006 [INF] Request starting HTTP/1.1 POST http://localhost:55842/api/Logs application/json 126 (ca22a1cb)
+2019-07-22T19:19:51.3811020+07:00 0HLOEJQCLN4FP:00000006 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:19:51.3825110+07:00 0HLOEJQCLN4FP:00000006 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:19:51.3869782+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.3963400+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.4043960+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.4098935+07:00 0HLOEJQCLN4FP:00000006 [INF] Executing action method "QLNS.Controllers.LogsController.PostLog (QLNS)" with arguments (["DAL.Models.Log"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:51.4121183+07:00 0HLOEJQCLN4FP:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:19:51.4163421+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("10"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.4263665+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.4359875+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("8"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.4443610+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.4534350+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("8"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.4603532+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.4683490+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.4762528+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.4860047+07:00 0HLOEJQCLN4FU:00000002 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/HoSoNhanSus/getHSNS/0/0/x application/json 204 (ca22a1cb)
+2019-07-22T19:19:51.4861023+07:00 0HLOEJQCLN4FU:00000002 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:19:51.4865966+07:00 0HLOEJQCLN4FU:00000002 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:19:51.4891633+07:00 0HLOEJQCLN4FU:00000002 [INF] Executing action method "QLNS.Controllers.HoSoNhanSusController.GetHSNS (QLNS)" with arguments (["0", "0", "x", "CoQuanTuyenDung in (2,1045,4,5,6,7,8,10,2064,2065,2066,2067,2068,2069,2070,2063,3,15,13,16,17,14,18,19,20,44,2044,1046) and tbl_HoSoNhanSu.TrangThai = 1 AND NgaySinh is not null and  MONTH(NgaySinh) = 7"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:51.4894007+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("12"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.4979756+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.5063853+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.5149348+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("8"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.5222559+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("5"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.5301276+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.5403187+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("8"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.5536359+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed DbCommand ("12"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:51.5537981+07:00 0HLOEJQCLN4FS:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:51.5540171+07:00 0HLOEJQCLN4FS:00000004 [INF] Executed action "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" in 269.2905ms (afa2e885)
+2019-07-22T19:19:51.5541300+07:00 0HLOEJQCLN4FS:00000004 [INF] Request finished in 271.5078ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:51.5543428+07:00 0HLOEJQCLN4FR:00000006 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/HoSoNhanSus/getItems/0/0/x application/json 264 (ca22a1cb)
+2019-07-22T19:19:51.5544402+07:00 0HLOEJQCLN4FR:00000006 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:19:51.5549783+07:00 0HLOEJQCLN4FR:00000006 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:19:51.5619334+07:00 0HLOEJQCLN4FR:00000006 [INF] Executing action method "QLNS.Controllers.HoSoNhanSusController.GetItems (QLNS)" with arguments (["0", "0", "x", "CoQuanTuyenDung in (2,1045,4,5,6,7,8,10,2064,2065,2066,2067,2068,2069,2070,2063,3,15,13,16,17,14,18,19,20,44,2044,1046) and TrangThai = 1 and((GioiTinhId = 4 and YEAR(GETDATE()) - YEAR(NgaySinh) = 60) OR(GioiTinhId = 2 and YEAR(GETDATE()) - YEAR(NgaySinh) = 55))"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:51.5677555+07:00 0HLOEJQCLN4FR:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:19:51.5844433+07:00 0HLOEJQCLN4FU:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:51.6133194+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("17"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""tbl_HoSoNhanSu_GetItemsByRange @p0,@p1,@p2,@p3" (0723d8ff)
+2019-07-22T19:19:51.6766675+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("8"ms) [Parameters=["@__item_DanTocId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[DanTocId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenDanToc], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_DanToc] AS [o]
+WHERE [o].[DanTocId] = @__item_DanTocId_0" (0723d8ff)
+2019-07-22T19:19:51.7156946+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("6"ms) [Parameters=["@__item_GioiTinhId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[GioiTinhId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenGioiTinh], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_GioiTinh] AS [o]
+WHERE [o].[GioiTinhId] = @__item_GioiTinhId_0" (0723d8ff)
+2019-07-22T19:19:51.7549196+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[TinhTrangHonNhanId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenTinhTrangHonNhan], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_TinhTrangHonNhan] AS [o]
+WHERE [o].[TinhTrangHonNhanId] IS NULL" (0723d8ff)
+2019-07-22T19:19:51.7782637+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[NgachCongChucId], [o].[DoiTuong], [o].[MaNgach], [o].[NgayNhap], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[PhanLoai], [o].[TenNgach], [o].[TrangThai]
+FROM [tbl_NgachCongChuc] AS [o]
+WHERE [o].[NgachCongChucId] IS NULL" (0723d8ff)
+2019-07-22T19:19:51.7874661+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("7"ms) [Parameters=["@__item_DanTocId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[DanTocId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenDanToc], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_DanToc] AS [o]
+WHERE [o].[DanTocId] = @__item_DanTocId_0" (0723d8ff)
+2019-07-22T19:19:51.7943615+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("6"ms) [Parameters=["@__item_GioiTinhId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[GioiTinhId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenGioiTinh], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_GioiTinh] AS [o]
+WHERE [o].[GioiTinhId] = @__item_GioiTinhId_0" (0723d8ff)
+2019-07-22T19:19:51.8019580+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[TinhTrangHonNhanId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenTinhTrangHonNhan], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_TinhTrangHonNhan] AS [o]
+WHERE [o].[TinhTrangHonNhanId] IS NULL" (0723d8ff)
+2019-07-22T19:19:51.8101931+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[NgachCongChucId], [o].[DoiTuong], [o].[MaNgach], [o].[NgayNhap], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[PhanLoai], [o].[TenNgach], [o].[TrangThai]
+FROM [tbl_NgachCongChuc] AS [o]
+WHERE [o].[NgachCongChucId] IS NULL" (0723d8ff)
+2019-07-22T19:19:51.8189424+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("8"ms) [Parameters=["@__item_DanTocId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[DanTocId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenDanToc], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_DanToc] AS [o]
+WHERE [o].[DanTocId] = @__item_DanTocId_0" (0723d8ff)
+2019-07-22T19:19:51.8263346+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("6"ms) [Parameters=["@__item_GioiTinhId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[GioiTinhId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenGioiTinh], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_GioiTinh] AS [o]
+WHERE [o].[GioiTinhId] = @__item_GioiTinhId_0" (0723d8ff)
+2019-07-22T19:19:51.8323104+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[TinhTrangHonNhanId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenTinhTrangHonNhan], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_TinhTrangHonNhan] AS [o]
+WHERE [o].[TinhTrangHonNhanId] IS NULL" (0723d8ff)
+2019-07-22T19:19:51.8414836+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[NgachCongChucId], [o].[DoiTuong], [o].[MaNgach], [o].[NgayNhap], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[PhanLoai], [o].[TenNgach], [o].[TrangThai]
+FROM [tbl_NgachCongChuc] AS [o]
+WHERE [o].[NgachCongChucId] IS NULL" (0723d8ff)
+2019-07-22T19:19:51.8507584+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("7"ms) [Parameters=["@__item_DanTocId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[DanTocId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenDanToc], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_DanToc] AS [o]
+WHERE [o].[DanTocId] = @__item_DanTocId_0" (0723d8ff)
+2019-07-22T19:19:51.8583733+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("6"ms) [Parameters=["@__item_GioiTinhId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[GioiTinhId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenGioiTinh], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_GioiTinh] AS [o]
+WHERE [o].[GioiTinhId] = @__item_GioiTinhId_0" (0723d8ff)
+2019-07-22T19:19:51.8655909+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[TinhTrangHonNhanId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenTinhTrangHonNhan], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_TinhTrangHonNhan] AS [o]
+WHERE [o].[TinhTrangHonNhanId] IS NULL" (0723d8ff)
+2019-07-22T19:19:51.8743098+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[NgachCongChucId], [o].[DoiTuong], [o].[MaNgach], [o].[NgayNhap], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[PhanLoai], [o].[TenNgach], [o].[TrangThai]
+FROM [tbl_NgachCongChuc] AS [o]
+WHERE [o].[NgachCongChucId] IS NULL" (0723d8ff)
+2019-07-22T19:19:51.8819903+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("7"ms) [Parameters=["@__item_DanTocId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[DanTocId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenDanToc], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_DanToc] AS [o]
+WHERE [o].[DanTocId] = @__item_DanTocId_0" (0723d8ff)
+2019-07-22T19:19:51.8898583+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("7"ms) [Parameters=["@__item_GioiTinhId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[GioiTinhId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenGioiTinh], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_GioiTinh] AS [o]
+WHERE [o].[GioiTinhId] = @__item_GioiTinhId_0" (0723d8ff)
+2019-07-22T19:19:51.8981512+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[TinhTrangHonNhanId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenTinhTrangHonNhan], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_TinhTrangHonNhan] AS [o]
+WHERE [o].[TinhTrangHonNhanId] IS NULL" (0723d8ff)
+2019-07-22T19:19:51.9064077+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[NgachCongChucId], [o].[DoiTuong], [o].[MaNgach], [o].[NgayNhap], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[PhanLoai], [o].[TenNgach], [o].[TrangThai]
+FROM [tbl_NgachCongChuc] AS [o]
+WHERE [o].[NgachCongChucId] IS NULL" (0723d8ff)
+2019-07-22T19:19:51.9158983+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("8"ms) [Parameters=["@__item_DanTocId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[DanTocId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenDanToc], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_DanToc] AS [o]
+WHERE [o].[DanTocId] = @__item_DanTocId_0" (0723d8ff)
+2019-07-22T19:19:51.9242933+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("7"ms) [Parameters=["@__item_GioiTinhId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[GioiTinhId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenGioiTinh], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_GioiTinh] AS [o]
+WHERE [o].[GioiTinhId] = @__item_GioiTinhId_0" (0723d8ff)
+2019-07-22T19:19:51.9323751+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[TinhTrangHonNhanId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenTinhTrangHonNhan], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_TinhTrangHonNhan] AS [o]
+WHERE [o].[TinhTrangHonNhanId] IS NULL" (0723d8ff)
+2019-07-22T19:19:51.9401431+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[NgachCongChucId], [o].[DoiTuong], [o].[MaNgach], [o].[NgayNhap], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[PhanLoai], [o].[TenNgach], [o].[TrangThai]
+FROM [tbl_NgachCongChuc] AS [o]
+WHERE [o].[NgachCongChucId] IS NULL" (0723d8ff)
+2019-07-22T19:19:51.9507852+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("10"ms) [Parameters=["@__item_DanTocId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[DanTocId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenDanToc], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_DanToc] AS [o]
+WHERE [o].[DanTocId] = @__item_DanTocId_0" (0723d8ff)
+2019-07-22T19:19:51.9597131+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("7"ms) [Parameters=["@__item_GioiTinhId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[GioiTinhId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenGioiTinh], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_GioiTinh] AS [o]
+WHERE [o].[GioiTinhId] = @__item_GioiTinhId_0" (0723d8ff)
+2019-07-22T19:19:51.9703158+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("7"ms) [Parameters=["@__item_TinhTrangHonNhanId_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[TinhTrangHonNhanId], [o].[GhiChu], [o].[KyHieu], [o].[NgaySua], [o].[NgayTao], [o].[NguoiSua], [o].[NguoiTao], [o].[TenTinhTrangHonNhan], [o].[ThuTuHienThi], [o].[TrangThai]
+FROM [tbl_TinhTrangHonNhan] AS [o]
+WHERE [o].[TinhTrangHonNhanId] = @__item_TinhTrangHonNhanId_0" (0723d8ff)
+2019-07-22T19:19:51.9863626+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[NgachCongChucId], [o].[DoiTuong], [o].[MaNgach], [o].[NgayNhap], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[PhanLoai], [o].[TenNgach], [o].[TrangThai]
+FROM [tbl_NgachCongChuc] AS [o]
+WHERE [o].[NgachCongChucId] IS NULL" (0723d8ff)
+2019-07-22T19:19:51.9865388+07:00 0HLOEJQCLN4FR:00000006 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:52.0839204+07:00 0HLOEJQCLN4FR:00000006 [INF] Executed action "QLNS.Controllers.HoSoNhanSusController.GetItems (QLNS)" in 526.4413ms (afa2e885)
+2019-07-22T19:19:52.0841137+07:00 0HLOEJQCLN4FR:00000006 [INF] Request finished in 529.7662ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:52.0845821+07:00 0HLOEJQCLN4FT:00000005 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/BaoCaos/hethanbonhiem/7/2019 application/json 102 (ca22a1cb)
+2019-07-22T19:19:52.0847068+07:00 0HLOEJQCLN4FT:00000005 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:19:52.0927527+07:00 0HLOEJQCLN4FT:00000005 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:19:52.0953986+07:00 0HLOEJQCLN4FT:00000005 [INF] Executing action method "QLNS.Controllers.BaoCaosController.GetItemsHetHanBoNhiem (QLNS)" with arguments (["(2,1045,4,5,6,7,8,10,2064,2065,2066,2067,2068,2069,2070,2063,3,15,13,16,17,14,18,19,20,44,2044,1046)", "7", "2019"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:52.1186876+07:00 0HLOEJQCLN4FT:00000005 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:52.1188747+07:00 0HLOEJQCLN4FT:00000005 [INF] Executed action "QLNS.Controllers.BaoCaosController.GetItemsHetHanBoNhiem (QLNS)" in 23.8169ms (afa2e885)
+2019-07-22T19:19:52.1189653+07:00 0HLOEJQCLN4FT:00000005 [INF] Request finished in 34.4523ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:52.1191806+07:00 0HLOEJQCLN4FP:00000006 [INF] Executed DbCommand ("634"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [tbl_Log] ([HanhDong], [NgayThucHien], [NguoiThucHien], [NoiDung], [TenModule])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [LogID]
+FROM [tbl_Log]
+WHERE @@ROWCOUNT = 1 AND [LogID] = scope_identity();" (0723d8ff)
+2019-07-22T19:19:52.1191997+07:00 0HLOEJQCLN4FV:00000001 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/BaoCaos/quaylai application/json 243 (ca22a1cb)
+2019-07-22T19:19:52.1192220+07:00 0HLOEJQCLN4FS:00000005 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/BaoCaos/hethanhopdong/7/2019 application/json 102 (ca22a1cb)
+2019-07-22T19:19:52.1192380+07:00 0HLOEJQCLN4FR:00000007 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/DonVis/getItems/0/0/x application/json 324 (ca22a1cb)
+2019-07-22T19:19:52.1192738+07:00 0HLOEJQCLN4FV:00000001 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:19:52.1192909+07:00 0HLOEJQCLN4FS:00000005 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:19:52.1193230+07:00 0HLOEJQCLN4FR:00000007 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:19:52.1197138+07:00 0HLOEJQCLN4FV:00000001 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:19:52.1197174+07:00 0HLOEJQCLN4FS:00000005 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:19:52.1197199+07:00 0HLOEJQCLN4FR:00000007 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:19:52.1200455+07:00 0HLOEJQCLN4FR:00000007 [INF] Executing action method "QLNS.Controllers.DonVisController.GetItems (QLNS)" with arguments (["0", "0", "x", "DonViId IN (select tbl_RoleDonVi.DonViId from AspNetUsers inner join AspNetUserRoles on AspNetUsers.Id = AspNetUserRoles.UserId inner join AspNetRoles on AspNetUserRoles.RoleId = AspNetRoles.Id inner join tbl_RoleDonVi on AspNetRoles.Id = tbl_RoleDonVi.RoleId where AspNetUsers.Id = '0280636e-99e3-4b3d-bec0-5e9aa67ad2b5')"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:52.1203567+07:00 0HLOEJQCLN4FR:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:19:52.1212042+07:00 0HLOEJQCLN4FV:00000001 [INF] Executing action method "QLNS.Controllers.BaoCaosController.GetItemsQuayLai (QLNS)" with arguments (["CoQuanTuyenDung in (2,1045,4,5,6,7,8,10,2064,2065,2066,2067,2068,2069,2070,2063,3,15,13,16,17,14,18,19,20,44,2044,1046) and MONTH(DenNgay) = 6 and YEAR(DenNgay) = 2019 and TangGiamBaoHiemId in (9,10,12,27,30) and tbl_HoSoNhanSu.TrangThai = 1"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:52.1212809+07:00 0HLOEJQCLN4FU:00000002 [INF] Executed action "QLNS.Controllers.HoSoNhanSusController.GetHSNS (QLNS)" in 632.51ms (afa2e885)
+2019-07-22T19:19:52.1213983+07:00 0HLOEJQCLN4FS:00000005 [INF] Executing action method "QLNS.Controllers.BaoCaosController.GetItemsHetHanHopDong (QLNS)" with arguments (["(2,1045,4,5,6,7,8,10,2064,2065,2066,2067,2068,2069,2070,2063,3,15,13,16,17,14,18,19,20,44,2044,1046)", "7", "2019"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:52.1214047+07:00 0HLOEJQCLN4FU:00000002 [INF] Request finished in 635.5136ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:52.1309361+07:00 0HLOEJQCLN4FR:00000007 [INF] Executed DbCommand ("10"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""tbl_DonVi_GetItemsByRange @p0,@p1,@p2,@p3" (0723d8ff)
+2019-07-22T19:19:52.1314327+07:00 0HLOEJQCLN4FR:00000007 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:52.1316811+07:00 0HLOEJQCLN4FR:00000007 [INF] Executed action "QLNS.Controllers.DonVisController.GetItems (QLNS)" in 11.8179ms (afa2e885)
+2019-07-22T19:19:52.1317872+07:00 0HLOEJQCLN4FR:00000007 [INF] Request finished in 12.596ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:52.1335784+07:00 0HLOEJQCLN4FP:00000006 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:52.1444890+07:00 0HLOEJQCLN4FV:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:52.1446834+07:00 0HLOEJQCLN4FV:00000001 [INF] Executed action "QLNS.Controllers.BaoCaosController.GetItemsQuayLai (QLNS)" in 23.5978ms (afa2e885)
+2019-07-22T19:19:52.1447594+07:00 0HLOEJQCLN4FV:00000001 [INF] Request finished in 25.5932ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:52.1454260+07:00 0HLOEJQCLN4FP:00000006 [INF] Executed action "QLNS.Controllers.LogsController.PostLog (QLNS)" in 752.317ms (afa2e885)
+2019-07-22T19:19:52.1455482+07:00 0HLOEJQCLN4FP:00000006 [INF] Request finished in 764.5558ms 201 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:52.1547103+07:00 0HLOEJQCLN4FT:00000006 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/HoSoNhanSus/getHSNS/0/0/x application/json 154 (ca22a1cb)
+2019-07-22T19:19:52.1548101+07:00 0HLOEJQCLN4FT:00000006 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:19:52.1554930+07:00 0HLOEJQCLN4FT:00000006 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:19:52.1560075+07:00 0HLOEJQCLN4FT:00000006 [INF] Executing action method "QLNS.Controllers.HoSoNhanSusController.GetHSNS (QLNS)" with arguments (["0", "0", "x", "tbl_HoSoNhanSu.TrangThai = 1 and CoQuanTuyenDung in (2,1045,4,5,6,7,8,10,2064,2065,2066,2067,2068,2069,2070,2063,3,15,13,16,17,14,18,19,20,44,2044,1046)"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:52.1710144+07:00 0HLOEJQCLN4FS:00000005 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:52.1712578+07:00 0HLOEJQCLN4FS:00000005 [INF] Executed action "QLNS.Controllers.BaoCaosController.GetItemsHetHanHopDong (QLNS)" in 49.975ms (afa2e885)
+2019-07-22T19:19:52.1721398+07:00 0HLOEJQCLN4FS:00000005 [INF] Request finished in 52.8718ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:52.2871072+07:00 0HLOEJQCLN4FT:00000006 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:52.3087714+07:00 0HLOEJQCLN4FT:00000006 [INF] Executed action "QLNS.Controllers.HoSoNhanSusController.GetHSNS (QLNS)" in 152.9924ms (afa2e885)
+2019-07-22T19:19:52.3088768+07:00 0HLOEJQCLN4FT:00000006 [INF] Request finished in 154.2345ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:53.5204802+07:00 0HLOEJQCLN4FU:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/DonVis/getDonViByRole/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2019-07-22T19:19:53.5210554+07:00 0HLOEJQCLN4FU:00000003 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:19:53.5213869+07:00 0HLOEJQCLN4FU:00000003 [INF] Executing action method "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:53.5217767+07:00 0HLOEJQCLN4FU:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:19:53.5303391+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.5412184+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("10"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.5481372+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.5561174+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.5641361+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.5721443+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.5814124+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("8"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.5883782+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.5962472+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.6041024+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.6101008+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("5"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.6181276+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.6261582+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.6381145+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("11"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.6460954+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.6540949+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.6613082+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.6712544+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("9"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.6781721+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.6861353+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.6941213+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.7021368+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.7102699+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.7181076+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.7261531+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.7341274+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.7421054+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.7503588+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.7584106+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2019-07-22T19:19:53.7586340+07:00 0HLOEJQCLN4FU:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:53.7589026+07:00 0HLOEJQCLN4FU:00000003 [INF] Executed action "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" in 237.6494ms (afa2e885)
+2019-07-22T19:19:53.7590446+07:00 0HLOEJQCLN4FU:00000003 [INF] Request finished in 238.641ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:53.9902242+07:00 0HLOEJQCLN4FR:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:55842/null   (ca22a1cb)
+2019-07-22T19:19:53.9915509+07:00 0HLOEJQCLN4FR:00000008 [INF] Executing action method "QLNS.Controllers.HomeController.Index (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:53.9918490+07:00 0HLOEJQCLN4FR:00000008 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2019-07-22T19:19:54.0578763+07:00 0HLOEJQCLN4FP:00000007 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/DonVis/getItems/0/0/x application/json 324 (ca22a1cb)
+2019-07-22T19:19:54.0579695+07:00 0HLOEJQCLN4FP:00000007 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:19:54.0584642+07:00 0HLOEJQCLN4FP:00000007 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:19:54.0670184+07:00 0HLOEJQCLN4FP:00000007 [INF] Executing action method "QLNS.Controllers.DonVisController.GetItems (QLNS)" with arguments (["0", "0", "x", "DonViId IN (select tbl_RoleDonVi.DonViId from AspNetUsers inner join AspNetUserRoles on AspNetUsers.Id = AspNetUserRoles.UserId inner join AspNetRoles on AspNetUserRoles.RoleId = AspNetRoles.Id inner join tbl_RoleDonVi on AspNetRoles.Id = tbl_RoleDonVi.RoleId where AspNetUsers.Id = '0280636e-99e3-4b3d-bec0-5e9aa67ad2b5')"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:54.0673134+07:00 0HLOEJQCLN4FP:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:19:54.0826417+07:00 0HLOEJQCLN4FP:00000007 [INF] Executed DbCommand ("14"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""tbl_DonVi_GetItemsByRange @p0,@p1,@p2,@p3" (0723d8ff)
+2019-07-22T19:19:54.0830859+07:00 0HLOEJQCLN4FP:00000007 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:54.0833742+07:00 0HLOEJQCLN4FP:00000007 [INF] Executed action "QLNS.Controllers.DonVisController.GetItems (QLNS)" in 24.7206ms (afa2e885)
+2019-07-22T19:19:54.0835214+07:00 0HLOEJQCLN4FP:00000007 [INF] Request finished in 25.6983ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:54.3089211+07:00 0HLOEJQCLN4FR:00000008 [INF] Executed action "QLNS.Controllers.HomeController.Index (QLNS)" in 317.3778ms (afa2e885)
+2019-07-22T19:19:54.3090574+07:00 0HLOEJQCLN4FR:00000008 [INF] Request finished in 318.874ms 200 text/html; charset=utf-8 (791a596a)
+2019-07-22T19:19:54.4354579+07:00 0HLOEJQCLN4FV:00000002 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/HoSoNhanSus/getHSNS/0/0/tbl_DonVi.LoaiDonVi%20ASC,%20tbl_DonVi.ViTri%20ASC,tbl_ChucDanh.ViTri%20ASC application/json 154 (ca22a1cb)
+2019-07-22T19:19:54.4355853+07:00 0HLOEJQCLN4FV:00000002 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:19:54.4361026+07:00 0HLOEJQCLN4FV:00000002 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:19:54.4365722+07:00 0HLOEJQCLN4FV:00000002 [INF] Executing action method "QLNS.Controllers.HoSoNhanSusController.GetHSNS (QLNS)" with arguments (["0", "0", "tbl_DonVi.LoaiDonVi ASC, tbl_DonVi.ViTri ASC,tbl_ChucDanh.ViTri ASC", "CoQuanTuyenDung in (2,1045,4,5,6,7,8,10,2064,2065,2066,2067,2068,2069,2070,2063,3,15,13,16,17,14,18,19,20,44,2044,1046) and tbl_HoSoNhanSu.TrangThai = 1"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:54.5626213+07:00 0HLOEJQCLN4FV:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:54.5780235+07:00 0HLOEJQCLN4FV:00000002 [INF] Executed action "QLNS.Controllers.HoSoNhanSusController.GetHSNS (QLNS)" in 141.6914ms (afa2e885)
+2019-07-22T19:19:54.5781375+07:00 0HLOEJQCLN4FV:00000002 [INF] Request finished in 142.8882ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:54.7798417+07:00 0HLOEJQCLN4FS:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/HoSoNhanSus/5932 application/json  (ca22a1cb)
+2019-07-22T19:19:54.7803556+07:00 0HLOEJQCLN4FS:00000006 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:19:54.7842108+07:00 0HLOEJQCLN4FS:00000006 [INF] Executing action method "QLNS.Controllers.HoSoNhanSusController.GetHoSoNhanSu (QLNS)" with arguments (["5932"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:54.7871136+07:00 0HLOEJQCLN4FS:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:19:54.8861585+07:00 0HLOEJQCLN4FS:00000006 [INF] Executed DbCommand ("17"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[HoSoNhanSuId], [o].[BHThatNghiep], [o].[BacLuong], [o].[BacTho], [o].[BoPhan], [o].[CaMacDinh], [o].[CanNang], [o].[CapBacQuanDoi], [o].[ChieuCao], [o].[ChucVuDoan], [o].[ChucVuHienTai], [o].[ChucVuQuanDoi], [o].[ChuyenMonCaoNhat], [o].[ChuyenNganh], [o].[CoQuanTuyenDung], [o].[CongViecChinh], [o].[DanTocId], [o].[DanhHieuId], [o].[DiaBan], [o].[DonViQuanDoi], [o].[Email], [o].[GhiChu], [o].[GiayPhepLaoDong], [o].[GioiTinhId], [o].[HanGiayPhepLaoDong], [o].[HanGiayPhepLaoDong1], [o].[HanTheTamTru], [o].[HanTheTamTru1], [o].[HeSo], [o].[HinhAnh], [o].[HoKhauTT], [o].[HoTenDem], [o].[HocHam], [o].[HocVi], [o].[KhenThuong], [o].[KhuyetTat], [o].[KiemNhiem], [o].[KyLuat], [o].[LoaiLaoDong], [o].[LuuYSucKhoe], [o].[LyLuanChinhTri], [o].[MaHoSo], [o].[MaNghach], [o].[MaSTCN], [o].[MaThe], [o].[MucLuongHienTai], [o].[NamThoiViec], [o].[NgachCongChucId], [o].[NganHangId], [o].[NgayCapCMTND], [o].[NgayCapCMTND1], [o].[NgayCapHC], [o].[NgayCapHC1], [o].[NgayDongBHXH], [o].[NgayDongBHXH1], [o].[NgayHetHanHC], [o].[NgayHetHanHC1], [o].[NgayHetHanViSa], [o].[NgayHetHanViSa1], [o].[NgayHuong], [o].[NgayHuong1], [o].[NgayLamViecCT], [o].[NgayLamViecCT1], [o].[NgayNhapNgu], [o].[NgayNhapNgu1], [o].[NgaySinh], [o].[NgaySinh1], [o].[NgayThoiViec], [o].[NgayThoiViec1], [o].[NgayTuyenDung], [o].[NgayTuyenDung1], [o].[NgayVaoDoan], [o].[NgayVaoDoan1], [o].[NgayXuatNgu], [o].[NgayXuatNgu1], [o].[NgheTruocTuyenDung], [o].[NgoaiNgu], [o].[NguyenQuan], [o].[NhomLamViec], [o].[NhomMauId], [o].[NoiCapCMTND], [o].[NoiCapHC], [o].[NoiOHienNay], [o].[NoiSinh], [o].[NoiSinhHoatDoan], [o].[PhanLoai], [o].[PhongBan], [o].[PhuCapKhac], [o].[PhucCapChucVu], [o].[QuanLyNhaNuoc], [o].[QuocTichId], [o].[SoBHXH], [o].[SoCMTND], [o].[SoDienThoai], [o].[SoHoChieu], [o].[SoTaiKhoan], [o].[SoTheBHYT], [o].[SoTheDoan], [o].[SoTruong], [o].[SoViSa], [o].[Ten], [o].[TenGoiKhac], [o].[ThangThoiViec], [o].[TheTamTru], [o].[TinHoc], [o].[TinhTrangHonNhanId], [o].[TinhTrangSucKhoe], [o].[TonGiaoId], [o].[TraLuongTaiKhoan], [o].[TrangThai], [o].[TrinhDoPhoThong], [o.TinhTrangHonNhans].[TinhTrangHonNhanId], [o.TinhTrangHonNhans].[GhiChu], [o.TinhTrangHonNhans].[KyHieu], [o.TinhTrangHonNhans].[NgaySua], [o.TinhTrangHonNhans].[NgayTao], [o.TinhTrangHonNhans].[NguoiSua], [o.TinhTrangHonNhans].[NguoiTao], [o.TinhTrangHonNhans].[TenTinhTrangHonNhan], [o.TinhTrangHonNhans].[ThuTuHienThi], [o.TinhTrangHonNhans].[TrangThai], [o.GioiTinhs].[GioiTinhId], [o.GioiTinhs].[GhiChu], [o.GioiTinhs].[KyHieu], [o.GioiTinhs].[NgaySua], [o.GioiTinhs].[NgayTao], [o.GioiTinhs].[NguoiSua], [o.GioiTinhs].[NguoiTao], [o.GioiTinhs].[TenGioiTinh], [o.GioiTinhs].[ThuTuHienThi], [o.GioiTinhs].[TrangThai], [o.DanToc].[DanTocId], [o.DanToc].[GhiChu], [o.DanToc].[KyHieu], [o.DanToc].[NgaySua], [o.DanToc].[NgayTao], [o.DanToc].[NguoiSua], [o.DanToc].[NguoiTao], [o.DanToc].[TenDanToc], [o.DanToc].[ThuTuHienThi], [o.DanToc].[TrangThai]
+FROM [tbl_HoSoNhanSu] AS [o]
+LEFT JOIN [tbl_TinhTrangHonNhan] AS [o.TinhTrangHonNhans] ON [o].[TinhTrangHonNhanId] = [o.TinhTrangHonNhans].[TinhTrangHonNhanId]
+LEFT JOIN [tbl_GioiTinh] AS [o.GioiTinhs] ON [o].[GioiTinhId] = [o.GioiTinhs].[GioiTinhId]
+LEFT JOIN [tbl_DanToc] AS [o.DanToc] ON [o].[DanTocId] = [o.DanToc].[DanTocId]
+WHERE [o].[HoSoNhanSuId] = @__id_0" (0723d8ff)
+2019-07-22T19:19:54.8969667+07:00 0HLOEJQCLN4FS:00000006 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:54.8972790+07:00 0HLOEJQCLN4FS:00000006 [INF] Executed action "QLNS.Controllers.HoSoNhanSusController.GetHoSoNhanSu (QLNS)" in 113.1676ms (afa2e885)
+2019-07-22T19:19:54.8974130+07:00 0HLOEJQCLN4FS:00000006 [INF] Request finished in 117.6148ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:54.9451635+07:00 0HLOEJQCLN4FT:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/CongTacs/getAllById/5932 application/json  (ca22a1cb)
+2019-07-22T19:19:54.9457173+07:00 0HLOEJQCLN4FT:00000007 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:19:54.9456603+07:00 0HLOEJQCLN4FU:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/TinhThanhs application/json  (ca22a1cb)
+2019-07-22T19:19:54.9477538+07:00 0HLOEJQCLN4FU:00000004 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:19:54.9554844+07:00 0HLOEJQCLN4FT:00000007 [INF] Executing action method "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" with arguments (["5932"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:54.9579503+07:00 0HLOEJQCLN4FT:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:19:54.9591254+07:00 0HLOEJQCLN4FU:00000004 [INF] Executing action method "QLNS.Controllers.TinhThanhsController.GetTinhThanhs (QLNS)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:19:54.9607921+07:00 0HLOEJQCLN4FU:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:19:54.9612830+07:00 0HLOEJQCLN4FU:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:54.9791998+07:00 0HLOEJQCLN4FU:00000004 [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[TinhThanhId], [r].[DienGiai], [r].[KyHieu], [r].[NgayNhap], [r].[NgaySua], [r].[NgonNgu], [r].[NguoiNhap], [r].[NguoiSua], [r].[TenTinhThanh], [r].[TrangThai], [r].[ViTri]
+FROM [tbl_TinhThanh] AS [r]
+ORDER BY [r].[ViTri]" (0723d8ff)
+2019-07-22T19:19:54.9899042+07:00 0HLOEJQCLN4FU:00000004 [INF] Executed action "QLNS.Controllers.TinhThanhsController.GetTinhThanhs (QLNS)" in 30.8987ms (afa2e885)
+2019-07-22T19:19:54.9900794+07:00 0HLOEJQCLN4FU:00000004 [INF] Request finished in 44.4139ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:19:54.9920342+07:00 0HLOEJQCLN4FP:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:55842/pic/avatar/IBPQO8K9AW_scan0011.jpg   (ca22a1cb)
+2019-07-22T19:19:54.9950630+07:00 0HLOEJQCLN4FP:00000008 [INF] Request finished in 3.1128ms 404  (791a596a)
+2019-07-22T19:19:55.0159932+07:00 0HLOEJQCLN4FT:00000007 [INF] Executed DbCommand ("26"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[CongTacId], [o].[ChucDanhId], [o].[DenNgay], [o].[DenNgay1], [o].[HSLuong], [o].[HSPhuCap], [o].[HoSoNhanSuId], [o].[MucLuong], [o].[NgayNhap], [o].[NgayQuyetDinh], [o].[NgayQuyetDinh1], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[NoiDung], [o].[PhuCap], [o].[SoThang], [o].[TangGiamBaoHiemId], [o].[TepDinhKem], [o].[TuNgay], [o].[TuNgay1], [o].[Type], [o.TangGiamBaoHiem].[TangGiamBaoHiemId], [o.TangGiamBaoHiem].[GhiChu], [o.TangGiamBaoHiem].[NgaySua], [o.TangGiamBaoHiem].[NgayTao], [o.TangGiamBaoHiem].[NguoiSua], [o.TangGiamBaoHiem].[NguoiTao], [o.TangGiamBaoHiem].[PhanLoai], [o.TangGiamBaoHiem].[ThuTuHienThi], [o.TangGiamBaoHiem].[TieuDe], [o.TangGiamBaoHiem].[TrangThai], [o.ChucDanh].[ChucDanhId], [o.ChucDanh].[DienGiai], [o.ChucDanh].[KyHieu], [o.ChucDanh].[NgayNhap], [o.ChucDanh].[NgaySua], [o.ChucDanh].[NgonNgu], [o.ChucDanh].[NguoiNhap], [o.ChucDanh].[NguoiSua], [o.ChucDanh].[PhanLoaiChucDanh], [o.ChucDanh].[TenChucDanh], [o.ChucDanh].[TrangThai], [o.ChucDanh].[ViTri]
+FROM [tbl_CongTac] AS [o]
+LEFT JOIN [tbl_TangGiamBaoHiem] AS [o.TangGiamBaoHiem] ON [o].[TangGiamBaoHiemId] = [o.TangGiamBaoHiem].[TangGiamBaoHiemId]
+LEFT JOIN [tbl_ChucDanh] AS [o.ChucDanh] ON [o].[ChucDanhId] = [o.ChucDanh].[ChucDanhId]
+WHERE [o].[HoSoNhanSuId] = @__id_0
+ORDER BY [o].[TuNgay]" (0723d8ff)
+2019-07-22T19:19:55.0397201+07:00 0HLOEJQCLN4FT:00000007 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:19:55.0503880+07:00 0HLOEJQCLN4FT:00000007 [INF] Executed action "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" in 95.1918ms (afa2e885)
+2019-07-22T19:19:55.0505209+07:00 0HLOEJQCLN4FT:00000007 [INF] Request finished in 105.431ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:03.7037902+07:00 0HLOEJQCLN4FR:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/HoSoNhanSus/6378 application/json  (ca22a1cb)
+2019-07-22T19:20:03.7044893+07:00 0HLOEJQCLN4FR:00000009 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:03.7048286+07:00 0HLOEJQCLN4FR:00000009 [INF] Executing action method "QLNS.Controllers.HoSoNhanSusController.GetHoSoNhanSu (QLNS)" with arguments (["6378"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:03.7062477+07:00 0HLOEJQCLN4FR:00000009 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:03.7253907+07:00 0HLOEJQCLN4FR:00000009 [INF] Executed DbCommand ("17"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[HoSoNhanSuId], [o].[BHThatNghiep], [o].[BacLuong], [o].[BacTho], [o].[BoPhan], [o].[CaMacDinh], [o].[CanNang], [o].[CapBacQuanDoi], [o].[ChieuCao], [o].[ChucVuDoan], [o].[ChucVuHienTai], [o].[ChucVuQuanDoi], [o].[ChuyenMonCaoNhat], [o].[ChuyenNganh], [o].[CoQuanTuyenDung], [o].[CongViecChinh], [o].[DanTocId], [o].[DanhHieuId], [o].[DiaBan], [o].[DonViQuanDoi], [o].[Email], [o].[GhiChu], [o].[GiayPhepLaoDong], [o].[GioiTinhId], [o].[HanGiayPhepLaoDong], [o].[HanGiayPhepLaoDong1], [o].[HanTheTamTru], [o].[HanTheTamTru1], [o].[HeSo], [o].[HinhAnh], [o].[HoKhauTT], [o].[HoTenDem], [o].[HocHam], [o].[HocVi], [o].[KhenThuong], [o].[KhuyetTat], [o].[KiemNhiem], [o].[KyLuat], [o].[LoaiLaoDong], [o].[LuuYSucKhoe], [o].[LyLuanChinhTri], [o].[MaHoSo], [o].[MaNghach], [o].[MaSTCN], [o].[MaThe], [o].[MucLuongHienTai], [o].[NamThoiViec], [o].[NgachCongChucId], [o].[NganHangId], [o].[NgayCapCMTND], [o].[NgayCapCMTND1], [o].[NgayCapHC], [o].[NgayCapHC1], [o].[NgayDongBHXH], [o].[NgayDongBHXH1], [o].[NgayHetHanHC], [o].[NgayHetHanHC1], [o].[NgayHetHanViSa], [o].[NgayHetHanViSa1], [o].[NgayHuong], [o].[NgayHuong1], [o].[NgayLamViecCT], [o].[NgayLamViecCT1], [o].[NgayNhapNgu], [o].[NgayNhapNgu1], [o].[NgaySinh], [o].[NgaySinh1], [o].[NgayThoiViec], [o].[NgayThoiViec1], [o].[NgayTuyenDung], [o].[NgayTuyenDung1], [o].[NgayVaoDoan], [o].[NgayVaoDoan1], [o].[NgayXuatNgu], [o].[NgayXuatNgu1], [o].[NgheTruocTuyenDung], [o].[NgoaiNgu], [o].[NguyenQuan], [o].[NhomLamViec], [o].[NhomMauId], [o].[NoiCapCMTND], [o].[NoiCapHC], [o].[NoiOHienNay], [o].[NoiSinh], [o].[NoiSinhHoatDoan], [o].[PhanLoai], [o].[PhongBan], [o].[PhuCapKhac], [o].[PhucCapChucVu], [o].[QuanLyNhaNuoc], [o].[QuocTichId], [o].[SoBHXH], [o].[SoCMTND], [o].[SoDienThoai], [o].[SoHoChieu], [o].[SoTaiKhoan], [o].[SoTheBHYT], [o].[SoTheDoan], [o].[SoTruong], [o].[SoViSa], [o].[Ten], [o].[TenGoiKhac], [o].[ThangThoiViec], [o].[TheTamTru], [o].[TinHoc], [o].[TinhTrangHonNhanId], [o].[TinhTrangSucKhoe], [o].[TonGiaoId], [o].[TraLuongTaiKhoan], [o].[TrangThai], [o].[TrinhDoPhoThong], [o.TinhTrangHonNhans].[TinhTrangHonNhanId], [o.TinhTrangHonNhans].[GhiChu], [o.TinhTrangHonNhans].[KyHieu], [o.TinhTrangHonNhans].[NgaySua], [o.TinhTrangHonNhans].[NgayTao], [o.TinhTrangHonNhans].[NguoiSua], [o.TinhTrangHonNhans].[NguoiTao], [o.TinhTrangHonNhans].[TenTinhTrangHonNhan], [o.TinhTrangHonNhans].[ThuTuHienThi], [o.TinhTrangHonNhans].[TrangThai], [o.GioiTinhs].[GioiTinhId], [o.GioiTinhs].[GhiChu], [o.GioiTinhs].[KyHieu], [o.GioiTinhs].[NgaySua], [o.GioiTinhs].[NgayTao], [o.GioiTinhs].[NguoiSua], [o.GioiTinhs].[NguoiTao], [o.GioiTinhs].[TenGioiTinh], [o.GioiTinhs].[ThuTuHienThi], [o.GioiTinhs].[TrangThai], [o.DanToc].[DanTocId], [o.DanToc].[GhiChu], [o.DanToc].[KyHieu], [o.DanToc].[NgaySua], [o.DanToc].[NgayTao], [o.DanToc].[NguoiSua], [o.DanToc].[NguoiTao], [o.DanToc].[TenDanToc], [o.DanToc].[ThuTuHienThi], [o.DanToc].[TrangThai]
+FROM [tbl_HoSoNhanSu] AS [o]
+LEFT JOIN [tbl_TinhTrangHonNhan] AS [o.TinhTrangHonNhans] ON [o].[TinhTrangHonNhanId] = [o.TinhTrangHonNhans].[TinhTrangHonNhanId]
+LEFT JOIN [tbl_GioiTinh] AS [o.GioiTinhs] ON [o].[GioiTinhId] = [o.GioiTinhs].[GioiTinhId]
+LEFT JOIN [tbl_DanToc] AS [o.DanToc] ON [o].[DanTocId] = [o.DanToc].[DanTocId]
+WHERE [o].[HoSoNhanSuId] = @__id_0" (0723d8ff)
+2019-07-22T19:20:03.7265691+07:00 0HLOEJQCLN4FR:00000009 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:03.7268689+07:00 0HLOEJQCLN4FR:00000009 [INF] Executed action "QLNS.Controllers.HoSoNhanSusController.GetHoSoNhanSu (QLNS)" in 22.164ms (afa2e885)
+2019-07-22T19:20:03.7270164+07:00 0HLOEJQCLN4FR:00000009 [INF] Request finished in 23.2682ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:03.7625297+07:00 0HLOEJQCLN4FV:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/CongTacs/getAllById/6378 application/json  (ca22a1cb)
+2019-07-22T19:20:03.7630952+07:00 0HLOEJQCLN4FV:00000003 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:03.7633892+07:00 0HLOEJQCLN4FV:00000003 [INF] Executing action method "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" with arguments (["6378"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:03.7632972+07:00 0HLOEJQCLN4FS:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/TinhThanhs/1029 application/json  (ca22a1cb)
+2019-07-22T19:20:03.7637454+07:00 0HLOEJQCLN4FV:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:03.7640600+07:00 0HLOEJQCLN4FS:00000007 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:03.7688867+07:00 0HLOEJQCLN4FS:00000007 [INF] Executing action method "QLNS.Controllers.TinhThanhsController.GetTinhThanh (QLNS)" with arguments (["1029"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:03.7759749+07:00 0HLOEJQCLN4FS:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:03.7902026+07:00 0HLOEJQCLN4FV:00000003 [INF] Executed DbCommand ("25"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[CongTacId], [o].[ChucDanhId], [o].[DenNgay], [o].[DenNgay1], [o].[HSLuong], [o].[HSPhuCap], [o].[HoSoNhanSuId], [o].[MucLuong], [o].[NgayNhap], [o].[NgayQuyetDinh], [o].[NgayQuyetDinh1], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[NoiDung], [o].[PhuCap], [o].[SoThang], [o].[TangGiamBaoHiemId], [o].[TepDinhKem], [o].[TuNgay], [o].[TuNgay1], [o].[Type], [o.TangGiamBaoHiem].[TangGiamBaoHiemId], [o.TangGiamBaoHiem].[GhiChu], [o.TangGiamBaoHiem].[NgaySua], [o.TangGiamBaoHiem].[NgayTao], [o.TangGiamBaoHiem].[NguoiSua], [o.TangGiamBaoHiem].[NguoiTao], [o.TangGiamBaoHiem].[PhanLoai], [o.TangGiamBaoHiem].[ThuTuHienThi], [o.TangGiamBaoHiem].[TieuDe], [o.TangGiamBaoHiem].[TrangThai], [o.ChucDanh].[ChucDanhId], [o.ChucDanh].[DienGiai], [o.ChucDanh].[KyHieu], [o.ChucDanh].[NgayNhap], [o.ChucDanh].[NgaySua], [o.ChucDanh].[NgonNgu], [o.ChucDanh].[NguoiNhap], [o.ChucDanh].[NguoiSua], [o.ChucDanh].[PhanLoaiChucDanh], [o.ChucDanh].[TenChucDanh], [o.ChucDanh].[TrangThai], [o.ChucDanh].[ViTri]
+FROM [tbl_CongTac] AS [o]
+LEFT JOIN [tbl_TangGiamBaoHiem] AS [o.TangGiamBaoHiem] ON [o].[TangGiamBaoHiemId] = [o.TangGiamBaoHiem].[TangGiamBaoHiemId]
+LEFT JOIN [tbl_ChucDanh] AS [o.ChucDanh] ON [o].[ChucDanhId] = [o.ChucDanh].[ChucDanhId]
+WHERE [o].[HoSoNhanSuId] = @__id_0
+ORDER BY [o].[TuNgay]" (0723d8ff)
+2019-07-22T19:20:03.7904350+07:00 0HLOEJQCLN4FS:00000007 [INF] Executed DbCommand ("7"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [m].[TinhThanhId], [m].[DienGiai], [m].[KyHieu], [m].[NgayNhap], [m].[NgaySua], [m].[NgonNgu], [m].[NguoiNhap], [m].[NguoiSua], [m].[TenTinhThanh], [m].[TrangThai], [m].[ViTri]
+FROM [tbl_TinhThanh] AS [m]
+WHERE [m].[TinhThanhId] = @__id_0" (0723d8ff)
+2019-07-22T19:20:03.7942950+07:00 0HLOEJQCLN4FS:00000007 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:03.7946483+07:00 0HLOEJQCLN4FS:00000007 [INF] Executed action "QLNS.Controllers.TinhThanhsController.GetTinhThanh (QLNS)" in 26.3413ms (afa2e885)
+2019-07-22T19:20:03.7948610+07:00 0HLOEJQCLN4FS:00000007 [INF] Request finished in 31.753ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:03.7950785+07:00 0HLOEJQCLN4FU:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/pic/avatar/empty.png   (ca22a1cb)
+2019-07-22T19:20:03.7953042+07:00 0HLOEJQCLN4FU:00000005 [INF] Sending file. Request path: '"/pic/avatar/empty.png"'. Physical path: '"D:\Project\Urenco\source\QLNS\QLNS\wwwroot\pic\avatar\empty.png"' (27b0a520)
+2019-07-22T19:20:03.7960333+07:00 0HLOEJQCLN4FV:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:03.7969203+07:00 0HLOEJQCLN4FU:00000005 [INF] Request finished in 1.8437ms 200 image/png (791a596a)
+2019-07-22T19:20:03.7990130+07:00 0HLOEJQCLN4FV:00000003 [INF] Executed action "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" in 35.6971ms (afa2e885)
+2019-07-22T19:20:03.7991844+07:00 0HLOEJQCLN4FV:00000003 [INF] Request finished in 36.6953ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:06.6678494+07:00 0HLOEJQCLN4FP:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2019-07-22T19:20:07.6900102+07:00 0HLOEJQCLN4FT:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/CongTacs/getAllById/6378 application/json  (ca22a1cb)
+2019-07-22T19:20:07.6908269+07:00 0HLOEJQCLN4FT:00000008 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:07.6911460+07:00 0HLOEJQCLN4FT:00000008 [INF] Executing action method "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" with arguments (["6378"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:07.6917119+07:00 0HLOEJQCLN4FT:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:07.7214775+07:00 0HLOEJQCLN4FT:00000008 [INF] Executed DbCommand ("29"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[CongTacId], [o].[ChucDanhId], [o].[DenNgay], [o].[DenNgay1], [o].[HSLuong], [o].[HSPhuCap], [o].[HoSoNhanSuId], [o].[MucLuong], [o].[NgayNhap], [o].[NgayQuyetDinh], [o].[NgayQuyetDinh1], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[NoiDung], [o].[PhuCap], [o].[SoThang], [o].[TangGiamBaoHiemId], [o].[TepDinhKem], [o].[TuNgay], [o].[TuNgay1], [o].[Type], [o.TangGiamBaoHiem].[TangGiamBaoHiemId], [o.TangGiamBaoHiem].[GhiChu], [o.TangGiamBaoHiem].[NgaySua], [o.TangGiamBaoHiem].[NgayTao], [o.TangGiamBaoHiem].[NguoiSua], [o.TangGiamBaoHiem].[NguoiTao], [o.TangGiamBaoHiem].[PhanLoai], [o.TangGiamBaoHiem].[ThuTuHienThi], [o.TangGiamBaoHiem].[TieuDe], [o.TangGiamBaoHiem].[TrangThai], [o.ChucDanh].[ChucDanhId], [o.ChucDanh].[DienGiai], [o.ChucDanh].[KyHieu], [o.ChucDanh].[NgayNhap], [o.ChucDanh].[NgaySua], [o.ChucDanh].[NgonNgu], [o.ChucDanh].[NguoiNhap], [o.ChucDanh].[NguoiSua], [o.ChucDanh].[PhanLoaiChucDanh], [o.ChucDanh].[TenChucDanh], [o.ChucDanh].[TrangThai], [o.ChucDanh].[ViTri]
+FROM [tbl_CongTac] AS [o]
+LEFT JOIN [tbl_TangGiamBaoHiem] AS [o.TangGiamBaoHiem] ON [o].[TangGiamBaoHiemId] = [o.TangGiamBaoHiem].[TangGiamBaoHiemId]
+LEFT JOIN [tbl_ChucDanh] AS [o.ChucDanh] ON [o].[ChucDanhId] = [o.ChucDanh].[ChucDanhId]
+WHERE [o].[HoSoNhanSuId] = @__id_0
+ORDER BY [o].[TuNgay]" (0723d8ff)
+2019-07-22T19:20:07.7222346+07:00 0HLOEJQCLN4FT:00000008 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:07.7225408+07:00 0HLOEJQCLN4FT:00000008 [INF] Executed action "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" in 31.507ms (afa2e885)
+2019-07-22T19:20:07.7226885+07:00 0HLOEJQCLN4FT:00000008 [INF] Request finished in 32.748ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:09.0667510+07:00 0HLOEJQCLN4FR:0000000A [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/CongTacs/43768 application/json 621 (ca22a1cb)
+2019-07-22T19:20:09.0668449+07:00 0HLOEJQCLN4FR:0000000A [INF] Policy execution successful. (0204925d)
+2019-07-22T19:20:09.0673021+07:00 0HLOEJQCLN4FR:0000000A [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:09.0907728+07:00 0HLOEJQCLN4FR:0000000A [INF] Executing action method "QLNS.Controllers.CongTacsController.PutCongTac (QLNS)" with arguments (["43768", "DAL.Models.CongTac"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:09.0932076+07:00 0HLOEJQCLN4FR:0000000A [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:09.1243120+07:00 0HLOEJQCLN4FR:0000000A [INF] Executed DbCommand ("7"ms) [Parameters=["@p21='?', @p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?', @p6='?' (Size = 4000), @p7='?', @p8='?', @p9='?' (Size = 4000), @p10='?', @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?', @p16='?', @p17='?' (Size = 4000), @p18='?', @p19='?' (Size = 4000), @p20='?'"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [tbl_CongTac] SET [ChucDanhId] = @p0, [DenNgay] = @p1, [DenNgay1] = @p2, [HSLuong] = @p3, [HSPhuCap] = @p4, [HoSoNhanSuId] = @p5, [MucLuong] = @p6, [NgayNhap] = @p7, [NgayQuyetDinh] = @p8, [NgayQuyetDinh1] = @p9, [NgaySua] = @p10, [NguoiNhap] = @p11, [NguoiSua] = @p12, [NoiDung] = @p13, [PhuCap] = @p14, [SoThang] = @p15, [TangGiamBaoHiemId] = @p16, [TepDinhKem] = @p17, [TuNgay] = @p18, [TuNgay1] = @p19, [Type] = @p20
+WHERE [CongTacId] = @p21;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2019-07-22T19:20:09.1416418+07:00 0HLOEJQCLN4FR:0000000A [INF] Executing HttpStatusCodeResult, setting HTTP status code 204 (e28ccfae)
+2019-07-22T19:20:09.1418101+07:00 0HLOEJQCLN4FR:0000000A [INF] Executed action "QLNS.Controllers.CongTacsController.PutCongTac (QLNS)" in 70.5089ms (afa2e885)
+2019-07-22T19:20:09.1419562+07:00 0HLOEJQCLN4FR:0000000A [INF] Request finished in 75.2689ms 204  (791a596a)
+2019-07-22T19:20:09.1906203+07:00 0HLOEJQCLN4FS:00000008 [INF] Request starting HTTP/1.1 POST http://localhost:55842/api/Logs application/json 271 (ca22a1cb)
+2019-07-22T19:20:09.1907336+07:00 0HLOEJQCLN4FS:00000008 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:20:09.1912261+07:00 0HLOEJQCLN4FS:00000008 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:09.1916105+07:00 0HLOEJQCLN4FS:00000008 [INF] Executing action method "QLNS.Controllers.LogsController.PostLog (QLNS)" with arguments (["DAL.Models.Log"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:09.1919637+07:00 0HLOEJQCLN4FS:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:09.2088829+07:00 0HLOEJQCLN4FS:00000008 [INF] Executed DbCommand ("5"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [tbl_Log] ([HanhDong], [NgayThucHien], [NguoiThucHien], [NoiDung], [TenModule])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [LogID]
+FROM [tbl_Log]
+WHERE @@ROWCOUNT = 1 AND [LogID] = scope_identity();" (0723d8ff)
+2019-07-22T19:20:09.2188575+07:00 0HLOEJQCLN4FS:00000008 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:09.2203744+07:00 0HLOEJQCLN4FS:00000008 [INF] Executed action "QLNS.Controllers.LogsController.PostLog (QLNS)" in 28.9165ms (afa2e885)
+2019-07-22T19:20:09.2205521+07:00 0HLOEJQCLN4FS:00000008 [INF] Request finished in 29.9796ms 201 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:09.2794949+07:00 0HLOEJQCLN4FU:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/CongTacs/getAllById/6378 application/json  (ca22a1cb)
+2019-07-22T19:20:09.2800645+07:00 0HLOEJQCLN4FU:00000006 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:09.2804084+07:00 0HLOEJQCLN4FU:00000006 [INF] Executing action method "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" with arguments (["6378"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:09.2808317+07:00 0HLOEJQCLN4FU:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:09.3074457+07:00 0HLOEJQCLN4FU:00000006 [INF] Executed DbCommand ("26"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[CongTacId], [o].[ChucDanhId], [o].[DenNgay], [o].[DenNgay1], [o].[HSLuong], [o].[HSPhuCap], [o].[HoSoNhanSuId], [o].[MucLuong], [o].[NgayNhap], [o].[NgayQuyetDinh], [o].[NgayQuyetDinh1], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[NoiDung], [o].[PhuCap], [o].[SoThang], [o].[TangGiamBaoHiemId], [o].[TepDinhKem], [o].[TuNgay], [o].[TuNgay1], [o].[Type], [o.TangGiamBaoHiem].[TangGiamBaoHiemId], [o.TangGiamBaoHiem].[GhiChu], [o.TangGiamBaoHiem].[NgaySua], [o.TangGiamBaoHiem].[NgayTao], [o.TangGiamBaoHiem].[NguoiSua], [o.TangGiamBaoHiem].[NguoiTao], [o.TangGiamBaoHiem].[PhanLoai], [o.TangGiamBaoHiem].[ThuTuHienThi], [o.TangGiamBaoHiem].[TieuDe], [o.TangGiamBaoHiem].[TrangThai], [o.ChucDanh].[ChucDanhId], [o.ChucDanh].[DienGiai], [o.ChucDanh].[KyHieu], [o.ChucDanh].[NgayNhap], [o.ChucDanh].[NgaySua], [o.ChucDanh].[NgonNgu], [o.ChucDanh].[NguoiNhap], [o.ChucDanh].[NguoiSua], [o.ChucDanh].[PhanLoaiChucDanh], [o.ChucDanh].[TenChucDanh], [o.ChucDanh].[TrangThai], [o.ChucDanh].[ViTri]
+FROM [tbl_CongTac] AS [o]
+LEFT JOIN [tbl_TangGiamBaoHiem] AS [o.TangGiamBaoHiem] ON [o].[TangGiamBaoHiemId] = [o.TangGiamBaoHiem].[TangGiamBaoHiemId]
+LEFT JOIN [tbl_ChucDanh] AS [o.ChucDanh] ON [o].[ChucDanhId] = [o.ChucDanh].[ChucDanhId]
+WHERE [o].[HoSoNhanSuId] = @__id_0
+ORDER BY [o].[TuNgay]" (0723d8ff)
+2019-07-22T19:20:09.3081058+07:00 0HLOEJQCLN4FU:00000006 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:09.3083825+07:00 0HLOEJQCLN4FU:00000006 [INF] Executed action "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" in 28.1294ms (afa2e885)
+2019-07-22T19:20:09.3085121+07:00 0HLOEJQCLN4FU:00000006 [INF] Request finished in 29.0926ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:11.5294733+07:00 0HLOEJQCLN4FV:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/CongTacs/getAllById/6378 application/json  (ca22a1cb)
+2019-07-22T19:20:11.5300297+07:00 0HLOEJQCLN4FV:00000004 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:11.5303724+07:00 0HLOEJQCLN4FV:00000004 [INF] Executing action method "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" with arguments (["6378"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:11.5308002+07:00 0HLOEJQCLN4FV:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:11.5553171+07:00 0HLOEJQCLN4FV:00000004 [INF] Executed DbCommand ("23"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[CongTacId], [o].[ChucDanhId], [o].[DenNgay], [o].[DenNgay1], [o].[HSLuong], [o].[HSPhuCap], [o].[HoSoNhanSuId], [o].[MucLuong], [o].[NgayNhap], [o].[NgayQuyetDinh], [o].[NgayQuyetDinh1], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[NoiDung], [o].[PhuCap], [o].[SoThang], [o].[TangGiamBaoHiemId], [o].[TepDinhKem], [o].[TuNgay], [o].[TuNgay1], [o].[Type], [o.TangGiamBaoHiem].[TangGiamBaoHiemId], [o.TangGiamBaoHiem].[GhiChu], [o.TangGiamBaoHiem].[NgaySua], [o.TangGiamBaoHiem].[NgayTao], [o.TangGiamBaoHiem].[NguoiSua], [o.TangGiamBaoHiem].[NguoiTao], [o.TangGiamBaoHiem].[PhanLoai], [o.TangGiamBaoHiem].[ThuTuHienThi], [o.TangGiamBaoHiem].[TieuDe], [o.TangGiamBaoHiem].[TrangThai], [o.ChucDanh].[ChucDanhId], [o.ChucDanh].[DienGiai], [o.ChucDanh].[KyHieu], [o.ChucDanh].[NgayNhap], [o.ChucDanh].[NgaySua], [o.ChucDanh].[NgonNgu], [o.ChucDanh].[NguoiNhap], [o.ChucDanh].[NguoiSua], [o.ChucDanh].[PhanLoaiChucDanh], [o.ChucDanh].[TenChucDanh], [o.ChucDanh].[TrangThai], [o.ChucDanh].[ViTri]
+FROM [tbl_CongTac] AS [o]
+LEFT JOIN [tbl_TangGiamBaoHiem] AS [o.TangGiamBaoHiem] ON [o].[TangGiamBaoHiemId] = [o.TangGiamBaoHiem].[TangGiamBaoHiemId]
+LEFT JOIN [tbl_ChucDanh] AS [o.ChucDanh] ON [o].[ChucDanhId] = [o.ChucDanh].[ChucDanhId]
+WHERE [o].[HoSoNhanSuId] = @__id_0
+ORDER BY [o].[TuNgay]" (0723d8ff)
+2019-07-22T19:20:11.5558837+07:00 0HLOEJQCLN4FV:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:11.5561307+07:00 0HLOEJQCLN4FV:00000004 [INF] Executed action "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" in 25.9284ms (afa2e885)
+2019-07-22T19:20:11.5562433+07:00 0HLOEJQCLN4FV:00000004 [INF] Request finished in 26.848ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:12.6829365+07:00 0HLOEJQCLN4FT:00000009 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/CongTacs/43767 application/json 615 (ca22a1cb)
+2019-07-22T19:20:12.6830533+07:00 0HLOEJQCLN4FT:00000009 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:20:12.6835637+07:00 0HLOEJQCLN4FT:00000009 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:12.6840086+07:00 0HLOEJQCLN4FT:00000009 [INF] Executing action method "QLNS.Controllers.CongTacsController.PutCongTac (QLNS)" with arguments (["43767", "DAL.Models.CongTac"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:12.6844893+07:00 0HLOEJQCLN4FT:00000009 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:12.7002655+07:00 0HLOEJQCLN4FT:00000009 [INF] Executed DbCommand ("8"ms) [Parameters=["@p21='?', @p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?', @p6='?' (Size = 4000), @p7='?', @p8='?', @p9='?' (Size = 4000), @p10='?', @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?', @p16='?', @p17='?' (Size = 4000), @p18='?', @p19='?' (Size = 4000), @p20='?'"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [tbl_CongTac] SET [ChucDanhId] = @p0, [DenNgay] = @p1, [DenNgay1] = @p2, [HSLuong] = @p3, [HSPhuCap] = @p4, [HoSoNhanSuId] = @p5, [MucLuong] = @p6, [NgayNhap] = @p7, [NgayQuyetDinh] = @p8, [NgayQuyetDinh1] = @p9, [NgaySua] = @p10, [NguoiNhap] = @p11, [NguoiSua] = @p12, [NoiDung] = @p13, [PhuCap] = @p14, [SoThang] = @p15, [TangGiamBaoHiemId] = @p16, [TepDinhKem] = @p17, [TuNgay] = @p18, [TuNgay1] = @p19, [Type] = @p20
+WHERE [CongTacId] = @p21;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2019-07-22T19:20:12.7082861+07:00 0HLOEJQCLN4FT:00000009 [INF] Executing HttpStatusCodeResult, setting HTTP status code 204 (e28ccfae)
+2019-07-22T19:20:12.7084607+07:00 0HLOEJQCLN4FT:00000009 [INF] Executed action "QLNS.Controllers.CongTacsController.PutCongTac (QLNS)" in 24.7108ms (afa2e885)
+2019-07-22T19:20:12.7086359+07:00 0HLOEJQCLN4FT:00000009 [INF] Request finished in 25.7638ms 204  (791a596a)
+2019-07-22T19:20:12.7438111+07:00 0HLOEJQCLN4FR:0000000B [INF] Request starting HTTP/1.1 POST http://localhost:55842/api/Logs application/json 271 (ca22a1cb)
+2019-07-22T19:20:12.7439244+07:00 0HLOEJQCLN4FR:0000000B [INF] Policy execution successful. (0204925d)
+2019-07-22T19:20:12.7444365+07:00 0HLOEJQCLN4FR:0000000B [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:12.7447948+07:00 0HLOEJQCLN4FR:0000000B [INF] Executing action method "QLNS.Controllers.LogsController.PostLog (QLNS)" with arguments (["DAL.Models.Log"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:12.7451056+07:00 0HLOEJQCLN4FR:0000000B [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:12.7605260+07:00 0HLOEJQCLN4FR:0000000B [INF] Executed DbCommand ("5"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [tbl_Log] ([HanhDong], [NgayThucHien], [NguoiThucHien], [NoiDung], [TenModule])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [LogID]
+FROM [tbl_Log]
+WHERE @@ROWCOUNT = 1 AND [LogID] = scope_identity();" (0723d8ff)
+2019-07-22T19:20:12.7697828+07:00 0HLOEJQCLN4FR:0000000B [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:12.7708973+07:00 0HLOEJQCLN4FR:0000000B [INF] Executed action "QLNS.Controllers.LogsController.PostLog (QLNS)" in 26.2537ms (afa2e885)
+2019-07-22T19:20:12.7710690+07:00 0HLOEJQCLN4FR:0000000B [INF] Request finished in 27.3157ms 201 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:12.8203629+07:00 0HLOEJQCLN4FS:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/CongTacs/getAllById/6378 application/json  (ca22a1cb)
+2019-07-22T19:20:12.8209299+07:00 0HLOEJQCLN4FS:00000009 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:12.8212237+07:00 0HLOEJQCLN4FS:00000009 [INF] Executing action method "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" with arguments (["6378"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:12.8216251+07:00 0HLOEJQCLN4FS:00000009 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:12.8522689+07:00 0HLOEJQCLN4FS:00000009 [INF] Executed DbCommand ("29"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[CongTacId], [o].[ChucDanhId], [o].[DenNgay], [o].[DenNgay1], [o].[HSLuong], [o].[HSPhuCap], [o].[HoSoNhanSuId], [o].[MucLuong], [o].[NgayNhap], [o].[NgayQuyetDinh], [o].[NgayQuyetDinh1], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[NoiDung], [o].[PhuCap], [o].[SoThang], [o].[TangGiamBaoHiemId], [o].[TepDinhKem], [o].[TuNgay], [o].[TuNgay1], [o].[Type], [o.TangGiamBaoHiem].[TangGiamBaoHiemId], [o.TangGiamBaoHiem].[GhiChu], [o.TangGiamBaoHiem].[NgaySua], [o.TangGiamBaoHiem].[NgayTao], [o.TangGiamBaoHiem].[NguoiSua], [o.TangGiamBaoHiem].[NguoiTao], [o.TangGiamBaoHiem].[PhanLoai], [o.TangGiamBaoHiem].[ThuTuHienThi], [o.TangGiamBaoHiem].[TieuDe], [o.TangGiamBaoHiem].[TrangThai], [o.ChucDanh].[ChucDanhId], [o.ChucDanh].[DienGiai], [o.ChucDanh].[KyHieu], [o.ChucDanh].[NgayNhap], [o.ChucDanh].[NgaySua], [o.ChucDanh].[NgonNgu], [o.ChucDanh].[NguoiNhap], [o.ChucDanh].[NguoiSua], [o.ChucDanh].[PhanLoaiChucDanh], [o.ChucDanh].[TenChucDanh], [o.ChucDanh].[TrangThai], [o.ChucDanh].[ViTri]
+FROM [tbl_CongTac] AS [o]
+LEFT JOIN [tbl_TangGiamBaoHiem] AS [o.TangGiamBaoHiem] ON [o].[TangGiamBaoHiemId] = [o.TangGiamBaoHiem].[TangGiamBaoHiemId]
+LEFT JOIN [tbl_ChucDanh] AS [o.ChucDanh] ON [o].[ChucDanhId] = [o.ChucDanh].[ChucDanhId]
+WHERE [o].[HoSoNhanSuId] = @__id_0
+ORDER BY [o].[TuNgay]" (0723d8ff)
+2019-07-22T19:20:12.8533159+07:00 0HLOEJQCLN4FS:00000009 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:12.8537227+07:00 0HLOEJQCLN4FS:00000009 [INF] Executed action "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" in 32.5884ms (afa2e885)
+2019-07-22T19:20:12.8538653+07:00 0HLOEJQCLN4FS:00000009 [INF] Request finished in 33.5993ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:25.4339833+07:00 0HLOEJQCLN4FU:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/CongTacs/getAllById/6378 application/json  (ca22a1cb)
+2019-07-22T19:20:25.4345710+07:00 0HLOEJQCLN4FU:00000007 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:25.4348255+07:00 0HLOEJQCLN4FU:00000007 [INF] Executing action method "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" with arguments (["6378"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:25.4351503+07:00 0HLOEJQCLN4FU:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:25.4609845+07:00 0HLOEJQCLN4FU:00000007 [INF] Executed DbCommand ("25"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[CongTacId], [o].[ChucDanhId], [o].[DenNgay], [o].[DenNgay1], [o].[HSLuong], [o].[HSPhuCap], [o].[HoSoNhanSuId], [o].[MucLuong], [o].[NgayNhap], [o].[NgayQuyetDinh], [o].[NgayQuyetDinh1], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[NoiDung], [o].[PhuCap], [o].[SoThang], [o].[TangGiamBaoHiemId], [o].[TepDinhKem], [o].[TuNgay], [o].[TuNgay1], [o].[Type], [o.TangGiamBaoHiem].[TangGiamBaoHiemId], [o.TangGiamBaoHiem].[GhiChu], [o.TangGiamBaoHiem].[NgaySua], [o.TangGiamBaoHiem].[NgayTao], [o.TangGiamBaoHiem].[NguoiSua], [o.TangGiamBaoHiem].[NguoiTao], [o.TangGiamBaoHiem].[PhanLoai], [o.TangGiamBaoHiem].[ThuTuHienThi], [o.TangGiamBaoHiem].[TieuDe], [o.TangGiamBaoHiem].[TrangThai], [o.ChucDanh].[ChucDanhId], [o.ChucDanh].[DienGiai], [o.ChucDanh].[KyHieu], [o.ChucDanh].[NgayNhap], [o.ChucDanh].[NgaySua], [o.ChucDanh].[NgonNgu], [o.ChucDanh].[NguoiNhap], [o.ChucDanh].[NguoiSua], [o.ChucDanh].[PhanLoaiChucDanh], [o.ChucDanh].[TenChucDanh], [o.ChucDanh].[TrangThai], [o.ChucDanh].[ViTri]
+FROM [tbl_CongTac] AS [o]
+LEFT JOIN [tbl_TangGiamBaoHiem] AS [o.TangGiamBaoHiem] ON [o].[TangGiamBaoHiemId] = [o.TangGiamBaoHiem].[TangGiamBaoHiemId]
+LEFT JOIN [tbl_ChucDanh] AS [o.ChucDanh] ON [o].[ChucDanhId] = [o.ChucDanh].[ChucDanhId]
+WHERE [o].[HoSoNhanSuId] = @__id_0
+ORDER BY [o].[TuNgay]" (0723d8ff)
+2019-07-22T19:20:25.4615687+07:00 0HLOEJQCLN4FU:00000007 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:25.4618447+07:00 0HLOEJQCLN4FU:00000007 [INF] Executed action "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" in 27.0973ms (afa2e885)
+2019-07-22T19:20:25.4619923+07:00 0HLOEJQCLN4FU:00000007 [INF] Request finished in 28.0704ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:27.2846490+07:00 0HLOEJQCLN4FV:00000005 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/CongTacs/43759 application/json 588 (ca22a1cb)
+2019-07-22T19:20:27.2847536+07:00 0HLOEJQCLN4FV:00000005 [INF] Policy execution successful. (0204925d)
+2019-07-22T19:20:27.2852457+07:00 0HLOEJQCLN4FV:00000005 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:27.2856429+07:00 0HLOEJQCLN4FV:00000005 [INF] Executing action method "QLNS.Controllers.CongTacsController.PutCongTac (QLNS)" with arguments (["43759", "DAL.Models.CongTac"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:27.2861579+07:00 0HLOEJQCLN4FV:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:27.3010703+07:00 0HLOEJQCLN4FV:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@p21='?', @p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?', @p6='?' (Size = 4000), @p7='?', @p8='?', @p9='?' (Size = 4000), @p10='?', @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?', @p16='?', @p17='?' (Size = 4000), @p18='?', @p19='?' (Size = 4000), @p20='?'"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [tbl_CongTac] SET [ChucDanhId] = @p0, [DenNgay] = @p1, [DenNgay1] = @p2, [HSLuong] = @p3, [HSPhuCap] = @p4, [HoSoNhanSuId] = @p5, [MucLuong] = @p6, [NgayNhap] = @p7, [NgayQuyetDinh] = @p8, [NgayQuyetDinh1] = @p9, [NgaySua] = @p10, [NguoiNhap] = @p11, [NguoiSua] = @p12, [NoiDung] = @p13, [PhuCap] = @p14, [SoThang] = @p15, [TangGiamBaoHiemId] = @p16, [TepDinhKem] = @p17, [TuNgay] = @p18, [TuNgay1] = @p19, [Type] = @p20
+WHERE [CongTacId] = @p21;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2019-07-22T19:20:27.3074724+07:00 0HLOEJQCLN4FV:00000005 [INF] Executing HttpStatusCodeResult, setting HTTP status code 204 (e28ccfae)
+2019-07-22T19:20:27.3075906+07:00 0HLOEJQCLN4FV:00000005 [INF] Executed action "QLNS.Controllers.CongTacsController.PutCongTac (QLNS)" in 22.1827ms (afa2e885)
+2019-07-22T19:20:27.3077305+07:00 0HLOEJQCLN4FV:00000005 [INF] Request finished in 23.1477ms 204  (791a596a)
+2019-07-22T19:20:27.3397221+07:00 0HLOEJQCLN4FT:0000000A [INF] Request starting HTTP/1.1 POST http://localhost:55842/api/Logs application/json 251 (ca22a1cb)
+2019-07-22T19:20:27.3398515+07:00 0HLOEJQCLN4FT:0000000A [INF] Policy execution successful. (0204925d)
+2019-07-22T19:20:27.3403579+07:00 0HLOEJQCLN4FT:0000000A [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:27.3407371+07:00 0HLOEJQCLN4FT:0000000A [INF] Executing action method "QLNS.Controllers.LogsController.PostLog (QLNS)" with arguments (["DAL.Models.Log"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:27.3410490+07:00 0HLOEJQCLN4FT:0000000A [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:27.3596359+07:00 0HLOEJQCLN4FT:0000000A [INF] Executed DbCommand ("10"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [tbl_Log] ([HanhDong], [NgayThucHien], [NguoiThucHien], [NoiDung], [TenModule])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [LogID]
+FROM [tbl_Log]
+WHERE @@ROWCOUNT = 1 AND [LogID] = scope_identity();" (0723d8ff)
+2019-07-22T19:20:27.3671951+07:00 0HLOEJQCLN4FT:0000000A [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:27.3674572+07:00 0HLOEJQCLN4FT:0000000A [INF] Executed action "QLNS.Controllers.LogsController.PostLog (QLNS)" in 26.9116ms (afa2e885)
+2019-07-22T19:20:27.3676189+07:00 0HLOEJQCLN4FT:0000000A [INF] Request finished in 27.9536ms 201 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:27.4110002+07:00 0HLOEJQCLN4FR:0000000C [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/CongTacs/getAllById/6378 application/json  (ca22a1cb)
+2019-07-22T19:20:27.4115754+07:00 0HLOEJQCLN4FR:0000000C [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:27.4118811+07:00 0HLOEJQCLN4FR:0000000C [INF] Executing action method "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" with arguments (["6378"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:27.4122410+07:00 0HLOEJQCLN4FR:0000000C [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:27.4394417+07:00 0HLOEJQCLN4FR:0000000C [INF] Executed DbCommand ("26"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[CongTacId], [o].[ChucDanhId], [o].[DenNgay], [o].[DenNgay1], [o].[HSLuong], [o].[HSPhuCap], [o].[HoSoNhanSuId], [o].[MucLuong], [o].[NgayNhap], [o].[NgayQuyetDinh], [o].[NgayQuyetDinh1], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[NoiDung], [o].[PhuCap], [o].[SoThang], [o].[TangGiamBaoHiemId], [o].[TepDinhKem], [o].[TuNgay], [o].[TuNgay1], [o].[Type], [o.TangGiamBaoHiem].[TangGiamBaoHiemId], [o.TangGiamBaoHiem].[GhiChu], [o.TangGiamBaoHiem].[NgaySua], [o.TangGiamBaoHiem].[NgayTao], [o.TangGiamBaoHiem].[NguoiSua], [o.TangGiamBaoHiem].[NguoiTao], [o.TangGiamBaoHiem].[PhanLoai], [o.TangGiamBaoHiem].[ThuTuHienThi], [o.TangGiamBaoHiem].[TieuDe], [o.TangGiamBaoHiem].[TrangThai], [o.ChucDanh].[ChucDanhId], [o.ChucDanh].[DienGiai], [o.ChucDanh].[KyHieu], [o.ChucDanh].[NgayNhap], [o.ChucDanh].[NgaySua], [o.ChucDanh].[NgonNgu], [o.ChucDanh].[NguoiNhap], [o.ChucDanh].[NguoiSua], [o.ChucDanh].[PhanLoaiChucDanh], [o.ChucDanh].[TenChucDanh], [o.ChucDanh].[TrangThai], [o.ChucDanh].[ViTri]
+FROM [tbl_CongTac] AS [o]
+LEFT JOIN [tbl_TangGiamBaoHiem] AS [o.TangGiamBaoHiem] ON [o].[TangGiamBaoHiemId] = [o.TangGiamBaoHiem].[TangGiamBaoHiemId]
+LEFT JOIN [tbl_ChucDanh] AS [o.ChucDanh] ON [o].[ChucDanhId] = [o.ChucDanh].[ChucDanhId]
+WHERE [o].[HoSoNhanSuId] = @__id_0
+ORDER BY [o].[TuNgay]" (0723d8ff)
+2019-07-22T19:20:27.4410980+07:00 0HLOEJQCLN4FR:0000000C [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:27.4414211+07:00 0HLOEJQCLN4FR:0000000C [INF] Executed action "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" in 29.6384ms (afa2e885)
+2019-07-22T19:20:27.4415690+07:00 0HLOEJQCLN4FR:0000000C [INF] Request finished in 30.6334ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:30.7310738+07:00 0HLOEJQCLN4FS:0000000A [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/HoSoNhanSus/6788 application/json  (ca22a1cb)
+2019-07-22T19:20:30.7316899+07:00 0HLOEJQCLN4FS:0000000A [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:30.7319782+07:00 0HLOEJQCLN4FS:0000000A [INF] Executing action method "QLNS.Controllers.HoSoNhanSusController.GetHoSoNhanSu (QLNS)" with arguments (["6788"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:30.7324554+07:00 0HLOEJQCLN4FS:0000000A [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:30.7495437+07:00 0HLOEJQCLN4FS:0000000A [INF] Executed DbCommand ("16"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[HoSoNhanSuId], [o].[BHThatNghiep], [o].[BacLuong], [o].[BacTho], [o].[BoPhan], [o].[CaMacDinh], [o].[CanNang], [o].[CapBacQuanDoi], [o].[ChieuCao], [o].[ChucVuDoan], [o].[ChucVuHienTai], [o].[ChucVuQuanDoi], [o].[ChuyenMonCaoNhat], [o].[ChuyenNganh], [o].[CoQuanTuyenDung], [o].[CongViecChinh], [o].[DanTocId], [o].[DanhHieuId], [o].[DiaBan], [o].[DonViQuanDoi], [o].[Email], [o].[GhiChu], [o].[GiayPhepLaoDong], [o].[GioiTinhId], [o].[HanGiayPhepLaoDong], [o].[HanGiayPhepLaoDong1], [o].[HanTheTamTru], [o].[HanTheTamTru1], [o].[HeSo], [o].[HinhAnh], [o].[HoKhauTT], [o].[HoTenDem], [o].[HocHam], [o].[HocVi], [o].[KhenThuong], [o].[KhuyetTat], [o].[KiemNhiem], [o].[KyLuat], [o].[LoaiLaoDong], [o].[LuuYSucKhoe], [o].[LyLuanChinhTri], [o].[MaHoSo], [o].[MaNghach], [o].[MaSTCN], [o].[MaThe], [o].[MucLuongHienTai], [o].[NamThoiViec], [o].[NgachCongChucId], [o].[NganHangId], [o].[NgayCapCMTND], [o].[NgayCapCMTND1], [o].[NgayCapHC], [o].[NgayCapHC1], [o].[NgayDongBHXH], [o].[NgayDongBHXH1], [o].[NgayHetHanHC], [o].[NgayHetHanHC1], [o].[NgayHetHanViSa], [o].[NgayHetHanViSa1], [o].[NgayHuong], [o].[NgayHuong1], [o].[NgayLamViecCT], [o].[NgayLamViecCT1], [o].[NgayNhapNgu], [o].[NgayNhapNgu1], [o].[NgaySinh], [o].[NgaySinh1], [o].[NgayThoiViec], [o].[NgayThoiViec1], [o].[NgayTuyenDung], [o].[NgayTuyenDung1], [o].[NgayVaoDoan], [o].[NgayVaoDoan1], [o].[NgayXuatNgu], [o].[NgayXuatNgu1], [o].[NgheTruocTuyenDung], [o].[NgoaiNgu], [o].[NguyenQuan], [o].[NhomLamViec], [o].[NhomMauId], [o].[NoiCapCMTND], [o].[NoiCapHC], [o].[NoiOHienNay], [o].[NoiSinh], [o].[NoiSinhHoatDoan], [o].[PhanLoai], [o].[PhongBan], [o].[PhuCapKhac], [o].[PhucCapChucVu], [o].[QuanLyNhaNuoc], [o].[QuocTichId], [o].[SoBHXH], [o].[SoCMTND], [o].[SoDienThoai], [o].[SoHoChieu], [o].[SoTaiKhoan], [o].[SoTheBHYT], [o].[SoTheDoan], [o].[SoTruong], [o].[SoViSa], [o].[Ten], [o].[TenGoiKhac], [o].[ThangThoiViec], [o].[TheTamTru], [o].[TinHoc], [o].[TinhTrangHonNhanId], [o].[TinhTrangSucKhoe], [o].[TonGiaoId], [o].[TraLuongTaiKhoan], [o].[TrangThai], [o].[TrinhDoPhoThong], [o.TinhTrangHonNhans].[TinhTrangHonNhanId], [o.TinhTrangHonNhans].[GhiChu], [o.TinhTrangHonNhans].[KyHieu], [o.TinhTrangHonNhans].[NgaySua], [o.TinhTrangHonNhans].[NgayTao], [o.TinhTrangHonNhans].[NguoiSua], [o.TinhTrangHonNhans].[NguoiTao], [o.TinhTrangHonNhans].[TenTinhTrangHonNhan], [o.TinhTrangHonNhans].[ThuTuHienThi], [o.TinhTrangHonNhans].[TrangThai], [o.GioiTinhs].[GioiTinhId], [o.GioiTinhs].[GhiChu], [o.GioiTinhs].[KyHieu], [o.GioiTinhs].[NgaySua], [o.GioiTinhs].[NgayTao], [o.GioiTinhs].[NguoiSua], [o.GioiTinhs].[NguoiTao], [o.GioiTinhs].[TenGioiTinh], [o.GioiTinhs].[ThuTuHienThi], [o.GioiTinhs].[TrangThai], [o.DanToc].[DanTocId], [o.DanToc].[GhiChu], [o.DanToc].[KyHieu], [o.DanToc].[NgaySua], [o.DanToc].[NgayTao], [o.DanToc].[NguoiSua], [o.DanToc].[NguoiTao], [o.DanToc].[TenDanToc], [o.DanToc].[ThuTuHienThi], [o.DanToc].[TrangThai]
+FROM [tbl_HoSoNhanSu] AS [o]
+LEFT JOIN [tbl_TinhTrangHonNhan] AS [o.TinhTrangHonNhans] ON [o].[TinhTrangHonNhanId] = [o.TinhTrangHonNhans].[TinhTrangHonNhanId]
+LEFT JOIN [tbl_GioiTinh] AS [o.GioiTinhs] ON [o].[GioiTinhId] = [o.GioiTinhs].[GioiTinhId]
+LEFT JOIN [tbl_DanToc] AS [o.DanToc] ON [o].[DanTocId] = [o.DanToc].[DanTocId]
+WHERE [o].[HoSoNhanSuId] = @__id_0" (0723d8ff)
+2019-07-22T19:20:30.7500662+07:00 0HLOEJQCLN4FS:0000000A [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:30.7503478+07:00 0HLOEJQCLN4FS:0000000A [INF] Executed action "QLNS.Controllers.HoSoNhanSusController.GetHoSoNhanSu (QLNS)" in 18.4942ms (afa2e885)
+2019-07-22T19:20:30.7504509+07:00 0HLOEJQCLN4FS:0000000A [INF] Request finished in 19.4434ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:30.7843890+07:00 0HLOEJQCLN4FV:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/TinhThanhs/16 application/json  (ca22a1cb)
+2019-07-22T19:20:30.7843891+07:00 0HLOEJQCLN4FU:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/CongTacs/getAllById/6788 application/json  (ca22a1cb)
+2019-07-22T19:20:30.7849028+07:00 0HLOEJQCLN4FV:00000006 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:30.7849253+07:00 0HLOEJQCLN4FU:00000008 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:30.7851674+07:00 0HLOEJQCLN4FU:00000008 [INF] Executing action method "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" with arguments (["6788"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:30.7853508+07:00 0HLOEJQCLN4FV:00000006 [INF] Executing action method "QLNS.Controllers.TinhThanhsController.GetTinhThanh (QLNS)" with arguments (["16"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:30.7855005+07:00 0HLOEJQCLN4FU:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:30.7856928+07:00 0HLOEJQCLN4FV:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:30.7953474+07:00 0HLOEJQCLN4FV:00000006 [INF] Executed DbCommand ("9"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [m].[TinhThanhId], [m].[DienGiai], [m].[KyHieu], [m].[NgayNhap], [m].[NgaySua], [m].[NgonNgu], [m].[NguoiNhap], [m].[NguoiSua], [m].[TenTinhThanh], [m].[TrangThai], [m].[ViTri]
+FROM [tbl_TinhThanh] AS [m]
+WHERE [m].[TinhThanhId] = @__id_0" (0723d8ff)
+2019-07-22T19:20:30.7956317+07:00 0HLOEJQCLN4FV:00000006 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:30.7957915+07:00 0HLOEJQCLN4FV:00000006 [INF] Executed action "QLNS.Controllers.TinhThanhsController.GetTinhThanh (QLNS)" in 10.6266ms (afa2e885)
+2019-07-22T19:20:30.7959631+07:00 0HLOEJQCLN4FV:00000006 [INF] Request finished in 11.6144ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:30.8084028+07:00 0HLOEJQCLN4FU:00000008 [INF] Executed DbCommand ("22"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[CongTacId], [o].[ChucDanhId], [o].[DenNgay], [o].[DenNgay1], [o].[HSLuong], [o].[HSPhuCap], [o].[HoSoNhanSuId], [o].[MucLuong], [o].[NgayNhap], [o].[NgayQuyetDinh], [o].[NgayQuyetDinh1], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[NoiDung], [o].[PhuCap], [o].[SoThang], [o].[TangGiamBaoHiemId], [o].[TepDinhKem], [o].[TuNgay], [o].[TuNgay1], [o].[Type], [o.TangGiamBaoHiem].[TangGiamBaoHiemId], [o.TangGiamBaoHiem].[GhiChu], [o.TangGiamBaoHiem].[NgaySua], [o.TangGiamBaoHiem].[NgayTao], [o.TangGiamBaoHiem].[NguoiSua], [o.TangGiamBaoHiem].[NguoiTao], [o.TangGiamBaoHiem].[PhanLoai], [o.TangGiamBaoHiem].[ThuTuHienThi], [o.TangGiamBaoHiem].[TieuDe], [o.TangGiamBaoHiem].[TrangThai], [o.ChucDanh].[ChucDanhId], [o.ChucDanh].[DienGiai], [o.ChucDanh].[KyHieu], [o.ChucDanh].[NgayNhap], [o.ChucDanh].[NgaySua], [o.ChucDanh].[NgonNgu], [o.ChucDanh].[NguoiNhap], [o.ChucDanh].[NguoiSua], [o.ChucDanh].[PhanLoaiChucDanh], [o.ChucDanh].[TenChucDanh], [o.ChucDanh].[TrangThai], [o.ChucDanh].[ViTri]
+FROM [tbl_CongTac] AS [o]
+LEFT JOIN [tbl_TangGiamBaoHiem] AS [o.TangGiamBaoHiem] ON [o].[TangGiamBaoHiemId] = [o.TangGiamBaoHiem].[TangGiamBaoHiemId]
+LEFT JOIN [tbl_ChucDanh] AS [o.ChucDanh] ON [o].[ChucDanhId] = [o.ChucDanh].[ChucDanhId]
+WHERE [o].[HoSoNhanSuId] = @__id_0
+ORDER BY [o].[TuNgay]" (0723d8ff)
+2019-07-22T19:20:30.8116195+07:00 0HLOEJQCLN4FU:00000008 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:30.8137215+07:00 0HLOEJQCLN4FU:00000008 [INF] Executed action "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" in 28.5978ms (afa2e885)
+2019-07-22T19:20:30.8138635+07:00 0HLOEJQCLN4FU:00000008 [INF] Request finished in 29.5217ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:33.8981284+07:00 0HLOEJQCLN4FT:0000000B [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/CongTacs/getAllById/6788 application/json  (ca22a1cb)
+2019-07-22T19:20:33.8989252+07:00 0HLOEJQCLN4FT:0000000B [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:33.8994721+07:00 0HLOEJQCLN4FT:0000000B [INF] Executing action method "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" with arguments (["6788"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:33.8998016+07:00 0HLOEJQCLN4FT:0000000B [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:33.9259686+07:00 0HLOEJQCLN4FT:0000000B [INF] Executed DbCommand ("25"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[CongTacId], [o].[ChucDanhId], [o].[DenNgay], [o].[DenNgay1], [o].[HSLuong], [o].[HSPhuCap], [o].[HoSoNhanSuId], [o].[MucLuong], [o].[NgayNhap], [o].[NgayQuyetDinh], [o].[NgayQuyetDinh1], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[NoiDung], [o].[PhuCap], [o].[SoThang], [o].[TangGiamBaoHiemId], [o].[TepDinhKem], [o].[TuNgay], [o].[TuNgay1], [o].[Type], [o.TangGiamBaoHiem].[TangGiamBaoHiemId], [o.TangGiamBaoHiem].[GhiChu], [o.TangGiamBaoHiem].[NgaySua], [o.TangGiamBaoHiem].[NgayTao], [o.TangGiamBaoHiem].[NguoiSua], [o.TangGiamBaoHiem].[NguoiTao], [o.TangGiamBaoHiem].[PhanLoai], [o.TangGiamBaoHiem].[ThuTuHienThi], [o.TangGiamBaoHiem].[TieuDe], [o.TangGiamBaoHiem].[TrangThai], [o.ChucDanh].[ChucDanhId], [o.ChucDanh].[DienGiai], [o.ChucDanh].[KyHieu], [o.ChucDanh].[NgayNhap], [o.ChucDanh].[NgaySua], [o.ChucDanh].[NgonNgu], [o.ChucDanh].[NguoiNhap], [o.ChucDanh].[NguoiSua], [o.ChucDanh].[PhanLoaiChucDanh], [o.ChucDanh].[TenChucDanh], [o.ChucDanh].[TrangThai], [o.ChucDanh].[ViTri]
+FROM [tbl_CongTac] AS [o]
+LEFT JOIN [tbl_TangGiamBaoHiem] AS [o.TangGiamBaoHiem] ON [o].[TangGiamBaoHiemId] = [o.TangGiamBaoHiem].[TangGiamBaoHiemId]
+LEFT JOIN [tbl_ChucDanh] AS [o.ChucDanh] ON [o].[ChucDanhId] = [o.ChucDanh].[ChucDanhId]
+WHERE [o].[HoSoNhanSuId] = @__id_0
+ORDER BY [o].[TuNgay]" (0723d8ff)
+2019-07-22T19:20:33.9263806+07:00 0HLOEJQCLN4FT:0000000B [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:33.9265645+07:00 0HLOEJQCLN4FT:0000000B [INF] Executed action "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" in 27.3778ms (afa2e885)
+2019-07-22T19:20:33.9266758+07:00 0HLOEJQCLN4FT:0000000B [INF] Request finished in 28.6185ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:40.3993031+07:00 0HLOEJQCLN4FR:0000000D [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/HoSoNhanSus/1378 application/json  (ca22a1cb)
+2019-07-22T19:20:40.3999069+07:00 0HLOEJQCLN4FR:0000000D [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:40.4002214+07:00 0HLOEJQCLN4FR:0000000D [INF] Executing action method "QLNS.Controllers.HoSoNhanSusController.GetHoSoNhanSu (QLNS)" with arguments (["1378"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:40.4006231+07:00 0HLOEJQCLN4FR:0000000D [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:40.4160581+07:00 0HLOEJQCLN4FR:0000000D [INF] Executed DbCommand ("14"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [o].[HoSoNhanSuId], [o].[BHThatNghiep], [o].[BacLuong], [o].[BacTho], [o].[BoPhan], [o].[CaMacDinh], [o].[CanNang], [o].[CapBacQuanDoi], [o].[ChieuCao], [o].[ChucVuDoan], [o].[ChucVuHienTai], [o].[ChucVuQuanDoi], [o].[ChuyenMonCaoNhat], [o].[ChuyenNganh], [o].[CoQuanTuyenDung], [o].[CongViecChinh], [o].[DanTocId], [o].[DanhHieuId], [o].[DiaBan], [o].[DonViQuanDoi], [o].[Email], [o].[GhiChu], [o].[GiayPhepLaoDong], [o].[GioiTinhId], [o].[HanGiayPhepLaoDong], [o].[HanGiayPhepLaoDong1], [o].[HanTheTamTru], [o].[HanTheTamTru1], [o].[HeSo], [o].[HinhAnh], [o].[HoKhauTT], [o].[HoTenDem], [o].[HocHam], [o].[HocVi], [o].[KhenThuong], [o].[KhuyetTat], [o].[KiemNhiem], [o].[KyLuat], [o].[LoaiLaoDong], [o].[LuuYSucKhoe], [o].[LyLuanChinhTri], [o].[MaHoSo], [o].[MaNghach], [o].[MaSTCN], [o].[MaThe], [o].[MucLuongHienTai], [o].[NamThoiViec], [o].[NgachCongChucId], [o].[NganHangId], [o].[NgayCapCMTND], [o].[NgayCapCMTND1], [o].[NgayCapHC], [o].[NgayCapHC1], [o].[NgayDongBHXH], [o].[NgayDongBHXH1], [o].[NgayHetHanHC], [o].[NgayHetHanHC1], [o].[NgayHetHanViSa], [o].[NgayHetHanViSa1], [o].[NgayHuong], [o].[NgayHuong1], [o].[NgayLamViecCT], [o].[NgayLamViecCT1], [o].[NgayNhapNgu], [o].[NgayNhapNgu1], [o].[NgaySinh], [o].[NgaySinh1], [o].[NgayThoiViec], [o].[NgayThoiViec1], [o].[NgayTuyenDung], [o].[NgayTuyenDung1], [o].[NgayVaoDoan], [o].[NgayVaoDoan1], [o].[NgayXuatNgu], [o].[NgayXuatNgu1], [o].[NgheTruocTuyenDung], [o].[NgoaiNgu], [o].[NguyenQuan], [o].[NhomLamViec], [o].[NhomMauId], [o].[NoiCapCMTND], [o].[NoiCapHC], [o].[NoiOHienNay], [o].[NoiSinh], [o].[NoiSinhHoatDoan], [o].[PhanLoai], [o].[PhongBan], [o].[PhuCapKhac], [o].[PhucCapChucVu], [o].[QuanLyNhaNuoc], [o].[QuocTichId], [o].[SoBHXH], [o].[SoCMTND], [o].[SoDienThoai], [o].[SoHoChieu], [o].[SoTaiKhoan], [o].[SoTheBHYT], [o].[SoTheDoan], [o].[SoTruong], [o].[SoViSa], [o].[Ten], [o].[TenGoiKhac], [o].[ThangThoiViec], [o].[TheTamTru], [o].[TinHoc], [o].[TinhTrangHonNhanId], [o].[TinhTrangSucKhoe], [o].[TonGiaoId], [o].[TraLuongTaiKhoan], [o].[TrangThai], [o].[TrinhDoPhoThong], [o.TinhTrangHonNhans].[TinhTrangHonNhanId], [o.TinhTrangHonNhans].[GhiChu], [o.TinhTrangHonNhans].[KyHieu], [o.TinhTrangHonNhans].[NgaySua], [o.TinhTrangHonNhans].[NgayTao], [o.TinhTrangHonNhans].[NguoiSua], [o.TinhTrangHonNhans].[NguoiTao], [o.TinhTrangHonNhans].[TenTinhTrangHonNhan], [o.TinhTrangHonNhans].[ThuTuHienThi], [o.TinhTrangHonNhans].[TrangThai], [o.GioiTinhs].[GioiTinhId], [o.GioiTinhs].[GhiChu], [o.GioiTinhs].[KyHieu], [o.GioiTinhs].[NgaySua], [o.GioiTinhs].[NgayTao], [o.GioiTinhs].[NguoiSua], [o.GioiTinhs].[NguoiTao], [o.GioiTinhs].[TenGioiTinh], [o.GioiTinhs].[ThuTuHienThi], [o.GioiTinhs].[TrangThai], [o.DanToc].[DanTocId], [o.DanToc].[GhiChu], [o.DanToc].[KyHieu], [o.DanToc].[NgaySua], [o.DanToc].[NgayTao], [o.DanToc].[NguoiSua], [o.DanToc].[NguoiTao], [o.DanToc].[TenDanToc], [o.DanToc].[ThuTuHienThi], [o.DanToc].[TrangThai]
+FROM [tbl_HoSoNhanSu] AS [o]
+LEFT JOIN [tbl_TinhTrangHonNhan] AS [o.TinhTrangHonNhans] ON [o].[TinhTrangHonNhanId] = [o.TinhTrangHonNhans].[TinhTrangHonNhanId]
+LEFT JOIN [tbl_GioiTinh] AS [o.GioiTinhs] ON [o].[GioiTinhId] = [o.GioiTinhs].[GioiTinhId]
+LEFT JOIN [tbl_DanToc] AS [o.DanToc] ON [o].[DanTocId] = [o.DanToc].[DanTocId]
+WHERE [o].[HoSoNhanSuId] = @__id_0" (0723d8ff)
+2019-07-22T19:20:40.4166048+07:00 0HLOEJQCLN4FR:0000000D [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:40.4168797+07:00 0HLOEJQCLN4FR:0000000D [INF] Executed action "QLNS.Controllers.HoSoNhanSusController.GetHoSoNhanSu (QLNS)" in 16.7836ms (afa2e885)
+2019-07-22T19:20:40.4170058+07:00 0HLOEJQCLN4FR:0000000D [INF] Request finished in 17.7883ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:40.4432784+07:00 0HLOEJQCLN4FS:0000000B [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/CongTacs/getAllById/1378 application/json  (ca22a1cb)
+2019-07-22T19:20:40.4433390+07:00 0HLOEJQCLN4FV:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/TinhThanhs/16 application/json  (ca22a1cb)
+2019-07-22T19:20:40.4438108+07:00 0HLOEJQCLN4FV:00000007 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:40.4438110+07:00 0HLOEJQCLN4FS:0000000B [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:40.4440588+07:00 0HLOEJQCLN4FS:0000000B [INF] Executing action method "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" with arguments (["1378"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:40.4440589+07:00 0HLOEJQCLN4FV:00000007 [INF] Executing action method "QLNS.Controllers.TinhThanhsController.GetTinhThanh (QLNS)" with arguments (["16"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:40.4443567+07:00 0HLOEJQCLN4FS:0000000B [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:40.4443542+07:00 0HLOEJQCLN4FV:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:40.4524866+07:00 0HLOEJQCLN4FV:00000007 [INF] Executed DbCommand ("7"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [m].[TinhThanhId], [m].[DienGiai], [m].[KyHieu], [m].[NgayNhap], [m].[NgaySua], [m].[NgonNgu], [m].[NguoiNhap], [m].[NguoiSua], [m].[TenTinhThanh], [m].[TrangThai], [m].[ViTri]
+FROM [tbl_TinhThanh] AS [m]
+WHERE [m].[TinhThanhId] = @__id_0" (0723d8ff)
+2019-07-22T19:20:40.4527807+07:00 0HLOEJQCLN4FV:00000007 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:40.4529510+07:00 0HLOEJQCLN4FV:00000007 [INF] Executed action "QLNS.Controllers.TinhThanhsController.GetTinhThanh (QLNS)" in 8.9769ms (afa2e885)
+2019-07-22T19:20:40.4530843+07:00 0HLOEJQCLN4FV:00000007 [INF] Request finished in 9.7684ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:40.4674736+07:00 0HLOEJQCLN4FS:0000000B [INF] Executed DbCommand ("22"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[CongTacId], [o].[ChucDanhId], [o].[DenNgay], [o].[DenNgay1], [o].[HSLuong], [o].[HSPhuCap], [o].[HoSoNhanSuId], [o].[MucLuong], [o].[NgayNhap], [o].[NgayQuyetDinh], [o].[NgayQuyetDinh1], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[NoiDung], [o].[PhuCap], [o].[SoThang], [o].[TangGiamBaoHiemId], [o].[TepDinhKem], [o].[TuNgay], [o].[TuNgay1], [o].[Type], [o.TangGiamBaoHiem].[TangGiamBaoHiemId], [o.TangGiamBaoHiem].[GhiChu], [o.TangGiamBaoHiem].[NgaySua], [o.TangGiamBaoHiem].[NgayTao], [o.TangGiamBaoHiem].[NguoiSua], [o.TangGiamBaoHiem].[NguoiTao], [o.TangGiamBaoHiem].[PhanLoai], [o.TangGiamBaoHiem].[ThuTuHienThi], [o.TangGiamBaoHiem].[TieuDe], [o.TangGiamBaoHiem].[TrangThai], [o.ChucDanh].[ChucDanhId], [o.ChucDanh].[DienGiai], [o.ChucDanh].[KyHieu], [o.ChucDanh].[NgayNhap], [o.ChucDanh].[NgaySua], [o.ChucDanh].[NgonNgu], [o.ChucDanh].[NguoiNhap], [o.ChucDanh].[NguoiSua], [o.ChucDanh].[PhanLoaiChucDanh], [o.ChucDanh].[TenChucDanh], [o.ChucDanh].[TrangThai], [o.ChucDanh].[ViTri]
+FROM [tbl_CongTac] AS [o]
+LEFT JOIN [tbl_TangGiamBaoHiem] AS [o.TangGiamBaoHiem] ON [o].[TangGiamBaoHiemId] = [o.TangGiamBaoHiem].[TangGiamBaoHiemId]
+LEFT JOIN [tbl_ChucDanh] AS [o.ChucDanh] ON [o].[ChucDanhId] = [o.ChucDanh].[ChucDanhId]
+WHERE [o].[HoSoNhanSuId] = @__id_0
+ORDER BY [o].[TuNgay]" (0723d8ff)
+2019-07-22T19:20:40.4678577+07:00 0HLOEJQCLN4FS:0000000B [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:40.4680532+07:00 0HLOEJQCLN4FS:0000000B [INF] Executed action "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" in 24.0829ms (afa2e885)
+2019-07-22T19:20:40.4681692+07:00 0HLOEJQCLN4FS:0000000B [INF] Request finished in 24.9621ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:50.2178348+07:00 0HLOEJQCLN4FU:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/CongTacs/getAllById/1378 application/json  (ca22a1cb)
+2019-07-22T19:20:50.2183252+07:00 0HLOEJQCLN4FU:00000009 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:50.2185729+07:00 0HLOEJQCLN4FU:00000009 [INF] Executing action method "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" with arguments (["1378"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:50.2211205+07:00 0HLOEJQCLN4FU:00000009 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:50.2469141+07:00 0HLOEJQCLN4FU:00000009 [INF] Executed DbCommand ("22"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[CongTacId], [o].[ChucDanhId], [o].[DenNgay], [o].[DenNgay1], [o].[HSLuong], [o].[HSPhuCap], [o].[HoSoNhanSuId], [o].[MucLuong], [o].[NgayNhap], [o].[NgayQuyetDinh], [o].[NgayQuyetDinh1], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[NoiDung], [o].[PhuCap], [o].[SoThang], [o].[TangGiamBaoHiemId], [o].[TepDinhKem], [o].[TuNgay], [o].[TuNgay1], [o].[Type], [o.TangGiamBaoHiem].[TangGiamBaoHiemId], [o.TangGiamBaoHiem].[GhiChu], [o.TangGiamBaoHiem].[NgaySua], [o.TangGiamBaoHiem].[NgayTao], [o.TangGiamBaoHiem].[NguoiSua], [o.TangGiamBaoHiem].[NguoiTao], [o.TangGiamBaoHiem].[PhanLoai], [o.TangGiamBaoHiem].[ThuTuHienThi], [o.TangGiamBaoHiem].[TieuDe], [o.TangGiamBaoHiem].[TrangThai], [o.ChucDanh].[ChucDanhId], [o.ChucDanh].[DienGiai], [o.ChucDanh].[KyHieu], [o.ChucDanh].[NgayNhap], [o.ChucDanh].[NgaySua], [o.ChucDanh].[NgonNgu], [o.ChucDanh].[NguoiNhap], [o.ChucDanh].[NguoiSua], [o.ChucDanh].[PhanLoaiChucDanh], [o.ChucDanh].[TenChucDanh], [o.ChucDanh].[TrangThai], [o.ChucDanh].[ViTri]
+FROM [tbl_CongTac] AS [o]
+LEFT JOIN [tbl_TangGiamBaoHiem] AS [o.TangGiamBaoHiem] ON [o].[TangGiamBaoHiemId] = [o.TangGiamBaoHiem].[TangGiamBaoHiemId]
+LEFT JOIN [tbl_ChucDanh] AS [o.ChucDanh] ON [o].[ChucDanhId] = [o.ChucDanh].[ChucDanhId]
+WHERE [o].[HoSoNhanSuId] = @__id_0
+ORDER BY [o].[TuNgay]" (0723d8ff)
+2019-07-22T19:20:50.2472969+07:00 0HLOEJQCLN4FU:00000009 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:50.2474896+07:00 0HLOEJQCLN4FU:00000009 [INF] Executed action "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" in 29.0154ms (afa2e885)
+2019-07-22T19:20:50.2475979+07:00 0HLOEJQCLN4FU:00000009 [INF] Request finished in 29.8306ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:52.2460290+07:00 0HLOEJQCLN4FT:0000000C [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/CongTacs/30680 application/json 462 (ca22a1cb)
+2019-07-22T19:20:52.2461254+07:00 0HLOEJQCLN4FT:0000000C [INF] Policy execution successful. (0204925d)
+2019-07-22T19:20:52.2466490+07:00 0HLOEJQCLN4FT:0000000C [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:52.2470773+07:00 0HLOEJQCLN4FT:0000000C [INF] Executing action method "QLNS.Controllers.CongTacsController.PutCongTac (QLNS)" with arguments (["30680", "DAL.Models.CongTac"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:52.2474568+07:00 0HLOEJQCLN4FT:0000000C [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:52.2610891+07:00 0HLOEJQCLN4FT:0000000C [INF] Executed DbCommand ("6"ms) [Parameters=["@p21='?', @p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?', @p6='?' (Size = 4000), @p7='?', @p8='?', @p9='?' (Size = 4000), @p10='?', @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?', @p16='?', @p17='?' (Size = 4000), @p18='?', @p19='?' (Size = 4000), @p20='?'"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [tbl_CongTac] SET [ChucDanhId] = @p0, [DenNgay] = @p1, [DenNgay1] = @p2, [HSLuong] = @p3, [HSPhuCap] = @p4, [HoSoNhanSuId] = @p5, [MucLuong] = @p6, [NgayNhap] = @p7, [NgayQuyetDinh] = @p8, [NgayQuyetDinh1] = @p9, [NgaySua] = @p10, [NguoiNhap] = @p11, [NguoiSua] = @p12, [NoiDung] = @p13, [PhuCap] = @p14, [SoThang] = @p15, [TangGiamBaoHiemId] = @p16, [TepDinhKem] = @p17, [TuNgay] = @p18, [TuNgay1] = @p19, [Type] = @p20
+WHERE [CongTacId] = @p21;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2019-07-22T19:20:52.2674040+07:00 0HLOEJQCLN4FT:0000000C [INF] Executing HttpStatusCodeResult, setting HTTP status code 204 (e28ccfae)
+2019-07-22T19:20:52.2675050+07:00 0HLOEJQCLN4FT:0000000C [INF] Executed action "QLNS.Controllers.CongTacsController.PutCongTac (QLNS)" in 20.6938ms (afa2e885)
+2019-07-22T19:20:52.2676404+07:00 0HLOEJQCLN4FT:0000000C [INF] Request finished in 21.6739ms 204  (791a596a)
+2019-07-22T19:20:52.2925453+07:00 0HLOEJQCLN4FR:0000000E [INF] Request starting HTTP/1.1 POST http://localhost:55842/api/Logs application/json 196 (ca22a1cb)
+2019-07-22T19:20:52.2926386+07:00 0HLOEJQCLN4FR:0000000E [INF] Policy execution successful. (0204925d)
+2019-07-22T19:20:52.2931047+07:00 0HLOEJQCLN4FR:0000000E [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:52.2935021+07:00 0HLOEJQCLN4FR:0000000E [INF] Executing action method "QLNS.Controllers.LogsController.PostLog (QLNS)" with arguments (["DAL.Models.Log"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:52.2938305+07:00 0HLOEJQCLN4FR:0000000E [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:52.3098303+07:00 0HLOEJQCLN4FR:0000000E [INF] Executed DbCommand ("8"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [tbl_Log] ([HanhDong], [NgayThucHien], [NguoiThucHien], [NoiDung], [TenModule])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [LogID]
+FROM [tbl_Log]
+WHERE @@ROWCOUNT = 1 AND [LogID] = scope_identity();" (0723d8ff)
+2019-07-22T19:20:52.3173005+07:00 0HLOEJQCLN4FR:0000000E [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:52.3175724+07:00 0HLOEJQCLN4FR:0000000E [INF] Executed action "QLNS.Controllers.LogsController.PostLog (QLNS)" in 24.2721ms (afa2e885)
+2019-07-22T19:20:52.3177325+07:00 0HLOEJQCLN4FR:0000000E [INF] Request finished in 25.23ms 201 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:20:52.3602925+07:00 0HLOEJQCLN4FV:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/CongTacs/getAllById/1378 application/json  (ca22a1cb)
+2019-07-22T19:20:52.3608686+07:00 0HLOEJQCLN4FV:00000008 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-07-22T19:20:52.3611684+07:00 0HLOEJQCLN4FV:00000008 [INF] Executing action method "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" with arguments (["1378"]) - ModelState is Valid (ba7f4ac2)
+2019-07-22T19:20:52.3615442+07:00 0HLOEJQCLN4FV:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:20:52.3846215+07:00 0HLOEJQCLN4FV:00000008 [INF] Executed DbCommand ("22"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[CongTacId], [o].[ChucDanhId], [o].[DenNgay], [o].[DenNgay1], [o].[HSLuong], [o].[HSPhuCap], [o].[HoSoNhanSuId], [o].[MucLuong], [o].[NgayNhap], [o].[NgayQuyetDinh], [o].[NgayQuyetDinh1], [o].[NgaySua], [o].[NguoiNhap], [o].[NguoiSua], [o].[NoiDung], [o].[PhuCap], [o].[SoThang], [o].[TangGiamBaoHiemId], [o].[TepDinhKem], [o].[TuNgay], [o].[TuNgay1], [o].[Type], [o.TangGiamBaoHiem].[TangGiamBaoHiemId], [o.TangGiamBaoHiem].[GhiChu], [o.TangGiamBaoHiem].[NgaySua], [o.TangGiamBaoHiem].[NgayTao], [o.TangGiamBaoHiem].[NguoiSua], [o.TangGiamBaoHiem].[NguoiTao], [o.TangGiamBaoHiem].[PhanLoai], [o.TangGiamBaoHiem].[ThuTuHienThi], [o.TangGiamBaoHiem].[TieuDe], [o.TangGiamBaoHiem].[TrangThai], [o.ChucDanh].[ChucDanhId], [o.ChucDanh].[DienGiai], [o.ChucDanh].[KyHieu], [o.ChucDanh].[NgayNhap], [o.ChucDanh].[NgaySua], [o.ChucDanh].[NgonNgu], [o.ChucDanh].[NguoiNhap], [o.ChucDanh].[NguoiSua], [o.ChucDanh].[PhanLoaiChucDanh], [o.ChucDanh].[TenChucDanh], [o.ChucDanh].[TrangThai], [o.ChucDanh].[ViTri]
+FROM [tbl_CongTac] AS [o]
+LEFT JOIN [tbl_TangGiamBaoHiem] AS [o.TangGiamBaoHiem] ON [o].[TangGiamBaoHiemId] = [o.TangGiamBaoHiem].[TangGiamBaoHiemId]
+LEFT JOIN [tbl_ChucDanh] AS [o.ChucDanh] ON [o].[ChucDanhId] = [o.ChucDanh].[ChucDanhId]
+WHERE [o].[HoSoNhanSuId] = @__id_0
+ORDER BY [o].[TuNgay]" (0723d8ff)
+2019-07-22T19:20:52.3850602+07:00 0HLOEJQCLN4FV:00000008 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-07-22T19:20:52.3852904+07:00 0HLOEJQCLN4FV:00000008 [INF] Executed action "QLNS.Controllers.CongTacsController.GetAllByID (QLNS)" in 24.2265ms (afa2e885)
+2019-07-22T19:20:52.3860293+07:00 0HLOEJQCLN4FV:00000008 [INF] Request finished in 25.4316ms 200 application/json; charset=utf-8 (791a596a)
+2019-07-22T19:21:20.0455881+07:00  [INF] webpack building... (478286db)
+2019-07-22T19:22:10.7789645+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:22:10.8618359+07:00  [FTL] Lỗi khởi tạo cơ sở dữ liệu (3b6074dc)
+System.AggregateException: One or more errors occurred. (Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.) ---> System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\Project\Urenco\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at QLNS.Program.Main(String[] args) in D:\Project\Urenco\source\QLNS\QLNS\Program.cs:line 35
+---> (Inner Exception #0) System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'UrencoDB, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\Project\Urenco\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+
+<---
+
+2019-07-22T19:22:11.0395922+07:00 0HLOEJSSAVVPR:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2019-07-22T19:23:20.2643504+07:00  [INF] webpack built 9d19acb631d523bed387 in 69614ms (b065866f)
+2019-07-22T19:23:20.8239620+07:00 0HLOEJSSAVVPS:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/ddb26648e9de7ca4d741.hot-update.json   (ca22a1cb)
+2019-07-22T19:23:21.4161391+07:00 0HLOEJSSAVVPS:00000001 [INF] Request finished in 591.671ms 404  (791a596a)
+2019-07-22T19:24:34.6509470+07:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2019-07-22T19:24:34.7272268+07:00  [FTL] Lỗi khởi tạo cơ sở dữ liệu (3b6074dc)
+System.AggregateException: One or more errors occurred. (Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.) ---> System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\Project\Urenco\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at QLNS.Program.Main(String[] args) in D:\Project\Urenco\source\QLNS\QLNS\Program.cs:line 35
+---> (Inner Exception #0) System.IO.FileNotFoundException: Could not load file or assembly 'UrencoDB, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'UrencoDB, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks, IntPtr ptrLoadContextBinder)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, IntPtr ptrLoadContextBinder)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationsAssembly..ctor(ICurrentDbContext currentContext, IDbContextOptions options, IMigrationsIdGenerator idGenerator)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.<>c__DisplayClass22_0.<RealizeService>b__0(ServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetRelationalService[TService](IInfrastructure`1 databaseFacade)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(DatabaseFacade databaseFacade, CancellationToken cancellationToken)
+   at DAL.DatabaseInitializer.<SeedAsync>d__4.MoveNext() in D:\Project\Urenco\source\QLNS\DAL\DatabaseInitializer.cs:line 46
+
+<---
+
+2019-07-22T19:24:34.8839803+07:00 0HLOEJU76N0V4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/__webpack_hmr   (ca22a1cb)
+2019-07-22T19:25:30.8975195+07:00  [INF] webpack built 9d19acb631d523bed387 in 56414ms (4c237d34)
+2019-07-22T19:25:31.4344032+07:00 0HLOEJU76N0V5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/dist/ddb26648e9de7ca4d741.hot-update.json   (ca22a1cb)
+2019-07-22T19:25:32.2233484+07:00 0HLOEJU76N0V5:00000001 [INF] Request finished in 788.6938ms 404  (791a596a)
+2019-07-22T19:33:46.7529051+07:00 0HLOEJU76N0V4:00000001 [INF] Request finished in 551878.1738ms 200 text/event-stream; charset=utf-8 (791a596a)

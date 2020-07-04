@@ -1,0 +1,84 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="portlet light portlet-fit portlet-datatable bordered">
+      <div class="portlet-title tabbable-line">
+        <div class="caption">
+          <i class="fa fa-flag font-green"></i>
+          <span class="caption-subject font-green sbold uppercase">Phân quyền nhóm người dùng - Đơn vị</span>
+        </div>
+        <div class="actions">
+        </div>
+      </div>
+      <div class="portlet-body">
+        <div class="rows">
+          <div class="col-md-12 x-toolbar-default">
+            <a class="btn green btn-outline btn-circle btn-sm tooltips" data-placement="top" tooltip="Mở rộng" data-remote="true" href="javascript:;" (click)="openDonVi()"><i class="fa fa-plus"></i>&nbsp;Mở rộng</a>&nbsp;&nbsp;
+            <a class="btn green btn-outline btn-circle btn-sm tooltips" data-placement="top" tooltip="Thu lại" data-remote="true" href="javascript:;" (click)="closeDonVi()"><i class="fa fa-minus"></i>&nbsp;Thu lại</a>
+            <!--<div style="float:right">
+              <kendo-combobox [suggest]="true" class="form-control"
+                              [data]="roles" name="roles"
+                              [placeholder]="'Nhóm người dùng'"
+                              [textField]="'name'"
+                              [valueField]="'id'"
+                              [(ngModel)]="rolesSelected"
+                              (valueChange)="rolesChange($event)">
+              </kendo-combobox>
+            </div>-->
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div id="portlet-body-container">
+          <div id="myForm" style="overflow-x:auto">
+            <div class="table-container" style="min-width:768px" id="treeView">
+              <kendo-treeview [nodes]="rows"
+                              textField="tenDonVi"
+                              kendoTreeViewExpandable
+                              kendoTreeViewHierarchyBinding
+                              [(expandedKeys)]="expandedKeys"
+                              childrenField="items">
+                <ng-template kendoTreeViewNodeTemplate let-dataItem>
+                  <ng-template #customTemplate let-options="options">
+                    <div [class]="'customnerpopover popover ' + options.placement" style="display: block">
+                      <div class="arrow"></div>
+                      <h3 class="popover-title">{{ options.popoverTitle }}</h3>
+                      <div class="popover-content">
+                        <p [innerHTML]="options.popoverMessage"></p>
+                        <div id="customTemplate"></div>
+                        <a class="cus-func editdv" href="javascript:;" (click)="UpdateRoles(dataItem,role)" *ngFor="let role of roles">
+                          <i class="fa fa-pencil-square-o"></i>&nbsp;
+                          <span style="color:red" *ngIf="chk(dataItem,role)">{{role.name}}</span>
+                          <span *ngIf="!chk(dataItem,role)">{{role.name}}</span>
+                        </a>
+                      </div>
+                    </div>
+                  </ng-template>
+                  <a class="item-treeview" mwlConfirmationPopover
+                     [popoverTitle]=null
+                     [popoverMessage]=null
+                     placement="bottom"
+                     [customTemplate]="customTemplate"
+                     [appendToBody]="appendToBody"
+                     [confirmText]="confirmText"
+                     [cancelText]="cancelText"
+                     (cancel)="cancelClicked = true">
+                    <span [ngClass]="iconClass(dataItem)"></span>
+                    {{dataItem.tenDonVi}}
+                  </a>
+                  <div style="margin-left:5px;">
+                    <span *ngIf="dataItem.roleDonVi!=null && dataItem.roleDonVi.length>0" style="color:red"> - Nhóm người dùng: </span>
+                    <span class="badge" *ngFor="let role of dataItem.roleDonVi">
+                      {{role.roleName}}
+                    </span>
+                  </div>
+                  <!--<i class="fa fa-check-square iconActive" style="color:green;padding-left:5px" (click)="UpdateRoles(dataItem)">
+                  </i>-->
+                </ng-template>
+              </kendo-treeview>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

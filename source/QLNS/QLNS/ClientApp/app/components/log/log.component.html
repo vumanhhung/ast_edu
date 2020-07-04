@@ -1,0 +1,75 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <div class="portlet light portlet-fit portlet-datatable bordered">
+            <div class="portlet-title tabbable-line">
+                <div class="caption">
+                    <i class="fa fa-flag font-green"></i>
+                    <span class="caption-subject font-green sbold uppercase">Nhật ký hệ thống</span>
+                </div>
+                <div class="actions">
+                    <!--<a class="btn green btn-outline btn-circle btn-sm tooltips" data-placement="top" tooltip="Thêm mới" data-remote="true" href="javascript:;" (click)="newLog()"><i class="fa fa-plus"></i>&nbsp;Thêm mới</a>
+                    <a class="btn green btn-outline btn-circle btn-sm tooltips btndeletemore" data-placement="top" tooltip="Xóa nhiều" data-remote="true" href="javascript:;">
+                      <span mwlConfirmationPopover
+                            [popoverTitle]="popoverTitle"
+                            [popoverMessage]="popoverMessage"
+                            placement="bottom"
+                            [confirmText]="confirmText"
+                            [cancelText]="cancelText"
+                            (confirm)="deleteMoreLog()"
+                            (cancel)="cancelClicked = true"><i class="fa fa-trash font-red"></i>&nbsp;Xóa nhiều</span>
+                    </a>-->
+                    <a class="btn green btn-outline btn-sm btn-refresh loading-resources tooltips" data-placement="top" tooltip="Làm mới" data-remote="true" href="javascript:;" (click)="refreshData()"><i class="fa fa-refresh"></i></a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="rowFilter">
+                    <div class="col-md-8">
+                        <search-box (searchChange)="onSearchChanged($event)" placeholder="Tìm kiếm"></search-box>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div id="portlet-body-container">
+                    <div id="myForm" style="overflow-x:auto">
+                        <div class="table-container" style="min-width:768px">
+                            <kendo-grid [data]="gridData" #grid
+                                        [pageSize]="state.take"
+                                        [skip]="state.skip"
+                                        [sort]="sort"
+                                        [sortable]="true"
+                                        [pageable]="true"
+                                        (dataStateChange)="dataStateChange($event)"
+                                        [selectable]="true"
+                                        [kendoGridSelectBy]="'logID'">
+                                <kendo-grid-column class="alightcenter" field="tenModule" title="Tên quá trình">
+                                </kendo-grid-column>
+                                <kendo-grid-column class="alightcenter" field="hanhDong" title="Hành động" width="100">
+                                </kendo-grid-column>
+                                <kendo-grid-column class="alightcenter" field="noiDung" title="Nội dung">
+                                </kendo-grid-column>
+                                <kendo-grid-column class="alightcenter" field="nguoiThucHien" title="Người thực hiện" width="120">
+                                </kendo-grid-column>
+                                <kendo-grid-column class="alightcenter" field="ngayThucHienString" title="Ngày thực hiện" width="120">
+                                </kendo-grid-column>
+                                <ng-template kendoPagerTemplate let-totalPages="totalPages" let-currentPage="currentPage">
+                                    Số bản ghi:<kendo-pager-page-sizes [pageSizes]="[5, 10, 20, 50]"></kendo-pager-page-sizes>
+                                    <kendo-pager-prev-buttons class="paging-left"></kendo-pager-prev-buttons>
+                                    <kendo-pager-numeric-buttons class="page-number" [buttonCount]="5"></kendo-pager-numeric-buttons>
+                                    <kendo-pager-next-buttons class="paging-right"></kendo-pager-next-buttons>
+                                    <kendo-pager-info></kendo-pager-info>
+                                </ng-template>
+                                <kendo-grid-messages pagerPage="Trang"
+                                                     pagerOf="trong số"
+                                                     pagerItemsPerPage=""
+                                                     pagerItems="bản ghi">
+                                </kendo-grid-messages>
+                                <ng-template kendoGridNoRecordsTemplate>
+                                    Không có bản ghi nào.
+                                </ng-template>
+                            </kendo-grid>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

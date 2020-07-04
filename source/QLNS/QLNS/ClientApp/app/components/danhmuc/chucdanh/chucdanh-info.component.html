@@ -1,0 +1,65 @@
+﻿<div class="modal fade" bsModal #editorModal="bs-modal" (onHidden)="onEditorModalHidden()" [config]="{backdrop: 'static'}" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title pull-left caption-subject bold uppercase font-green">
+                    <i class="fa fa-plus" *ngIf="isNew"></i> <i class="fa fa-pencil" *ngIf="!isNew"></i> {{isNew ? 'Thêm mới' : 'Chỉnh sửa'}}
+                </h4>
+                <button type="button" class="close pull-right btn-close-modal" title="Close" (click)="editorModal.hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="Editform">
+                    <form *ngIf="formResetToggle" [attr.autocomplete]="isGeneralEditor ? NaN : null" class="form-horizontal" name="ChucDanhInfoForm" #f="ngForm" novalidate (ngSubmit)="f.form.valid ? save() :
+          (!tenChucDanh.valid);
+">
+                        <div class="form-group has-feedback form-md-line-input">
+                            <label class="control-label col-md-2" for="tenChucDanh-{{uniqueId}}">Tên chức danh</label>
+                            <div class="col-md-10" [ngClass]="{'has-success': f.submitted && tenChucDanh.valid, 'has-error' : f.submitted && (!tenChucDanh.valid || isExitsItems)}">
+                                <input type="text" class="form-control" name="tenChucDanh" [(ngModel)]="ChucDanhEdit.tenChucDanh" #tenChucDanh="ngModel" required placeholder="Nhập Tên chức danh" />
+                                <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': tenChucDanh.valid, 'glyphicon-remove' : (!tenChucDanh.valid || isExitsItems) }"></span>
+                                <span *ngIf="showValidationErrors && f.submitted && !tenChucDanh.valid" class="errorMessage">
+                                    Tên chức danh không được để trống
+                                </span>
+                                <span *ngIf="showValidationErrors && f.submitted && isExitsItems" class="errorMessage">
+                                    Tên chức danh đã tồn tại.
+                                </span>
+                            </div>
+                        </div><div class="clearfix"></div>
+                        <div class="form-group has-feedback form-md-line-input">
+                            <label class="control-label col-md-2" for="viTri-{{uniqueId}}">Thứ tự hiển thị</label>
+                            <div class="col-md-5">
+                                <kendo-numerictextbox [min]="0" [max]="999999999" [autoCorrect]="autoCorrect" class="form-control" [format]="'0'" name="viTri" [(ngModel)]="ChucDanhEdit.viTri" #viTri="ngModel">
+                                </kendo-numerictextbox>
+                            </div>
+                            <label class="control-label col-md-2" for="trangThai-{{uniqueId}}">Trạng thái</label>
+                            <div class="col-md-3">
+                                <span class="statusEdit" [class.statusEdit_check]="isStatusEditChange" (click)="changeStatusEdit()"></span>
+                            </div>
+                        </div><div class="clearfix"></div>
+                        <div class="form-group has-feedback form-md-line-input">
+                            <label class="control-label col-md-2" for="dienGiai-{{uniqueId}}">Diễn giải</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" name="dienGiai" [(ngModel)]="ChucDanhEdit.dienGiai" #dienGiai="ngModel" placeholder="Nhập Diễn giải" />
+                            </div>
+                        </div><div class="clearfix"></div>
+                        <div class="actionBtn-form-group">
+                            <div class="">
+                                <div class="pull-right btnF">
+                                    <button *ngIf="!isEditMode && isGeneralEditor" type="button" (click)="close()" class="btn btn-default"><i class='fa fa-close'></i> Đóng</button>
+                                    <button *ngIf="!isEditMode && !isGeneralEditor" type="button" (click)="edit()" class="btn btn-default"><i class='fa fa-edit'></i> Lưu lại</button>
+                                    <button *ngIf="isEditMode" type="button" (click)="cancel()" class="btn btn-default" [disabled]="isSaving"><i class='fa fa-arrow-circle-o-left'></i> Hủy bỏ</button>
+                                    <button *ngIf="isEditMode" type="submit" class="btn btn-primary green" [disabled]="isSaving">
+                                        <i *ngIf="!isSaving" class='fa fa-floppy-o'></i><i *ngIf="isSaving" class='fa fa-circle-o-notch fa-spin'></i> Lưu lại
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
