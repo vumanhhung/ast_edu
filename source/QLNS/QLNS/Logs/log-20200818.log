@@ -1,0 +1,147 @@
+2020-08-18T08:10:42.0342964+07:00 0HM22I9N08AUV:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/DonVis/getDonViByRole/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-08-18T08:10:42.0383624+07:00 0HM22I9N08AUV:00000001 [INF] "Bearer" was not authenticated. Failure message: "Authentication failed because the access token was expired." (48071232)
+2020-08-18T08:10:42.0896888+07:00 0HM22I9N08AUV:00000001 [INF] Executing action method "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2020-08-18T08:10:42.0920069+07:00 0HM22I9N08AUV:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-08-18T08:10:42.1944236+07:00 0HM22I9N08AUV:00000001 [INF] Executed DbCommand ("69"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?'"], CommandType='Text', CommandTimeout='30']"
+""GetDonViByRole @p0,@p1" (0723d8ff)
+2020-08-18T08:10:42.2021446+07:00 0HM22I9N08AUV:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-08-18T08:10:42.2049663+07:00 0HM22I9N08AUV:00000001 [INF] Executed action "QLNS.Controllers.DonVisController.GetDonViByRole (QLNS)" in 149.2483ms (afa2e885)
+2020-08-18T08:10:42.2051562+07:00 0HM22I9N08AUV:00000001 [INF] Request finished in 170.9758ms 200 application/json; charset=utf-8 (791a596a)
+2020-08-18T08:10:42.2144103+07:00 0HM22I9N08AUV:00000002 [INF] Request starting HTTP/1.1 PUT http://localhost:55842/api/DonVis/getItems/0/0/x application/json 324 (ca22a1cb)
+2020-08-18T08:10:42.2151679+07:00 0HM22I9N08AUV:00000002 [INF] Policy execution successful. (0204925d)
+2020-08-18T08:10:42.2161138+07:00 0HM22I9N08AUV:00000002 [INF] "Bearer" was not authenticated. Failure message: "Authentication failed because the access token was expired." (48071232)
+2020-08-18T08:10:42.2297479+07:00 0HM22I9N08AUV:00000002 [INF] Executing action method "QLNS.Controllers.DonVisController.GetItems (QLNS)" with arguments (["0", "0", "x", "DonViId IN (select tbl_RoleDonVi.DonViId from AspNetUsers inner join AspNetUserRoles on AspNetUsers.Id = AspNetUserRoles.UserId inner join AspNetRoles on AspNetUserRoles.RoleId = AspNetRoles.Id inner join tbl_RoleDonVi on AspNetRoles.Id = tbl_RoleDonVi.RoleId where AspNetUsers.Id = '0280636e-99e3-4b3d-bec0-5e9aa67ad2b5')"]) - ModelState is Valid (ba7f4ac2)
+2020-08-18T08:10:42.2304982+07:00 0HM22I9N08AUV:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-08-18T08:10:42.2561146+07:00 0HM22I9N08AUV:00000002 [INF] Executed DbCommand ("18"ms) [Parameters=["@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""tbl_DonVi_GetItemsByRange @p0,@p1,@p2,@p3" (0723d8ff)
+2020-08-18T08:10:42.2643826+07:00 0HM22I9N08AUV:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-08-18T08:10:42.2713898+07:00 0HM22I9N08AUV:00000002 [INF] Executed action "QLNS.Controllers.DonVisController.GetItems (QLNS)" in 51.8335ms (afa2e885)
+2020-08-18T08:10:42.2730455+07:00 0HM22I9N08AUV:00000002 [INF] Request finished in 58.6626ms 200 application/json; charset=utf-8 (791a596a)
+2020-08-18T08:10:42.4167552+07:00  [INF] webpack building... (478286db)
+2020-08-18T08:10:42.9206384+07:00 0HM22I9N08AUV:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/account/users/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-08-18T08:10:42.9215020+07:00 0HM22I9N08AUV:00000003 [INF] "Bearer" was not authenticated. Failure message: "Authentication failed because the access token was expired." (48071232)
+2020-08-18T08:10:42.9418896+07:00 0HM22I9N08AUV:00000003 [INF] Authorization failed for user: null. (a4ab1676)
+2020-08-18T08:10:42.9446208+07:00 0HM22I9N08AUV:00000003 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2020-08-18T08:10:42.9469604+07:00 0HM22I9N08AUV:00000003 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2020-08-18T08:10:42.9941865+07:00 0HM22I9N08AUV:00000003 [INF] AuthenticationScheme: "Bearer" was challenged. (d45f1f38)
+2020-08-18T08:10:42.9943001+07:00 0HM22I9N08AUV:00000003 [INF] Executed action "QLNS.Controllers.AccountController.GetUserById (QLNS)" in 65.2404ms (afa2e885)
+2020-08-18T08:10:42.9950840+07:00 0HM22I9N08AUV:00000003 [INF] Request finished in 74.5648ms 401  (791a596a)
+2020-08-18T08:10:43.2809034+07:00 0HM22I9N08AUV:00000004 [INF] Request starting HTTP/1.1 POST http://localhost:55842/connect/token application/x-www-form-urlencoded 4738 (ca22a1cb)
+2020-08-18T08:10:43.2811378+07:00 0HM22I9N08AUV:00000004 [INF] Policy execution successful. (0204925d)
+2020-08-18T08:10:43.4564304+07:00 0HM22I9N08AUV:00000004 [INF] The token request was successfully extracted from the HTTP request: "{
+  \"refresh_token\": \"[removed for security reasons]\",
+  \"grant_type\": \"refresh_token\",
+  \"scope\": \"openid email phone profile offline_access roles\"
+}". (ebc01284)
+2020-08-18T08:10:43.4838987+07:00 0HM22I9N08AUV:00000004 [INF] The token request was successfully validated. (d7e51e65)
+2020-08-18T08:10:43.5220694+07:00 0HM22I9N08AUV:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-08-18T08:10:43.8254827+07:00 0HM22I9N08AUV:00000004 [INF] Executed DbCommand ("89"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [token].[Id], [token].[ApplicationId], [token].[AuthorizationId], [token].[ConcurrencyToken], [token].[CreationDate], [token].[ExpirationDate], [token].[Payload], [token].[ReferenceId], [token].[Status], [token].[Subject], [token].[Type], [token.Authorization].[Id], [token.Authorization].[ApplicationId], [token.Authorization].[ConcurrencyToken], [token.Authorization].[Scopes], [token.Authorization].[Status], [token.Authorization].[Subject], [token.Authorization].[Type], [token.Application].[Id], [token.Application].[ClientId], [token.Application].[ClientSecret], [token.Application].[ConcurrencyToken], [token.Application].[DisplayName], [token.Application].[PostLogoutRedirectUris], [token.Application].[RedirectUris], [token.Application].[Type]
+FROM [OpenIddictTokens] AS [token]
+LEFT JOIN [OpenIddictAuthorizations] AS [token.Authorization] ON [token].[AuthorizationId] = [token.Authorization].[Id]
+LEFT JOIN [OpenIddictApplications] AS [token.Application] ON [token].[ApplicationId] = [token.Application].[Id]
+WHERE [token].[Id] = @__key_0" (0723d8ff)
+2020-08-18T08:10:43.9734690+07:00 0HM22I9N08AUV:00000004 [INF] Executing action method "QLNS.Controllers.AuthorizationController.Exchange (QLNS)" with arguments (["{
+  \"refresh_token\": \"[removed for security reasons]\",
+  \"grant_type\": \"refresh_token\",
+  \"scope\": \"openid email phone profile offline_access roles\"
+}"]) - ModelState is Valid (ba7f4ac2)
+2020-08-18T08:10:43.9866679+07:00 0HM22I9N08AUV:00000004 [INF] AuthenticationScheme: "ASOS" was successfully authenticated. (1805f3b3)
+2020-08-18T08:10:44.0179711+07:00 0HM22I9N08AUV:00000004 [INF] Executed DbCommand ("11"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Configuration], [e].[CreatedBy], [e].[CreatedDate], [e].[DonViId], [e].[Email], [e].[EmailConfirmed], [e].[FullName], [e].[IsEnabled], [e].[JobTitle], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UpdatedBy], [e].[UpdatedDate], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2020-08-18T08:10:44.1232621+07:00 0HM22I9N08AUV:00000004 [INF] Executed DbCommand ("50"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2020-08-18T08:10:44.1652397+07:00 0HM22I9N08AUV:00000004 [INF] Executed DbCommand ("13"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2020-08-18T08:10:44.2262450+07:00 0HM22I9N08AUV:00000004 [INF] Executed DbCommand ("20"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[CreatedBy], [r].[CreatedDate], [r].[Description], [r].[Name], [r].[NormalizedName], [r].[UpdatedBy], [r].[UpdatedDate]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-08-18T08:10:44.2685297+07:00 0HM22I9N08AUV:00000004 [INF] Executed DbCommand ("3"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-08-18T08:10:44.2795363+07:00 0HM22I9N08AUV:00000004 [INF] Executing SignInResult with authentication scheme ("ASOS") and the following principal: "System.Security.Claims.ClaimsPrincipal". (f8bf0a82)
+2020-08-18T08:10:44.4292067+07:00 0HM22I9N08AUV:00000004 [INF] Executed DbCommand ("26"ms) [Parameters=["@p10='?' (Size = 450), @p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 4000), @p11='?' (Size = 4000), @p3='?', @p4='?', @p5='?' (Size = 4000), @p6='?' (Size = 450), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [OpenIddictTokens] SET [ApplicationId] = @p0, [AuthorizationId] = @p1, [ConcurrencyToken] = @p2, [CreationDate] = @p3, [ExpirationDate] = @p4, [Payload] = @p5, [ReferenceId] = @p6, [Status] = @p7, [Subject] = @p8, [Type] = @p9
+WHERE [Id] = @p10 AND [ConcurrencyToken] = @p11;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2020-08-18T08:10:44.4396615+07:00 0HM22I9N08AUV:00000004 [INF] The expiration date of the refresh token '"4d4623d5-6aac-43a6-82b8-76195c753f10"' was automatically updated: 09/01/2020 01:10:44 +00:00. (3e1903c1)
+2020-08-18T08:10:44.5150832+07:00 0HM22I9N08AUV:00000004 [INF] The token response was successfully returned: "{
+  \"resource\": \"http://localhost:55842\",
+  \"token_type\": \"Bearer\",
+  \"access_token\": \"[removed for security reasons]\",
+  \"expires_in\": 3600,
+  \"id_token\": \"[removed for security reasons]\"
+}". (12d98310)
+2020-08-18T08:10:44.5377931+07:00 0HM22I9N08AUV:00000004 [INF] Executed action "QLNS.Controllers.AuthorizationController.Exchange (QLNS)" in 572.8031ms (afa2e885)
+2020-08-18T08:10:44.5380315+07:00 0HM22I9N08AUV:00000004 [INF] Request finished in 1257.253ms 200 application/json;charset=UTF-8 (791a596a)
+2020-08-18T08:10:44.5595514+07:00 0HM22I9N08AUV:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/account/users/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-08-18T08:10:44.5619652+07:00 0HM22I9N08AUV:00000005 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-08-18T08:10:44.5631810+07:00 0HM22I9N08AUV:00000005 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-08-18T08:10:44.5638861+07:00 0HM22I9N08AUV:00000005 [INF] Executing action method "QLNS.Controllers.AccountController.GetUserById (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2020-08-18T08:10:44.5680010+07:00 0HM22I9N08AUV:00000005 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-08-18T08:10:44.5734622+07:00 0HM22I9N08AUV:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-08-18T08:10:44.6181659+07:00 0HM22I9N08AUV:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Configuration], [u].[CreatedBy], [u].[CreatedDate], [u].[DonViId], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[IsEnabled], [u].[JobTitle], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedBy], [u].[UpdatedDate], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[Id] = @__userId_0
+ORDER BY [u].[Id]" (0723d8ff)
+2020-08-18T08:10:44.6287689+07:00 0HM22I9N08AUV:00000005 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u.Roles].[UserId], [u.Roles].[RoleId]
+FROM [AspNetUserRoles] AS [u.Roles]
+INNER JOIN (
+    SELECT TOP(1) [u0].[Id]
+    FROM [AspNetUsers] AS [u0]
+    WHERE [u0].[Id] = @__userId_0
+    ORDER BY [u0].[Id]
+) AS [t] ON [u.Roles].[UserId] = [t].[Id]
+ORDER BY [t].[Id]" (0723d8ff)
+2020-08-18T08:10:44.6529700+07:00 0HM22I9N08AUV:00000005 [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Name]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[Id] IN (N'ad4de3cb-1654-460b-9c4c-e29fab9860d7')" (0723d8ff)
+2020-08-18T08:10:44.6751232+07:00 0HM22I9N08AUV:00000005 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-08-18T08:10:44.6816839+07:00 0HM22I9N08AUV:00000005 [INF] Executed action "QLNS.Controllers.AccountController.GetUserById (QLNS)" in 119.1237ms (afa2e885)
+2020-08-18T08:10:44.6819097+07:00 0HM22I9N08AUV:00000005 [INF] Request finished in 122.3949ms 200 application/json; charset=utf-8 (791a596a)
+2020-08-18T08:10:47.5783142+07:00  [INF] webpack built ff3ca572f0775152d623 in 4956ms (de05d197)
+2020-08-18T08:10:48.0816904+07:00  [INF] webpack building... (478286db)
+2020-08-18T08:10:55.3941187+07:00  [INF] webpack built ff3ca572f0775152d623 in 7133ms (bcea9010)
+2020-08-18T08:13:40.6467605+07:00  [INF] webpack building... (478286db)
+2020-08-18T08:13:43.7827560+07:00  [INF] webpack built ff3ca572f0775152d623 in 2524ms (ae0492e1)
+2020-08-18T08:26:04.7449741+07:00 0HM22I9N08AV0:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55842/api/account/users/0280636e-99e3-4b3d-bec0-5e9aa67ad2b5 application/json  (ca22a1cb)
+2020-08-18T08:26:04.7456311+07:00 0HM22I9N08AV0:00000001 [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2020-08-18T08:26:04.7459524+07:00 0HM22I9N08AV0:00000001 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-08-18T08:26:04.7464096+07:00 0HM22I9N08AV0:00000001 [INF] Executing action method "QLNS.Controllers.AccountController.GetUserById (QLNS)" with arguments (["0280636e-99e3-4b3d-bec0-5e9aa67ad2b5"]) - ModelState is Valid (ba7f4ac2)
+2020-08-18T08:26:04.7466325+07:00 0HM22I9N08AV0:00000001 [INF] Authorization was successful for user: "trungvu18". (d7eb274a)
+2020-08-18T08:26:04.7470723+07:00 0HM22I9N08AV0:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=UrencoDB " (9958f5bb)
+2020-08-18T08:26:04.7596677+07:00 0HM22I9N08AV0:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Configuration], [u].[CreatedBy], [u].[CreatedDate], [u].[DonViId], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[IsEnabled], [u].[JobTitle], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UpdatedBy], [u].[UpdatedDate], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[Id] = @__userId_0
+ORDER BY [u].[Id]" (0723d8ff)
+2020-08-18T08:26:04.7620247+07:00 0HM22I9N08AV0:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u.Roles].[UserId], [u.Roles].[RoleId]
+FROM [AspNetUserRoles] AS [u.Roles]
+INNER JOIN (
+    SELECT TOP(1) [u0].[Id]
+    FROM [AspNetUsers] AS [u0]
+    WHERE [u0].[Id] = @__userId_0
+    ORDER BY [u0].[Id]
+) AS [t] ON [u.Roles].[UserId] = [t].[Id]
+ORDER BY [t].[Id]" (0723d8ff)
+2020-08-18T08:26:04.7643827+07:00 0HM22I9N08AV0:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Name]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[Id] IN (N'ad4de3cb-1654-460b-9c4c-e29fab9860d7')" (0723d8ff)
+2020-08-18T08:26:04.7654457+07:00 0HM22I9N08AV0:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2020-08-18T08:26:04.7656551+07:00 0HM22I9N08AV0:00000001 [INF] Executed action "QLNS.Controllers.AccountController.GetUserById (QLNS)" in 19.7487ms (afa2e885)
+2020-08-18T08:26:04.7658137+07:00 0HM22I9N08AV0:00000001 [INF] Request finished in 20.9435ms 200 application/json; charset=utf-8 (791a596a)

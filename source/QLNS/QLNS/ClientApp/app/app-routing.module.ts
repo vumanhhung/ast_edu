@@ -22,6 +22,8 @@ import { HoSoCaNhanComponent } from './components/hethong/hosocanhan.component';
 import { QuanHuyenComponent } from './components/danhmuc/quanhuyen/quanhuyen.component';
 
 import { BaoCaoMenuComponent } from './components/baocao/baocao-menu.component';
+import { ChucDanhComponent } from './components/danhmuc/chucdanh/chucdanh.component';
+import { ChamCongComponent } from './components/chamcong/chamcong.component';
 
 @NgModule({
     imports: [
@@ -39,10 +41,12 @@ import { BaoCaoMenuComponent } from './components/baocao/baocao-menu.component';
             { path: "roles", component: RolesManagementComponent, canActivate: [AuthGuard], data: { title: "Quản lý nhóm người dùng" } },
             { path: "userinfo", component: HoSoCaNhanComponent, canActivate: [AuthGuard], data: { title: "Hồ sơ cá nhân" } },
             { path: "log", component: LogComponent, data: { title: "Báo cáo thao tác" } },
+            { path: "chamcong", component: ChamCongComponent, data: { title: "Quản lý chấm công" } },
 
             //begin hungvm
             { path: "tinhthanh", component: TinhThanhComponent, canActivate: [AuthGuard], data: { title: "Danh mục Tỉnh thành" } },
             { path: "quanhuyen", component: QuanHuyenComponent, canActivate: [AuthGuard], data: { title: "Danh mục quận huyện" } },
+            { path: "chucdanh", component: ChucDanhComponent, canActivate: [AuthGuard], data: { title: "Danh mục chức danh" } },
             //End hungvm
 
 

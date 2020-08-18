@@ -34,6 +34,7 @@ namespace DAL
         public DbSet<BacLuong> BacLuongs { get; set; }
         public DbSet<GioiTinh> GioiTinhs { get; set; }
         public DbSet<ChucDanh> ChucDanhs { get; set; }
+        public DbSet<ChamCong> ChamCongs { get; set; }
         //End hungvm
 
         public ApplicationDbContext(DbContextOptions options) : base(options)
@@ -82,6 +83,7 @@ namespace DAL
             builder.Entity<GioiTinh>().ToTable($"tbl_GioiTinh");
             builder.Entity<BacLuong>().ToTable($"tbl_BacLuong");
             builder.Entity<DoiTac>().ToTable($"tbl_DoiTac");
+            builder.Entity<ChamCong>().ToTable($"tbl_ChamCong");
             //End hungvm         
         }
 

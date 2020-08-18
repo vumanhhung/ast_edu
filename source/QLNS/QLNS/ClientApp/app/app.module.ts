@@ -25,9 +25,6 @@ import { TabStripModule } from '@progress/kendo-angular-layout';
 import { PDFExportModule } from '@progress/kendo-angular-pdf-export';
 import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
 import { UploadModule } from '@progress/kendo-angular-upload';
-import { NgxBarcodeModule } from 'ngx-barcode';
-import { QRCodeModule } from 'angularx-qrcode';
-import { StarRatingModule } from 'angular-star-rating';
 import 'bootstrap';
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
@@ -124,6 +121,10 @@ import { QuanHuyenService } from "./services/quanhuyen.service";
 
 //Start tuyenlm
 import { BaoCaoMenuComponent } from "./components/baocao/baocao-menu.component";
+import { ChamCongComponent } from "./components/chamcong/chamcong.component";
+import { ChamCongInfoComponent } from "./components/chamcong/chamcong-info.component";
+import { ChamCongEndpoint } from "./services/chamcong-endpoint.service";
+import { ChamCongService } from "./services/chamcong.service";
 //End tuyenlm
 
 @NgModule({
@@ -166,10 +167,7 @@ import { BaoCaoMenuComponent } from "./components/baocao/baocao-menu.component";
         PDFExportModule,
         TreeViewModule,
         UploadModule,
-        PopupModule,
-        NgxBarcodeModule,
-        QRCodeModule,
-        StarRatingModule.forRoot()
+        PopupModule
     ],
     declarations: [
         AppComponent,
@@ -213,6 +211,8 @@ import { BaoCaoMenuComponent } from "./components/baocao/baocao-menu.component";
         ChucDanhComponent,
         ChucDanhInfoComponent,
         BaoCaoMenuComponent,
+        ChamCongComponent,
+        ChamCongInfoComponent
     ],
     providers: [
         { provide: LOCALE_ID, useValue: 'vi-VN' },
@@ -242,6 +242,8 @@ import { BaoCaoMenuComponent } from "./components/baocao/baocao-menu.component";
         ChucDanhService,
         QuanHuyenEndpoint,
         QuanHuyenService,
+        ChamCongEndpoint,
+        ChamCongService
     ],
     bootstrap: [AppComponent]
 })

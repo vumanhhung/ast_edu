@@ -35,6 +35,9 @@
                                 <i class="glyphicon glyphicon-home" style="margin-left:10px;"></i>
                             </a>
                         </li>
+                        <li *ngIf="chamcongP" [class.active]="activeRouterLink == 1">
+                            <a href="javascript://" (click)="setRouterLinkActive(1)" routerLink="/chamcong"><i class="glyphicon glyphicon-check"></i>Chấm công</a>
+                        </li>
                         <li *ngIf="baocaoP" [class.active]="activeRouterLink == 8">
                             <a href="javascript://" (click)="setRouterLinkActive(8)" routerLink="/baocao"><i class="glyphicon glyphicon-stats"></i>Báo cáo</a>
                         </li>

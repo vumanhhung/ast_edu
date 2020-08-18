@@ -1,7 +1,6 @@
 ﻿@import './assets/styles/ngx-datatable.css';
 @import './assets/styles/alertify.core.css';
 @import './assets/styles/alertify.bootstrap.css';
-@import "~css-star-rating/dist/css/star-rating.css";
 
 @font-face {
     font-family: 'UTMAvoBold';
@@ -2130,7 +2129,7 @@ span.k-state-selected p.item-treeview {
 }
 
 .k-grid thead {
-    background: #0058b2;
+    background: #2296d3;
     color: #fcfcfc !important;
 }
 
@@ -2203,11 +2202,11 @@ span.k-state-selected p.item-treeview {
 
 .k-pager-numbers .k-state-selected {
     color: #fff !important;
-    background-color: #0644a7 !important;
+    background-color: #2296d3 !important;
 }
 
 .k-pager-numbers .k-link, .k-pager-numbers .k-link:link {
-    color: #0644a7 !important;
+    color: #2296d3 !important;
     height: 15px !important;
 }
 

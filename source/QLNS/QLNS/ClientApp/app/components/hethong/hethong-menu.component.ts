@@ -36,10 +36,12 @@ export class HeThongMenuComponent {
     icon15 = require("../../assets/icon/sms.png");       
 
     get canViewDonVi() {
+        console.log(this.accountService.userHasPermission(Permission.xemdvPermission));
         return this.accountService.userHasPermission(Permission.xemdvPermission);
     }
 
     get canViewNguoiDung() {
+        console.log(this.accountService.userHasPermission(Permission.viewUsersPermission));
         return this.accountService.userHasPermission(Permission.viewUsersPermission);
     }
 

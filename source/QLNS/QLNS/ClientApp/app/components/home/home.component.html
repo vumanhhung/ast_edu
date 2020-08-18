@@ -1,4 +1,15 @@
 ﻿<div class="homepage">
     <div class="container">
+        <div class="col-lg-2 col-xs-6 itemCate">
+            <a class="small-box btn btn-circle loading-resources tooltips" data-remote="true" style="border: none !important;" href="javascript:;" (click)="checkout()">
+                <div class="inner">
+                    <h3>
+                        Chấm công
+                    </h3>
+                </div>
+                <div class="icon"> <img src="../../assets/icon/check-icon.png" alt="checkout" width="100"> </div>
+            </a>
+        </div>
     </div>
 </div>
+<chamcong-info #chamcongEditor [isGeneralEditor]="true"></chamcong-info>

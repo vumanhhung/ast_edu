@@ -6,7 +6,7 @@
 // ==> Gun4Hire: contact@ebenmonney.com
 // ======================================
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { fadeInOut } from '../../services/animations';
 import { ConfigurationService } from '../../services/configuration.service';
 import 'hammerjs';
@@ -17,6 +17,7 @@ import { AlertService, MessageSeverity } from '../../services/alert.service';
 import { DonVi } from '../../models/donvi.model';
 import { AccountService } from '../../services/account.service';
 import { Utilities } from '../../services/utilities';
+import { ChamCongInfoComponent } from '../chamcong/chamcong-info.component';
 
 
 @Component({
@@ -41,6 +42,9 @@ export class HomeComponent implements OnInit {
     public listthoiky: any;
     public listbaomat: any;
     public listdonvi: any;
+
+    @ViewChild('chamcongEditor')
+    ChamCongEditor: ChamCongInfoComponent;
 
     constructor(public configurations: ConfigurationService, private authService: AuthService, private alertService: AlertService, private donviService: DonViService
         , private accountService: AccountService) {
@@ -90,14 +94,10 @@ export class HomeComponent implements OnInit {
             MessageSeverity.error, error);
     }
 
-    //get isCucDiSan() {
-    //    this.accountService.getUser(this.accountService.currentUser.id).subscribe(r => {            
-    //        this.donviService.getDonViByID(r.donViId).subscribe(r => {
-    //            console.log(r);
-    //            if (r.maDonViCha == 0) { return true; }
-    //        }, e => { return false; });
-    //    }, e => { return false; });        
-    //    return false;
-    //}
+    checkout() {
+        this.ChamCongEditor.loadData();
+        this.ChamCongEditor.newChamCong();
+        this.ChamCongEditor.editorModal.show();
+    }
 }
 

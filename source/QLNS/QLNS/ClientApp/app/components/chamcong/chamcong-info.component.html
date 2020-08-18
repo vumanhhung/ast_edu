@@ -1,0 +1,68 @@
+﻿<div class="modal fade" bsModal #editorModal="bs-modal" (onHidden)="onEditorModalHidden()" [config]="{backdrop: 'static'}" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title pull-left caption-subject bold uppercase font-green">
+                    <i class="fa fa-check-square"></i> Chấm công
+                </h4>
+                <button type="button" class="close pull-right btn-close-modal" title="Close" (click)="editorModal.hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="Editform">
+                    <form *ngIf="formResetToggle" [attr.autocomplete]="isGeneralEditor ? NaN : null" class="form-horizontal" name="ChamCongInfoForm" #f="ngForm" novalidate (ngSubmit)="save()">
+                        <div class="form-group has-feedback form-md-line-input">
+                            <label class="control-label col-md-3" style="width: 18%; padding-right: 0 !important;">Thời gian chấm công</label>
+                            <label class="control-label col-md-2" style="padding-left: 5px !important;">{{date}}</label>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group has-feedback form-md-line-input">
+                            <label class="control-label col-md-2" for="duongDan-{{uniqueId}}">Đường dẫn</label>
+                            <div class="col-md-10">
+                                <kendo-upload *ngIf="listFile.length == 0" name="kendo-upload-flie" [autoUpload]="false"
+                                              [multiple]="multiUpload"
+                                              [saveUrl]='"api/FileUploads/UploadFile"'
+                                              [removeUrl]='"api/FileUploads/Remove"'
+                                              [restrictions]="uploadRestrictions"
+                                              (remove)="removeEventHandler($event)"
+                                              (upload)="uploadEventHandler($event,'/thuvien/')"
+                                              (select)="selectEventHandler($event)"
+                                              (complete)="completeEventHandler($event)"
+                                              [batch]="true"
+                                              [disabled]="false">
+                                    <kendo-upload-messages select="Chọn file..."></kendo-upload-messages>
+                                </kendo-upload>
+                                <i class="fa fa-info-circle" *ngIf="listFile.length == 0"></i><span *ngIf="listFile.length == 0"> Vui lòng lựa chọn các file dưới 4MB với định dạng sau: .png, .jpg</span>
+                                <div class="clearfix"></div>
+                                <div *ngFor="let file of listFile" class="">
+                                    <a href="javascript://" id="imgData" class="fileName">{{file}}</a>
+                                    <span (click)="clearFile(file,ChamCongEdit.duongDan)" tooltip="Xóa" class="glyphicon glyphicon-remove glyphicon-remove-image deleteFile"></span>
+                                </div>
+                            </div>
+                        </div><div class="clearfix"></div>
+                        <div class="form-group has-feedback form-md-line-input">
+                            <label class="control-label col-md-2" for="noiDung-{{uniqueId}}">Nội dung</label>
+                            <div class="col-md-10">
+                                <input autofocus type="text" class="form-control" name="noiDung" [(ngModel)]="ChamCongEdit.noiDung" #noiDung="ngModel" placeholder="Nhập nội dung" />
+                            </div>
+                        </div><div class="clearfix"></div>
+                        <div class="actionBtn-form-group">
+                            <div class="">
+                                <div class="pull-right btnF">
+                                    <button *ngIf="!isEditMode && isGeneralEditor" type="button" (click)="close()" class="btn btn-default" style="padding: 3px 8px;"><i class='fa fa-close'></i> Đóng</button>
+                                    <button *ngIf="!isEditMode && !isGeneralEditor" type="button" (click)="edit()" class="btn btn-default" style="padding: 3px 8px;"><i class='fa fa-edit'></i> Lưu lại</button>
+                                    <button *ngIf="isEditMode" type="button" (click)="cancel()" class="btn btn-default" [disabled]="isSaving" style="padding: 3px 8px;"><i class='fa fa-arrow-circle-o-left'></i> Hủy bỏ</button>
+                                    <button *ngIf="isEditMode" type="submit" class="btn btn-primary green" [disabled]="isSaving">
+                                        <i *ngIf="!isSaving" class='fa fa-floppy-o'></i><i *ngIf="isSaving" class='fa fa-circle-o-notch fa-spin'></i> Lưu lại
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

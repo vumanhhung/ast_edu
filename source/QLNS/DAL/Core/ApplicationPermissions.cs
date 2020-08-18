@@ -19,49 +19,11 @@ namespace DAL.Core
     {
         public static ReadOnlyCollection<ApplicationPermission> AllPermissions;
 
-        public const string HienVat = "Hồ sơ hiện vật";
-        public static ApplicationPermission XemHienVat = new ApplicationPermission("Xem hồ sơ", "hienvat.view", HienVat, "Quyền xem danh sách hồ sơ hiện vật");
-        public static ApplicationPermission ThemHienVat = new ApplicationPermission("Tạo hồ sơ", "hienvat.new", HienVat, "Quyền tạo hồ sơ hiện vật");
-        public static ApplicationPermission SuaHienVat = new ApplicationPermission("Sửa hồ sơ", "hienvat.edit", HienVat, "Quyền sửa hồ sơ hiện vật");
-        public static ApplicationPermission XoaHienVat = new ApplicationPermission("Xóa hồ sơ", "hienvat.delete", HienVat, "Quyền xóa hồ sơ hiện vật");
-
-        public const string BaoQuanHienVat = "Bảo quản hiện vật";
-        public static ApplicationPermission XemBaoQuanHienVat = new ApplicationPermission("Xem tình trạng bảo quản", "baoquanhienvat.view", BaoQuanHienVat, "Quyền xem danh sách tình trạng bảo quản");
-        public static ApplicationPermission ThemBaoQuanHienVat = new ApplicationPermission("Thêm tình trạng bảo quản ", "baoquanhienvat.new", BaoQuanHienVat, "Quyền thêm mới tình trạng bảo quản");
-        public static ApplicationPermission SuaBaoQuanHienVat = new ApplicationPermission("Sửa tình trạng bảo quản", "baoquanhienvat.edit", BaoQuanHienVat, "Quyền sửa tình trạng bảo quản");
-        public static ApplicationPermission XoaBaoQuanHienVat = new ApplicationPermission("Xóa tình trạng bảo quản", "baoquanhienvat.delete", BaoQuanHienVat, "Quyền xóa tình trạng bảo quản");
-
-        public const string HinhAnhHienVat = "Hình ảnh hiện vật";
-        public static ApplicationPermission XemHinhAnhHienVat = new ApplicationPermission("Danh sách hình ảnh", "hinhanhhienvat.view", HinhAnhHienVat, "Quyền xem danh sách hình ảnh");
-        public static ApplicationPermission ThemHinhAnhHienVat = new ApplicationPermission("Thêm mới hình ảnh", "hinhanhhienvat.new", HinhAnhHienVat, "Quyền thêm mới hình ảnh");        
-        public static ApplicationPermission XoaHinhAnhHienVat = new ApplicationPermission("Xóa hình ảnh", "hinhanhhienvat.delete", HinhAnhHienVat, "Quyền xóa hình ảnh");
-
-        public const string HienVatDiChuyen = "Hiện vật di chuyển";
-        public static ApplicationPermission XemHienVatDiChuyen = new ApplicationPermission("Danh sách di chuyển", "hienvatdichuyen.view", HienVatDiChuyen, "Quyền xem danh sách nhật ký di chuyển");
-        public static ApplicationPermission ThemHienVatDiChuyen = new ApplicationPermission("Thêm nhật ký di chuyển", "hienvatdichuyen.new", HienVatDiChuyen, "Quyền thêm mới nhật ký di chuyển");
-        public static ApplicationPermission SuaHienVatDiChuyen = new ApplicationPermission("Sửa nhật ký di chuyển", "hienvatdichuyen.edit", HienVatDiChuyen, "Quyền sửa nhật ký di chuyển");
-        public static ApplicationPermission XoaHienVatDiChuyen = new ApplicationPermission("Xóa nhật ký di chuyển", "hienvatdichuyen.delete", HienVatDiChuyen, "Quyền xóa nhật ký di chuyển");
+        public const string ChamCong = "Quản lý chấm công";
+        public static ApplicationPermission XemChamCong = new ApplicationPermission("Xem hồ sơ", "chamcong.view", ChamCong, "Quyền xem danh sách chấm công");
+        public static ApplicationPermission ThemChamCong = new ApplicationPermission("Thêm hồ sơ", "chamcong.new", ChamCong, "Quyền thêm danh sách chấm công");
+        public static ApplicationPermission XoaChamCong = new ApplicationPermission("Xóa hồ sơ", "chamcong.del", ChamCong, "Quyền xóa danh sách chấm công");
         
-        public const string MuonTra = "Mượn trả";
-        public static ApplicationPermission XemMuonTra = new ApplicationPermission("Danh sách mượn trả", "muontra.view", MuonTra, "Quyền xem danh sách nhật ký mượn trả");
-        public static ApplicationPermission ThemMuonTra = new ApplicationPermission("Thêm nhật ký mượn trả", "muontra.new", MuonTra, "Quyền thêm mới nhật ký mượn trả");
-        public static ApplicationPermission SuaMuonTra = new ApplicationPermission("Sửa nhật ký mượn trả", "muontra.edit", MuonTra, "Quyền sửa nhật ký mượn trả");
-        public static ApplicationPermission XoaMuonTra = new ApplicationPermission("Xóa nhật ký mượn trả", "muontra.delete", MuonTra, "Quyền xóa nhật ký mượn trả");
-
-        public const string ChuyenVienNghiepVu = "Chuyên viên (nghiệp vụ)";
-        public static ApplicationPermission DeNghiSoDuyet = new ApplicationPermission("Đề nghị sơ duyệt", "chuyenviennghiepvu.denghisoduyet", ChuyenVienNghiepVu, "Quyền Đề nghị sơ duyệt");
-        public static ApplicationPermission DeNghiDuyetVuotCap = new ApplicationPermission("Đề nghị duyệt vượt cấp", "chuyenviennghiepvu.denghivuotcap", ChuyenVienNghiepVu, "Quyền Đề nghị duyệt vượt cấp");
-        public static ApplicationPermission TiepNhanHoSoDonVi = new ApplicationPermission("Tiếp nhận hồ sơ đơn vị", "chuyenviennghiepvu.tiepnhandonvi", ChuyenVienNghiepVu, "Quyền Tiếp nhận hồ sơ đơn vị");
-
-        public const string PhoPhongPhoCuc = "Phó phòng - phó cục";
-        public static ApplicationPermission SoDuyetHoSo = new ApplicationPermission("Sơ duyệt hồ sơ", "phophongphocuc.soduyet", PhoPhongPhoCuc, "Quyền Sơ duyệt hồ sơ");
-        public static ApplicationPermission TuChoiSoDuyet = new ApplicationPermission("Từ chối sơ duyệt", "phophongphocuc.tuchoisoduyet", PhoPhongPhoCuc, "Quyền từ chối sơ duyệt hồ sơ");
-        public static ApplicationPermission DuyetVuotCap = new ApplicationPermission("Duyệt vượt cấp", "phophongphocuc.duyetvuotcap", PhoPhongPhoCuc, "Quyền duyệt vượt cấp");
-
-        public const string TruongPhongCucTruong = "Trưởng phòng - cục trưởng";
-        public static ApplicationPermission DuyetHoSo = new ApplicationPermission("Duyệt hồ sơ", "truongphongcuctruong.duyet", TruongPhongCucTruong, "Quyền duyệt hồ sơ");
-        public static ApplicationPermission TuChoiDuyet = new ApplicationPermission("Từ chối duyệt", "truongphongcuctruong.tuchoiduyet", TruongPhongCucTruong, "Quyền từ chối duyệt hồ sơ");        
-
         public const string BaoCao = "Khai thác báo cáo";
         public static ApplicationPermission XemBaoCao = new ApplicationPermission("Báo cáo tổng công ty", "bc.tct", BaoCao, "Quyền khai thác báo cáo");                    
 
@@ -87,15 +49,7 @@ namespace DAL.Core
         {
             List<ApplicationPermission> allPermissions = new List<ApplicationPermission>()
             {
-                XemHienVat,ThemHienVat,SuaHienVat,XoaHienVat,
-                XemBaoQuanHienVat,ThemBaoQuanHienVat,SuaBaoQuanHienVat,XoaBaoQuanHienVat,
-                XemHinhAnhHienVat,ThemHinhAnhHienVat,XoaHinhAnhHienVat,
-                XemHienVatDiChuyen,ThemHienVatDiChuyen,SuaHienVatDiChuyen,XoaHienVatDiChuyen,
-                XemMuonTra,ThemMuonTra,SuaMuonTra,XoaMuonTra,
-                DeNghiSoDuyet,DeNghiDuyetVuotCap,TiepNhanHoSoDonVi,
-                SoDuyetHoSo,TuChoiSoDuyet,DuyetVuotCap,
-                DuyetHoSo,TuChoiDuyet,
-                XemBaoCao,
+                XemChamCong, ThemChamCong, XoaChamCong, XemBaoCao,
                 XemDanhMuc,QuanLyDanhMuc,                
                 ViewUsers,ManageUsers,
                 ViewRoles,ManageRoles,AssignRoles,

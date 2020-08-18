@@ -1,25 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AST\\source\\QLNS\\QLNS\\QLNS.csproj": {}
+    "D:\\HUNGVM\\ast_edu\\source\\QLNS\\QLNS\\QLNS.csproj": {}
   },
   "projects": {
-    "D:\\AST\\source\\QLNS\\DAL\\DAL.csproj": {
+    "D:\\HUNGVM\\ast_edu\\source\\QLNS\\DAL\\DAL.csproj": {
       "version": "2.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AST\\source\\QLNS\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\HUNGVM\\ast_edu\\source\\QLNS\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\AST\\source\\QLNS\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\Monki\\.nuget\\packages\\",
-        "outputPath": "D:\\AST\\source\\QLNS\\DAL\\obj\\",
+        "projectPath": "D:\\HUNGVM\\ast_edu\\source\\QLNS\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\HungVM\\.nuget\\packages\\",
+        "outputPath": "D:\\HUNGVM\\ast_edu\\source\\QLNS\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Monki\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\HungVM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -79,26 +78,25 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\AST\\source\\QLNS\\QLNS\\QLNS.csproj": {
+    "D:\\HUNGVM\\ast_edu\\source\\QLNS\\QLNS\\QLNS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AST\\source\\QLNS\\QLNS\\QLNS.csproj",
+        "projectUniqueName": "D:\\HUNGVM\\ast_edu\\source\\QLNS\\QLNS\\QLNS.csproj",
         "projectName": "QLNS",
-        "projectPath": "D:\\AST\\source\\QLNS\\QLNS\\QLNS.csproj",
-        "packagesPath": "C:\\Users\\Monki\\.nuget\\packages\\",
-        "outputPath": "D:\\AST\\source\\QLNS\\QLNS\\obj\\",
+        "projectPath": "D:\\HUNGVM\\ast_edu\\source\\QLNS\\QLNS\\QLNS.csproj",
+        "packagesPath": "C:\\Users\\HungVM\\.nuget\\packages\\",
+        "outputPath": "D:\\HUNGVM\\ast_edu\\source\\QLNS\\QLNS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Monki\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\HungVM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.0"
@@ -110,8 +108,8 @@
         "frameworks": {
           "netcoreapp2.0": {
             "projectReferences": {
-              "D:\\AST\\source\\QLNS\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\AST\\source\\QLNS\\DAL\\DAL.csproj"
+              "D:\\HUNGVM\\ast_edu\\source\\QLNS\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\HUNGVM\\ast_edu\\source\\QLNS\\DAL\\DAL.csproj"
               }
             }
           }
@@ -186,7 +184,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

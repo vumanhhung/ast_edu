@@ -399,66 +399,8 @@ export class AppComponent implements OnInit, AfterViewInit {
 
 
 
-
-
-    get chuyenvienP() {
-        if (this.authService.currentUser != null) {
-            for (var i = 0; i < this.authService.currentUser.roles.length; i++) {
-                if (this.authService.currentUser.roles[i].toString() == "ChuyenVien")
-                    return true;
-            }
-        }
-        return false;
-    }
-
-    get phophongP() {
-        if (this.authService.currentUser != null) {
-            for (var i = 0; i < this.authService.currentUser.roles.length; i++) {
-                if (this.authService.currentUser.roles[i].toString() == "PhoPhong")
-                    return true;
-            }
-        }
-        return false;
-    }
-
-    get truongphongP() {
-        if (this.authService.currentUser != null) {
-            for (var i = 0; i < this.authService.currentUser.roles.length; i++) {
-                if (this.authService.currentUser.roles[i].toString() == "TruongPhong")
-                    return true;
-            }
-        }
-        return false;
-    }
-
-    get chuyenviencuc() {
-        if (this.authService.currentUser != null) {
-            for (var i = 0; i < this.authService.currentUser.roles.length; i++) {
-                if (this.authService.currentUser.roles[i].toString() == "ChuyenVienCuc")
-                    return true;
-            }
-        }
-        return false;
-    }
-
-    get cucpho() {
-        if (this.authService.currentUser != null) {
-            for (var i = 0; i < this.authService.currentUser.roles.length; i++) {
-                if (this.authService.currentUser.roles[i].toString() == "CucPho")
-                    return true;
-            }
-        }
-        return false;
-    }
-
-    get cuctruong() {
-        if (this.authService.currentUser != null) {
-            for (var i = 0; i < this.authService.currentUser.roles.length; i++) {
-                if (this.authService.currentUser.roles[i].toString() == "CucTruong")
-                    return true;
-            }
-        }
-        return false;
+    get chamcongP() {
+        return this.accountService.userHasPermission(Permission.xemChamCongPermission);
     }
 
     get baocaoP() {

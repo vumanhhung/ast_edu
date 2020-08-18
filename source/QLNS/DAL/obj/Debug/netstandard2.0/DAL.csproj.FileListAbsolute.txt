@@ -156,3 +156,12 @@ D:\AST\source\QLNS\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
 D:\AST\source\QLNS\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
 D:\AST\source\QLNS\DAL\obj\Debug\netstandard2.0\DAL.dll
 D:\AST\source\QLNS\DAL\obj\Debug\netstandard2.0\DAL.pdb
+D:\HUNGVM\ast_edu\source\QLNS\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+D:\HUNGVM\ast_edu\source\QLNS\DAL\bin\Debug\netstandard2.0\DAL.dll
+D:\HUNGVM\ast_edu\source\QLNS\DAL\bin\Debug\netstandard2.0\DAL.pdb
+D:\HUNGVM\ast_edu\source\QLNS\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+D:\HUNGVM\ast_edu\source\QLNS\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+D:\HUNGVM\ast_edu\source\QLNS\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+D:\HUNGVM\ast_edu\source\QLNS\DAL\obj\Debug\netstandard2.0\DAL.dll
+D:\HUNGVM\ast_edu\source\QLNS\DAL\obj\Debug\netstandard2.0\DAL.pdb
+D:\HUNGVM\ast_edu\source\QLNS\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache

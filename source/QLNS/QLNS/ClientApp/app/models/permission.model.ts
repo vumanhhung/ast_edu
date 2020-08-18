@@ -11,55 +11,16 @@ export type PermissionNames =
     "View Roles" | "Manage Roles" | "Assign Roles";
 
 export type PermissionValues =
-    "hienvat.view" | "hienvat.new" | "hienvat.edit" | "hienvat.delete" |
-    "baoquanhienvat.view" | "baoquanhienvat.new" | "baoquanhienvat.edit" | "baoquanhienvat.delete" |
-    "hinhanhhienvat.view" | "hinhanhhienvat.new" | "hinhanhhienvat.delete" |
-    "hienvatdichuyen.view" | "hienvatdichuyen.new" | "hienvatdichuyen.edit" | "hienvatdichuyen.delete" |
-    "muontra.view" | "muontra.new" | "muontra.edit" | "muontra.delete" |
-    "chuyenviennghiepvu.denghisoduyet" | "chuyenviennghiepvu.denghivuotcap" | "chuyenviennghiepvu.tiepnhandonvi" |
-    "phophongphocuc.soduyet" | "phophongphocuc.tuchoisoduyet" | "phophongphocuc.duyetvuotcap" |
-    "truongphongcuctruong.duyet" | "truongphongcuctruong.tuchoiduyet" |
-    "bc.tct" |
+    "chamcong.view" | "chamcong.new" | "chamcong.del" | "bc.tct" |
     "danhmuc.view" | "danhmuc.manage" |   
     "donvi.view" | "donvi.manage" | "donvi.assign" |
     "users.view" | "users.manage" |
     "roles.view" | "roles.manage" | "roles.assign";
 
 export class Permission {
-    public static readonly xemHienVatPermission: PermissionValues = "hienvat.view";
-    public static readonly suaHienVatPermission: PermissionValues = "hienvat.edit";
-    public static readonly themHienVatPermission: PermissionValues = "hienvat.new";
-    public static readonly xoaHienVatPermission: PermissionValues = "hienvat.delete";
-
-    public static readonly xemBaoQuanHienVatPermission: PermissionValues = "baoquanhienvat.view";
-    public static readonly suaBaoQuanHienVatPermission: PermissionValues = "baoquanhienvat.edit";
-    public static readonly themBaoQuanHienVatPermission: PermissionValues = "baoquanhienvat.new";
-    public static readonly xoaBaoQuanHienVatPermission: PermissionValues = "baoquanhienvat.delete";
-
-    public static readonly xemHinhAnhHienVatPermission: PermissionValues = "hinhanhhienvat.view";
-    public static readonly themHinhAnhHienVatPermission: PermissionValues = "hinhanhhienvat.new";    
-    public static readonly xoaHinhAnhHienVatPermission: PermissionValues = "hinhanhhienvat.delete";
-
-    public static readonly xemHienVatDiChuyenPermission: PermissionValues = "hienvatdichuyen.view";
-    public static readonly suaHienVatDiChuyenPermission: PermissionValues = "hienvatdichuyen.edit";
-    public static readonly themHienVatDiChuyenPermission: PermissionValues = "hienvatdichuyen.new";
-    public static readonly xoaHienVatDiChuyenPermission: PermissionValues = "hienvatdichuyen.delete";
-
-    public static readonly xemMuonTraPermission: PermissionValues = "muontra.view";
-    public static readonly suaMuonTraPermission: PermissionValues = "muontra.edit";
-    public static readonly themMuonTraPermission: PermissionValues = "muontra.new";
-    public static readonly xoaMuonTraPermission: PermissionValues = "muontra.delete";
-
-    public static readonly cvdnsdPermission: PermissionValues = "chuyenviennghiepvu.denghisoduyet";
-    public static readonly cvdndvcPermission: PermissionValues = "chuyenviennghiepvu.denghivuotcap";
-    public static readonly cvtndvPermission: PermissionValues = "chuyenviennghiepvu.tiepnhandonvi";
-
-    public static readonly ppsdPermission: PermissionValues = "phophongphocuc.soduyet";
-    public static readonly pptcsdPermission: PermissionValues = "phophongphocuc.tuchoisoduyet";
-    public static readonly ppdvcPermission: PermissionValues = "phophongphocuc.duyetvuotcap";
-
-    public static readonly tpdPermission: PermissionValues = "truongphongcuctruong.duyet";
-    public static readonly tptcdPermission: PermissionValues = "truongphongcuctruong.tuchoiduyet";    
+    public static readonly xemChamCongPermission: PermissionValues = "chamcong.view"; 
+    public static readonly newChamCongPermission: PermissionValues = "chamcong.new"; 
+    public static readonly delChamCongPermission: PermissionValues = "chamcong.del"; 
 
     public static readonly bcPermission: PermissionValues = "bc.tct";    
 
